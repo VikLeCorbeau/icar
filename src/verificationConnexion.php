@@ -1,7 +1,7 @@
 <?php 
 	session_start();
 	
-	if ($fid = fopen("identifiants.csv", 'r')) {
+	if ($fid = fopen("../db/identifiants.csv", 'r')) {
 		while ($data = fgetcsv($fid, 1000, ';')) {
 			if ($data[0] == $_POST["id"] && $data[1] == $_POST["password"]) {
 				$_SESSION["identifiants"] = $data[0];

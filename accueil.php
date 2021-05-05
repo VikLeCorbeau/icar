@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	if (!isset($_SESSION['identifiants'])) {
-		header('Location: connexion.php');
+		header('Location: pages/connexion.php');
 		exit();
 	}
 ?>

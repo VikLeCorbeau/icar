@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbbb2ba7-76dd-4918-b044-d3dc239a79f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/css/test.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/accueil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/verificationConnexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/verificationConnexion.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +44,9 @@
       <workItem from="1620207684907" duration="463000" />
       <workItem from="1620208695259" duration="115000" />
       <workItem from="1620208854018" duration="208000" />
+      <workItem from="1620210444565" duration="18000" />
+      <workItem from="1620210467823" duration="7000" />
+      <workItem from="1620210539403" duration="21000" />
     </task>
     <servers />
   </component>
@@ -59,7 +64,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Victor" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
