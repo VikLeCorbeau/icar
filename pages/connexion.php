@@ -5,17 +5,15 @@
 <html>
 <head>
 	<title>Connexion</title>
+    <link href="../css/style.css" rel="stylesheet">
 </head>
 <body>
-	<?php 
-		if (isset($_POST['OUT'])) {
-			session_destroy();
-		}
-	 ?>
-	<form action="verificationConnexion.php" method="POST">
-		<p>Nom d'utilisateur : <input type="text" name="id" required></p>
-		<p>Mot de passe : <input type="password" name="password" required></p>
-		<input type="submit" value="Connexion">
-	</form>
+    <div class="main-container">
+        <div class="desktop-container">
+            <div class="nav-container">
+                <svg></svg>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
