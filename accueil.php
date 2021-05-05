@@ -36,7 +36,7 @@
 		echo "recheche dans ses clients</p>";
 	}
 	?>
-	<form action="connexion.php" method="POST">
+	<form action="pages/connexion.php" method="POST">
 		<input type="submit" name="OUT" value="déconnexion">
 	</form>
 
