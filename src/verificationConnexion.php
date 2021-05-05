@@ -12,5 +12,5 @@
 		}
 		fclose($fid);
 	}
-	header('Location; connexion.php');
+	header('Location; ../pages/connexion.php');
  ?>
