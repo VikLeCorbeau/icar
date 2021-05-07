@@ -11,9 +11,9 @@ session_start()
 <body>
     <?php
 
-        $var = $_POST["assure"].".csv";
+        $var = $_SESSION["identifiants"].".csv";
 
-        $fp = fopen($var, 'w');
+        $fp = fopen($var, 'a+');
 
         $constat = array(
             array($_POST[""], $_POST[""])
