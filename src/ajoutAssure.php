@@ -7,9 +7,11 @@ $tel = $_POST['telephone'];
 $email = $_POST['email'];
 $contrat = $_POST['contrat'];
 $adresse = $_POST['adresse'];
+$ville = $_POST['ville'];
 $cp = $_POST['CP'];
 $pays = $_POST['pays'];
 $contrat = $_POST['contrat'];
+$assurance = $_POST['assurance'];
 
 
 $id = $prenom.'.'.$nom;
@@ -21,7 +23,7 @@ foreach ($identifiant as $element) {
 	fputcsv($fi, $element, ';');
 }
 fclose($fi);
-$assure = array(array($nom,$prenom,$contrat));
+$assure = array(array($nom,$prenom,$contrat, $assurance));
 if ($fa = fopen("../db/assure.csv", 'a+')) {
 	foreach ($assure as $element) {
 			fputcsv($fa, $element, ';');
@@ -31,7 +33,7 @@ fclose($fa);
 
 
 $dossier = "../db/InfoAssure/".$nom.$prenom;
-$v = array(array($id, $mdp, $nom ,$prenom,$tel,$email,$adresse, $cp, $pays,$contrat));
+$v = array(array($id,$mdp,$nom,$prenom,$tel,$email,$adresse,$ville,$cp,$pays,$contrat,$assurance));
 mkdir($dossier, 0777, true);
 
 if ($fa = fopen("../db/InfoAssure/".$nom.$prenom."/informations.csv", 'a+')) {
