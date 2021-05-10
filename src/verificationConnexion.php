@@ -6,6 +6,12 @@
 			if ($data[0] == $_POST["id"] && $data[1] == $_POST["password"]) {
 				$_SESSION["identifiants"] = $data[0];
 				$_SESSION['profil'] = $data[2];
+				if ($data[2] == 'gestionnaire') {
+					$_SESSION['assurance'] = $data[3];
+				}
+				if (isset($data[3])) {
+					$_SESSION['dossier'] = $data[3];
+				}
 				header('Location: ../accueil.php');
 				exit();
 			}
