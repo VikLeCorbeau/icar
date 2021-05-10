@@ -1,3 +1,5 @@
+/* W610 */
+
 .boxes-container {
     display: flex;
     justify-content: center;
@@ -5,26 +7,42 @@
     margin-top: 50px;
 }
 
-.box-610 {
+.boxes-container-grid {
+    display: grid;
+
+	grid-auto-rows: min-content;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3.5%;
+
+    margin-top: 50px;
+
+}
+
+.box {
     display: flex;
     justify-content: center;
     flex-direction: column;
-
-    width: clamp(610px, 610px, 610px);
 
     border: 1px solid black;
     text-align: center;
 }
 
+.box-610 {
+    width: clamp(610px, 610px, 610px);
+}
+
+.box-446 {
+    grid-auto-rows: min-content;
+}
+
 .box-title-container {
     border-bottom: 1px solid black;
+    padding: 20px 0 20px 0;
 }
 
 .box-title {
     font-size: 1.5rem;
     font-weight: 700;
-
-    padding: 20px 0 20px 0;
 }
 
 .box-informations-container {
@@ -34,20 +52,67 @@
     padding: 20px 30px 30px 30px;
 }
 
-.box-information {
+.box-informations {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
+    position: relative;
 }
 
 .box-information {
-    margin-top: 10px;
+    width: calc(50% - 5px);
+    margin-top: 15px;
 }
 
 .box-information--primary {
+    text-align: left;
     font-weight: 500;
 }
 
 .box-information--secondary {
+    text-align: right;
     font-weight: 200;
+}
+
+/* VEHICLES */
+
+.box-vehicles-container {
+    padding: 20px 30px 30px 30px;
+}
+
+.box-vehicles {
+    display: flex;
+    flex-direction: column;
+}
+
+.box-vehicle {
+
+}
+
+.box-vehicle-a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+
+    padding: 15px 0 15px 0;
+    margin-top: 20px;
+    
+    background-color: var(--light-yellow);
+    border: 1px solid transparent;
+
+    text-align: center;
+
+    transition-duration: 250ms;
+}
+
+.box-vehicle-svg-text {
+    margin-right: 10px;
+}
+
+.box-vehicle-a:hover{
+    background-color: transparent;
+    border-color: black;
 }
