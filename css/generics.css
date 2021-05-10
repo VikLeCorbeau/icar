@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* VARIABLES */
+
+:root {
+    --dark-grey: #BEBEBE;
+    --light-grey: #F5F5F5;
+    --light-yellow: #FFE68E;
+}
+
+/* FONT-FAMILY */
+
+@font-face {
+    font-family: Nunito;
+    src: url('../assets/fonts/Nunito-ExtraLight.ttf');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url('../assets/fonts/Nunito-Light.ttf');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url('../assets/fonts/Nunito-Regular.ttf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url('../assets/fonts/Nunito-SemiBold.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url('../assets/fonts/Nunito-Bold.ttf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url('../assets/fonts/Nunito-ExtraBold.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url('../assets/fonts/Nunito-Black.ttf');
+    font-weight: 800;
+}
+
+html {
+    font-size: 100%;
+    font-family: Nunito;
+    font-weight: 300;
+}
+
+/* INPUTS */
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    box-shadow: none !important;
+    border: none;
+    text-decoration: none;
+}
+
+
+/* NAVIGATION */
+
+.nav-container {
+    width: 100%;
+    height: 80px;
+
+    position: relative;
+
+    border-bottom: 1px solid black;
+}
+
+.nav-container-1440 {
+    width: clamp(300px, 75%, 1440px);
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 0 auto;
+}
+
+.nav-logo-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 138px;
+    height: 33px;
+}
+
+/* CONTAINERS */
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+.container-1440, .nav-container-1440 {
+    width: clamp(300px, 75%, 1440px);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 0 auto;
+}
+
+
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between  ;
+    
+    width: 100%;
+}
+
+.content-center {
+    min-height: calc(100vh - 82px);
+}
+
+
+/* BUTTONS */
+
+.button {
+    width: 100% ;
+
+    padding: 15px;
+    border: 1px transparent solid;
+
+    cursor: pointer;
+
+    transition: 250ms;
+}
+
+.button--dark {
+    color: white;
+    background-color: black;
+}
+
+.button--dark:hover {
+    color: black;
+    background-color: transparent;
+    border-color: black;
+}
