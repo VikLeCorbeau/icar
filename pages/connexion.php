@@ -1,5 +1,8 @@
 <?php 
 	session_start();
+	if (isset($_POST['OUT'])) {
+		session_destroy();
+	}
  ?>
 <!DOCTYPE html>
 <html>
@@ -9,6 +12,8 @@
     <link href="../css/connection.css" rel="stylesheet">
 </head>
 <body>
+
+
 
     <div class="main-container">
 
@@ -28,7 +33,7 @@
 
             <div class="content-container content-center">
 
-                <form action="" method="get" class="form-connection">
+                <form action="../src/verificationConnexion.php" method="get" class="form-connection">
                     <h1 class="form-connection-title">Content de vous revoir !</h1>
                     <div class="form-connection-input-container">
                         <label for="name" class="form-connection-label">E-mail</label>
@@ -58,4 +63,4 @@
     </div>
 
 </body>
-</html>
+</html> 
