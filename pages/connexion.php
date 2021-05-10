@@ -9,10 +9,9 @@
 <head>
 	<title>Connexion</title>
     <link href="../css/generics.css" rel="stylesheet">
-    <link href="../css/connection.css" rel="stylesheet">
+    <link href="../css/connexion.css" rel="stylesheet">
 </head>
 <body>
-
 
 
     <div class="main-container">
@@ -31,7 +30,7 @@
         <div class="container-1440">
 
 
-            <div class="content-container content-center">
+            <div class="content-container content-center content-page">
 
                 <form action="../src/verificationConnexion.php" method="get" class="form-connection">
                     <h1 class="form-connection-title">Content de vous revoir !</h1>

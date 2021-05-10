@@ -1,0 +1,53 @@
+.boxes-container {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 50px;
+}
+
+.box-610 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    width: clamp(610px, 610px, 610px);
+
+    border: 1px solid black;
+    text-align: center;
+}
+
+.box-title-container {
+    border-bottom: 1px solid black;
+}
+
+.box-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    padding: 20px 0 20px 0;
+}
+
+.box-informations-container {
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px 30px 30px 30px;
+}
+
+.box-information {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.box-information {
+    margin-top: 10px;
+}
+
+.box-information--primary {
+    font-weight: 500;
+}
+
+.box-information--secondary {
+    font-weight: 200;
+}
