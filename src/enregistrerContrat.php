@@ -26,15 +26,4 @@ foreach ($contrat as $element) {
 	fputcsv($f, $element, ';');
 }
 fclose($f);
-
  ?>
- <!DOCTYPE html>
- <html>
- <head>
- 	<title></title>
- </head>
- <body>
- 	<p>Le qrCode du contrat est : </p>
- 	<img src="../db/InfoAssure/<?php echo $nom.$prenom; ?>/contrat-<?php echo $nom.$prenom.$immatriculation; ?>.png" width="150px">
- </body>
- </html>
