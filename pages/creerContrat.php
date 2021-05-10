@@ -58,7 +58,7 @@ session_start();
  	 		<option>Au kilomètre</option>
  	 	</select></p>
  	 	<p>Bonus : <input type="number" name="bonus" min="" max="50" step="5"></p>
- 	 	<p>Paiement : <select>
+ 	 	<p>Paiement : <select name="paiement">
  	 		<option>Mensuel</option>
  	 		<option>Trimestriel</option>
  	 		<option>Annuel</option>
