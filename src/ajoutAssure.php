@@ -17,12 +17,13 @@ $assurance = $_POST['assurance'];
 $id = $prenom.'.'.$nom;
 $mdp = $prenom.$nom;
 
-$identifiant = array(array($id, $mdp, 'assure'));
+$identifiant = array(array($id, $mdp, 'assure', $nom.$prenom));
 $fi = fopen("../db/identifiants.csv", 'a+');
 foreach ($identifiant as $element) {
 	fputcsv($fi, $element, ';');
 }
 fclose($fi);
+
 $assure = array(array($nom,$prenom,$contrat, $assurance));
 if ($fa = fopen("../db/assure.csv", 'a+')) {
 	foreach ($assure as $element) {
