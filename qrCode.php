@@ -1,6 +1,6 @@
 <?php 
 include('phpqrcode/qrlib.php');
-$lien = $_SERVER;
+$lien = "localhost/Projet_Car/icar/pages/visteur.php";
 QRcode::png($lien, 'image-qrcode.png');
  ?>
  <!DOCTYPE html>

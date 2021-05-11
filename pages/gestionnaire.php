@@ -15,9 +15,10 @@ echo "<p>répondre aux messages des assurés</p>";
 echo "<p>traiter les différentes déclarations (sinistre, changement de coordonnées, cession de véhicule)</p>";
 echo "<p>connaître le nombre de sinistres responsabilité : totale, partielle, non responsable</p>";
 echo "<p>remonter des problèmes de fonctionnalités à l'administrateur (sous forme de ticket GLPI)</p>";
-echo "<p>ouvrir un compte pour ses assurés créer un nouveau contrat d'assurance pour un assuré, et donc générer un QRCode spécifique à ce nouveau contrat.</p>";
 echo "<p>recheche dans ses clients</p>";
 ?>
+<a href="creerContrat.php">Créer un nouveau contrat</a>
+
 </body>
 
 <form action="../pages/connexion.php" method="POST">
