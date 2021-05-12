@@ -5,10 +5,27 @@ session_start();
  <html>
  <head>
  	<title>Constat</title>
+
+	<script>
+        function remorque(action){ //la fonction JS
+            if (action == "oui") //on regarde si tu veux afficher ou cacher le input
+            {
+                document.getElementById('numero immatriculation').setAttribute("required", ""); //Si oui, on l'affiche
+                document.getElementById('Pays immatriculation').setAttribute("required", "");
+            }
+            else
+            {
+                document.getElementById('numero immatriculation').removeAttribute("required"); //Si non, on l'affiche
+                document.getElementById('Pays immatriculation').removeAttribute("required");
+            }
+        return true;
+        }
+    </script>
  </head>
  <body>
  	<h1>Déclaration de constat</h1>
- 	<h2>3- Véhicule tiers</h2>
+ 	<h2>2- Votre véhicule</h2>
+	<h3>Informations sur l'assuré</h3>
  	<form action="enregistrerPartie2.php" method="POST">
  		<p>Nom <input type="text" name="nom" required></p>
  		<p>Prénom <input type="text" name="prenom" required></p>
@@ -20,16 +37,17 @@ session_start();
 		
 		<h1>Informations sur le véhicule</h1>
  		<p>Marque, Type <input type="text" name="marque" required></p>
- 		<p>Numéro d'immatriculation <input type="text" name="numero immatriculation" required></p>
+ 		<p>Numéro d'immatriculation <input type="text" name="numero immatriculation" id="numero immatriculation" required></p>
  		<p>Pays d'immatriculation <input type="text" name="Pays immatriculation" required></p>
 		 
 		<h2>Informations sur la remorque</h2>
  		<p>
-		Possédez-vous une remorque <input type="radio" id="oui" name="drone" value="oui">
+		Possédez-vous une remorque <input type="radio" id="oui" name="drone" value="oui" onchange="remorque('oui')">
   		<label for="oui">Oui</label>
 		<input type="radio" id="non" name="drone" value="non">
   		<label for="non">Non</label>
 		</p>
+
  		<p>Numéro d'immatriculation <input type="text" name="numero immatriculation" required></p>
  		<p>Pays d'immatriculation <input type="text" name="Pays immatriculation" required></p>
 
@@ -129,5 +147,6 @@ session_start();
 		<p><input type="submit" value="Retour"></p>
  		<p><input type="submit" value="Continuer"></p>
  	</form>
+
  </body>
  </html>

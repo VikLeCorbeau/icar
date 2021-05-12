@@ -11,7 +11,7 @@ function upload(){
     };
 
     /* Envoyer des informations au serveur pour un traitement */
-    xhttp.open("POST", "../src/uploadConstat3.php", true);
+    xhttp.open("POST", "../src/uploadConstat4.php", true);
 
     /* Ne pas oublier l'encodage des caractères */
     xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
