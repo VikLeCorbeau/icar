@@ -18,7 +18,7 @@ session_start()
     <h2>1-Informations générales</h2>
 
     <form action = "enregistrerPartie1.php" method="POST">
-        <p>date de l'accident <input type="date" name="date"></p>
+        <p>date de l'accident <input type="date" name="date" ></p>
         <p>Heure de l'accident <input type="time" name="heure"></p>
         <p>Localisation exacte <input type="text" name="localisation"></p>
         <p>Autres dégats matériels <input type="radio" name="degat" value="oui">Oui<input type="radio" name="degat" value="non">Non</p>
