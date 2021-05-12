@@ -9,9 +9,6 @@
 				if ($data[2] == 'gestionnaire') {
 					$_SESSION['assurance'] = $data[3];
 				}
-				if (isset($data[3])) {
-					$_SESSION['dossier'] = $data[3];
-				}
 				header('Location: ../accueil.php');
 				exit();
 			}

@@ -126,7 +126,8 @@ session_start();
 		Ses observations ...
 		</textarea>
 		
- 		<p><input type="submit" value="continuer"></p>
+		<p><input type="submit" value="Retour"></p>
+ 		<p><input type="submit" value="Continuer"></p>
  	</form>
  </body>
  </html>

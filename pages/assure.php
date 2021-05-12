@@ -11,7 +11,7 @@
 <body>
 <?php echo "<p>Bonjour ".$_SESSION['identifiants']."</p>";
 ?>
-<br><a href="declarer_sinistre.php">Déclarer un sinistre</a></br>
+<br><a href="../src/ajoutConstat1.php">Déclarer un sinistre</a></br>
 <br><a href="declarer_changementcoordonnees.php">Déclarer un changement de coordonnées</a></br>
 <br><a href="mesContrats.php">Visualiser son ou ses contrat(s) d’assurance</a></br>
 <br><a href="declarationvente.php">Remplir la déclaration de vente de véhicule</a></br>

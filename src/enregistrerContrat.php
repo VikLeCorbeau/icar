@@ -16,8 +16,9 @@ $typeA = $_POST['typeAssurance'];
 $bonus = $_POST['bonus'];
 $paiement = $_POST['paiement'];
 
-$texte = $nom.','.$prenom.','.$adresse.','.$tel.','.$email.','.$nomAssurance.','.$numeroAssurance.','.$immatriculation.','.$dateValidite.','.$modele.','.$typeA.','.$bonus.','.$paiement;
-QRcode::png($texte, "../db/InfoAssure/".$nom.$prenom."/contrat-".$nom.$prenom.$immatriculation.".png");
+//$texte = $nom.','.$prenom.','.$adresse.','.$tel.','.$email.','.$nomAssurance.','.$numeroAssurance.','.$immatriculation.','.$dateValidite.','.$modele.','.$typeA.','.$bonus.','.$paiement;
+$lien = "http://localhost/Projet_Car/icar/pages/visiteur.php?assure=".$nom.$prenom."&immatriculation=".$immatriculation;
+QRcode::png($lien, "../db/InfoAssure/".$nom.$prenom."/contrat-".$nom.$prenom.$immatriculation.".png");
 
 
 $contrat = array(array($nom,$prenom,$adresse,$tel,$email,$nomAssurance,$numeroAssurance,$immatriculation,$dateValidite,$modele,$typeA,$bonus,$paiement));
@@ -27,3 +28,13 @@ foreach ($contrat as $element) {
 }
 fclose($f);
  ?>
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>Contrat</title>
+ </head>
+ <body>
+ 	<p>Le contrat a bien été créé, le qr code est : </p>
+ 	<img src=<?php echo "../db/InfoAssure/".$nom.$prenom."/contrat-".$nom.$prenom.$immatriculation.".png"; ?>>
+ </body>
+ </html>
