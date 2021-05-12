@@ -2,6 +2,7 @@
 session_start()
 ?>
 
+</html>
 <!DOCTYPE html>
 <html>
     <head>
@@ -24,7 +25,7 @@ session_start()
         <p>Bléssé(s) même léger(s) <input type="radio" name="blesse" value="oui">Oui<input type="radio" name="blesse" value="non">Non</p>
     <h3>Ajout de témoin</h3>
         <p>Nom du témoin : <input type="text" id="nomT" name="nomT" placeholder="nom du témoin"></p>
-        <p>Préom du témoin : <input type="text" id="prenomT" name="prenomT" placeholder="prénom du témoin"></p>
+        <p>Prénom du témoin : <input type="text" id="prenomT" name="prenomT" placeholder="prénom du témoin"></p>
         <p>Adresse du témoin : <input type="text" id="adresseT" name="adresseT" placeholder="adresse du témoin"></p>
         <p>Téléphone du témoin : <input type="text" id="telephoneT" name="telephoneT" placeholder="Téléphone du témoin"></p>
         <p><input type="button" value="Ajouter le témoin" onclick="ajouterT()"></p>
@@ -57,7 +58,10 @@ session_start()
          ?>
     </table>
 
-    <script type="text/javascript">
+</body>
+</html>
+
+<script type="text/javascript">
         function ajouterT(){
             nom = document.getElementById("nomT").value;
             prenom = document.getElementById("prenomT").value;
@@ -91,12 +95,10 @@ session_start()
             xhttp.open("POST", "ajouterTemoin.php",true);
             xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             xhttp.send("nom="+nom+"&prenom="+prenom+"&adresse="+adresse+"&tel="+tel);
-        }
+        };
         function retirerT(){
             $tab = document.getElementById('listeT');
-            $tab = 
+            //$tab = ;
         }
+        
     </script>
-
-</body>
-</html>

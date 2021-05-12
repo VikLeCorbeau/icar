@@ -7,7 +7,10 @@
 	<title>Assure</title>
     <link href="../css/style.css" rel="stylesheet">
 </head>
-
-<?php echo "Déclarer un sinistre</p>";
+<body>
+<?php 
+header('Location: ../src/ajoutConstat1.php');
+exit();
 ?>
+</body>
 </html>
