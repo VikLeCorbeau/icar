@@ -17,16 +17,9 @@ session_start();
         <label for="fileUpload">Fichier:</label>
         <p><input type="file" name="fichier" id="fileUpload"></p>
         <p><input type="submit" name="submit" value="Upload"></p>
-        <p><strong>Note:</strong> Seuls les ".csv" sont autorisés</p>
+        <p><strong>Note:</strong> Seuls les .jpg .jpeg .png sont autorisés</p>
     </form>
 
-
-    <!-- <form action="upload.php" method="post" enctype="multipart/form-data">
-    <label for="fileUpload">Fichier:</label>
-    <input type="file" name="fichier" id="fileUpload">
-	<p><input type="submit" value="Retour"></p>
-    <input type="button" value="Continuer" onclick="upload()">
-    </form> -->
 	<div id="info"></div>
 </body>
 </html>
