@@ -1,21 +1,24 @@
 /* W610 */
 
-.boxes-container {
+.boxes-container-solo {
     display: flex;
     justify-content: center;
 
     margin-top: 50px;
 }
 
-.boxes-container-grid {
-    display: grid;
+.boxes-container {
+    display: flex;
 
-	grid-auto-rows: min-content;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 3.5%;
+    flex-direction: column;
+}
 
+.boxes-row {
     margin-top: 50px;
 
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .box {
@@ -28,11 +31,11 @@
 }
 
 .box-610 {
-    width: clamp(610px, 610px, 610px);
+    width: clamp(300px, 42%, 610px);
 }
 
 .box-446 {
-    grid-auto-rows: min-content;
+    width: clamp(300px, 31%, 446px);
 }
 
 .box-title-container {
@@ -73,6 +76,25 @@
 .box-information--secondary {
     text-align: right;
     font-weight: 200;
+}
+
+
+/* SEPARATORS */
+
+.box-separator {
+    margin: 0 auto;
+
+    height: 1px;
+
+    background-color: black;
+}
+
+.box-separator-446 {
+    width: 85%;
+}
+
+.box-separator-610 {
+    width: 90%;
 }
 
 /* VEHICLES */
@@ -116,3 +138,14 @@
     background-color: transparent;
     border-color: black;
 }
+
+/* VEHICLES INFORMATIONS */
+
+.vehicle-information-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    margin-top: 50px;
+}
+

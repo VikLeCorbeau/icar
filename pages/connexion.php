@@ -25,7 +25,7 @@
             <div class="nav-container-1440">
                 <div class="nav-logo-container">
                     <svg aria-hidden="true" class="logo">
-                        <use xlink:href="../assets/svg/logo.svg#logo"></use>
+                        <use xlink:href="../assets/svg/logo/logo.svg#logo"></use>
                     </svg>
                 </div>
             </div>
@@ -53,9 +53,7 @@
 
 
                 <div class="illustration-connection-container">
-                    <img class="illustration-connection"
-                        src="../assets/images/illustrations/illustration_connection.png"
-                        alt="Grapefruit slice atop a pile of other slices">
+                    <img class="illustration-connection" src="../assets/svg/illustrations/illustration_connection.svg">
                 </div>
 
                 

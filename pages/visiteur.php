@@ -22,14 +22,14 @@
             <div class="nav-container-1440">
             <div class="nav-logo-container">
                     <svg aria-hidden="true" class="logo">
-                        <use xlink:href="../assets/svg/logo.svg#logo"></use>
+                        <use xlink:href="../assets/svg/logo/logo.svg#logo"></use>
                     </svg>
                 </div>
                 <div class="nav-side-container">
                     <div class="nav-side-link-container">
                         <a href="connexion.php" class="nav-side-a">
                             <svg aria-hidden="true" class="nav-side-svg">
-                                <use xlink:href="../assets/svg/icons.svg#signin"></use>
+                                <use xlink:href="../assets/svg/icons/icons.svg#signin"></use>
                             </svg>
                             <p class="nav-side-svg-text">Connexion</p>
                         </a>
@@ -40,9 +40,16 @@
 
         <div class="container-1440">
             <div class="content-container content-column">
-                <h1 class="content-title">Visiteur - QR Code</h1>
 
-                <div class="boxes-container">
+                <div class="content-banner">
+                    
+                    <div class="content-titles-container">
+                        <h1 class="content-title">Visiteur - QR Code</h1>
+                    </div>
+
+                </div>
+
+                <div class="boxes-container-solo">
 
                     <div class="box box-610">
                         <div class="box-title-container">
