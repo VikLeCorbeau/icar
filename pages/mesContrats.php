@@ -18,7 +18,7 @@ session_start();
 	</style>
 	<h1>Mes contrats d'assurance</h1>
 	<?php 
-		$fa = fopen("../db/InfoAssure/".$_SESSION['dossier']."/contrats.csv", 'r');
+		$fa = fopen("../db/InfoAssure/".$_SESSION['identifiants']."/contrats.csv", 'r');
 		while ($data = fgetcsv($fa, 1000, ';')) {
 			echo "<div>";
 			echo "<p>Nom de l'assurance : ".$data[5]."</p>";

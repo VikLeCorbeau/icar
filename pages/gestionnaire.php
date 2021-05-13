@@ -17,7 +17,9 @@ echo "<p>connaître le nombre de sinistres responsabilité : totale, partielle, 
 echo "<p>remonter des problèmes de fonctionnalités à l'administrateur (sous forme de ticket GLPI)</p>";
 echo "<p>recheche dans ses clients</p>";
 ?>
-<a href="creerContrat.php">Créer un nouveau contrat</a>
+
+<p><a href="mesAssures.php">Voir tous mes assurés</a></p>
+<p><a href="creerContrat.php">Créer un nouveau contrat</a></p>
 
 </body>
 

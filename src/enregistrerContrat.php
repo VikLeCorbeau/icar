@@ -16,12 +16,12 @@ $typeA = $_POST['typeAssurance'];
 $bonus = $_POST['bonus'];
 $paiement = $_POST['paiement'];
 
-//$texte = $nom.','.$prenom.','.$adresse.','.$tel.','.$email.','.$nomAssurance.','.$numeroAssurance.','.$immatriculation.','.$dateValidite.','.$modele.','.$typeA.','.$bonus.','.$paiement;
 $lien = "http://localhost/Projet_Car/icar/pages/visiteur.php?assure=".$nom.$prenom."&immatriculation=".$immatriculation;
 QRcode::png($lien, "../db/InfoAssure/".$nom.$prenom."/contrat-".$nom.$prenom.$immatriculation.".png");
 
 
 $contrat = array(array($nom,$prenom,$adresse,$tel,$email,$nomAssurance,$numeroAssurance,$immatriculation,$dateValidite,$modele,$typeA,$bonus,$paiement));
+
 $f = fopen("../db/InfoAssure/".$nom.$prenom."/contrats.csv", 'a+');
 foreach ($contrat as $element) {
 	fputcsv($f, $element, ';');
