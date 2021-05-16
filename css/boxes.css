@@ -1,0 +1,151 @@
+/* W610 */
+
+.boxes-container-solo {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 50px;
+}
+
+.boxes-container {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.boxes-row {
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    border: 1px solid black;
+    text-align: center;
+}
+
+.box-610 {
+    width: clamp(300px, 42%, 610px);
+}
+
+.box-446 {
+    width: clamp(300px, 31%, 446px);
+}
+
+.box-title-container {
+    border-bottom: 1px solid black;
+    padding: 20px 0 20px 0;
+}
+
+.box-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.box-informations-container {
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px 30px 30px 30px;
+}
+
+.box-informations {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    position: relative;
+}
+
+.box-information {
+    width: calc(50% - 5px);
+    margin-top: 15px;
+}
+
+.box-information--primary {
+    text-align: left;
+    font-weight: 500;
+}
+
+.box-information--secondary {
+    text-align: right;
+    font-weight: 200;
+}
+
+
+/* SEPARATORS */
+
+.box-separator {
+    margin: 0 auto;
+
+    height: 1px;
+
+    background-color: black;
+}
+
+.box-separator-446 {
+    width: 85%;
+}
+
+.box-separator-610 {
+    width: 90%;
+}
+
+/* VEHICLES */
+
+.box-vehicles-container {
+    padding: 20px 30px 30px 30px;
+}
+
+.box-vehicles {
+    display: flex;
+    flex-direction: column;
+}
+
+.box-vehicle {
+
+}
+
+.box-vehicle-a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+
+    padding: 15px 0 15px 0;
+    margin-top: 20px;
+    
+    background-color: var(--light-yellow);
+    border: 1px solid transparent;
+
+    text-align: center;
+
+    transition-duration: 250ms;
+}
+
+.box-vehicle-svg-text {
+    margin-right: 10px;
+}
+
+.box-vehicle-a:hover{
+    background-color: transparent;
+    border-color: black;
+}
+
+/* VEHICLES INFORMATIONS */
+
+.vehicle-information-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    margin-top: 50px;
+}
+
