@@ -7,7 +7,7 @@ $adresse = $_POST['adresse'];
 $tel = $_POST['tel'];
 $temoin = array(array($nom, $prenom, $adresse, $tel));
 
-$ft = fopen("../db/constat/tempTemoin.csv", 'a+');
+$ft = fopen("../db/InfoAssure/".$_SESSION['identifiants']."/constats/tempTemoin.csv", 'a+');
 foreach ($temoin as $element) {
 	fputcsv($ft, $element, ';');
 }

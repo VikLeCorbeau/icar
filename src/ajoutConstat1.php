@@ -1,5 +1,10 @@
 <?php
-session_start()
+session_start();
+$filename = "../db/InfoAssure/".$_SESSION['identifiants']."/constats";
+if (!file_exists($filename)) {
+    mkdir($filename, 0777, true);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +47,7 @@ session_start()
             <th></th>
         </tr>
         <?php 
-        if ($ft = fopen("../db/constat/tempTemoin.csv", 'r')) {
+        if ($ft = fopen("../db/InfoAssure/".$_SESSION['identifiants']."/constats/tempTemoin.csv", 'r')) {
             while ($data = fgetcsv($ft, 1000,';')) {
                 echo "<tr>";
                 echo "<td>".$data[0]."</td>";
@@ -73,7 +78,6 @@ session_start()
                     tr.appendChild(document.createElement('td'));
                     tr.appendChild(document.createElement('td'));
                     tr.appendChild(document.createElement('td'));
-
                     tr.cells[0].appendChild(document.createTextNode(nom));
                     tr.cells[1].appendChild(document.createTextNode(prenom));
                     tr.cells[2].appendChild(document.createTextNode(adresse));
@@ -94,7 +98,6 @@ session_start()
         }
         function retirerT(){
             $tab = document.getElementById('listeT');
-            $tab = 
         }
     </script>
 
