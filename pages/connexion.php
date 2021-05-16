@@ -14,6 +14,7 @@
     
     <link href="../css/generics.css" rel="stylesheet">
     <link href="../css/connexion.css" rel="stylesheet">
+    <link href="../css/form.css" rel="stylesheet">
 </head>
 <body>
 

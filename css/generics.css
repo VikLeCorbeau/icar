@@ -135,7 +135,7 @@ button {
 }
 
 .nav-side-links-container {
-
+    display: flex;
 }
 
 .nav-side-link-container {
@@ -144,7 +144,7 @@ button {
 
     position: relative;
 
-    height: 100%;
+    height: var(--nav-height);
 }
 
 .nav-side-link, .nav-side-a {
@@ -157,10 +157,18 @@ button {
 .nav-side-svg {
     width: 22px;
     height: var(--nav-height);
+
+    margin-right: 10px;
+}
+
+.nav-side-arrow {
+    width: 5px;
+    
+    margin-left: 5px;
+    margin-right: 50px;
 }
 
 .nav-side-svg-text {
-    margin-left: 10px;
 }
 
 /* SEARCH */
