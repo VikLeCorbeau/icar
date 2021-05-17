@@ -39,18 +39,14 @@
     width: 100%;
 }
 
-.section-form-container {
-    display: flex;
-    flex-direction: column;
+.grid-form {
+    display: grid;
 
-    width: 100%;
-}
+    grid-template-columns: repeat(3, 1fr);
 
-.column-form-container {
-    display: flex;
-    flex-direction: column;
-    
-    width: calc(100% / 3);
+    grid-gap: 25px 3.5%;
+
+    margin-bottom: 50px;
 }
 
 .form-title-container {
@@ -60,36 +56,14 @@
 
     width: 100%;
 
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .form-title {
     font-size: 16px;
     font-variant: small-caps;
+    letter-spacing: 0.10rem;
     font-weight: 600;
-}
-
-.form-container {
-    position: relative;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    width: 100%;
-}
-
-.form-container-3 {
-    width: 100%;
-}
-
-.form-container-2 {
-    width: var(--two-container);
-}
-
-.form-container-1 {
-    flex-direction: column;
-    width: var(--one-container);
 }
 
 .input-container {
@@ -97,21 +71,6 @@
     flex-direction: column;
 
     text-align: left;
-
-    margin-bottom: 50px;
-}
-
-.input-container-3 {
-    width: var(--three-input);
-}
-
-.input-container-2 {
-    width: var(--two-input);
-}
-
-.input-container-1 {
-    width: 100%;
-    margin-bottom: 25px!important;
 }
 
 .form-label, .radio-title {
@@ -131,10 +90,6 @@
 
 /* RADIO */
 
-.radio-title {
-    
-}
-
 .input-radio-container {
     display: flex;
     justify-content: space-between;
@@ -150,4 +105,43 @@
 
 .input-radio {
     margin-right: 10px;
+}
+
+/* DATAS */
+
+.datas-grid {
+    display: grid;
+
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+
+    margin-bottom: 50px;
+}
+
+.datas-grid > span {
+    text-align: center;
+    vertical-align: middle;
+
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+
+    padding: 20px;
+}
+
+.datas-title {
+    font-variant: small-caps;
+    font-weight: 600;
+    letter-spacing: 0.10rem;
+
+}
+
+.datas-data {
+    font-weight: 100;
+}
+
+.datas-svg {
+    margin-top: 2px;
+
+    height: 22px;
+    width: 22px;
 }

@@ -101,139 +101,144 @@
 
                     <form id="ajoutConstat1" class="form" action="enregistrerPartie1.php" method="POST">
 
-                        <div class="section-form-container">
+                        <div class="form-title-container">
+                            <h1 class="form-title">accident</h1>
+                        </div>
 
-                            <div class="form-container form-container-3">
+                        <div class="grid-form">
                             
-                                <div class="input-container input-container-3">
-                                    <label for="date" class="form-label">date de l'accident</label>
-                                    <input type="date" name="date" class="form-slim-input" placeholder="Date de l'accident">
-                                </div>
-
-                                <div class="input-container input-container-3">
-                                    <label for="heure" class="form-label">heure de l'accident</label>
-                                    <input type="time" name="heure" class="form-slim-input" placeholder="Heure de l'accident">
-                                </div>
-
-                                <div class="input-container input-container-3">
-                                    <label for="localisation" class="form-label">localisation exacte</label>
-                                    <input type="text" name="localisation" class="form-slim-input" placeholder="Localisation exacte">
-                                </div>
-
+                            <div class="input-container">
+                                <label for="date" class="form-label">date de l'accident</label>
+                                <input type="date" name="date" class="form-slim-input" placeholder="Date de l'accident">
                             </div>
 
-                            <div class="form-container form-container-2">
+                            <div class="input-container">
+                                <label for="heure" class="form-label">heure de l'accident</label>
+                                <input type="time" name="heure" class="form-slim-input" placeholder="Heure de l'accident">
+                            </div>
 
-                                <div class="input-container input-container-2">
-                                    <p class="radio-title">autres dégats matériels</p>
-                                    <div class="input-radio-container">
-                                        <label for="oui" class="radio-container">
-                                            <input type="radio" name="degat" value="oui" class="input-radio">
-                                            Oui
-                                        </label>
-                                        <label for="oui" class="radio-container">
-                                            <input type="radio" name="degat" value="non" class="input-radio">
-                                            Non
-                                        </label>
-                                    </div>
+                            <div class="input-container">
+                                <label for="localisation" class="form-label">localisation exacte</label>
+                                <input type="text" name="localisation" class="form-slim-input" placeholder="Localisation exacte">
+                            </div>
+
+                            <div class="input-container">
+                                <p class="radio-title">autres dégats matériels</p>
+                                <div class="input-radio-container">
+                                    <label for="oui" class="radio-container">
+                                        <input type="radio" name="degat" value="oui" class="input-radio">
+                                        Oui
+                                    </label>
+                                    <label for="oui" class="radio-container">
+                                        <input type="radio" name="degat" value="non" class="input-radio">
+                                        Non
+                                    </label>
                                 </div>
+                            </div>
 
-                                <div class="input-container input-container-2">
-                                    <p class="radio-title">bléssé(s) même léger(s)</p>
-                                    <div class="input-radio-container">
-                                        <label for="oui" class="radio-container">
-                                            <input type="radio" name="blesse" value="oui" class="input-radio">
-                                            Oui
-                                        </label>
-                                        <label for="non" class="radio-container">
-                                            <input type="radio" name="blesse" value="non" class="input-radio">
-                                            Nom
-                                        </label>
-                                    </div>
+                            <div class="input-container">
+                                <p class="radio-title">bléssé(s) même léger(s)</p>
+                                <div class="input-radio-container">
+                                    <label for="oui" class="radio-container">
+                                        <input type="radio" name="blesse" value="oui" class="input-radio">
+                                        Oui
+                                    </label>
+                                    <label for="non" class="radio-container">
+                                        <input type="radio" name="blesse" value="non" class="input-radio">
+                                        Nom
+                                    </label>
                                 </div>
-
                             </div>
 
                         </div>  
 
-                        <div class="section-form-container">
+                        <div class="form-title-container">
+                            <h1 class="form-title">ajout de témoin</h1>
+                        </div>
 
-                            <div class="form-container form-container-1">
+                        <div class="grid-form">
 
-                                <div class="form-title-container">
-                                    <h1 class="form-title">ajout de témoin</h1>
-                                </div>
+                            <div class="input-container">
+                                <label for="nomT" class="form-label">nom du témoin  </label>
+                                <input type="text" id="nomT" name="nomT" placeholder="Nom du témoin" class="form-slim-input">
+                            </div>
 
-                                <div class="input-container input-container-1">
-                                    <label for="nomT" class="form-label">nom du témoin  </label>
-                                    <input type="text" id="nomT" name="nomT" placeholder="Nom du témoin" class="form-slim-input">
-                                </div>
+                                <div class="input-container">
+                                <label for="prenomT" class="form-label">prénom du témoin</label>
+                                <input type="text" id="prenomT" name="prenomT" placeholder="Prénom du témoin" class="form-slim-input">  
+                            </div>
 
-                                 <div class="input-container input-container-1">
-                                    <label for="prenomT" class="form-label">prénom du témoin</label>
-                                    <input type="text" id="prenomT" name="prenomT" placeholder="Prénom du témoin" class="form-slim-input">  
-                                </div>
+                            <div class="input-container">
+                                <label for="adresseT" class="form-label">adresse du témoin</label>
+                                <input type="text" id="adresseT" name="adresseT" placeholder="Adresse du témoin" class="form-slim-input">  
+                            </div>
 
-                                <div class="input-container input-container-1">
-                                    <label for="adresseT" class="form-label">adresse du témoin</label>
-                                    <input type="text" id="adresseT" name="adresseT" placeholder="Adresse du témoin" class="form-slim-input">  
-                                </div>
-
-                                <div class="input-container input-container-1">
-                                    <label for="telephoneT" class="form-label">téléphone du témoin</label>
-                                    <input type="text" id="telephoneT" name="telephoneT" placeholder="Téléphone du témoin" class="form-slim-input">  
-                                </div>
-
-                                <div class="input-container input-container-1">
-                                    <button id="buttonT" class="button button--light" type="button" onclick="ajouterT()">
-                                        <p class="button-text">Ajouter le témoin</p>
-                                        <img class="button-svg" src="../assets/svg/icons/add.svg">
-                                    </button>
-                                </div>
-
+                            <div class="input-container">
+                                <label for="telephoneT" class="form-label">téléphone du témoin</label>
+                                <input type="text" id="telephoneT" name="telephoneT" placeholder="Téléphone du témoin" class="form-slim-input">  
                             </div>
 
                         </div>
 
                     </form>
 
+                    <div class="form-title-container">
+                        <h1 class="form-title">liste des témoins</h1>
+                    </div>
+
+                    <!--<table id="listeT" class="witness-table">
+                        <thead>
+                            <tr class="witness-tr">
+                                <th class="witness-th">nom</th>
+                                <th class="witness-th">prénom</th>
+                                <th class="witness-th">adresse</th>
+                                <th class="witness-th">téléphone</th>
+                                <th class="witness-th">supprimer ?</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php/*
+                                if ($ft = fopen("../db/InfoAssure/".$_SESSION['identifiants']."/constats/tempTemoin.csv", 'r')) {
+                                    while ($data = fgetcsv($ft, 1000,';')) {
+                                        echo "<tr class='witness-tr'>";
+                                        echo "<td class='witness-td'>".$data[0]."</td>";
+                                        echo "<td class='witness-td'>".$data[1]."</td>";
+                                        echo "<td class='witness-td'>".$data[2]."</td>";
+                                        echo "<td class='witness-td'>".$data[3]."</td>";
+                                        echo "<td class='witness-td'>
+                                                    <button type='button' id='witness-remove-button' class='witness-button'>
+                                                        <img src='../assets/svg/icons/delete.svg' class='witness-svg' alt='croix' onclick='retirerT()'>
+                                                    </button>
+                                                </td>";
+                                        echo "</tr>";
+                                    }
+                                }
+                                fclose($ft);
+                            */?>
+                        </tbody>
+                    </table>-->
+                    <input type="hidden">
+                    <div class="datas-grid" id="witness-grid" style="grid-template-columns: repeat(5, 1fr);" data-row="0">
+                        <span class="datas-title">nom</span>
+                        <span class="datas-title">prénom</span>
+                        <span class="datas-title">adresse</span>
+                        <span class="datas-title">téléphone</span>
+                        <span class="datas-title">supprimer ?</span>
+                    </div>
+
                     <div class="buttons-container">
 
-                        <button form="ajoutConstat1" type="submit" class="button button-3 button--yellow">
+                        <button id="buttonT" class="button button--light" type="button" onclick="ajouterT()">
+                            <p class="button-text">Ajouter le témoin</p>
+                                <img class="button-svg" src="../assets/svg/icons/add.svg">
+                        </button>
+
+                        <button form="ajoutConstat1" type="submit" class="button button--yellow">
                             <p class="button-text">Continuer</p>
                             <img class="button-svg" src="../assets/svg/icons/back.svg" style="transform: rotate(180deg);">
                         </button>
 
                     </div>
-
-
-
-                   
-
-                    <h3>Liste des témoins</h3>
-                    <table id="listeT">
-                        <tr>
-                            <th>Nom</th>
-                            <th>Prénom</th>
-                            <th>Adresse</th>
-                            <th>Téléphone</th>
-                            <th></th>
-                        </tr>
-                        <?php
-                        if ($ft = fopen("../db/InfoAssure/".$_SESSION['identifiants']."/constats/tempTemoin.csv", 'r')) {
-                            while ($data = fgetcsv($ft, 1000,';')) {
-                                echo "<tr>";
-                                echo "<td>".$data[0]."</td>";
-                                echo "<td>".$data[1]."</td>";
-                                echo "<td>".$data[2]."</td>";
-                                echo "<td>".$data[3]."</td>";
-                                echo "<td><img src='../db/croix.png' alt='croix' onclick='retirerT()'></img></td>";
-                                echo "</tr>";
-                            }
-                        }
-                        fclose($ft);
-                        ?>
-                    </table>
             </div>
         </div>
 

@@ -328,6 +328,16 @@ button:focus {
 
 /* BUTTONS */
 
+.buttons-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-gap: 3.5%;
+
+    margin-bottom: 50px;
+}
+
 .button {
     display: flex;
     justify-content: center;
@@ -341,10 +351,6 @@ button:focus {
     cursor: pointer;
 
     transition: 250ms;
-}
-
-.button-3 {
-    width: var(--three-input);
 }
 
 .button-text {

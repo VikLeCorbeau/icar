@@ -16,11 +16,12 @@ session_start();
  	<form action="ajoutConstat2.php" method="POST">
  		<p><select name="voitureA">
  			<?php 
-		 		$fa = fopen('../db/InfoAssure/'.$_SESSION['identifiants'].'/contrats.csv', 'r');
-		 		while ($data = fgetcsv($fa, 1000, ';')) {
-		 			echo "<option value=".$data[9].">".$data[9]." ".$data[7]."</option>";
-		 		}
-		 		fclose($fa);
+		 		if ($fa = fopen('../db/InfoAssure/'.$_SESSION['identifiants'].'/contrats.csv', 'r')) {
+					while ($data = fgetcsv($fa, 1000, ';')) {
+						echo "<option value=".$data[9].">".$data[9]." ".$data[7]."</option>";
+					}
+					fclose($fa);
+				}
 	 		?>
  		</select></p>
  		<input type="submit" value="Choisir">
@@ -29,29 +30,30 @@ session_start();
  		if (isset($_POST['voitureA'])) {
  			$voiture = $_POST['voitureA'];
  		}
- 		$fa = fopen("../db/InfoAssure/".$_SESSION['identifiants']."/contrats.csv", 'r');
- 		while ($data = fgetcsv($fa, 1000, ';')) {
- 			if ($data[9] == $voiture) {
-	 			$nom = $data[0];
-	 			$prenom = $data[1];
-	 			$adresseLongue = $data[2];
-	 			$tel = $data[3];
-	 			$email = $data[4];
-	 			$marque = $data[9];
-	 			$immatriculation = $data[7];
-	 			$assurance = $data[5];
-	 			$numContrat = $data[6];
-	 			$date = $data[8];
- 			}
- 		}
- 		fclose($fa);
- 		
- 		$elementAdresse = explode(',', $adresseLongue);
- 		$adresse = $elementAdresse[0];
- 		$cp = $elementAdresse[2];
- 		$ville = $elementAdresse[1];
- 		$pays = $elementAdresse[3];
-
+		/*$fa = fopen("../db/InfoAssure/".$_SESSION['identifiants']."/contrats.csv", 'r');
+ 		if ($fa) {
+			while ($data = fgetcsv($fa, 1000, ';')) {
+				if ($data[9] == $voiture) {
+					$nom = $data[0];
+					$prenom = $data[1];
+					$adresseLongue = $data[2];
+					$tel = $data[3];
+					$email = $data[4];
+					$marque = $data[9];
+					$immatriculation = $data[7];
+					$assurance = $data[5];
+					$numContrat = $data[6];
+					$date = $data[8];
+				}
+			}
+			fclose($fa);
+			
+			$elementAdresse = explode(',', $adresseLongue);
+			$adresse = $elementAdresse[0];
+			$cp = $elementAdresse[2];
+			$ville = $elementAdresse[1];
+			$pays = $elementAdresse[3];
+		}*/
  	 ?>
  	<h1>Déclaration de constat</h1>
  	<h2>3- Véhicule tiers</h2>
