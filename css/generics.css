@@ -25,6 +25,16 @@ ul {
     --light-grey: #F5F5F5;
     --light-yellow: #FFE68E;
     --nav-height: 80px;
+
+    --form-column-width: 446px;
+
+    /* Pourcentages pour les colonnes des inputs. Les margin de 50px ont été pris en compte.*/
+
+    --one-container: 30.97%;
+    --two-container: 65.41%;
+
+    --three-input: calc(100% / 3 - 100px / 3);
+    --two-input: 47.34%;
 }
 
 /* FONT-FAMILY */
@@ -72,9 +82,9 @@ ul {
 }
 
 
-/* INPUTS & BUTTONS*/
+/* INPUTS */
 
-input, button, input:active, input:active {
+input, button, input:active {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -86,8 +96,21 @@ input, button, input:active, input:active {
     outline-width: 0;
 }
 
-button {
-    cursor: pointer;
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+[type="radio"], [type="radio"]:active {
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+    appearance: auto;
+
+    box-shadow: auto !important;
+    border: auto;
+    text-decoration: auto;
 }
 
 /* NAVIGATION */
@@ -234,6 +257,8 @@ button {
     position: absolute;
     top: 70px;
 
+    z-index: 9999;
+
     width: 180px;
     height: auto;
 
@@ -275,7 +300,7 @@ button {
     align-items: center;
     justify-content: space-between;
 
-    width: clamp(300px, 75%, 1440px);
+    width: clamp(300px, 75.6%, 1440px);
 
     margin: 0 auto;
     margin-bottom: 50px;
@@ -304,7 +329,11 @@ button {
 /* BUTTONS */
 
 .button {
-    width: 100% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
 
     padding: 15px;
     border: 1px transparent solid;
@@ -312,6 +341,21 @@ button {
     cursor: pointer;
 
     transition: 250ms;
+}
+
+.button-3 {
+    width: var(--three-input);
+}
+
+.button-text {
+    font-weight: 400;
+}
+
+.button-svg {
+    height: 15px;
+    width: 15px;
+
+    margin-left: 10px;
 }
 
 .button--dark {
@@ -325,10 +369,32 @@ button {
     border-color: black;
 }
 
+.button--light {
+    color: black;
+    background-color: transparent;
+    border-color: black;
+}
+
+.button--light:hover {
+
+}
+
+.button--yellow {
+    color: black;
+    background-color: var(--light-yellow);
+}
+
+.button--yellow:hover {
+    color: black;
+    background-color: transparent;
+    border-color: black;
+}
+
 /* CONTENT BANNER */
 
 .content-banner {
     margin-top: 50px;
+    margin-bottom: 50px;
 
     width: 100%;
     
@@ -384,7 +450,7 @@ footer {
 }
 
 .footer-title {
-    text-transform: uppercase;
+    font-variant: small-caps;
     font-weight: 600;
     letter-spacing: 0.5rem;
 }

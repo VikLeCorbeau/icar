@@ -1,9 +1,9 @@
 <?php
-    /*session_start();
+    session_start();
     $filename = "../db/InfoAssure/".$_SESSION['identifiants']."/constats";
     if (!file_exists($filename)) {
         mkdir($filename, 0777, true);
-    }*/
+    }
 ?>
 
 <!DOCTYPE html>
@@ -18,6 +18,9 @@
         <link href="../css/visiteur.css" rel="stylesheet">
         <link href="../css/boxes.css" rel="stylesheet">
         <link href="../css/form.css" rel="stylesheet">
+
+
+        <script type="text/javascript" src="ajoutConstat1.js"></script>
     </head>
 <body>
 
@@ -96,88 +99,116 @@
 
                 </div>
 
-                    <form action="enregistrerPartie1.php" method="POST">
+                    <form id="ajoutConstat1" class="form" action="enregistrerPartie1.php" method="POST">
 
-                        <div class="form-container">
-        
-                            <h1 class="form-title"></h1>
+                        <div class="section-form-container">
 
-                            <div class="form-container-3">
+                            <div class="form-container form-container-3">
                             
-                                <div class="input-container">
-                                    <label for="" class="form-label">date de l'accident</label>
-                                    <input type="date" name="date" class="form-slim-input">
+                                <div class="input-container input-container-3">
+                                    <label for="date" class="form-label">date de l'accident</label>
+                                    <input type="date" name="date" class="form-slim-input" placeholder="Date de l'accident">
                                 </div>
 
-                                <div class="input-container">
-                                    <label for="" class="form-label">Heure de l'accident</label>
-                                    <input type="time" name="heure" class="form-slim-input">
+                                <div class="input-container input-container-3">
+                                    <label for="heure" class="form-label">heure de l'accident</label>
+                                    <input type="time" name="heure" class="form-slim-input" placeholder="Heure de l'accident">
                                 </div>
 
-                                <div class="input-container">
-                                    <label for="" class="form-label">Localisation exacte</label>
-                                    <input type="text" name="localisation" class="form-slim-input">
+                                <div class="input-container input-container-3">
+                                    <label for="localisation" class="form-label">localisation exacte</label>
+                                    <input type="text" name="localisation" class="form-slim-input" placeholder="Localisation exacte">
                                 </div>
 
                             </div>
+
+                            <div class="form-container form-container-2">
+
+                                <div class="input-container input-container-2">
+                                    <p class="radio-title">autres dégats matériels</p>
+                                    <div class="input-radio-container">
+                                        <label for="oui" class="radio-container">
+                                            <input type="radio" name="degat" value="oui" class="input-radio">
+                                            Oui
+                                        </label>
+                                        <label for="oui" class="radio-container">
+                                            <input type="radio" name="degat" value="non" class="input-radio">
+                                            Non
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="input-container input-container-2">
+                                    <p class="radio-title">bléssé(s) même léger(s)</p>
+                                    <div class="input-radio-container">
+                                        <label for="oui" class="radio-container">
+                                            <input type="radio" name="blesse" value="oui" class="input-radio">
+                                            Oui
+                                        </label>
+                                        <label for="non" class="radio-container">
+                                            <input type="radio" name="blesse" value="non" class="input-radio">
+                                            Nom
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>  
+
+                        <div class="section-form-container">
+
+                            <div class="form-container form-container-1">
+
+                                <div class="form-title-container">
+                                    <h1 class="form-title">ajout de témoin</h1>
+                                </div>
+
+                                <div class="input-container input-container-1">
+                                    <label for="nomT" class="form-label">nom du témoin  </label>
+                                    <input type="text" id="nomT" name="nomT" placeholder="Nom du témoin" class="form-slim-input">
+                                </div>
+
+                                 <div class="input-container input-container-1">
+                                    <label for="prenomT" class="form-label">prénom du témoin</label>
+                                    <input type="text" id="prenomT" name="prenomT" placeholder="Prénom du témoin" class="form-slim-input">  
+                                </div>
+
+                                <div class="input-container input-container-1">
+                                    <label for="adresseT" class="form-label">adresse du témoin</label>
+                                    <input type="text" id="adresseT" name="adresseT" placeholder="Adresse du témoin" class="form-slim-input">  
+                                </div>
+
+                                <div class="input-container input-container-1">
+                                    <label for="telephoneT" class="form-label">téléphone du témoin</label>
+                                    <input type="text" id="telephoneT" name="telephoneT" placeholder="Téléphone du témoin" class="form-slim-input">  
+                                </div>
+
+                                <div class="input-container input-container-1">
+                                    <button id="buttonT" class="button button--light" type="button" onclick="ajouterT()">
+                                        <p class="button-text">Ajouter le témoin</p>
+                                        <img class="button-svg" src="../assets/svg/icons/add.svg">
+                                    </button>
+                                </div>
+
+                            </div>
+
                         </div>
 
-                        
-                        <div class="form-container">
-
-                            <h1 class="form-title"></h1>
-
-                            <div class="form-container-3">
-
-                                <div class="input-container">
-                                    <p class="radio-title">Autres dégats matériels</p>
-                                    <div class="input-radio-container">
-                                        <div class="input-radio">
-                                            <input type="radio" name="degat" value="oui">
-                                            <label for="oui" class="label-radio">Oui</label>
-                                        </div>
-                                        <div class="input-radio">
-                                            <input type="radio" name="degat" value="non">
-                                            <label for="non" class="label-radio">Non</label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="input-container">
-                                    <p class="radio-title">Bléssé(s) même léger(s)</p>
-                                    <div class="input-radio-container">
-                                        <div class="input-radio">
-                                            <input type="radio" name="blesse" value="oui">
-                                            <label for="oui" class="label-radio">Oui</label>
-                                        </div>
-                                        <div class="input-radio">
-                                            <input type="radio" name="blesse" value="non">
-                                            <label for="non" class="label-radio">Non</label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>    
-
-                        <h3>Ajout de témoin</h3>
-
-                        <label for="">Nom du témoin</label>
-                        <input type="text" id="nomT" name="nomT" placeholder="nom du témoin">
-                        
-                        <label for="">Prénom du témoin</label>
-                        <input type="text" id="prenomT" name="prenomT" placeholder="prénom du témoin">
-
-                        <label for="">Adresse du témoin</label>
-                        <input type="text" id="adresseT" name="adresseT" placeholder="adresse du témoin">
-
-                        <label for="">Téléphone du témoin</label>
-                        <input type="text" id="telephoneT" name="telephoneT" placeholder="Téléphone du témoin">
-
-                        <label for=""><input type="button" value="Ajouter le témoin" onclick="ajouterT()">
-                        <input type="submit" value="continuer">
-
                     </form>
+
+                    <div class="buttons-container">
+
+                        <button form="ajoutConstat1" type="submit" class="button button-3 button--yellow">
+                            <p class="button-text">Continuer</p>
+                            <img class="button-svg" src="../assets/svg/icons/back.svg" style="transform: rotate(180deg);">
+                        </button>
+
+                    </div>
+
+
+
+                   
 
                     <h3>Liste des témoins</h3>
                     <table id="listeT">
@@ -188,7 +219,7 @@
                             <th>Téléphone</th>
                             <th></th>
                         </tr>
-                        <?php /*
+                        <?php
                         if ($ft = fopen("../db/InfoAssure/".$_SESSION['identifiants']."/constats/tempTemoin.csv", 'r')) {
                             while ($data = fgetcsv($ft, 1000,';')) {
                                 echo "<tr>";
@@ -200,10 +231,9 @@
                                 echo "</tr>";
                             }
                         }
-                        fclose($ft);*/
+                        fclose($ft);
                         ?>
                     </table>
-
             </div>
         </div>
 
@@ -221,45 +251,6 @@
         </footer>
 
     </div> 
-
-    <script type="text/javascript">
-        function ajouterT(){
-            nom = document.getElementById("nomT").value;
-            prenom = document.getElementById("prenomT").value;
-            adresse = document.getElementById("adresseT").value;
-            tel = document.getElementById("telephoneT").value;
-
-            xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function(){
-                if (this.readyState==4 && this.status==200) {
-                    tr = document.createElement('tr');
-                    tr.appendChild(document.createElement('td'));
-                    tr.appendChild(document.createElement('td'));
-                    tr.appendChild(document.createElement('td'));
-                    tr.appendChild(document.createElement('td'));
-                    tr.appendChild(document.createElement('td'));
-                    tr.cells[0].appendChild(document.createTextNode(nom));
-                    tr.cells[1].appendChild(document.createTextNode(prenom));
-                    tr.cells[2].appendChild(document.createTextNode(adresse));
-                    tr.cells[3].appendChild(document.createTextNode(tel));
-                    var croix = document.createElement('IMG');
-                    croix.alt = 'croix';
-                    croix.src = '../db/croix.png';
-                    croix.onclick = retirerT();
-                    tr.cells[4].appendChild(croix);
-
-                    element = document.getElementById("listeT");
-                    element.appendChild(tr);
-                }
-            };
-            xhttp.open("POST", "ajouterTemoin.php",true);
-            xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            xhttp.send("nom="+nom+"&prenom="+prenom+"&adresse="+adresse+"&tel="+tel);
-        }
-        function retirerT(){
-            $tab = document.getElementById('listeT');
-        }
-    </script>
 
 </body>
 </html>

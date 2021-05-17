@@ -37,18 +37,20 @@
 
             <div class="content-container content-center content-page">
 
-                <form action="../src/verificationConnexion.php" method="get" class="form-connection">
+                <form action="../src/verificationConnexion.php" method="POST" class="form-connection">
                     <h1 class="form-connection-title">Content de vous revoir !</h1>
                     <div class="form-connection-input-container">
-                        <label for="name" class="form-connection-label">E-mail</label>
-                        <input type="text" name="name" id="name" class="form-connection-input" placeholder="Entrez votre adresse mail" required>
+                        <label for="id" class="form-connection-label">E-mail</label>
+                        <input type="text" name="id" id="id" class="form-connection-input" placeholder="Entrez votre adresse mail" required>
                     </div>
                     <div class="form-connection-input-container">
                         <label for="password" class="form-connection-label">Mot de passe</label>
                         <input type="password" name="password" id="password" class="form-connection-input" placeholder="Entrez votre mot de passe" required>
                     </div>
                     <div class="form-connection-input-container">
-                        <input type="submit" class="button button--dark" value="Connexion">
+                        <button type="submit" class="button button--dark">
+                            <p class="button-text">Connexion</p>
+                        </button>
                     </div>
                 </form>
 
