@@ -1,5 +1,5 @@
 <?php 
-session_start();
+	session_start();
  ?>
  <!DOCTYPE html>
  <html>
@@ -7,24 +7,47 @@ session_start();
  	<title>Constat</title>
  </head>
  <body>
- 	<style type="text/css">
- 		.style_input{
-	 		width:200px;
-	 		height:100px;
- 		}
- 	</style>
- 	<form action="ajoutConstat2.php" method="POST">
- 		<p><select name="voitureA">
- 			<?php 
-		 		if ($fa = fopen('../db/InfoAssure/'.$_SESSION['identifiants'].'/contrats.csv', 'r')) {
-					while ($data = fgetcsv($fa, 1000, ';')) {
-						echo "<option value=".$data[9].">".$data[9]." ".$data[7]."</option>";
-					}
-					fclose($fa);
-				}
-	 		?>
- 		</select></p>
+
+ 	<form id="car-selection" action="ajoutConstat2.php" method="POST">
+
+ 		<div class="custom-select">
+
+			<select name="voitureA">
+				<option value="0">Select car:</option>
+				<option value="1">Audi</option>
+				<option value="2">BMW</option>
+				<option value="3">Citroen</option>
+				<option value="4">Ford</option>
+				<option value="5">Honda</option>
+				<option value="6">Jaguar</option>
+				<option value="7">Land Rover</option>
+				<option value="8">Mercedes</option>
+				<option value="9">Mini</option>
+				<option value="10">Nissan</option>
+				<option value="11">Toyota</option>
+				<option value="12">Volvo</option>
+
+				<?php 
+					/*if ($fa = fopen('../db/InfoAssure/'.$_SESSION['identifiants'].'/contrats.csv', 'r')) {
+						while ($data = fgetcsv($fa, 1000, ';')) {
+							echo "<option value=".$data[9].">".$data[9]." ".$data[7]."</option>";
+						}
+						fclose($fa);
+					}*/
+				?>
+
+			</select>
+
+		</div>
+
+		<div class="buttons-container">
+			<button form="car-selection" type="submit" class="button button--yellow">
+				<p class="button-text">Choisir</p>
+			</button>
+		</div>
+
  		<input type="submit" value="Choisir">
+
  	</form>
  	<?php 
  		if (isset($_POST['voitureA'])) {
