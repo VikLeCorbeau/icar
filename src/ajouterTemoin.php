@@ -25,6 +25,4 @@ if (!empty($nom) && !empty($prenom) && !empty($adresse) && !empty($tel)) {
 
 	echo $witness_json;
 }
-
-
 ?>

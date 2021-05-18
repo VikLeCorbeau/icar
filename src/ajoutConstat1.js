@@ -80,26 +80,6 @@ function ajouterT(){
 
             currentId++
             datasGrid.dataset.row = currentId
-            
-
-            /*tr = document.createElement('tr');
-            tr.appendChild(document.createElement('td'));
-            tr.appendChild(document.createElement('td'));
-            tr.appendChild(document.createElement('td'));
-            tr.appendChild(document.createElement('td'));
-            tr.appendChild(document.createElement('td'));
-            tr.cells[0].appendChild(document.createTextNode(nom));
-            tr.cells[1].appendChild(document.createTextNode(prenom));
-            tr.cells[2].appendChild(document.createTextNode(adresse));
-            tr.cells[3].appendChild(document.createTextNode(tel));
-            var croix = document.createElement('IMG');
-            croix.alt = 'croix';
-            croix.src = '../db/croix.png';
-            croix.onclick = retirerT();
-            tr.cells[4].appendChild(croix);
-
-            element = document.getElementById("listeT");
-            element.appendChild(tr);*/
         }
     };
     xhttp.open("POST", "ajouterTemoin.php",true);

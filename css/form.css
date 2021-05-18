@@ -107,6 +107,38 @@
     margin-right: 10px;
 }
 
+.input-radio-text{
+    color: var(--dark-grey);
+}
+
+
+.radio-grid-container {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    grid-gap: 15px 1.5%;
+
+    margin-bottom: 50px;
+    
+    width: 100%;
+}
+
+.radio-grid-label {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.radio-grid-input {
+    margin-right: 5px;
+    margin-top: 3px;
+}
+
+.radio-grid-text {
+    color: var(--dark-grey);
+}
+
 /* DATAS */
 
 .datas-grid {
@@ -148,61 +180,87 @@
 
 /* SELECT */
 
-.custom-select {
-  position: relative;
-  font-family: Arial;
+.select-container {
+    width: 100%;
+    height: 100%;
 }
 
-.custom-select select {
-  display: none; /*hide original SELECT element: */
+.select {
+    width: 100%;
+    height: 100%;
+
+    padding: 0 15px 0 15px;
 }
 
-.select-selected {
-  background-color: DodgerBlue;
+
+/* TEXTAREA */
+
+.form-textarea {
+    height: 150px;
+
+    resize: none;
+
+    padding: 15px;
+    margin-top: 15px;
+
+    border: 1px solid var(--dark-grey);
+
+    font-family: Nunito;
+    font-weight: 300;
 }
 
-/* Style the arrow inside the select element: */
-.select-selected:after {
-  position: absolute;
-  content: "";
-  top: 14px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
+/* INPUT IMAGES */
+
+.form-images-container {
+    display: flex;
+    flex-direction: column;
+
+    padding: 11%;
+    border: 1px solid black;
 }
 
-/* Point the arrow upwards when the select box is open (active): */
-.select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
-  top: 7px;
+.form-images-illustration-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    margin-bottom: 50px;
 }
 
-/* style the items (options), including the selected item: */
-.select-items div,.select-selected {
-  color: #ffffff;
-  padding: 8px 16px;
-  border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-  cursor: pointer;
+.form-images-illustration {
+
 }
 
-/* Style items (options): */
-.select-items {
-  position: absolute;
-  background-color: DodgerBlue;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
+.form-images-input-file-container {
+    width: 100%;
+    margin-bottom: 20px;
 }
 
-/* Hide the items when the select box is closed: */
-.select-hide {
-  display: none;
+.form-images-input-file {
+    display: none;
+} 
+
+.form-images-input-file-label {
+    display: block;
+
+    padding: 15px;
+
+    border: 1px solid black;
+    cursor: pointer;
+
+    font-weight: 300;
+    text-align: center;
 }
 
-.select-items div:hover, .same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1);
+.form-images-input-file-label:hover {
+    color: white;
+    background-color: black;
+}
+
+.form-images-nb-container {
+}
+
+.form-images-nb {
+    text-align: center;
+    color: var(--dark-grey);
 }

@@ -66,14 +66,14 @@
                                     <svg aria-hidden="true" class="nav-side-svg">
                                         <use xlink:href="../assets/svg/type/type.svg#type_insured"></use>
                                     </svg>
-                                    <p class="nav-side-svg-text">Prénom Nom</p>
+                                    <p class="nav-side-svg-text"><?php if (isset($_SESSION['identifiants'])) { echo ($_SESSION['identifiants']); }else { echo('Non connecté'); } ?></p>
 
                                 </div>
 
                                 <div class="nav-side-link-dropdown-container">
                                     <ul class="nav-side-link-dropdown-ul">
                                         <li class="nav-side-link-dropdown-li"><a href="">Changer mes coordonnées</a></li>
-                                        <li class="nav-side-link-dropdown-li"><a href="">Déconnexion</a></li>
+                                        <li class="nav-side-link-dropdown-li"><a href="deconnexion.php">Déconnexion</a></li>
                                     </ul> 
                                 </div>
 
@@ -94,7 +94,7 @@
                     
                     <div class="content-titles-container">
                         <h1 class="content-title">Déclaration de constat</h1>
-                        <h1 class="content-subtitle">1-Informations générales</h1>
+                        <h1 class="content-subtitle">1 - Informations générales</h1>
                     </div>
 
                 </div>
@@ -125,13 +125,13 @@
                             <div class="input-container">
                                 <p class="radio-title">autres dégats matériels</p>
                                 <div class="input-radio-container">
-                                    <label for="oui" class="radio-container">
+                                    <label for="degat" class="radio-container">
                                         <input type="radio" name="degat" value="oui" class="input-radio">
-                                        Oui
+                                        <p class="input-radio-text">Oui</p>
                                     </label>
-                                    <label for="oui" class="radio-container">
+                                    <label for="degat" class="radio-container">
                                         <input type="radio" name="degat" value="non" class="input-radio">
-                                        Non
+                                        <p class="input-radio-text">Non</p>
                                     </label>
                                 </div>
                             </div>
@@ -139,13 +139,13 @@
                             <div class="input-container">
                                 <p class="radio-title">bléssé(s) même léger(s)</p>
                                 <div class="input-radio-container">
-                                    <label for="oui" class="radio-container">
+                                    <label for="blesse" class="radio-container">
                                         <input type="radio" name="blesse" value="oui" class="input-radio">
-                                        Oui
+                                        <p class="input-radio-text">Oui</p>
                                     </label>
-                                    <label for="non" class="radio-container">
+                                    <label for="blesse" class="radio-container">
                                         <input type="radio" name="blesse" value="non" class="input-radio">
-                                        Nom
+                                        <p class="input-radio-text">Non</p>
                                     </label>
                                 </div>
                             </div>
@@ -186,44 +186,36 @@
                         <h1 class="form-title">liste des témoins</h1>
                     </div>
 
-                    <!--<table id="listeT" class="witness-table">
-                        <thead>
-                            <tr class="witness-tr">
-                                <th class="witness-th">nom</th>
-                                <th class="witness-th">prénom</th>
-                                <th class="witness-th">adresse</th>
-                                <th class="witness-th">téléphone</th>
-                                <th class="witness-th">supprimer ?</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php/*
-                                if ($ft = fopen("../db/InfoAssure/".$_SESSION['identifiants']."/constats/tempTemoin.csv", 'r')) {
-                                    while ($data = fgetcsv($ft, 1000,';')) {
-                                        echo "<tr class='witness-tr'>";
-                                        echo "<td class='witness-td'>".$data[0]."</td>";
-                                        echo "<td class='witness-td'>".$data[1]."</td>";
-                                        echo "<td class='witness-td'>".$data[2]."</td>";
-                                        echo "<td class='witness-td'>".$data[3]."</td>";
-                                        echo "<td class='witness-td'>
-                                                    <button type='button' id='witness-remove-button' class='witness-button'>
-                                                        <img src='../assets/svg/icons/delete.svg' class='witness-svg' alt='croix' onclick='retirerT()'>
-                                                    </button>
-                                                </td>";
-                                        echo "</tr>";
-                                    }
-                                }
-                                fclose($ft);
-                            */?>
-                        </tbody>
-                    </table>-->
-                    <input type="hidden">
-                    <div class="datas-grid" id="witness-grid" style="grid-template-columns: repeat(5, 1fr);" data-row="0">
+                    <div class="datas-grid" id="witness-grid" style="grid-template-columns: repeat(5, 1fr);" data-row="99">
+
                         <span class="datas-title">nom</span>
                         <span class="datas-title">prénom</span>
                         <span class="datas-title">adresse</span>
                         <span class="datas-title">téléphone</span>
                         <span class="datas-title">supprimer ?</span>
+
+                        <?php
+                            if (file_exists("../db/InfoAssure/".$_SESSION['identifiants']."/constats/tempTemoin.csv")) {
+
+                                if ($ft = fopen("../db/InfoAssure/".$_SESSION['identifiants']."/constats/tempTemoin.csv", 'r')) {
+                                    $i = 0;
+
+                                    while ($data = fgetcsv($ft, 1000,';')) {
+                                        echo "
+                                        <span class='datas-data' id='". $i ."'>". $data[0] ."</span>
+                                        <span class='datas-data' id='". $i ."'>". $data[1] ."</span>
+                                        <span class='datas-data' id='". $i ."'>". $data[2] ."</span>
+                                        <span class='datas-data' id='". $i ."'>". $data[3] ."</span>      
+                                        <span class='datas-data' id='". $i ."'>
+                                            <img src='../assets/svg/icons/delete.svg' class='datas-svg' id='". $i ."'>
+                                        </span>
+                                        ";
+                                    }
+
+                                    fclose($ft);
+                                }
+                            }
+                        ?>
                     </div>
 
                     <div class="buttons-container">
