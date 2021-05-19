@@ -26,66 +26,7 @@
 
     <div class="main-container">
 
-        <div class="nav-container">
-            <div class="nav-container-1440">
-
-                <div class="nav-logo-container">
-                    <svg aria-hidden="true" class="logo">
-                        <use xlink:href="../assets/svg/logo/logo.svg#logo"></use>
-                    </svg>
-                </div>
-
-                <div class="nav-right-container">
-
-                    <div class="nav-side-container">
-
-                        <div class="nav-side-links-container">
-
-                            <div class="nav-side-link-container">
-
-                                <div class="nav-side-link">
-                                    <p class="nav-side-svg-text">Actions</p>
-                                    <img src="../assets/svg/icons/down_arrow.svg" class="nav-side-arrow">
-                                </div>
-
-                                <div class="nav-side-link-dropdown-container">
-                                    <ul class="nav-side-link-dropdown-ul">
-                                        <li class="nav-side-link-dropdown-li"><a href="">Déclarer un constat</a></li>
-                                        <li class="nav-side-link-dropdown-li"><a href="">Voir mes cartes vertes</a></li>
-                                        <li class="nav-side-link-dropdown-li"><a href="">Je vends mon véhicule</a></li>
-                                        <li class="nav-side-link-dropdown-li"><a href="">Contacter mon assurance</a></li>
-                                        <li class="nav-side-link-dropdown-li"><a href="">Mes déclarations de constat</a></li>
-                                    </ul> 
-                                </div>
-
-                            </div>
-
-                            <div class="nav-side-link-container">
-
-                                <div class="nav-side-link">
-                                    <svg aria-hidden="true" class="nav-side-svg">
-                                        <use xlink:href="../assets/svg/type/type.svg#type_insured"></use>
-                                    </svg>
-                                    <p class="nav-side-svg-text"><?php if (isset($_SESSION['identifiants'])) { echo ($_SESSION['identifiants']); }else { echo('Non connecté'); } ?></p>
-
-                                </div>
-
-                                <div class="nav-side-link-dropdown-container">
-                                    <ul class="nav-side-link-dropdown-ul">
-                                        <li class="nav-side-link-dropdown-li"><a href="">Changer mes coordonnées</a></li>
-                                        <li class="nav-side-link-dropdown-li"><a href="deconnexion.php">Déconnexion</a></li>
-                                    </ul> 
-                                </div>
-
-                            </div>
-
-                        </div>
-                        
-                    </div>
-                </div>
-
-            </div>
-        </div>
+        <?php include("../layouts/navigation.php"); ?>  
 
         <div class="container-1440">
             <div class="content-container content-column">
@@ -234,18 +175,7 @@
             </div>
         </div>
 
-        <footer>
-            <div class="footer-center">
-                <div class="footer-box">
-                    <h1 class="footer-title">contact</h1>
-                    <h2 class="footer-text">05 67 34 56 78 - icar@contact.fr</h2>
-                </div>
-                <div class="footer-box">
-                    <h1 class="footer-title">support</h1>
-                    <h2 class="footer-text"><a href="#">Signaler une erreur aux adminstrateurs</a></h2>
-                </div>
-            </div>
-        </footer>
+        <?php include "../layouts/footer.php"; ?>
 
     </div> 
 

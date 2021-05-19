@@ -8,16 +8,11 @@
 }
 
 .boxes-container {
+    width: 100%;
+
+    
     display: flex;
-
-    flex-direction: column;
-}
-
-.boxes-row {
-    margin-top: 50px;
-
-    display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: flex-start;
 }
 
@@ -35,7 +30,13 @@
 }
 
 .box-446 {
-    width: clamp(300px, 31%, 446px);
+    flex: 0 0 31%; 
+    margin: 1%;
+}
+
+.box-inline {
+    display: inline-block;
+    vertical-align: top;
 }
 
 .box-title-container {

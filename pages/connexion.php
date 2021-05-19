@@ -22,15 +22,7 @@
     <div class="main-container">
 
 
-        <div class="nav-container" style="border: none;">
-            <div class="nav-container-1440">
-                <div class="nav-logo-container">
-                    <svg aria-hidden="true" class="logo">
-                        <use xlink:href="../assets/svg/logo/logo.svg#logo"></use>
-                    </svg>
-                </div>
-            </div>
-        </div>
+        <?php include("../layouts/navigation.php"); ?>  
 
         <div class="container-1440" style="margin-bottom: 0!important;">
 
