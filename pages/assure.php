@@ -14,8 +14,6 @@
         <link href="../css/visiteur.css" rel="stylesheet">
         <link href="../css/boxes.css" rel="stylesheet">
         <link href="../css/form.css" rel="stylesheet">
-
-        <script type="text/javascript" src=""></script>
     </head>
 <body>
 
@@ -32,16 +30,65 @@
                         <h1 class="content-title">Menu - Assuré</h1>
                     </div>
 
+                </div>    
+
 					<div class="menu-container">
 
 						<div class="menu-buttons-container">
 
-							<div class="menu-button-container">
-								<div class="menu-button">
-									<img class="menu-button-svg" src="../assets/svg/menu_icons/menu_constats.svg">
-									<p class="menu-button-text">Déclarer un constat</p>
-								</div>
-							</div>
+                            <a href="../src/ajoutConstat1.php">
+                                <div class="menu-button-container">
+                                    <div class="menu-button">
+                                        <img class="menu-button-svg" src="../assets/svg/menu_icons/menu_constats.svg">
+                                        <p class="menu-button-text">déclarer un constat</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="declarer_changementcoordonnees.php">
+                                <div class="menu-button-container">
+                                    <div class="menu-button">
+                                        <img class="menu-button-svg" src="../assets/svg/menu_icons/insured_coordinates.svg">
+                                        <p class="menu-button-text">changer mes coordonnées</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="mesContrats.php">
+                                <div class="menu-button-container">
+                                    <div class="menu-button">
+                                        <img class="menu-button-svg" src="../assets/svg/menu_icons/menu_see_contracts.svg">
+                                        <p class="menu-button-text">voir mes contrats d’assurance</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="certificatCession1.php">
+                                <div class="menu-button-container">
+                                    <div class="menu-button">
+                                        <img class="menu-button-svg" src="../assets/svg/menu_icons/menu_sell_car.svg">
+                                        <p class="menu-button-text">je vends mon véhicule</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="contacterassurance.php">
+                                <div class="menu-button-container">
+                                    <div class="menu-button">
+                                        <img class="menu-button-svg" src="../assets/svg/menu_icons/menu_contact.svg">
+                                        <p class="menu-button-text">contacter mon assurance</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="historique_declarationsinistre.php">
+                                <div class="menu-button-container">
+                                    <div class="menu-button">
+                                        <img class="menu-button-svg" src="../assets/svg/menu_icons/menu_see_constats.svg">
+                                        <p class="menu-button-text">mes déclarations de constats</p>
+                                    </div>
+                                </div>
+                            </a>
 
 						</div>
 

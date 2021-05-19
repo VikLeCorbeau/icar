@@ -474,15 +474,21 @@ footer {
 /* MENU */
 
 .menu-container {
+    width: 100%;
+
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
 .menu-buttons-container {
+    width: clamp(200px, 60%, 700px);
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    margin-bottom: 50px;
 }
 
 .menu-button-container {
@@ -491,8 +497,8 @@ footer {
     justify-content: space-around;
     align-items: center;
 
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
 
     padding: 50px;
 }
@@ -508,7 +514,10 @@ footer {
 
 .menu-button-text {
     font-variant: small-caps;
-    margin-top: 15px;
+    color: var(--dark-grey);
+    text-align: center;
+    font-weight: 600;
+    margin-top: 10px;
 }
 
 .menu-illustration-container {
