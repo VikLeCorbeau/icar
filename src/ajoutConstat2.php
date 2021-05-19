@@ -2,10 +2,12 @@
 	
 	session_start();
 
+	require_once("fonctions.php");
+
 	if (isset($_POST['voitureA'])) {
 		$voiture = $_POST['voitureA'];
 
-		if ($fa = fopen("../db/InfoAssure/".$_SESSION['identifiants']."/contrats.csv", 'r')) {
+		if ($fa = verificationFichier("../db/InfoAssure/".$_SESSION['identifiants']."/contrats.csv", 'r')) {
 			while ($data = fgetcsv($fa, 1000, ';')) {
 				if ($data[9] == $voiture) {
 					$nom = $data[0];
@@ -36,6 +38,7 @@
  <!DOCTYPE html>
  <html>
  <head>
+	 
  		<meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,6 +48,7 @@
         <link href="../css/visiteur.css" rel="stylesheet">
         <link href="../css/boxes.css" rel="stylesheet">
         <link href="../css/form.css" rel="stylesheet">	
+
  </head>
  <body>
 
@@ -81,9 +85,8 @@
 
 									<?php 
 									echo ('../db/InfoAssure/'.$_SESSION['identifiants'].'/contrats.csv');
-										if (file_exists('../db/InfoAssure/'.$_SESSION['identifiants'].'/contrats.csv')) {
 
-											if ($fa = fopen('../db/InfoAssure/'.$_SESSION['identifiants'].'/contrats.csv', 'r')) {
+											if ($fa = verificationFichier('../db/InfoAssure/'.$_SESSION['identifiants'].'/contrats.csv', 'r')) {
 
 												while ($data = fgetcsv($fa, 1000, ';')) {
 													echo "<option value=".$data[9].">".$data[9]." ".$data[7]."</option>";
@@ -91,8 +94,6 @@
 												fclose($fa);
 
 											}
-
-										}
 									?>
 
 								</select>
@@ -191,7 +192,7 @@
                             <p class="radio-title">possédez-vous une remorque ?</p>
                             <div class="input-radio-container">
                                 <label for="remorque" class="radio-container">
-                                    <input type="radio" name="remorque" value="oui" class="input-radio">
+                                    <input type="radio" name="remorque" value="oui" class="input-radio" checked>
                                     <p class="input-radio-text">Oui</p>
                                 </label>
                                 <label for="remorque" class="radio-container">
@@ -203,12 +204,12 @@
 
 						<div class="input-container">
                             <label for="immatriculationR" class="form-label">numéro d'immatriculation</label>
-                            <input type="text" name="immatriculationR" class="form-slim-input" placeholder="Numéro d'immatriculation" value="<?php if (isset($immatriculation)) { echo($immatriculation); } ?>" required>
+                            <input type="text" name="immatriculationR" class="form-slim-input" placeholder="Numéro d'immatriculation" value="<?php if (isset($immatriculation)) { echo($immatriculation); } ?>">
                         </div>
 
 						<div class="input-container">
                             <label for="paysImmR" class="form-label">pays d'immatriculation</label>
-                            <input type="text" name="paysImmR" class="form-slim-input" placeholder="Pays d'immatriculation" required>
+                            <input type="text" name="paysImmR" class="form-slim-input" placeholder="Pays d'immatriculation">
                         </div>
 
 					</div>
@@ -253,7 +254,7 @@
                             <p class="radio-title">Les dégats matériels au véhicule sont-ils assurés par le contrat ?</p>
                             <div class="input-radio-container">
                                 <label for="degat" class="radio-container">
-                                    <input type="radio" name="degat" value="oui" class="input-radio">
+                                    <input type="radio" name="degat" value="oui" class="input-radio" checked>
                                     <p class="input-radio-text">Oui</p>
                                 </label>
                                 <label for="degat" class="radio-container">
@@ -330,7 +331,7 @@
 					<div class="radio-grid-container">
 
 						<label for="circonstance" class="radio-grid-label">
-							<input type="radio" name="circonstance" class="radio-grid-input">
+							<input type="radio" name="circonstance" class="radio-grid-input" checked>
 							<p class="radio-grid-text">En stationnement/à l'arrêt</p>
 						</label>
 

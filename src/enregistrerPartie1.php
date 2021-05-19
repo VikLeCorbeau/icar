@@ -1,10 +1,12 @@
 <?php 
 session_start();
+require_once("fonctions.php");
 
 $filename = "../db/InfoAssure/".$_SESSION['identifiants']."/constats";
 if (!file_exists($filename)) {
 	mkdir($filename, 0777, true);
 }
+
 $files = glob($filename.'/*.json');
 $compteur = count($files);
 $numeroConstat = $compteur + 1;
@@ -24,7 +26,7 @@ $data = json_encode($chaineAjout);
 file_put_contents($filename.'/constat'.$numeroConstat.'.json', $data);
 
 
-if ($ft = fopen($filename."/tempTemoin.csv", 'r')) {
+if ($ft = verificationFichier($filename."/tempTemoin.csv", 'r')) {
 	while ($data = fgetcsv($ft, 1000, ';')) {
 		$tab = file_get_contents($filename.'/constat'.$numeroConstat.'.json');
 		$array_data = json_decode($tab, true);

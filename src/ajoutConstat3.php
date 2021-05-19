@@ -4,6 +4,7 @@
  <!DOCTYPE html>
  <html>
  <head>
+	 
  		<meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
         <link href="../css/visiteur.css" rel="stylesheet">
         <link href="../css/boxes.css" rel="stylesheet">
         <link href="../css/form.css" rel="stylesheet">	
+
  </head>
  <body>
 
@@ -114,7 +116,7 @@
                                     <p class="input-radio-text">Oui</p>
                                 </label>
                                 <label for="remorque" class="radio-container">
-                                    <input type="radio" name="remorque" value="non" class="input-radio">
+                                    <input type="radio" name="remorque" value="non" class="input-radio" checked>
                                     <p class="input-radio-text">Non</p>
                                 </label>
                             </div>
@@ -172,7 +174,7 @@
                             <p class="radio-title">Les dégats matériels au véhicule sont-ils assurés par le contrat ?</p>
                             <div class="input-radio-container">
                                 <label for="degat" class="radio-container">
-                                    <input type="radio" name="degat" value="oui" class="input-radio">
+                                    <input type="radio" name="degat" value="oui" class="input-radio" checked>
                                     <p class="input-radio-text">Oui</p>
                                 </label>
                                 <label for="degat" class="radio-container">
@@ -249,7 +251,7 @@
 					<div class="radio-grid-container">
 
 						<label for="circonstance" class="radio-grid-label">
-							<input type="radio" name="circonstance" class="radio-grid-input">
+							<input type="radio" name="circonstance" class="radio-grid-input" checked>
 							<p class="radio-grid-text">En stationnement/à l'arrêt</p>
 						</label>
 

@@ -357,6 +357,10 @@ button:focus {
     transition: 250ms;
 }
 
+.round-button {
+    border-radius: 20px;
+}
+
 .button-text {
     font-weight: 400;
 }
@@ -501,10 +505,6 @@ footer {
     height: 100px;
 
     padding: 50px;
-}
-
-.menu-button {
-
 }
 
 .menu-button-svg {

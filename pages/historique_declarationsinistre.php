@@ -1,14 +1,45 @@
-<?php 
-	session_start();
- ?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Assure</title>
-    <link href="../css/style.css" rel="stylesheet">
-</head>
-
-<?php echo "<p>Historique déclaration de sinistre</p>";
+<?php
+    session_start();
+    require_once("../src/fonctions.php");
 ?>
 
+<!DOCTYPE html>
+<html>
+    <head>    
+    
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TITRE</title>
+
+        <link href="../css/generics.css" rel="stylesheet">
+        <link href="../css/visiteur.css" rel="stylesheet">
+        <link href="../css/boxes.css" rel="stylesheet">
+        <link href="../css/form.css" rel="stylesheet">
+
+    </head>
+<body>
+
+    <div class="main-container">
+
+        <?php include("../layouts/navigation.php"); ?> 
+
+        <div class="container-1440">
+            <div class="content-container content-column">
+
+                <div class="content-banner"> 
+                    <div class="content-titles-container">
+                        <h1 class="content-title">Mes déclarations de constats</h1>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <?php include("../layouts/footer.php"); ?>  
+
+    </div> 
+
+</body>
 </html>

@@ -1,5 +1,7 @@
 <?php
     session_start();
+    require_once("fonctions.php");
+
     $filename = "../db/InfoAssure/".$_SESSION['identifiants']."/constats";
     if (!file_exists($filename)) {
         mkdir($filename, 0777, true);
@@ -9,6 +11,7 @@
 <!DOCTYPE html>
 <html>
     <head>    
+
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,8 +22,8 @@
         <link href="../css/boxes.css" rel="stylesheet">
         <link href="../css/form.css" rel="stylesheet">
 
-
         <script type="text/javascript" src="ajoutConstat1.js"></script>
+        
     </head>
 <body>
 
@@ -50,17 +53,17 @@
                             
                             <div class="input-container">
                                 <label for="date" class="form-label">date de l'accident</label>
-                                <input type="date" name="date" class="form-slim-input" placeholder="Date de l'accident">
+                                <input type="date" name="date" class="form-slim-input" placeholder="Date de l'accident" required>
                             </div>
 
                             <div class="input-container">
                                 <label for="heure" class="form-label">heure de l'accident</label>
-                                <input type="time" name="heure" class="form-slim-input" placeholder="Heure de l'accident">
+                                <input type="time" name="heure" class="form-slim-input" placeholder="Heure de l'accident" required>
                             </div>
 
                             <div class="input-container">
                                 <label for="localisation" class="form-label">localisation exacte</label>
-                                <input type="text" name="localisation" class="form-slim-input" placeholder="Localisation exacte">
+                                <input type="text" name="localisation" class="form-slim-input" placeholder="Localisation exacte" required>
                             </div>
 
                             <div class="input-container">
@@ -71,7 +74,7 @@
                                         <p class="input-radio-text">Oui</p>
                                     </label>
                                     <label for="degat" class="radio-container">
-                                        <input type="radio" name="degat" value="non" class="input-radio">
+                                        <input type="radio" name="degat" value="non" class="input-radio" checked>
                                         <p class="input-radio-text">Non</p>
                                     </label>
                                 </div>
@@ -85,7 +88,7 @@
                                         <p class="input-radio-text">Oui</p>
                                     </label>
                                     <label for="blesse" class="radio-container">
-                                        <input type="radio" name="blesse" value="non" class="input-radio">
+                                        <input type="radio" name="blesse" value="non" class="input-radio" checked>
                                         <p class="input-radio-text">Non</p>
                                     </label>
                                 </div>
@@ -101,22 +104,22 @@
 
                             <div class="input-container">
                                 <label for="nomT" class="form-label">nom du témoin  </label>
-                                <input type="text" id="nomT" name="nomT" placeholder="Nom du témoin" class="form-slim-input">
+                                <input type="text" id="nomT" name="nomT" placeholder="Nom du témoin" class="form-slim-input" required>
                             </div>
 
                                 <div class="input-container">
                                 <label for="prenomT" class="form-label">prénom du témoin</label>
-                                <input type="text" id="prenomT" name="prenomT" placeholder="Prénom du témoin" class="form-slim-input">  
+                                <input type="text" id="prenomT" name="prenomT" placeholder="Prénom du témoin" class="form-slim-input" required>  
                             </div>
 
                             <div class="input-container">
                                 <label for="adresseT" class="form-label">adresse du témoin</label>
-                                <input type="text" id="adresseT" name="adresseT" placeholder="Adresse du témoin" class="form-slim-input">  
+                                <input type="text" id="adresseT" name="adresseT" placeholder="Adresse du témoin" class="form-slim-input" required>  
                             </div>
 
                             <div class="input-container">
                                 <label for="telephoneT" class="form-label">téléphone du témoin</label>
-                                <input type="text" id="telephoneT" name="telephoneT" placeholder="Téléphone du témoin" class="form-slim-input">  
+                                <input type="text" id="telephoneT" name="telephoneT" placeholder="Téléphone du témoin" class="form-slim-input" required>  
                             </div>
 
                         </div>
@@ -136,9 +139,7 @@
                         <span class="datas-title">supprimer ?</span>
 
                         <?php
-                            if (file_exists("../db/InfoAssure/".$_SESSION['identifiants']."/constats/tempTemoin.csv")) {
-
-                                if ($ft = fopen("../db/InfoAssure/".$_SESSION['identifiants']."/constats/tempTemoin.csv", 'r')) {
+                            if ($ft = verificationFichier("../db/InfoAssure/".$_SESSION['identifiants']."/constats/tempTemoin.csv", 'r')) {
                                     $i = 0;
 
                                     while ($data = fgetcsv($ft, 1000,';')) {
@@ -154,7 +155,6 @@
                                     }
 
                                     fclose($ft);
-                                }
                             }
                         ?>
                     </div>

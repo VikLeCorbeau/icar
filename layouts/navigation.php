@@ -47,10 +47,10 @@
                                             switch ($_SESSION['profil']) {
                                                 case "assure":?>
                                                     <li class="nav-side-link-dropdown-li"><a href="../src/ajoutConstat1.php">Déclarer un constat</a></li>
-                                                    <li class="nav-side-link-dropdown-li"><a href="mesContrats.php">Voir mes contrats d'assurance</a></li>
-                                                    <li class="nav-side-link-dropdown-li"><a href="certificatCession1.php">Je vends mon véhicule</a></li>
-                                                    <li class="nav-side-link-dropdown-li"><a href="contacterassurance.php">Contacter mon assurance</a></li>
-                                                    <li class="nav-side-link-dropdown-li"><a href="historique_declarationsinistre.php">Mes déclarations de constat</a></li>
+                                                    <li class="nav-side-link-dropdown-li"><a href="../pages/mesContrats.php">Voir mes contrats d'assurance</a></li>
+                                                    <li class="nav-side-link-dropdown-li"><a href="../pages/certificatCession1.php">Je vends mon véhicule</a></li>
+                                                    <li class="nav-side-link-dropdown-li"><a href="../pages/contacterassurance.php">Contacter mon assurance</a></li>
+                                                    <li class="nav-side-link-dropdown-li"><a href="../pages/mesConstats.php">Mes déclarations de constat</a></li>
                                                 <?php break;
                                                 case "gestionnaire":?>
                                                     <li class="nav-side-link-dropdown-li"><a href="">Voir mes assurés</a></li>

@@ -1,32 +1,32 @@
 function retirerT(){
 
-    let id = this.id
-    let toRemove = []
-    let datas = []
+    let id = this.id;
+    let toRemove = [];
+    let datas = [];
 
     let datasGrid = document.getElementById("witness-grid")
 
     if (datasGrid.hasChildNodes()) {
-        let children = datasGrid.childNodes
+        let children = datasGrid.childNodes;
       
         for (let i = 0; i < children.length; i++) {
             if (children[i].id == id) {
-                toRemove.push(children[i])
-                datas.push(children[i].innerText)
+                toRemove.push(children[i]);
+                datas.push(children[i].innerText);
             }
         }
 
         for (let j = 0; j < toRemove.length; j++) {
-            toRemove[j].parentNode.removeChild(toRemove[j])
+            toRemove[j].parentNode.removeChild(toRemove[j]);
         }
 
-        datas.pop()
+        datas.pop();
     }
 
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function(){
         if (this.readyState==4 && this.status==200) {
-            console.log(this.responseText)
+            console.log(this.responseText);
         }
     }
 
@@ -36,50 +36,50 @@ function retirerT(){
 }
 
 function ajouterT(){
-    let nom = document.getElementById("nomT").value
-    let prenom = document.getElementById("prenomT").value
-    let adresse = document.getElementById("adresseT").value
-    let tel = document.getElementById("telephoneT").value
+    let nom = document.getElementById("nomT").value;
+    let prenom = document.getElementById("prenomT").value;
+    let adresse = document.getElementById("adresseT").value;
+    let tel = document.getElementById("telephoneT").value;
 
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function(){
         if (this.readyState==4 && this.status==200) {
-            let datasGrid = document.getElementById("witness-grid")
+            let datasGrid = document.getElementById("witness-grid");
 
-            let currentId = parseInt(datasGrid.dataset.row)
+            let currentId = parseInt(datasGrid.dataset.row);
 
-            let temoin = JSON.parse(this.responseText)
+            let temoin = JSON.parse(this.responseText);
 
             
             for (let i = 0; i < temoin.length; i++) {
                 let champ = temoin[i];
 
-                let element = document.createElement("span")
+                let element = document.createElement("span");
 
-                element.innerHTML = champ
-                element.classList.add("datas-data")
-                element.id = currentId
+                element.innerHTML = champ;
+                element.classList.add("datas-data");
+                element.id = currentId;
 
-                datasGrid.appendChild(element)
+                datasGrid.appendChild(element);
             }
 
-            let deleteSpan = document.createElement("span")
-            deleteSpan.classList.add("datas-data")
-            deleteSpan.id = currentId
+            let deleteSpan = document.createElement("span");
+            deleteSpan.classList.add("datas-data");
+            deleteSpan.id = currentId;
 
 
-            let dlt = document.createElement("img")
+            let dlt = document.createElement("img");
             
-            dlt.src = '../assets/svg/icons/delete.svg'
-            dlt.classList.add("datas-svg")
-            dlt.id = currentId
+            dlt.src = '../assets/svg/icons/delete.svg';
+            dlt.classList.add("datas-svg");
+            dlt.id = currentId;
             dlt.addEventListener('click', retirerT, false);
 
-            deleteSpan.appendChild(dlt)
-            datasGrid.appendChild(deleteSpan)
+            deleteSpan.appendChild(dlt);
+            datasGrid.appendChild(deleteSpan);
 
-            currentId++
-            datasGrid.dataset.row = currentId
+            currentId++;
+            datasGrid.dataset.row = currentId;
         }
     };
     xhttp.open("POST", "ajouterTemoin.php",true);
