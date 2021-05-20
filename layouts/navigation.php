@@ -5,9 +5,11 @@
     <div class="nav-container-1440">
 
         <div class="nav-logo-container">
-            <svg aria-hidden="true" class="logo">
-                <use xlink:href="../assets/svg/logo/logo.svg#logo"></use>
-            </svg>
+            <a href="../accueil.php">
+                <svg aria-hidden="true" class="logo">
+                    <use xlink:href="../assets/svg/logo/logo.svg#logo"></use>
+                </svg>
+            </a>
         </div>
 
         <?php if (isset($_SESSION['profil'])) { ?>

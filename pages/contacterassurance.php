@@ -13,7 +13,6 @@
         <title>Contact</title>
 
         <link href="../css/generics.css" rel="stylesheet">
-        <link href="../css/visiteur.css" rel="stylesheet">
         <link href="../css/boxes.css" rel="stylesheet">
         <link href="../css/form.css" rel="stylesheet">
         <link href="../css/contact.css" rel="stylesheet">
@@ -41,10 +40,15 @@
 						<div class="contact-left-title-container">
 							<h1 class="contact-title">répertoire</h1>
 						</div>
-						<ul class="contact-left-list">
-							<li class="contact-left-name">Michel Platini (MAIF)<li>
-							<li class="contact-left-name">Pascal Dupraz (Pacifica)<li>
-							<li class="contact-left-name">Brandon Mac (SJF)<li>
+						<ul class="contact-left-list" id="nom">
+                            <li class="contact-left-name" onclick="nouveauMessage()">Nouveau Message</li>
+                            <?php 
+                                $files = $scanned_directory = array_diff(scandir("../db/InfoAssure/".$_SESSION['identifiants']."/messagerie"), array('..','.'));
+                                foreach ($files as $file) {
+                                    $fic = explode('.', $file);
+                                    echo "<li class='contact-left-name' onclick='affichage(this.textContent)'>".$fic[0]."</li>";
+                                }
+                             ?>
 						</ul>
 					</div>
 
@@ -55,15 +59,13 @@
 							<h1 class="contact-title">en relation avec :</h1>
 
 							<div class="contact-right-top-contact-container">
-                                <p class="contact-info contact-info-primary">Michel Platini (MAIF)</p>
-                                <p class="contact-info contact-info-secondary">07 09 98 87 89 - michel.platini@icar.contact.fr</p>
+                                <p class="contact-info contact-info-primary" id="first"></p>
+                                <p class="contact-info contact-info-secondary" id="second"></p>
 							</div>
 
 						</div>
 
-                        <div class="contact-right-middle">
-                            <p class="contact-message-container my-message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel ipsum in nibh condimentum dapibus eu euismod augue. Nulla ut vestibulum erat. Cras nec feugiat magna. Sed sed vulputate enim.</p>
-                            <p class="contact-message-container other-message">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="contact-right-middle" id="discussion">
                         </div>
 
                         <div class="contact-right-bottom">
@@ -74,7 +76,7 @@
 
                             <div class="contact-button-container">
 
-                                <button type="button" class="button button--light round-button">
+                                <button type="button" class="button button--light round-button" onclick="envoyer()">
                                     <p class="button-text">Envoyer</p>
                                     <img class="button-svg" src="../assets/svg/icons/back.svg" style="transform: rotate(90deg);">
                                 </button>
@@ -94,6 +96,68 @@
         <?php include("../layouts/footer.php"); ?>  
 
     </div> 
+    <script type="text/javascript">
+        function nouveauMessage(){
+            assurance = prompt("Entrez le nom de l'assurance à contacter");
+            liste = document.getElementById("nom");
+            let li = document.createElement("li");
+            let text = document.createTextNode(assurance);
+            li.className = "contact-left-name";
+            li.setAttribute("onclick", "affichage(this.textContent)");
+            li.appendChild(text);
+            liste.appendChild(li);
+
+        }
+        function envoyer(){
+            texte = document.getElementById("contact-message").value;
+            discussion = document.getElementById("discussion");
+            assureur = document.getElementById("first").textContent;
+            console.log(assureur);
+            let xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function(){
+                if (this.readyState==4 && this.status==200) {
+                    let message = document.createElement("p");
+                    message.className = "contact-message-container my-message";
+                    message.innerHTML = this.responseText;
+                    discussion.appendChild(message);
+                }
+            };  
+            xhttp.open("POST", "../src/ajouterMessage.php",true);
+            xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhttp.send("message="+texte+"&assureur="+assureur);
+        }
+        function affichage(assureur){
+            document.getElementById("first").innerHTML = assureur;
+            document.getElementById("second").innerHTML = assureur+"@icar.contact.fr";
+            discussion = document.getElementById("discussion");
+            while(discussion.firstChild){
+                discussion.removeChild(discussion.firstChild);
+            }
+            let xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function(){
+                if (this.readyState==4 && this.status==200) {
+                    let affichage = JSON.parse(this.responseText);
+                    console.log(affichage);
+                    for (var i = 0; i < affichage.length; i++) {
+                        if(affichage[i][0] == "me"){
+                            let message = document.createElement("p");
+                            message.className = "contact-message-container my-message";
+                            message.innerHTML = affichage[i][1];
+                            discussion.appendChild(message);
+                        }else if (affichage[i][0] == "assureur") {
+                            let message = document.createElement("p");
+                            message.className = "contact-message-container other-message";
+                            message.innerHTML = affichage[i][1];
+                            discussion.appendChild(message);
+                        }
+                    }
+                }
+            };  
+            xhttp.open("POST", "../src/afficherMessages.php",true);
+            xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhttp.send("assureur="+assureur);
+        }
+    </script>
 
 </body>
 </html>
