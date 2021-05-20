@@ -1,0 +1,5 @@
+/* ILLUSTRATION */
+
+.illustration-connection {
+    width: clamp(450px, 700px, 750px);
+}

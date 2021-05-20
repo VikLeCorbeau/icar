@@ -1,0 +1,147 @@
+/* CONNECTION - FORM */
+
+.form-connection {
+    width: clamp(300px, 450px, 450px);
+}
+
+.form-connection-title {
+    font-size: 2.8rem;
+    font-weight: 300;
+}
+
+.form-connection-input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+
+    margin-top: 40px;
+}
+
+.form-connection-label {
+    margin-bottom: 10px;
+}
+
+.form-connection-input {
+    width: calc(100% - 20px);
+
+    padding: 15px 0px 15px 20px;
+
+    border-radius: 5px;
+    border: 1px var(--dark-grey) solid;
+}
+
+/* SLIM FORM */
+
+.form {
+    position: relative;
+
+    width: 100%;
+}
+
+.grid-form {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-gap: 25px 3.5%;
+
+    margin-bottom: 50px;
+}
+
+.form-title-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    width: 100%;
+
+    margin-bottom: 15px;
+}
+
+.form-title {
+    font-size: 16px;
+    font-variant: small-caps;
+    letter-spacing: 0.10rem;
+    font-weight: 600;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+
+    text-align: left;
+}
+
+.form-label, .radio-title {
+    font-variant: small-caps;
+    font-weight: 300;
+    letter-spacing: 0.10rem;
+}
+
+.form-slim-input {
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--dark-grey);
+
+    margin-top: 10px;
+
+    font-weight: 400;
+}
+
+/* RADIO */
+
+.input-radio-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 10px;
+}
+
+.radio-container {
+    display: flex;
+    align-items: center;
+}
+
+.input-radio {
+    margin-right: 10px;
+}
+
+/* DATAS */
+
+.datas-grid {
+    display: grid;
+
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+
+    margin-bottom: 50px;
+}
+
+.datas-grid > span {
+    text-align: center;
+    vertical-align: middle;
+
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+
+    padding: 20px;
+}
+
+.datas-title {
+    font-variant: small-caps;
+    font-weight: 600;
+    letter-spacing: 0.10rem;
+
+}
+
+.datas-data {
+    font-weight: 100;
+}
+
+.datas-svg {
+    margin-top: 2px;
+
+    height: 22px;
+    width: 22px;
+}
