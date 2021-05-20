@@ -81,7 +81,7 @@
                                 </div>
                             </a>
 
-                            <a href="historique_declarationsinistre.php">
+                            <a href="mesConstats.php">
                                 <div class="menu-button-container">
                                     <div class="menu-button">
                                         <img class="menu-button-svg" src="../assets/svg/menu_icons/menu_see_constats.svg">
