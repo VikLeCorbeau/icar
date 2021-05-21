@@ -73,6 +73,14 @@
     text-align: left;
 }
 
+.span-2 {
+    grid-column: span 2;
+}
+
+.span-3 {
+    grid-column: span 3;
+}
+
 .form-label, .radio-title {
     font-variant: small-caps;
     font-weight: 300;

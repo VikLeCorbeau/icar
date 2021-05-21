@@ -1,5 +1,6 @@
 <?php 
     session_start();
+    require_once("../src/fonctions.php");
  ?>
 <!DOCTYPE html>
 <html>
@@ -42,34 +43,38 @@
                         </div>
                         <div class="box-informations-container">
                         <?php 
+                            if (isset($_GET['assure'], $_GET['immatriculation'])) {
                                 $nomAssure = $_GET['assure'];
                                 $immatriculation = $_GET['immatriculation'];
-								$fa = fopen("../db/InfoAssure/".$nomAssure."/contrats.csv", 'r');
-								while ($data = fgetcsv($fa, 1000, ';')) {
-									if ($immatriculation == $data[7]) {
-										echo "<div class='box-informations'>";
-										echo "<h3 class='box-information box-information--primary'>Nom de l'assurance :</h3>";
-										echo "<h3 class='box-information box-information--secondary'>".$data[5]."</h3>";
-										echo "</div>";
-										echo "<div class='box-informations'>";
-										echo "<h3 class='box-information box-information--primary'>Numéro du contrat d'assurance :</h3>";
-										echo "<h3 class='box-information box-information--secondary'>".$data[6]."</h3>";
-										echo "</div>";
-										echo "<div class='box-informations'>";
-										echo "<h3 class='box-information box-information--primary'>Numéro d'immatriculation :</h3>";
-										echo "<h3 class='box-information box-information--secondary'>".$data[7]."</h3>";
-										echo "</div>";
-										echo "<div class='box-informations'>";
-										echo "<h3 class='box-information box-information--primary'>Date de validité :</h3>";
-										echo "<h3 class='box-information box-information--secondary'>".$data[8]."</h3>";
-										echo "</div>";
-										echo "<div class='box-informations'>";
-										echo "<h3 class='box-information box-information--primary'>Modèle du véhicule :</h3>";
-										echo "<h3 class='box-information box-information--secondary'>".$data[9]."</h3>";
-										echo "</div>";
-									}
-								}
-								fclose($fa);
+								if ($fa = fopen("../db/InfoAssure/".$nomAssure."/contrats.csv", 'r')) {
+                                    while ($data = fgetcsv($fa, 1000, ';')) {
+                                        if ($immatriculation == $data[7]) {
+                                            echo "<div class='box-informations'>";
+                                            echo "<h3 class='box-information box-information--primary'>Nom de l'assurance :</h3>";
+                                            echo "<h3 class='box-information box-information--secondary'>".$data[5]."</h3>";
+                                            echo "</div>";
+                                            echo "<div class='box-informations'>";
+                                            echo "<h3 class='box-information box-information--primary'>Numéro du contrat d'assurance :</h3>";
+                                            echo "<h3 class='box-information box-information--secondary'>".$data[6]."</h3>";
+                                            echo "</div>";
+                                            echo "<div class='box-informations'>";
+                                            echo "<h3 class='box-information box-information--primary'>Numéro d'immatriculation :</h3>";
+                                            echo "<h3 class='box-information box-information--secondary'>".$data[7]."</h3>";
+                                            echo "</div>";
+                                            echo "<div class='box-informations'>";
+                                            echo "<h3 class='box-information box-information--primary'>Date de validité :</h3>";
+                                            echo "<h3 class='box-information box-information--secondary'>".$data[8]."</h3>";
+                                            echo "</div>";
+                                            echo "<div class='box-informations'>";
+                                            echo "<h3 class='box-information box-information--primary'>Modèle du véhicule :</h3>";
+                                            echo "<h3 class='box-information box-information--secondary'>".$data[9]."</h3>";
+                                            echo "</div>";
+                                        }
+                                    }
+                                    fclose($fa);
+                                }
+                            }
+                                
 							?>
                         </div>
 

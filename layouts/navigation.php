@@ -15,7 +15,7 @@
         <?php if (isset($_SESSION['profil'])) { ?>
         
             <div class="nav-right-container">
-                <?php if ($_SESSION['profil'] === 'police') { ?>
+                <?php if ($_SESSION['profil'] === 'police' || $_SESSION['profil'] === 'gestionnaire') { ?>
 
                     <div class="nav-search-container">
                         <div class="nav-search">
@@ -55,14 +55,14 @@
                                                     <li class="nav-side-link-dropdown-li"><a href="../pages/mesConstats.php">Mes déclarations de constat</a></li>
                                                 <?php break;
                                                 case "gestionnaire":?>
-                                                    <li class="nav-side-link-dropdown-li"><a href="">Voir mes assurés</a></li>
-                                                    <li class="nav-side-link-dropdown-li"><a href="">Voir mes messages</a></li>
-                                                    <li class="nav-side-link-dropdown-li"><a href="">Voir les traitements en attente/a></li>
-                                                    <li class="nav-side-link-dropdown-li"><a href="">Ouvrir un nouveau compte assuré</a></li>
+                                                    <li class="nav-side-link-dropdown-li"><a href="../pages/mesAssures.php">Voir mes assurés</a></li>
+                                                    <li class="nav-side-link-dropdown-li"><a href="../pages/">Voir mes messages</a></li>
+                                                    <li class="nav-side-link-dropdown-li"><a href="../pages/traitements.php">Voir les traitements en attente</a></li>
+                                                    <li class="nav-side-link-dropdown-li"><a href="../pages/creerAssure.php">Ouvrir un nouveau compte assuré</a></li>
                                                     <?php break;
                                                 case "admin":?>
-                                                    <li class="nav-side-link-dropdown-li"><a href="">Logs de modifications</a></li>
-                                                    <li class="nav-side-link-dropdown-li"><a href="">Erreurs signalées</a></li>
+                                                    <li class="nav-side-link-dropdown-li"><a href="../pages/logs.php">Logs de modifications</a></li>
+                                                    <li class="nav-side-link-dropdown-li"><a href="../pages/listeErreurs.php">Erreurs signalées</a></li>
                                                     <?php break;
                                             }
                                             ?>
@@ -92,22 +92,38 @@
                                             case "admin":?>
                                                 <use xlink:href="../assets/svg/type/type.svg#type_admin"></use>
                                                 <?php break;
+                                            case "visiteur":?>
+                                                <img src="../assets/svg/icons/signin.svg"">
+                                                <?php break;
                                         }
                                     ?>
                                 </svg>
-                                <p class="nav-side-svg-text"><?php if (isset($_SESSION['identifiants'])) { echo ($_SESSION['identifiants']); } ?></p>
+                                <p class="nav-side-svg-text">
+                                    <?php 
+                                        if (isset($_SESSION['identifiants'], $_SESSION['profil'])) {
+                                            if ($_SESSION['profil'] != "visiteur") {
+                                                echo ($_SESSION['identifiants']);  
+                                            } else {
+                                                echo "<a href='../src/deconnexion.php' style='margin-left: 10px;'>Connexion</a>";
+                                            }
+                                        } 
+                                    ?>
+                                </p>
 
                             </div>
-
+                            <?php if ($_SESSION['profil'] !== 'visiteur') { ?>
                             <div class="nav-side-link-dropdown-container">
                                 <ul class="nav-side-link-dropdown-ul">
                                     <?php 
                                         if ($_SESSION['profil'] === 'assure') { ?>    
                                         <li class="nav-side-link-dropdown-li"><a href="../pages/declarer_changementcoordonnees.php">Changer mes coordonnées</a></li>
                                     <?php } ?>
+                                      
                                     <li class="nav-side-link-dropdown-li"><a href="../src/deconnexion.php">Déconnexion</a></li>
+                                    
                                 </ul> 
                             </div>
+                            <?php } ?>
 
                         </div>
 
