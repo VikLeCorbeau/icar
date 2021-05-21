@@ -336,67 +336,67 @@
 						</label>
 
 						<label for="circonstance" class="radio-grid-label">
-							<input type="radio" name="circonstance" class="radio-grid-input">
+							<input type="radio" name="circonstance" class="radio-grid-input" value="Prenait un stationnement">
 							<p class="radio-grid-text">Prenait un stationnement</p>
 						</label>
 
 						<label for="circonstance" class="radio-grid-label">
-							<input type="radio" name="circonstance" class="radio-grid-input">
+							<input type="radio" name="circonstance" class="radio-grid-input" value="Sortait d'un parking, d'un lieu privé, d'un chemin de terre">
 							<p class="radio-grid-text">Sortait d'un parking, d'un lieu privé, d'un chemin de terre</p>
 						</label>
 
 						<label for="circonstance" class="radio-grid-label">
-							<input type="radio" name="circonstance" class="radio-grid-input">
+							<input type="radio" name="circonstance" class="radio-grid-input" value="S'engageait dans un parking, un lieu privé, un chemin de terre">
 							<p class="radio-grid-text">S'engageait dans un parking, un lieu privé, un chemin de terre</p>
 						</label>
 
 						<label for="circonstance" class="radio-grid-label">
-							<input type="radio" name="circonstance" class="radio-grid-input">
+							<input type="radio" name="circonstance" class="radio-grid-input" value="S'engageait sur une place à sens giratoire">
 							<p class="radio-grid-text">S'engageait sur une place à sens giratoire</p>
 						</label>
 
 						<label for="circonstance" class="radio-grid-label">
-							<input type="radio" name="circonstance" class="radio-grid-input">
+							<input type="radio" name="circonstance" class="radio-grid-input" value="Roulait sur une place à sens giratoire">
 							<p class="radio-grid-text">Roulait sur une place à sens giratoire</p>
 						</label>
 
 						<label for="circonstance" class="radio-grid-label">
-							<input type="radio" name="circonstance" class="radio-grid-input">
+							<input type="radio" name="circonstance" class="radio-grid-input" value="Heurtait à l'arrière, en roulant dans le même sens et sur une même file">
 							<p class="radio-grid-text">Heurtait à l'arrière, en roulant dans le même sens et sur une même file</p>
 						</label>
 
 						<label for="circonstance" class="radio-grid-label">
-							<input type="radio" name="circonstance" class="radio-grid-input">
+							<input type="radio" name="circonstance" class="radio-grid-input" value="Roulait dans le même sens et sur une file différente">
 							<p class="radio-grid-text">Roulait dans le même sens et sur une file différente</p>
 						</label>
 
 						<label for="circonstance" class="radio-grid-label">
-							<input type="radio" name="circonstance" class="radio-grid-input">
+							<input type="radio" name="circonstance" class="radio-grid-input" value="Changeait de file">
 							<p class="radio-grid-text">Changeait de file</p>
 						</label>
 
 						<label for="circonstance" class="radio-grid-label">
-							<input type="radio" name="circonstance" class="radio-grid-input">
+							<input type="radio" name="circonstance" class="radio-grid-input" value="Doublait">
 							<p class="radio-grid-text">Doublait</p>
 						</label>
 
 						<label for="circonstance" class="radio-grid-label">
-							<input type="radio" name="circonstance" class="radio-grid-input">
+							<input type="radio" name="circonstance" class="radio-grid-input" value="Virait à droite">
 							<p class="radio-grid-text">Virait à droite</p>
 						</label>
 
 						<label for="circonstance" class="radio-grid-label">
-							<input type="radio" name="circonstance" class="radio-grid-input">
+							<input type="radio" name="circonstance" class="radio-grid-input" value="Reculait">
 							<p class="radio-grid-text">Reculait</p>
 						</label>
 
 						<label for="circonstance" class="radio-grid-label">
-							<input type="radio" name="circonstance" class="radio-grid-input">
+							<input type="radio" name="circonstance" class="radio-grid-input" value="Empiétait sur une voir réservée à la circulation en sens inverse">
 							<p class="radio-grid-text">Empiétait sur une voir réservée à la circulation en sens inverse</p>
 						</label>
 
 						<label for="circonstance" class="radio-grid-label">
-							<input type="radio" name="circonstance" class="radio-grid-input">
+							<input type="radio" name="circonstance" class="radio-grid-input" value="Venait de droite(dans un carrefour)">
 							<p class="radio-grid-text">Venait de droite(dans un carrefour)</p>
 						</label>
 

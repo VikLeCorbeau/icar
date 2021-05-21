@@ -42,6 +42,8 @@
                         </div>
                         <div class="box-informations-container">
                         <?php 
+                                $nomAssure = $_GET['assure'];
+                                $immatriculation = $_GET['immatriculation'];
 								$fa = fopen("../db/InfoAssure/".$nomAssure."/contrats.csv", 'r');
 								while ($data = fgetcsv($fa, 1000, ';')) {
 									if ($immatriculation == $data[7]) {
