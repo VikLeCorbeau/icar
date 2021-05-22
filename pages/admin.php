@@ -34,7 +34,36 @@
                 </div>
 
 
-                ICI
+                <div class="menu-container menu-3">
+
+						<div class="menu-buttons-container">
+
+                            <a href="logs.php">
+                                <div class="menu-button-container">
+                                    <div class="menu-button">
+                                        <img class="menu-button-svg" src="../assets/svg/menu_icons/menu_logs.svg">
+                                        <p class="menu-button-text">voir les logs des modifications</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="listeErreurs.php">
+                                <div class="menu-button-container">
+                                    <div class="menu-button">
+                                        <img class="menu-button-svg" src="../assets/svg/menu_icons/menu_errors.svg">
+                                        <p class="menu-button-text">voir les erreurs signalées</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+
+
+                    <div class="menu-illustration-container">
+                        <img class="menu-illustration" src="../assets/svg/illustrations/illustration_admin.svg">
+                    </div>
+
+				</div> 
 
 
             </div>

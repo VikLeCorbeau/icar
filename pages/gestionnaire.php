@@ -74,6 +74,17 @@
                                 </div>
                             </a>
 
+                            <a href="creerContrat.php">
+                                <div class="menu-button-container">
+                                    <div class="menu-button">
+                                        <img class="menu-button-svg" src="../assets/svg/menu_icons/menu_add_contract.svg">
+                                        <p class="menu-button-text">ajouter un contrat</p>
+                                    </div>
+                                </div>
+                            </a>
+
+
+
 						</div>
 
 

@@ -67,7 +67,7 @@
 
 											<div class='box-title-container'>
 												<h2 class='box-title'>" . $data[3] . " " . $data[2] . "</h2>
-												<a href='creerContrat.php?assure=" . $data[3] . $data[2] . "'>
+												<a href='creerContrat.php?assure=" . $data[2] . $data[3] . "'>
 													<div class='box-actions-container'>
 														<img class='box-actions-svg' src='../assets/svg/icons/gestionnaire_add_contract.svg'>
 													</div>
