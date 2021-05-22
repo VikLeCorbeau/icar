@@ -44,6 +44,23 @@ for ($i=0; $i < count($_FILES["photo"]["name"]); $i++) {
 	  }
 	}
 }
-//header('Location: enregistrerConstat.php?numero='.$numeroConstat);
-//exit();
+
+#traitements, ajouter l'immatriculation 
+$traitements = array(array('constat', $numeroConstat, $_SESSION['identifiants']));
+$ft = fopen("../db/traitements.csv", 'a+');
+foreach ($traitements as $element) {
+	fputcsv($ft, $element, ';');
+}
+fclose($ft);
+
+#logs
+$fl = fopen("../db/logs.csv", 'a+');
+$date = date('d-m-y h:i:s');
+$donnees = array(array($date, 'constat', $_SESSION['profil'].':'.$_SESSION['identifiants'], $_SESSION['profil'].':'.$_SESSION['identifiants'], 'nouvelle déclaration de constat'));
+foreach ($donnees as $element) {
+	fputcsv($fl, $element, ';');
+}
+fclose($fl);
+header('Location: ../accueil.php');
+exit();
 ?>

@@ -34,6 +34,13 @@ foreach ($contrat as $element) {
 	fputcsv($f, $element, ';');
 }
 fclose($f);
+$fl = fopen("../db/logs.csv", 'a+');
+$date = date('d-m-y h:i:s');
+$donnees = array(array($date, 'contrat', $_SESSION['profil'].':'.$_SESSION['identifiants'], 'assure:'.$prenom.$nom, 'nouveau contrat'));
+foreach ($donnees as $element) {
+	fputcsv($fl, $element, ';');
+}
+fclose($fl);
  ?>
  <!DOCTYPE html>
  <html>

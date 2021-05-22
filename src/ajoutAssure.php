@@ -43,7 +43,13 @@ if ($fa = fopen("../db/InfoAssure/".$nom.$prenom."/informations.csv", 'a+')) {
 	}
 }
 fclose($fa);
-
+$fl = fopen("../db/logs.csv", 'a+');
+$date = date('d-m-y h:i:s');
+$donnees = array(array($date, 'assuré', $_SESSION['profil'].':'.$_SESSION['identifiants'], 'assure:'.$nom.$prenom , "ajout d'un assuré"));
+foreach ($donnees as $element) {
+	fputcsv($fl, $element, ';');
+}
+fclose($fl);
 header('Location: ../pages/creerAssure.php');
 exit();
 ?>

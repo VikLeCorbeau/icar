@@ -32,8 +32,8 @@
                 <form action="../src/verificationConnexion.php" method="POST" class="form-connection">
                     <h1 class="form-connection-title">Content de vous revoir !</h1>
                     <div class="form-connection-input-container">
-                        <label for="id" class="form-connection-label">E-mail</label>
-                        <input type="text" name="id" id="id" class="form-connection-input" placeholder="Entrez votre adresse mail" required>
+                        <label for="id" class="form-connection-label">Identifiant</label>
+                        <input type="text" name="id" id="id" class="form-connection-input" placeholder="Entrez votre identifiant" required>
                     </div>
                     <div class="form-connection-input-container">
                         <label for="password" class="form-connection-label">Mot de passe</label>

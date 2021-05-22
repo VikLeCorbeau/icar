@@ -80,19 +80,19 @@
 
 								<div class='box-actions-container'>
 									<div class='box-action'>
-										<a href='visualiserConstat.php?numero='" . $i . ">
+										<a href='visualiserConstat.php?numero='".$i.">
 											<img src='../assets/svg/icons/see.svg' class='box-action-svg'>
 										</a>
 									</div>
 
 									<div class='box-action'>
-										<a href='supprimerConstat.php?numero='" . $i . ">
+										<a href='supprimerConstat.php?numero='".$i.">
 											<img src='../assets/svg/icons/delete.svg' class='box-action-svg'>
 										</a>
 									</div>
 
 									<div class='box-action'>
-										<a href='ajoutImageConstatConstat.php?numero='" . $i . ">
+										<a href='ajoutImageConstatConstat.php?numero='".$i.">
 											<img src='../assets/svg/icons/insured_add_images.svg' class='box-action-svg'>
 										</a>
 									</div>
