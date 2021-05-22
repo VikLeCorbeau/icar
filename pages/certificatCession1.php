@@ -41,7 +41,6 @@
 					</div>
 
 					<div class="grid-form">
-						
 						<div class="input-container">
 							<label for="immatriculation" class="form-label">numéro d'immatriculation</label>
 							<input type="text" name="immatriculation" class="form-slim-input" placeholder="Numéro d'immatriculation" required>
