@@ -1,6 +1,10 @@
 <?php
     session_start();
     require_once("../src/fonctions.php");
+
+	if (isset($_GET['imm'])) {
+		$immatriculation = $_GET['imm'];
+	}
 ?>
 
 <!DOCTYPE html>

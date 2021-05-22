@@ -1,7 +1,14 @@
 <?php
     session_start();
     require_once("../src/fonctions.php");
+<<<<<<< HEAD
     $immatriculation = $_GET['imm'];
+=======
+
+	if (isset($_GET['imm'])) {
+		$immatriculation = $_GET['imm'];
+	}
+>>>>>>> 6bead6cb3d072d40a8f3ed3f0a78a11aa2daffe1
 ?>
 
 <!DOCTYPE html>
@@ -35,8 +42,14 @@
                     </div>
                 </div>
 
+<<<<<<< HEAD
                 <?php  
                 echo "<form id='cession2' class='form' action='../src/enregistrerCession2.php?imm=".$immatriculation."' method='POST'>";
+=======
+
+                <?php  
+                	echo "<form id='cession2' class='form' action='../src/enregistrerCession2.php?imm=".$immatriculation."' method='POST'>";
+>>>>>>> 6bead6cb3d072d40a8f3ed3f0a78a11aa2daffe1
                 ?>
 
 					<div class="form-title-container">
@@ -44,6 +57,11 @@
 					</div>
 
 					<div class="grid-form">
+
+						<?php 
+							if ($fi = verificationFichier("../db/InfoAssure/".$_SESSION['identifiants']."/informations.csv", 'r')) {
+								while ($data = fgetcsv($fi, 1000, ';')) {
+						?>
 
 						<div class="input-container">
 							<p class="radio-title">personne physique/morale</p>
@@ -87,7 +105,11 @@
 						?>
 						<div class="input-container">
 							<label for="nom" class="form-label">nom</label>
+<<<<<<< HEAD
 							<input type="text" name="nom" class="form-slim-input" placeholder="Nom" value="<?php  echo $data[2];?>" required>
+=======
+							<input type="text" name="nom" class="form-slim-input" placeholder="Nom" value="<?php echo $data[2]; ?>" required>
+>>>>>>> 6bead6cb3d072d40a8f3ed3f0a78a11aa2daffe1
 						</div>
 
 						<div class="input-container">
@@ -113,11 +135,14 @@
 						<div class="input-container">
 							<label for="cp" class="form-label">code postal</label>
 							<input type="text" name="cp" class="form-slim-input" placeholder="Code Postal" value="<?php echo $data[8]; ?>" required>
+<<<<<<< HEAD
 						</div>
 
 						<div class="input-container">
 							<label for="name" class="form-label">nom</label>
 							<input type="text" name="name" class="form-slim-input" placeholder="Nom" value="<?php  ?>" required>
+=======
+>>>>>>> 6bead6cb3d072d40a8f3ed3f0a78a11aa2daffe1
 						</div>
 
 						<div class="input-container">
@@ -126,7 +151,16 @@
 						</div>
 
 					</div>
+<<<<<<< HEAD
 					<?php } ?>
+=======
+
+					<?php 
+							}
+						} 
+					?>
+
+>>>>>>> 6bead6cb3d072d40a8f3ed3f0a78a11aa2daffe1
 					<div class="form-title-container">
 						<h1 class="form-title">certifications</h1>
 					</div>

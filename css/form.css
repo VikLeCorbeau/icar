@@ -201,6 +201,13 @@
     height: 100%;
 }
 
+.select-with-label {
+    height: 50px!important;
+    margin-top: 10px;
+
+    border-radius: 5px;
+}
+
 .select {
     width: 100%;
     height: 100%;

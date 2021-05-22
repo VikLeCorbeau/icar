@@ -6,7 +6,7 @@
                 </div>
                 <div class="footer-box">
                     <h1 class="footer-title">support</h1>
-                    <h2 class="footer-text"><a href="#">Signaler une erreur aux adminstrateurs</a></h2>
+                    <h2 class="footer-text"><a href="../pages/signalerErreur.php">Signaler une erreur aux adminstrateurs</a></h2>
                 </div>
             </div>
         </footer>

@@ -40,6 +40,8 @@
 }
 
 .box-title-container {
+    position: relative;
+
     border-bottom: 1px solid black;
     padding: 20px 0 20px 0;
 }
@@ -47,6 +49,26 @@
 .box-title {
     font-size: 1.5rem;
     font-weight: 700;
+}
+
+.box-actions-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    height: 100%;
+    width: 16%;
+
+    border-left: 1px solid black;
+}
+
+.box-actions-svg {
+    height: 22px;
+    width: 22px;
 }
 
 .box-informations-container {
@@ -152,17 +174,17 @@
 
 /* ACTIONS */
 
-.box-actions-container {
+.box-constats-actions-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.box-action {
+.box-constats-action {
 
 }
 
-.box-action-svg {
+.box-constats-action-svg {
     height: 30px;
     width: 30px;
 

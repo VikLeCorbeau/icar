@@ -56,11 +56,9 @@
 
 						echo "
 							<div class='box box-446'>
-
 								<div class='box-title-container'>
 									<h2 class='box-title'>" . $array[0]['date'] . "</h2>
 								</div>
-
 								<div class='box-informations-container'>
 									<div class='box-informations'>
 										<h3 class='box-information box-information--primary'>Etat</h3>
@@ -75,8 +73,8 @@
 										<h3 class='box-information box-information--secondary'>A intégrer ...</h3>
 									</div>
 								</div>
-
 								<div class='box-separator box-separator-446'></div>
+<<<<<<< HEAD
 
 								<div class='box-actions-container'>
 									<div class='box-action'>
@@ -94,10 +92,25 @@
 									<div class='box-action'>
 										<a href='ajoutImageConstatConstat.php?numero='".$i.">
 											<img src='../assets/svg/icons/insured_add_images.svg' class='box-action-svg'>
+=======
+								<div class='box-constats-actions-container'>
+									<div class='box-constats-action'>
+										<a href='visualiserConstat.php?numero='".$i.">
+											<img src='../assets/svg/icons/see.svg' class='box-constats-action-svg'>
+										</a>
+									</div>
+									<div class='box-constats-action'>
+										<a href='supprimerConstat.php?numero='".$i.">
+											<img src='../assets/svg/icons/delete.svg' class='box-constats-action-svg'>
+										</a>
+									</div>
+									<div class='box-constats-action'>
+										<a href='ajoutImageConstatConstat.php?numero='".$i.">
+											<img src='../assets/svg/icons/insured_add_images.svg' class='box-constats-action-svg'>
+>>>>>>> 6bead6cb3d072d40a8f3ed3f0a78a11aa2daffe1
 										</a>
 									</div>
 								</div>
-
 							</div>
 						";
 					}
@@ -115,4 +128,3 @@
 
 </body>
 </html>
-

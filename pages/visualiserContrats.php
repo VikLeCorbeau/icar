@@ -36,7 +36,15 @@
                     </div>
 
                     <div class="back-container">
-                        <a href="visualisationPolice.php">
+                        <a href="<?php 
+						if (isset($_SESSION['profil'])) {
+							if ($_SESSION['profil'] === 'police') {
+								echo "visualisationPolice.php";
+							} elseif ($_SESSION['profil'] === 'gestionnaire') {
+								echo "mesAssures.php";
+							}
+						}
+						?>">
                             <img src="../assets/svg/icons/back.svg">
                         </a>
                     </div>
@@ -47,13 +55,26 @@
 
                     <div class="box box-610">
                         
-                        <div class="box-title-container">
-                            <h2 class="box-title">Contrat d'assurance</h2>
-                        </div>
+                        
 						<?php
 								if ($fa = verificationFichier("../db/InfoAssure/".$assure."/contrats.csv", "r")) {
 									while ($data = fgetcsv($fa, 1000, ';')) {
 										if ($data[7] == $immatriculation) {
+											echo "
+											<div class='box-title-container'>
+												<h2 class='box-title'>Contrat d'assurance</h2>";
+													if (isset($_SESSION['profil'])) {
+														if ($_SESSION['profil'] === 'gestionnaire') {
+															echo "
+																<a href='modifierContrat.php?assure=" . $data[1] . $data[0] . "'>
+																	<div class='box-actions-container'>
+																		<img class='box-actions-svg' src='../assets/svg/icons/gestionnaire_modify_contract.svg'>
+																	</div>
+																</a>
+															";
+														}
+													}
+											echo "</div>";
 											echo "<div class='box-informations-container'>";
 											
 											echo "<div class='box-informations'>";

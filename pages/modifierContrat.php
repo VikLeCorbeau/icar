@@ -1,0 +1,167 @@
+<?php
+    session_start();
+    require_once("../src/fonctions.php");
+?>
+
+<!DOCTYPE html>
+<html>
+    <head>    
+    
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TITRE</title>
+
+        <link href="../css/generics.css" rel="stylesheet">
+        <link href="../css/visiteur.css" rel="stylesheet">
+        <link href="../css/boxes.css" rel="stylesheet">
+        <link href="../css/form.css" rel="stylesheet">
+
+    </head>
+<body>
+
+    <div class="main-container">
+
+        <?php include("../layouts/navigation.php"); ?> 
+
+        <div class="container-1440">
+            <div class="content-container content-column">
+
+                <div class="content-banner"> 
+                    <div class="content-titles-container">
+                        <h1 class="content-title">Modifier contrat d'assurance</h1>
+                        <h1 class="content-subtitle">VALEUR : Véhicule</h1>
+                    </div>
+                </div>
+
+
+                <form id="modificationContrat" class="form" action="" method="POST">
+
+                        <div class="form-title-container">
+                            <h1 class="form-title">informations générales</h1>
+                        </div>
+
+                        <div class="grid-form">
+                            
+                            <div class="input-container">
+                                <label for="assurance" class="form-label">nom de l'assurance</label>
+                                <input type="text" name="assurance" class="form-large-input" placeholder="Nom de l'assurance" value="<?php  ?>" required>
+                            </div>
+
+                            <div class="input-container">
+                                <label for="numeroContrat" class="form-label">numéro du contrat d'assurance</label>
+                                <input type="text" name="numeroContrat" class="form-large-input" placeholder="Numéro du contrat d'assurance" value="<?php  ?>" required>
+                            </div>
+
+                            <div class="input-container">
+                                <label for="immatriculation" class="form-label">numéro d'immatriculation</label>
+                                <input type="text" name="immatriculation" class="form-large-input" placeholder="Numéro d'immatriculation" value="<?php  ?>" required>
+                            </div>
+
+                            <div class="input-container">
+                                <label for="validite" class="form-label">validité</label>
+                                <input type="date" name="validite" class="form-large-input" placeholder="Validité" value="<?php  ?>" required>
+                            </div>
+
+                            <div class="input-container">
+                                <label for="modele" class="form-label">modèle du véhicule</label>
+                                <input type="text" name="modele" class="form-large-input" placeholder="Modèle du véhicule" value="<?php  ?>" required>
+                            </div>
+
+                        </div>
+
+                        <div class="form-title-container">
+                            <h1 class="form-title">conducteur principal</h1>
+                        </div>
+
+                        <div class="grid-form">
+                            
+                            <div class="input-container">
+                                <label for="nomConducteur" class="form-label">nom</label>
+                                <input type="text" name="nomConducteur" class="form-large-input" placeholder="Nom" value="<?php  ?>" required>
+                            </div>
+
+                            <div class="input-container">
+                                <label for="prenomConducteur" class="form-label">prénom</label>
+                                <input type="text" name="prenomConducteur" class="form-large-input" placeholder="Prénom" value="<?php  ?>" required>
+                            </div>
+
+                            <div class="input-container">
+                                <label for="mail" class="form-label">adresse mail</label>
+                                <input type="email" name="mail" class="form-large-input" placeholder="Adresse mail" value="<?php  ?>" required>
+                            </div>
+
+                            <div class="input-container">
+                                <label for="telephone" class="form-label">téléphone</label>
+                                <input type="text" name="telephone" class="form-large-input" placeholder="Téléphone" value="<?php  ?>" required>
+                            </div>
+
+                            <div class="input-container">
+                                <label for="adresse" class="form-label">adresse</label>
+                                <input type="text" name="adresse" class="form-large-input" placeholder="Adresse" value="<?php  ?>" required>
+                            </div>
+
+                            <div class="input-container">
+                                <label for="ville" class="form-label">ville</label>
+                                <input type="text" name="ville" class="form-large-input" placeholder="Ville" value="<?php  ?>" required>
+                            </div>
+
+                            <div class="input-container">
+                                <label for="codePostal" class="form-label">code postal</label>
+                                <input type="text" name="codePostal" class="form-large-input" placeholder="Code postal" value="<?php  ?>" required>
+                            </div>
+
+                            <div class="input-container">
+                                <label for="pays" class="form-label">pays</label>
+                                <input type="text" name="pays" class="form-large-input" placeholder="Pays" value="<?php  ?>" required>
+                            </div>
+
+                        </div>
+
+                        <div class="form-title-container">
+                            <h1 class="form-title">assurance</h1>
+                        </div>
+
+                        <div class="grid-form">
+                            
+                            <div class="input-container">
+                                <label for="typeAssurance" class="form-label">type d'assurance</label>
+                                <input type="text" name="typeAssurance" class="form-large-input" placeholder="Type d'assurance" value="<?php  ?>" required>
+                            </div>
+
+                            <div class="input-container">
+                                <label for="bonus" class="form-label">bonus</label>
+                                <input type="text" name="bonus" class="form-large-input" placeholder="Bonus" value="<?php  ?>" required>
+                            </div>
+
+                            <div class="input-container">
+                                <label for="paiement" class="form-label">paiement</label>
+                                <input type="text" name="paiement" class="form-large-input" placeholder="Paiement" value="<?php  ?>" required>
+                            </div>
+
+                        </div>
+
+                        <div class="buttons-container">
+
+                            <button form="modificationContrat" type="submit" class="button button--dark">
+                                <p class="button-text">Appliquer les changements</p>
+                            </button>
+
+                            <button id="supprimerContrat" type="button" class="button button--yellow">
+                                <p class="button-text">Supprimer le contrat d'assurance</p>
+                            </button>
+
+                        </div>
+
+                </form>
+
+
+            </div>
+        </div>
+
+        <?php include("../layouts/footer.php"); ?>  
+
+    </div> 
+
+</body>
+</html>
