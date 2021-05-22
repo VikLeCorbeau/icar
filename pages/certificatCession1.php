@@ -103,7 +103,7 @@
 							</div>
 						</div>
 
-						<div class="input-container">
+						<div class="input-container span-2">
 							<label for="observation" class="form-label">motif d’absence de certificat d’immatriculation</label>
 							<textarea name="observation" class="form-textarea" placeholder="Mes observations ..." style="height: 95px;"></textarea>
 						</div>
