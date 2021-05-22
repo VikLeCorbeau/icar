@@ -1,6 +1,10 @@
 <?php
     session_start();
     require_once("../src/fonctions.php");
+
+	if (isset($_GET['imm'])) {
+		$immatriculation = $_GET['imm'];
+	}
 ?>
 
 <!DOCTYPE html>
@@ -30,12 +34,13 @@
                 <div class="content-banner"> 
                     <div class="content-titles-container">
                         <h1 class="content-title">Certificat de cession d'un véhicule d'occasion</h1>
-                        <h1 class="content-subtitle">2 - Nouveau propriétaire</h1>
+                        <h1 class="content-subtitle">3 - Nouveau propriétaire</h1>
                     </div>
                 </div>
 
-
-                <form id="cession2" class="form" action="../src/enregistrerCession.php" method="POST">
+                <?php  
+                	echo "<form id='cession2' class='form' action='../src/enregistrerCession3.php?imm=".$_GET['imm']."' method='POST'>";
+                ?>
 
 					<div class="form-title-container">
 						<h1 class="form-title">informations sur le nouveau propriétaire</h1>

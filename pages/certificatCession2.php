@@ -1,6 +1,10 @@
 <?php
     session_start();
     require_once("../src/fonctions.php");
+
+	if (isset($_GET['imm'])) {
+		$immatriculation = $_GET['imm'];
+	}
 ?>
 
 <!DOCTYPE html>
@@ -35,13 +39,20 @@
                 </div>
 
 
-                <form id="cession2" class="form" action="../src/enregistrerCession.php" method="POST">
+                <?php  
+                	echo "<form id='cession2' class='form' action='../src/enregistrerCession2.php?imm=".$immatriculation."' method='POST'>";
+                ?>
 
 					<div class="form-title-container">
 						<h1 class="form-title">informations sur l'ancien propriétaire</h1>
 					</div>
 
 					<div class="grid-form">
+
+						<?php 
+							if ($fi = verificationFichier("../db/InfoAssure/".$_SESSION['identifiants']."/informations.csv", 'r')) {
+								while ($data = fgetcsv($fi, 1000, ';')) {
+						?>
 
 						<div class="input-container">
 							<p class="radio-title">personne physique/morale</p>
@@ -81,12 +92,12 @@
 			
 						<div class="input-container">
 							<label for="nom" class="form-label">nom</label>
-							<input type="text" name="nom" class="form-slim-input" placeholder="Nom" value="<?php  ?>" required>
+							<input type="text" name="nom" class="form-slim-input" placeholder="Nom" value="<?php echo $data[2]; ?>" required>
 						</div>
 
 						<div class="input-container">
 							<label for="prenom" class="form-label">prénom</label>
-							<input type="text" name="prenom" class="form-slim-input" placeholder="Prénom" value="<?php  ?>" required>
+							<input type="text" name="prenom" class="form-slim-input" placeholder="Prénom" value="<?php echo $data[3]; ?>" required>
 						</div>
 
 						<div class="input-container">
@@ -96,30 +107,30 @@
 
 						<div class="input-container">
 							<label for="adresse" class="form-label">adresse</label>
-							<input type="text" name="adresse" class="form-slim-input" placeholder="Adresse" value="<?php  ?>" required>
+							<input type="text" name="adresse" class="form-slim-input" placeholder="Adresse" value="<?php echo $data[6]; ?>" required>
 						</div>
 
 						<div class="input-container">
 							<label for="ville" class="form-label">ville</label>
-							<input type="text" name="ville" class="form-slim-input" placeholder="Ville" value="<?php  ?>" required>
+							<input type="text" name="ville" class="form-slim-input" placeholder="Ville" value="<?php echo $data[7]; ?>" required>
 						</div>
 
 						<div class="input-container">
 							<label for="cp" class="form-label">code postal</label>
-							<input type="text" name="cp" class="form-slim-input" placeholder="Code Postal" value="<?php  ?>" required>
-						</div>
-
-						<div class="input-container">
-							<label for="name" class="form-label">nom</label>
-							<input type="text" name="name" class="form-slim-input" placeholder="Nom" value="<?php  ?>" required>
+							<input type="text" name="cp" class="form-slim-input" placeholder="Code Postal" value="<?php echo $data[8]; ?>" required>
 						</div>
 
 						<div class="input-container">
 							<label for="pays" class="form-label">pays</label>
-							<input type="text" name="pays" class="form-slim-input" placeholder="Pays" value="<?php  ?>" required>
+							<input type="text" name="pays" class="form-slim-input" placeholder="Pays" value="<?php echo $data[9]; ?>" required>
 						</div>
 
 					</div>
+
+					<?php 
+							}
+						} 
+					?>
 
 					<div class="form-title-container">
 						<h1 class="form-title">certifications</h1>

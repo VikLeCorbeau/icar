@@ -40,7 +40,7 @@
                         <h1 class="content-title">Liste des assurés</h1>
                     </div>
 
-                </div>
+                </div> 
                 <div class='boxes-container'>
                 <?php 
                     foreach ($tabAssure as $element) {
@@ -57,6 +57,7 @@
                                             echo "</div>";
 
                                             echo "<div class='box-informations-container'>";
+                                            
                                                 echo "<div class='box-informations'>";
                                                     echo "<h3 class='box-information box-information--primary'>Nom :</h3>";
                                                     echo "<h3 class='box-information box-information--secondary'>".$data[2]."</h3>";

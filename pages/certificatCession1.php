@@ -34,7 +34,7 @@
                     </div>
                 </div>
 
-				<form id="cession1" class="form" action="../src/enregistrerCession.php" method="POST">
+				<form id="cession1" class="form" action="../src/enregistrerCession1.php" method="POST">
 
 					<div class="form-title-container">
 						<h1 class="form-title">informations sur le véhicule</h1>
