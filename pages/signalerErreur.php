@@ -34,7 +34,7 @@
                 </div>
 
 
-                <form id="signalerErreur" class="form" action="" method="POST">
+                <form id="signalerErreur" class="form" action="../src/enregistrerErreur.php" method="POST">
 
 					<div class="form-title-container">
 						<h1 class="form-title">qui êtes-vous ?</h1>
@@ -67,7 +67,7 @@
 						
 						<div class="input-container">
 							<label for="nom" class="form-label">titre</label>
-							<input type="text" name="nom" class="form-large-input" placeholder="Nom" required>
+							<input type="text" name="titre" class="form-large-input" placeholder="Titre" required>
 						</div>
 
                         <div class="input-container">

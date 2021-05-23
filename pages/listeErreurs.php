@@ -47,7 +47,7 @@
                     <span class="datas-title">supprimer ?</span>
 
 					<?php
-						/*if ($fl = verificationFichier("../db/logs.csv", 'r')) {
+						if ($fl = verificationFichier("../db/erreurs.csv", 'r')) {
 							$i = 0;
 
 							while ($data = fgetcsv($fl, 1000,';')) {
@@ -56,7 +56,10 @@
 								<span class='datas-data' id='". $i ."'>". $data[1] ."</span>
 								<span class='datas-data' id='". $i ."'>". $data[2] ."</span>
 								<span class='datas-data' id='". $i ."'>". $data[3] ."</span>
-								<span class='datas-data' id='". $i ."'>". $data[4] ."</span>        
+                                <span class='datas-data' id='". $i ."'>". $data[4] ."</span>        
+                                <span class='datas-data' id='". $i ."'>". $data[5] ."</span>        
+                                <span class='datas-data' id='". $i ."'>". $data[6] ."</span>        
+								<span class='datas-data' id='". $i ."'>". $data[7] ."</span>        
 								<span class='datas-data' id='". $i ."'>
 									<img src='../assets/svg/icons/delete.svg' class='datas-svg' id='". $i ."'>
 								</span>
@@ -64,7 +67,7 @@
 							}
 
 							fclose($fl);
-						}*/
+						}
 					?>
 
 				</div>

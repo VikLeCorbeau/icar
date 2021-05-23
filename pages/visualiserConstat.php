@@ -20,10 +20,10 @@ session_start();
             width: 100px;
         }
     </style>
-    <p>Votre constat a bien été pris en compte, vous pouvez voir tous vos constats <a href="../pages/mesConstats.php">ICI</a></p>
-
     <?php 
-        $filename = "../db/InfoAssure/".$_SESSION['identifiants']."/constats";
+        $numeroConstat = $_GET['numero'];
+        $assure = $_GET['assure'];
+        $filename = "../db/InfoAssure/".$assure."/constats";
         $numeroConstat = $_GET['numero'];
         $Json = file_get_contents($filename."/constat".$numeroConstat.".json", true);
         $array = json_decode($Json, true);

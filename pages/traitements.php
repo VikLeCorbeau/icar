@@ -67,17 +67,17 @@
 														<div class='box-separator box-separator-446'></div>
 														<div class='box-constats-actions-container'>
 															<div class='box-constats-action'>
-																<a href='visualiserConstat.php?numero='>
+																<a href='visualiserConstat.php?assure=".$data[2]."&numero=".$data[1]."'>
 																	<img src='../assets/svg/icons/see.svg' class='box-constats-action-svg'>
 																</a>
 															</div>
 															<div class='box-constats-action'>
-																<a href='supprimerConstat.php?numero='>
+																<a href='supprimerConstat.php?numero=".$data[1]."'>
 																	<img src='../assets/svg/icons/delete.svg' class='box-constats-action-svg'>
 																</a>
 															</div>
 															<div class='box-constats-action'>
-																<a href='ajoutImageConstatConstat.php?numero='>
+																<a href='ajoutImageConstatConstat.php?numero=".$data[1]."'>
 																	<img src='../assets/svg/icons/insured_add_images.svg' class='box-constats-action-svg'>
 																</a>
 															</div>
