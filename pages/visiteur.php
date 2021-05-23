@@ -14,7 +14,6 @@
 	<title>Visiteur</title>
 
     <link href="../css/generics.css" rel="stylesheet">
-    <link href="../css/visiteur.css" rel="stylesheet">
     <link href="../css/boxes.css" rel="stylesheet">
     <script type="text/javascript" src="../src/visiteur.js"></script>
 </head>

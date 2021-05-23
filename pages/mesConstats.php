@@ -74,25 +74,6 @@
 									</div>
 								</div>
 								<div class='box-separator box-separator-446'></div>
-<<<<<<< HEAD
-
-								<div class='box-actions-container'>
-									<div class='box-action'>
-										<a href='visualiserConstat.php?numero='".$i.">
-											<img src='../assets/svg/icons/see.svg' class='box-action-svg'>
-										</a>
-									</div>
-
-									<div class='box-action'>
-										<a href='supprimerConstat.php?numero='".$i.">
-											<img src='../assets/svg/icons/delete.svg' class='box-action-svg'>
-										</a>
-									</div>
-
-									<div class='box-action'>
-										<a href='ajoutImageConstatConstat.php?numero='".$i.">
-											<img src='../assets/svg/icons/insured_add_images.svg' class='box-action-svg'>
-=======
 								<div class='box-constats-actions-container'>
 									<div class='box-constats-action'>
 										<a href='visualiserConstat.php?numero='".$i.">
@@ -107,7 +88,6 @@
 									<div class='box-constats-action'>
 										<a href='ajoutImageConstatConstat.php?numero='".$i.">
 											<img src='../assets/svg/icons/insured_add_images.svg' class='box-constats-action-svg'>
->>>>>>> 6bead6cb3d072d40a8f3ed3f0a78a11aa2daffe1
 										</a>
 									</div>
 								</div>
