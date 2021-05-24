@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Visiteur</title>
-
+    <link rel="icon" type="image/png" href="../assets/svg/logo/logo_2.png">
     <link href="../css/generics.css" rel="stylesheet">
     <link href="../css/boxes.css" rel="stylesheet">
     <script type="text/javascript" src="../src/visiteur.js"></script>

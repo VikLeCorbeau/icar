@@ -7,6 +7,7 @@ session_start();
 <html>
     <head>
 	    <title>Visualiser le Constat</title>
+        <link rel="icon" type="image/png" href="../assets/svg/logo/logo_2.png">
     </head>
 <body>
     <style type="text/css">
