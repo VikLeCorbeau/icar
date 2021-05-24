@@ -140,3 +140,24 @@
 .contact-button-container {
     width: 20%;
 }
+
+/* RESPONSIVE */
+
+
+@media screen and (max-width: 975px) {
+
+    /* FORMULAIRES */
+
+    .button-text {
+        display: none;
+    }
+
+    .contact-info-secondary {
+        display: none;
+    }
+
+    .contact-right-bottom {
+        padding: 15px;
+    }
+
+}

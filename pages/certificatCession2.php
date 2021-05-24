@@ -1,13 +1,9 @@
 <?php
     session_start();
     require_once("../src/fonctions.php");
-<<<<<<< HEAD
-    $immatriculation = $_GET['imm'];
-=======
 	if (isset($_GET['imm'])) {
 		$immatriculation = $_GET['imm'];
 	}
->>>>>>> 6bead6cb3d072d40a8f3ed3f0a78a11aa2daffe1
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,10 +13,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cession véhicule</title>
+
+		<link rel="icon" href="../assets/svg/logo/icon.svg">
+
         <link href="../css/generics.css" rel="stylesheet">
-        <link href="../css/visiteur.css" rel="stylesheet">
         <link href="../css/boxes.css" rel="stylesheet">
         <link href="../css/form.css" rel="stylesheet">
+		
     </head>
 <body>
     <div class="main-container">
@@ -33,14 +32,9 @@
                         <h1 class="content-subtitle">2 - Ancien propriétaire</h1>
                     </div>
                 </div>
-<<<<<<< HEAD
-                <?php  
-                echo "<form id='cession2' class='form' action='../src/enregistrerCession2.php?imm=".$immatriculation."' method='POST'>";
-=======
 
                 <?php  
-                	echo "<form id='cession2' class='form' action='../src/enregistrerCession2.php?imm=".$immatriculation."' method='POST'>";
->>>>>>> 6bead6cb3d072d40a8f3ed3f0a78a11aa2daffe1
+                	echo "<form id='cession2' class='form' action='../src/enregistrerCession2.php?imm=". $immatriculation ."' method='POST'>";
                 ?>
 
 					<div class="form-title-container">
@@ -48,11 +42,6 @@
 					</div>
 
 					<div class="grid-form">
-
-						<?php 
-							if ($fi = verificationFichier("../db/InfoAssure/".$_SESSION['identifiants']."/informations.csv", 'r')) {
-								while ($data = fgetcsv($fi, 1000, ';')) {
-						?>
 
 						<div class="input-container">
 							<p class="radio-title">personne physique/morale</p>
@@ -90,17 +79,12 @@
 
 					<div class="grid-form">
 						<?php 
-							$fi = fopen("../db/InfoAssure/".$_SESSION['identifiants']."/informations.csv", 'r');
-							while ($data = fgetcsv($fi, 1000, ';')) {
-							
+							if ($fi = verificationFichier("../db/InfoAssure/".$_SESSION['identifiants']."/informations.csv", 'r')) {
+								while ($data = fgetcsv($fi, 1000, ';')) {
 						?>
 						<div class="input-container">
 							<label for="nom" class="form-label">nom</label>
-<<<<<<< HEAD
-							<input type="text" name="nom" class="form-slim-input" placeholder="Nom" value="<?php  echo $data[2];?>" required>
-=======
 							<input type="text" name="nom" class="form-slim-input" placeholder="Nom" value="<?php echo $data[2]; ?>" required>
->>>>>>> 6bead6cb3d072d40a8f3ed3f0a78a11aa2daffe1
 						</div>
 
 						<div class="input-container">
@@ -126,14 +110,11 @@
 						<div class="input-container">
 							<label for="cp" class="form-label">code postal</label>
 							<input type="text" name="cp" class="form-slim-input" placeholder="Code Postal" value="<?php echo $data[8]; ?>" required>
-<<<<<<< HEAD
 						</div>
 
 						<div class="input-container">
 							<label for="name" class="form-label">nom</label>
 							<input type="text" name="name" class="form-slim-input" placeholder="Nom" value="<?php  ?>" required>
-=======
->>>>>>> 6bead6cb3d072d40a8f3ed3f0a78a11aa2daffe1
 						</div>
 
 						<div class="input-container">
@@ -142,16 +123,12 @@
 						</div>
 
 					</div>
-<<<<<<< HEAD
-					<?php } ?>
-=======
 
 					<?php 
 							}
 						} 
 					?>
 
->>>>>>> 6bead6cb3d072d40a8f3ed3f0a78a11aa2daffe1
 					<div class="form-title-container">
 						<h1 class="form-title">certifications</h1>
 					</div>
@@ -185,15 +162,15 @@
 						<div class="input-container span-3">
 							<p class="radio-title">je certifie en outre</p>
 							<div class="input-radio-container" style="flex-direction: column; align-items: flex-start;">
-								<label for="certif" class="radio-container">
+								<label for="certif" class="radio-container radio-mt10">
 									<input type="radio" name="certif" value="remis" class="input-radio">
 									<p class="input-radio-text">Avoir remis au nouveau propriétaire un certificat établi depuis moins de quinze jours par le ministre de l’Intérieur, attestant à sa date d’édition de la situation administrative du véhicule.</p>
 								</label>
-								<label for="certif" class="radio-container">
+								<label for="certif" class="radio-container radio-mt10">
 									<input type="radio" name="certif" value="transformation" class="input-radio" checked>
 									<p class="input-radio-text">Que ce véhicule n’a pas subi de transformation notable susceptible de modifier les indications du certificat de conformité ou de l’actuel certificat  d’immatriculation.</p>
 								</label>
-								<label for="certif" class="radio-container">
+								<label for="certif" class="radio-container radio-mt10">
 									<input type="radio" name="certif" value="destruction" class="input-radio" checked>
 									<p class="input-radio-text">Que ce véhicule est cédé pour destruction à un professionnel de la destruction des véhicules hors d’usage (VHU).</p>
 								</label>

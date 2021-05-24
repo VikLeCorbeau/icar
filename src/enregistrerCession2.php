@@ -12,8 +12,4 @@
 		file_put_contents($filename.'/'.$immatriculation.'.json', $data);
 		header('Location: ../pages/certificatCession3.php?imm='.$immatriculation);
 		exit();
-<<<<<<< HEAD
- ?>
-=======
 ?>
->>>>>>> 6bead6cb3d072d40a8f3ed3f0a78a11aa2daffe1

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<hmtl>
 	<head>
 		<title>Afficher Carte verte</title>
         

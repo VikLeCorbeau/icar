@@ -15,9 +15,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cession véhicule</title>
-        <link rel="icon" type="image/png" href="../assets/svg/logo/logo_2.png">
+
+        <link rel="icon" href="../assets/svg/logo/icon.svg">
+
         <link href="../css/generics.css" rel="stylesheet">
-        <link href="../css/visiteur.css" rel="stylesheet">
         <link href="../css/boxes.css" rel="stylesheet">
         <link href="../css/form.css" rel="stylesheet">
 
@@ -140,11 +141,11 @@
 						<div class="input-container span-3">
 							<p class="radio-title">je certifie</p>
 							<div class="input-radio-container" style="flex-direction: column; align-items: flex-start;">
-								<label for="certification" class="radio-container">
+								<label for="certification" class="radio-container radio-mt10">
 									<input type="radio" name="certification" value="vendre" class="input-radio">
 									<p class="input-radio-text">Acquérir le véhicule désigné ci-dessus aux dates et heures indiquées par l’ancien propriétaire.</p>
 								</label>
-								<label for="certification" class="radio-container">
+								<label for="certification" class="radio-container radio-mt10">
 									<input type="radio" name="certification" value="detruire" class="input-radio">
 									<p class="input-radio-text">Avoir été informé de la situation administrative du véhicule.</p>
 								</label>

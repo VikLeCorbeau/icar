@@ -42,13 +42,51 @@ foreach ($donnees as $element) {
 }
 fclose($fl);
  ?>
- <!DOCTYPE html>
- <html>
- <head>
- 	<title>Contrat</title>
- </head>
- <body>
- 	<p>Le contrat a bien été créé, le qr code est : </p>
- 	<img src=<?php echo "../db/InfoAssure/".$nom.$prenom."/contrat-".$nom.$prenom.$immatriculation.".png"; ?>>
- </body>
- </html>
+
+<!DOCTYPE html>
+<html>
+    <head>    
+    
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ajout contrat d'assurance</title>
+
+        <link rel="icon" href="../assets/svg/logo/icon.svg">
+
+        <link href="../css/generics.css" rel="stylesheet">
+        <link href="../css/visiteur.css" rel="stylesheet">
+        <link href="../css/boxes.css" rel="stylesheet">
+        <link href="../css/form.css" rel="stylesheet">
+
+    </head>
+<body>
+
+    <div class="main-container">
+
+        <?php include("../layouts/navigation.php"); ?> 
+
+        <div class="container-1440">
+            <div class="content-container content-column">
+
+                <div class="content-banner"> 
+                    <div class="content-titles-container">
+                        <h1 class="content-title">Ajout contrat d'assurance</h1>
+                        <h1 class="content-subtitle">Le contrat a bien été créé son qr code associé est</h1>
+                    </div>
+                </div>
+
+				<div class="qr-code-container">
+					<img src=<?php echo "../db/InfoAssure/".$nom.$prenom."/contrat-".$nom.$prenom.$immatriculation.".png";?> class="qr-code">
+				</div>
+ 				
+
+            </div>
+        </div>
+
+        <?php include("../layouts/footer.php"); ?>  
+
+    </div> 
+
+</body>
+</html>

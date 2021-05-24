@@ -44,6 +44,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Constat</title>
 
+		<link rel="icon" href="../assets/svg/logo/icon.svg">
+
         <link href="../css/generics.css" rel="stylesheet">
         <link href="../css/visiteur.css" rel="stylesheet">
         <link href="../css/boxes.css" rel="stylesheet">

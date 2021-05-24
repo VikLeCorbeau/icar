@@ -6,7 +6,7 @@
  <html>
  <head>
  	<title>Rechercher un assure</title>
- 	<link rel="icon" type="image/png" href="../assets/svg/logo/logo_2.png">
+ 	<link rel="icon" href="../assets/svg/logo/icon.svg">
  </head>
  <body>
  	<h1>Recherche d'assure</h1>

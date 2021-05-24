@@ -9,7 +9,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Visualiser le contrat</title>
-	<link rel="icon" type="image/png" href="../assets/svg/logo/logo_2.png">
+
+	<<link rel="icon" href="../assets/svg/logo/icon.svg">
+
 	<link href="../css/generics.css" rel="stylesheet">
     <link href="../css/connexion.css" rel="stylesheet">
     <link href="../css/boxes.css" rel="stylesheet">
@@ -52,9 +54,9 @@
 
                 </div>
 
-                <div class="vehicle-information-container">
+                <div class="boxes-container">
 
-                    <div class="box box-610">
+                    <div class="box box-446">
                         
                         
 						<?php
@@ -143,7 +145,7 @@
 						?>
                     </div>
 
-                     <div class="box box-610">
+                     <div class="box box-446">
 
                         <div class="box-title-container">
                             <h2 class="box-title">Carte verte associée</h2>

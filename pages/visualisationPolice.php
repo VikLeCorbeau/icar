@@ -9,7 +9,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Police - Assurés</title>
-    <link rel="icon" type="image/png" href="../assets/svg/logo/logo_2.png">
+
+    <link rel="icon" href="../assets/svg/logo/icon.svg">
+
 	<link href="../css/generics.css" rel="stylesheet">
     <link href="../css/connexion.css" rel="stylesheet">
     <link href="../css/boxes.css" rel="stylesheet">

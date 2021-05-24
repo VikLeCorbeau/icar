@@ -24,17 +24,8 @@ ul {
     --dark-grey: #BEBEBE;
     --light-grey: #F5F5F5;
     --light-yellow: #FFE68E;
+
     --nav-height: 80px;
-
-    --form-column-width: 446px;
-
-    /* Pourcentages pour les colonnes des inputs. Les margin de 50px ont été pris en compte.*/
-
-    --one-container: 30.97%;
-    --two-container: 65.41%;
-
-    --three-input: calc(100% / 3 - 100px / 3);
-    --two-input: 47.34%;
 }
 
 /* FONT-FAMILY */
@@ -141,9 +132,10 @@ button:focus {
 
 .nav-right-container {
     height: 100%;
+
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .nav-logo-container, .nav-side-container {
@@ -165,7 +157,7 @@ button:focus {
     display: flex;
 }
 
-.nav-side-link-container {
+.nav-side-link-container, .burger-menu-container, .nav-side-link-container-no-mobile {
     display: flex;
     align-items: center;
 
@@ -201,6 +193,9 @@ button:focus {
 /* SEARCH */
 
 .nav-search-container {
+    width: 35%;
+    height: 45px;
+
     margin-right: 50px;
 }
 
@@ -210,8 +205,8 @@ button:focus {
 
     position: relative;
 
-    width: 350px;
-    height: 45px;
+    width: 100%;
+    height: 100%;
 
     border-radius: 25px;
     border: 1px solid black;
@@ -222,7 +217,7 @@ button:focus {
 }
 
 .nav-search-input {
-    width: 267px;
+    width: 75%;
     height: 100%;
 
     border-radius: 25px 0 0 25px;
@@ -233,9 +228,11 @@ button:focus {
 }
 
 .nav-search-button {
+    cursor: pointer;
+    
     background-color: transparent;
 
-    width: 83px;
+    width: 25%;
     height: 100%;
 
     border-radius: 0 25px 25px 0;
@@ -245,6 +242,14 @@ button:focus {
 
 .nav-search-button-svg {
 
+}
+
+.search-svg {
+    height: 15px;
+    width: 15px;
+
+    margin-right: 50px;
+    margin-left: 10px;
 }
 
 /* DROPDOWN */
@@ -292,6 +297,8 @@ button:focus {
 /* CONTAINERS */
 
 .main-container {
+    position: relative;
+
     display: flex;
     flex-direction: column;
 
@@ -490,7 +497,8 @@ footer {
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    align-items: flex-start;
+    justify-content: space-around;
 
     margin-bottom: 50px;
 }
@@ -501,13 +509,19 @@ footer {
     justify-content: space-around;
     align-items: center;
 
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
 
-    padding: 50px;
+    margin-bottom: 50px;
+}
+
+.menu-button {
+    width: 90px;
 }
 
 .menu-button-svg {
+    margin: auto;
+    
     width: 90px;
     height: 90px;
 }
@@ -527,4 +541,140 @@ footer {
 .menu-illustration {
     width: 100%;
     height: 100%;
+}
+
+/* BURGER MENU */
+
+
+.burger-menu-container {
+    display: none;
+}
+
+.burger-menu-svg {
+    
+}
+
+/* NAV MOBILE */
+
+.active {
+    display: block!important;
+}
+
+.no-scrolling {
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.nav-mobile-container {
+    display: none;
+
+    height: calc(100vh - 80px);
+
+    background-color: white;
+}
+
+.nav-mobile-center {
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-mobile-button {
+    width: 100%;
+
+    padding: 17px 0 17px 0;
+    margin-bottom: 20px;
+
+    background-color: var(--light-grey);
+
+    text-align: center;
+}
+
+.nav-mobile-button--yellow {
+    background-color: var(--light-yellow);
+}
+
+.mobile-name-container {
+    display: none;
+    align-items: center;
+}
+
+.mobile-name-svg {
+    height: 22px;
+    width: 22px;
+
+    margin-right: 10px;
+}
+
+.mobile-name-text {
+
+}
+
+
+/* MEDIAS QUERIES */
+
+@media screen and (max-width: 1024px) {
+
+    /* NAVIGATION */
+
+    .search-container {
+        display: none;
+    }
+
+    .nav-side-link-container {
+        display: none;
+    }
+
+    .burger-menu-container {
+        display: flex;
+    }
+
+}
+
+@media screen and (max-width: 975px) {
+
+    /* FORMULAIRES */
+
+    .grid-form {
+        grid-template-columns: repeat(2, 1fr)!important;
+    }
+
+    .content-title {
+        font-size: 2rem;
+    }
+
+    .content-subtitle {
+        font-size: 1.15rem;
+    }
+
+    .menu-button-container {
+        width: 150px;
+        height: 150px;
+    }
+
+}
+
+@media screen and (max-width: 640px) {
+
+    .grid-form {
+        grid-template-columns: 1fr!important;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+
+    /* MENU */
+
+    
+
+    .menu-buttons-container {
+        width: 100%!important;
+    }
+
+    .menu-illustration-container {
+        display: none;
+    }
+
 }
