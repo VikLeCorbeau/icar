@@ -41,8 +41,8 @@
  			prenom = document.getElementById('prenom').value;
  			mail = document.getElementById('mail').value;
  			tel = document.getElementById('tel').value;
- 			contrat = document.getElementById('tel').value;
- 			if (nom !== "" || prenom !== "") {
+ 			contrat = document.getElementById('contrat').value;
+ 			if (nom !== "" && prenom !== "") {
  				element = {'nom':nom, 'prenom':prenom};
  				params = JSON.stringify(element);
  			}else if (mail !== "") {
@@ -58,7 +58,6 @@
  			let xhttp = new XMLHttpRequest();
 		    xhttp.onreadystatechange = function(){
 		        if (this.readyState==4 && this.status==200) {
-		        	console.log(this.responseText);
 			        let infos = JSON.parse(this.responseText);
 		        	if(infos[0] == "mauvais"){
 		        		document.getElementById('erreur').innerHTML = "Pas de résultat pour votre recherche";

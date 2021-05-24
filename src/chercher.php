@@ -31,7 +31,7 @@
 			}else if (isset($tab[0]->tel)) {
 				$tel = $tab[0]->tel;
 				if ($data[4] == $tel) {
-					array_push($wtness, array($data[0], $data[1], $data[3], $tel, $data[2], $data[5]));
+					array_push($witness, array($data[0], $data[1], $data[3], $tel, $data[2], $data[5]));
 					$witness_json =  json_encode($witness);
 				}else{
 					$mauvais = $mauvais + 1;
