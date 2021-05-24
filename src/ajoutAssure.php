@@ -24,7 +24,7 @@ foreach ($identifiant as $element) {
 }
 fclose($fi);
 
-$assure = array(array($nom,$prenom,$contrat, $assurance));
+$assure = array(array($nom,$prenom,$contrat, $mail, $tel, $assurance));
 if ($fa = fopen("../db/assure.csv", 'a+')) {
 	foreach ($assure as $element) {
 			fputcsv($fa, $element, ';');
