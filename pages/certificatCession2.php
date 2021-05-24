@@ -4,13 +4,11 @@
 <<<<<<< HEAD
     $immatriculation = $_GET['imm'];
 =======
-
 	if (isset($_GET['imm'])) {
 		$immatriculation = $_GET['imm'];
 	}
 >>>>>>> 6bead6cb3d072d40a8f3ed3f0a78a11aa2daffe1
 ?>
-
 <!DOCTYPE html>
 <html>
     <head>    
@@ -19,29 +17,22 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cession véhicule</title>
-
         <link href="../css/generics.css" rel="stylesheet">
         <link href="../css/visiteur.css" rel="stylesheet">
         <link href="../css/boxes.css" rel="stylesheet">
         <link href="../css/form.css" rel="stylesheet">
-
     </head>
 <body>
-
     <div class="main-container">
-
         <?php include("../layouts/navigation.php"); ?> 
-
         <div class="container-1440">
             <div class="content-container content-column">
-
                 <div class="content-banner"> 
                     <div class="content-titles-container">
                         <h1 class="content-title">Certificat de cession d'un véhicule d'occasion</h1>
                         <h1 class="content-subtitle">2 - Ancien propriétaire</h1>
                     </div>
                 </div>
-
 <<<<<<< HEAD
                 <?php  
                 echo "<form id='cession2' class='form' action='../src/enregistrerCession2.php?imm=".$immatriculation."' method='POST'>";
