@@ -2,6 +2,8 @@
     session_start();
     require_once("../src/fonctions.php");
 
+    verificationType(array('assure', 'gestionnaire'));
+
     $filename = "../db/InfoAssure/".$_SESSION['identifiants']."/messagerie";
     if (!file_exists($filename)) {
         mkdir($filename, 0777, true);

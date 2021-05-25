@@ -13,4 +13,26 @@
         return $reponse;
     }
 
+    function verificationType(array $typeAutorises) 
+    {
+        $pass = false;
+
+        if (isset($_SESSION['profil'])) {
+
+            foreach ($typeAutorises as $typeAutorise) {
+
+                if ($_SESSION['profil'] === $typeAutorise) {
+                    $pass = true;
+                }
+
+            }
+            
+        }
+
+        if (!$pass) {
+            header('Location: ../accueil.php');
+            exit();
+        }
+    }
+
 ?>

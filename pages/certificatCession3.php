@@ -2,6 +2,8 @@
     session_start();
     require_once("../src/fonctions.php");
 
+	verificationType(array('assure'));
+
 	if (isset($_GET['imm'])) {
 		$immatriculation = $_GET['imm'];
 	}

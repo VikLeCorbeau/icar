@@ -1,5 +1,8 @@
 <?php
     session_start();
+    require_once("../src/fonctions.php");
+
+    verificationType(array('assure'));
 ?>
 
 <!DOCTYPE html>

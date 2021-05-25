@@ -1,6 +1,8 @@
 <?php
 	session_start();
-	require_once("../src/fonctions.php")
+	require_once("../src/fonctions.php");
+
+	verificationType(array('gestionnaire', 'police'));
  ?>
 <!DOCTYPE html>
 <html>

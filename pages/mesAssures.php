@@ -2,6 +2,8 @@
     session_start();
     require_once("../src/fonctions.php");
 
+	verificationType(array('gestionnaire'));
+
 	if (!isset($_SESSION['identifiants'])) {
 		header('Location: connexion.php');
 		exit();

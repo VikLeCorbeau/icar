@@ -1,5 +1,9 @@
 <?php 
 session_start();
+require_once("fonctions.php");
+
+verificationType(array('assure'));
+
 if (!isset($_SESSION['identifiants'])) {
 	header('Location: connexion.php');
 	exit();

@@ -4,6 +4,8 @@
 
 	require_once("fonctions.php");
 
+	verificationType(array('assure'));
+
 	if (isset($_POST['voitureA'])) {
 		$voiture = $_POST['voitureA'];
 
