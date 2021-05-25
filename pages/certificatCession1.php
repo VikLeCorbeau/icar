@@ -79,7 +79,7 @@
 
 						<div class="input-container">
 							<label for="kilometrage" class="form-label">kilométrage inscrit au compteur</label>
-							<input type="text" name="kilometrage" class="form-slim-input" placeholder="Kilométrage inscrit au compteur " required>
+							<input type="text" name="kilometrage" class="form-slim-input" placeholder="Kilométrage inscrit au compteur" required>
 						</div>
 
 					</div>
@@ -94,17 +94,27 @@
 							<p class="radio-title">possedez-vous un certificat d’immatriculation</p>
 							<div class="input-radio-container">
 								<label for="certificat" class="radio-container">
-									<input type="radio" name="certificat" value="oui" class="input-radio">
+									<input type="radio" name="certificat" value="oui" class="input-radio" id="radio-show-on" checked>
 									<p class="input-radio-text">Oui</p>
 								</label>
 								<label for="certificat" class="radio-container">
-									<input type="radio" name="certificat" value="non" class="input-radio" checked>
+									<input type="radio" name="certificat" value="non" class="input-radio" id="radio-show-off">
 									<p class="input-radio-text">Non</p>
 								</label>
 							</div>
 						</div>
 
-						<div class="input-container span-2">
+						<div class="input-container" id="on">
+							<label for="formule" class="form-label">numéro de formule</label>
+							<input type="text" name="formule" class="form-slim-input" placeholder="numéro de formule" required>
+						</div>
+
+						<div class="input-container" id="on">
+							<label for="dateCertificat" class="form-label">date du certificat d'immatriculation</label>
+							<input type="date" name="dateCertificat" class="form-slim-input" placeholder="date du certificat d'immatriculation" required>
+						</div>
+
+						<div class="input-container span-2 display-none" id="off">
 							<label for="observation" class="form-label">motif d’absence de certificat d’immatriculation</label>
 							<textarea name="observation" class="form-textarea" placeholder="Mes observations ..." style="height: 95px;"></textarea>
 						</div>
@@ -129,6 +139,8 @@
         <?php include("../layouts/footer.php"); ?>  
 
     </div> 
+
+	<script src="../assets/js/radio.js"></script>
 
 </body>
 </html>

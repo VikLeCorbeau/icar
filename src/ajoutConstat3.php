@@ -114,22 +114,22 @@
                             <p class="radio-title">possédez-vous une remorque ?</p>
                             <div class="input-radio-container">
                                 <label for="remorque" class="radio-container">
-                                    <input type="radio" name="remorque" value="oui" class="input-radio">
+                                    <input type="radio" name="remorque" value="oui" class="input-radio" id="radio-show-yes" checked>
                                     <p class="input-radio-text">Oui</p>
                                 </label>
                                 <label for="remorque" class="radio-container">
-                                    <input type="radio" name="remorque" value="non" class="input-radio" checked>
+                                    <input type="radio" name="remorque" value="non" class="input-radio" id="radio-show-no">
                                     <p class="input-radio-text">Non</p>
                                 </label>
                             </div>
                         </div>
 
-						<div class="input-container">
+						<div class="input-container" id="radio-show-input">
                             <label for="immatriculationR" class="form-label">numéro d'immatriculation</label>
                             <input type="text" name="immatriculationR" class="form-slim-input" placeholder="Numéro d'immatriculation" required>
                         </div>
 
-						<div class="input-container">
+						<div class="input-container" id="radio-show-input">
                             <label for="paysImmR" class="form-label">pays d'immatriculation</label>
                             <input type="text" name="paysImmR" class="form-slim-input" placeholder="Pays d'immatriculation" required>
                         </div>
@@ -363,6 +363,8 @@
 		<?php include "../layouts/footer.php"; ?>
 
 	</div>
+
+	<script src="../assets/js/radio.js"></script>
 	 
  </body>
  </html>

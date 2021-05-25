@@ -652,6 +652,34 @@ th {
 
 }
 
+/* PHOTOS */
+
+.photo-choosen-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.photo-choosen {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 15px 30px 15px 30px;
+    border: 1px solid black;
+
+    margin-bottom: 15px;
+}
+
+.photo-choosen-text {
+}
+
+.photo-choosen-svg {
+    height: 18px;
+    width: 18px;
+
+    cursor: pointer;
+}
+
 
 /* MEDIAS QUERIES */
 

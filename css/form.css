@@ -50,6 +50,10 @@
     grid-column: span 3;
 }
 
+.display-none {
+    display: none;
+}
+
 .form-label, .radio-title {
     font-variant: small-caps;
     font-weight: 300;
@@ -262,6 +266,12 @@
 }
 
 /* RESPONSIVE */
+
+@media screen and (max-width: 1280px) {
+    .form-images-illustration {
+        width: 180px;
+    }
+}
 
 @media screen and (max-width: 1024px) {
 

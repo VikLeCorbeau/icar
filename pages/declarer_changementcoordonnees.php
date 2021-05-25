@@ -80,15 +80,30 @@
 
 					<div class="grid-form">
 
-						<div>
-							<div class="form-images-input-file-container">
-								<input class="form-images-input-file" id="justificatif" type="file" name="">
-								<label class="form-images-input-file-label" for="justificatif">Selectionner un justificatif de domicile</label>
+						<div class="form-images-input-file-container">
+                            <input class="form-images-input-file" id="photos-input" type="file" name="photo[]">
+                            <label class="form-images-input-file-label" for="photos-input">Selectionner un justificatif de domicile</label>
+                        </div>
+
+						<div class="input-container">
+
+							<div id="photos-choosen" class="photo-choosen-container">
+
+								<div class="photo-choosen">
+									<p id="no-photo" class="photo-choosen-text">pas de photos sélectionnées</p>
+									<!--<img class="photo-choosen-svg" src="../assets/svg/icons/delete.svg">-->
+								</div>
+								
 							</div>
+
 						</div>
 
-						<div>
-							<p class="file-return"></p>
+						<div class="input-container">
+
+							<button type="button" class="button button--light" id="supprimer-photos">
+								<p class="button-text">Supprimer le fichier</p>
+							</button>
+
 						</div>
 					
 					</div>
@@ -110,6 +125,8 @@
         <?php include("../layouts/footer.php"); ?>  
 
     </div> 
+
+	<script src="../assets/js/inputfiles.js"></script>
 
 </body>
 </html>
