@@ -1,6 +1,11 @@
 <?php 
 	session_start();
 
+    if (isset($_SESSION['profil'])) {
+        header('Location: ../accueil.php');
+        exit();
+    }
+
 	if (isset($_POST['OUT'])) {
 		session_destroy();
 	}
