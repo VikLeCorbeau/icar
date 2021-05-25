@@ -160,6 +160,7 @@
 }
 
 .datas-svg {
+    cursor: pointer;
     margin-top: 2px;
 
     height: 22px;

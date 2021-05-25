@@ -233,6 +233,7 @@
                         <a href="../pages/certificatCession1.php"><p class="nav-mobile-button">Je vends mon véhicule</p></a>
                         <a href="../pages/contacterassurance.php"><p class="nav-mobile-button">Contacter mon assurance</p></a>
                         <a href="../pages/mesConstats.php"><p class="nav-mobile-button">Mes déclarations de constat</p></a>
+                        <a href="../pages/declarer_changementcoordonnees.php"><p class="nav-mobile-button">Changer mes coordonnees</p></a>
                     <?php break;
                     case "gestionnaire":?>
                         <a href="../pages/mesAssures.php"><p class="nav-mobile-button">Voir mes assurés</p></a>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Visualiser le contrat</title>
 
-	<<link rel="icon" href="../assets/svg/logo/icon.svg">
+	<link rel="icon" href="../assets/svg/logo/icon.svg">
 
 	<link href="../css/generics.css" rel="stylesheet">
     <link href="../css/connexion.css" rel="stylesheet">

@@ -18,6 +18,13 @@ ul {
     font-weight: 200;
 }
 
+
+.error {
+    margin-bottom: 15px;
+
+    color: red;
+}
+
 /* VARIABLES */
 
 :root {
@@ -357,6 +364,8 @@ button:focus {
     width: 100%;
 
     padding: 15px;
+    margin-bottom: 10px;
+
     border: 1px transparent solid;
 
     cursor: pointer;
@@ -543,6 +552,38 @@ footer {
     height: 100%;
 }
 
+
+/* TABLE */
+
+table {
+    border-collapse: collapse;
+    border: 1px solid black; 
+}
+
+
+
+td, th {
+    text-align: center;
+    vertical-align: middle;
+
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+
+    padding: 20px;
+
+    overflow-wrap: anywhere;
+}
+
+td {
+    font-weight: 100;
+}
+
+th {
+    font-variant: small-caps;
+    font-weight: 600;
+    letter-spacing: 0.10rem;
+}
+
 /* BURGER MENU */
 
 
@@ -640,6 +681,10 @@ footer {
         grid-template-columns: repeat(2, 1fr)!important;
     }
 
+    .buttons-container {
+        grid-template-columns: repeat(2, 1fr)!important;
+    }
+
     .content-title {
         font-size: 2rem;
     }
@@ -658,6 +703,10 @@ footer {
 @media screen and (max-width: 640px) {
 
     .grid-form {
+        grid-template-columns: 1fr!important;
+    }
+
+    .buttons-container {
         grid-template-columns: 1fr!important;
     }
 

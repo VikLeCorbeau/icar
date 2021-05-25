@@ -1,6 +1,11 @@
 <?php
     session_start();
     require_once("../src/fonctions.php");
+
+    $filename = "../db/InfoAssure/".$_SESSION['identifiants']."/messagerie";
+    if (!file_exists($filename)) {
+        mkdir($filename, 0777, true);
+    }
 ?>
 
 <!DOCTYPE html>
@@ -127,6 +132,7 @@
             xhttp.open("POST", "../src/ajouterMessage.php",true);
             xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             xhttp.send("message="+texte+"&assureur="+assureur);
+            document.getElementById('contact-message').value = null;
         }
         function affichage(assureur){
             document.getElementById("first").innerHTML = assureur;
