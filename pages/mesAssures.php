@@ -50,7 +50,7 @@
 						$tabAssure = array();
 						if ($fa = fopen("../db/assure.csv", 'r')) {
 							while ($data = fgetcsv($fa, 1000, ';')) {
-								if ($data[3] == $_SESSION['assurance']) {
+								if ($data[5] == $_SESSION['assurance']) {
 									array_push($tabAssure, $data[0].$data[1]);
 								}
 							}

@@ -150,7 +150,7 @@
                                         <span class='datas-data' id='". $i ."'>". $data[2] ."</span>
                                         <span class='datas-data' id='". $i ."'>". $data[3] ."</span>      
                                         <span class='datas-data' id='". $i ."'>
-                                            <img src='../assets/svg/icons/delete.svg' class='datas-svg' id='". $i ."'>
+                                            <img src='../assets/svg/icons/delete.svg' class='datas-svg' onclick='retirerT()' id='". $i ."'>
                                         </span>
                                         ";
                                     }

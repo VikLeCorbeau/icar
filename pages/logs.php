@@ -56,7 +56,7 @@
 								<span class='datas-data' id='". $i ."'>". $data[3] ."</span>
 								<span class='datas-data' id='". $i ."'>". $data[4] ."</span>        
 								<span class='datas-data' id='". $i ."'>
-									<img src='../assets/svg/icons/delete.svg' class='datas-svg' id='". $i ."'>
+									<img src='../assets/svg/icons/delete.svg' class='datas-svg' id='". $i ."' onclick='supprimerLog()'>
 								</span>
 								";
 							}
@@ -74,6 +74,44 @@
         <?php include("../layouts/footer.php"); ?>  
 
     </div> 
+    <script type="text/javascript">
+        function supprimerLog(){
+
+            let id = this.id;
+            let toRemove = [];
+            let datas = [];
+            console.log(id);
+            let datasGrid = document.getElementById("witness-grid");
+
+            if (datasGrid.hasChildNodes()) {
+                let children = datasGrid.childNodes;
+              
+                for (let i = 0; i < children.length; i++) {
+                    if (children[i].id == id) {
+                        toRemove.push(children[i]);
+                        datas.push(children[i].innerText);
+                    }
+                }
+
+                for (let j = 0; j < toRemove.length; j++) {
+                    toRemove[j].parentNode.removeChild(toRemove[j]);
+                }
+
+                datas.pop();
+            }
+            console.log(datas);
+            let xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function(){
+                if (this.readyState==4 && this.status==200) {
+                    console.log(this.responseText);
+                }
+            }
+
+            xhttp.open("POST", "../src/supprimerLogs.php",true);
+            xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhttp.send("date="+datas[0]+"&type="+datas[1]+"&nom="+datas[2]+"&sujet="+datas[3]+"&quoi="+datas[4]);
+        }
+    </script>
 
 </body>
 </html>
