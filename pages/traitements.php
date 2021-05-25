@@ -73,13 +73,13 @@
 																</a>
 															</div>
 															<div class='box-constats-action'>
-																<a href='supprimerConstat.php?numero=".$data[1]."'>
-																	<img src='../assets/svg/icons/delete.svg' class='box-constats-action-svg'>
+																<a href='valider.php?numero=".$data[1]."'>
+																	<img src='../assets/svg/icons/admin_validation.svg' class='box-constats-action-svg'>
 																</a>
 															</div>
 															<div class='box-constats-action'>
-																<a href='ajoutImageConstatConstat.php?numero=".$data[1]."'>
-																	<img src='../assets/svg/icons/insured_add_images.svg' class='box-constats-action-svg'>
+																<a href='refuser.php?numero=".$data[1]."'>
+																	<img src='../assets/svg/icons/admin_validation.svg' class='box-constats-action-svg' style='transform: rotate(180deg);'>
 																</a>
 															</div>
 														</div>
@@ -134,13 +134,13 @@
 																</a>
 															</div>
 															<div class='box-constats-action'>
-																<a href='supprimerConstat.php?numero='>
+																<a href='refuser.php?numero='>
 																	<img src='../assets/svg/icons/delete.svg' class='box-constats-action-svg'>
 																</a>
 															</div>
 															<div class='box-constats-action'>
-																<a href='ajoutImageConstatConstat.php?numero='>
-																	<img src='../assets/svg/icons/insured_add_images.svg' class='box-constats-action-svg'>
+																<a href='refuser.php?numero='>
+																	<img src='../assets/svg/icons/insured_add_images.svg' class='box-constats-action-svg' style='transform: rotate(180deg);'>
 																</a>
 															</div>
 														</div>
@@ -213,13 +213,13 @@
 																</a>
 															</div>
 															<div class='box-constats-action'>
-																<a href='supprimerConstat.php?numero='>
-																	<img src='../assets/svg/icons/delete.svg' class='box-constats-action-svg'>
+																<a href='valider.php?numero='>
+																	<img src='../assets/svg/icons/admin_validation.svg' class='box-constats-action-svg'>
 																</a>
 															</div>
 															<div class='box-constats-action'>
-																<a href='ajoutImageConstatConstat.php?numero='>
-																	<img src='../assets/svg/icons/insured_add_images.svg' class='box-constats-action-svg'>
+																<a href='refuser.php?numero='>
+																	<img src='../assets/svg/icons/admin_validation.svg' class='box-constats-action-svg' style='transform: rotate(180deg);'>
 																</a>
 															</div>
 														</div>
