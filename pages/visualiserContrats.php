@@ -71,7 +71,7 @@
 													if (isset($_SESSION['profil'])) {
 														if ($_SESSION['profil'] === 'gestionnaire') {
 															echo "
-																<a href='modifierContrat.php?assure=" . $data[1] . $data[0] . "'>
+																<a href='modifierContrat.php?assure=" . $data[0] . $data[1] . "&immatriculation=".$data[7]."'>
 																	<div class='box-actions-container'>
 																		<img class='box-actions-svg' src='../assets/svg/icons/gestionnaire_modify_contract.svg'>
 																	</div>

@@ -69,7 +69,7 @@
                                 </div>
                             </a>
 
-                            <a href="">
+                            <a href="contacterAssure.php">
                                 <div class="menu-button-container">
                                     <div class="menu-button">
                                         <img class="menu-button-svg" src="../assets/svg/menu_icons/menu_contact.svg">
