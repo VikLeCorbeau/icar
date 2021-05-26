@@ -17,7 +17,6 @@
         <link rel="icon" href="../assets/svg/logo/icon.svg">
 
         <link href="../css/generics.css" rel="stylesheet">
-        <link href="../css/visiteur.css" rel="stylesheet">
         <link href="../css/boxes.css" rel="stylesheet">
         <link href="../css/form.css" rel="stylesheet">
 
@@ -37,52 +36,52 @@
                     </div>
                 </div>
 
+                <table>
+                    <thead>
+                        <th>date</th>
+                        <th>urgence</th>
+                        <th>type</th>
+                        <th>identité</th>
+                        <th>e-mail</th>
+                        <th>identifiant</th>
+                        <th>titre</th>
+                        <th>message</th>
+                        <th>supprimer ?</th>
+                    </thead>
+                    <tbody id="table-body">
+                    <?php
+                    if ($fl = verificationFichier("../db/erreurs.csv", 'r')) {
 
-                <div class="datas-grid" id="witness-grid" style="grid-template-columns: repeat(9, 1fr);" data-row="99">
+                        while ($data = fgetcsv($fl, 1000,';')) {
+                            echo "
+                                        <tr>
+                                            <td>" . $data[0] . "</td>
+                                            <td>" . $data[1] . "</td>
+                                            <td>" . $data[2] . "</td>
+                                            <td>" . $data[3] . "</td>
+                                            <td>" . $data[4] . "</td>
+                                            <td>" . $data[5] . "</td>
+                                            <td>" . $data[6] . "</td>
+                                            <td>" . $data[7] . "</td>
+                                            <td><img src='../assets/svg/icons/delete.svg' class='datas-svg line-delete'></td>
+                                        </tr>
+                                        ";
+                        }
 
-                    <span class="datas-title">date</span>
-                    <span class="datas-title">urgence</span>
-                    <span class="datas-title">type</span>
-                    <span class="datas-title">identité</span>
-                    <span class="datas-title">e-mail</span>
-                    <span class="datas-title">identifiant</span>
-                    <span class="datas-title">titre</span>
-					<span class="datas-title">message</span>
-                    <span class="datas-title">supprimer ?</span>
-
-					<?php
-						if ($fl = verificationFichier("../db/erreurs.csv", 'r')) {
-							$i = 0;
-
-							while ($data = fgetcsv($fl, 1000,';')) {
-								echo "
-								<span class='datas-data' id='". $i ."'>". $data[0] ."</span>
-								<span class='datas-data' id='". $i ."'>". $data[1] ."</span>
-								<span class='datas-data' id='". $i ."'>". $data[2] ."</span>
-								<span class='datas-data' id='". $i ."'>". $data[3] ."</span>
-                                <span class='datas-data' id='". $i ."'>". $data[4] ."</span>        
-                                <span class='datas-data' id='". $i ."'>". $data[5] ."</span>        
-                                <span class='datas-data' id='". $i ."'>". $data[6] ."</span>        
-								<span class='datas-data' id='". $i ."'>". $data[7] ."</span>        
-								<span class='datas-data' id='". $i ."'>
-									<img src='../assets/svg/icons/delete.svg' class='datas-svg' id='". $i ."'>
-								</span>
-								";
-							}
-
-							fclose($fl);
-						}
-					?>
-
-				</div>
-
+                        fclose($fl);
+                    }
+                    ?>
+                    </tbody>
+                </table>
 
             </div>
         </div>
 
         <?php include("../layouts/footer.php"); ?>  
 
-    </div> 
+    </div>
+
+    <script type="text/javascript" src="../src/table.js"></script>
 
 </body>
 </html>

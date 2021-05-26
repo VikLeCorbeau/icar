@@ -37,7 +37,7 @@
                 </div>
 
 
-                <div class="datas-grid" id="witness-grid" style="grid-template-columns: repeat(6, 1fr);" data-row="99">
+                <!--<div class="datas-grid" id="witness-grid" style="grid-template-columns: repeat(6, 1fr);" data-row="99">
 
                     <span class="datas-title">date - heure</span>
                     <span class="datas-title">type</span>
@@ -46,7 +46,7 @@
 					<span class="datas-title">quoi</span>
                     <span class="datas-title">supprimer ?</span>
 
-					<?php
+					<?php/*
 						if ($fl = verificationFichier("../db/logs.csv", 'r')) {
 							$i = 0;
 
@@ -65,9 +65,41 @@
 
 							fclose($fl);
 						}
-					?>
+					*/?>
 
-				</div>
+				</div>-->
+
+                <table>
+                    <thead>
+                        <th>date - heure</th>
+                        <th>type</th>
+                        <th>par</th>
+                        <th>sujet</th>
+                        <th>quoi</th>
+                        <th>supprimer ?</th>
+                    </thead>
+                    <tbody id="table-body">
+                    <?php
+                    if ($fl = verificationFichier("../db/logs.csv", 'r')) {
+
+                        while ($data = fgetcsv($fl, 1000,';')) {
+                            echo "
+                                        <tr>
+                                            <td>" . $data[0] . "</td>
+                                            <td>" . $data[1] . "</td>
+                                            <td>" . $data[2] . "</td>
+                                            <td>" . $data[3] . "</td>
+                                            <td>" . $data[4] . "</td>
+                                            <td><img src='../assets/svg/icons/delete.svg' class='datas-svg line-delete'></td>
+                                        </tr>
+                                        ";
+                        }
+
+                        fclose($fl);
+                    }
+                    ?>
+                    </tbody>
+                </table>
 
 
             </div>
@@ -75,45 +107,8 @@
 
         <?php include("../layouts/footer.php"); ?>  
 
-    </div> 
-    <script type="text/javascript">
-        function supprimerLog(){
-
-            let id = this.id;
-            let toRemove = [];
-            let datas = [];
-            console.log(id);
-            let datasGrid = document.getElementById("witness-grid");
-
-            if (datasGrid.hasChildNodes()) {
-                let children = datasGrid.childNodes;
-              
-                for (let i = 0; i < children.length; i++) {
-                    if (children[i].id == id) {
-                        toRemove.push(children[i]);
-                        datas.push(children[i].innerText);
-                    }
-                }
-
-                for (let j = 0; j < toRemove.length; j++) {
-                    toRemove[j].parentNode.removeChild(toRemove[j]);
-                }
-
-                datas.pop();
-            }
-            console.log(datas);
-            let xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function(){
-                if (this.readyState==4 && this.status==200) {
-                    console.log(this.responseText);
-                }
-            }
-
-            xhttp.open("POST", "../src/supprimerLogs.php",true);
-            xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            xhttp.send("date="+datas[0]+"&type="+datas[1]+"&nom="+datas[2]+"&sujet="+datas[3]+"&quoi="+datas[4]);
-        }
-    </script>
+    </div>
+    <script type="text/javascript" src="../src/table.js"></script>
 
 </body>
 </html>

@@ -2,9 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbbb2ba7-76dd-4918-b044-d3dc239a79f9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/oui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/changementscoordonnees.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/supprimerContrat.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/supprimerErreurs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/accueil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/verificationConnexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/verificationConnexion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/inputfiles.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/inputfiles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/radio.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/radio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/generics.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/generics.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/InfoAssure/DupontPierre/constats/img/2-imageConstat1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/db/InfoAssure/DupontPierre/constats/img/2-imageConstat1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/InfoAssure/MartinBen/messagerie/MAIF.csv" beforeDir="false" afterPath="$PROJECT_DIR$/db/InfoAssure/MartinBen/messagerie/MAIF.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/assurance.csv" beforeDir="false" afterPath="$PROJECT_DIR$/db/assurance.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/erreurs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/db/erreurs.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/logs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/db/logs.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/contacterAssure.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contacterAssure.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/declarer_changementcoordonnees.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/declarer_changementcoordonnees.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/listeErreurs.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/listeErreurs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/logs.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/logs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/modifierContrat.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/modifierContrat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/traitements.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/traitements.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/afficherMessagesGestionnaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/afficherMessagesGestionnaire.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ajoutConstat1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ajoutConstat1.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ajoutConstat1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ajouterMessageGestionnaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ajouterMessageGestionnaire.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modificationContrat.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/modificationContrat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/supprimerLogs.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/supprimerLogs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/supprimerTemoin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/supprimerTemoin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/verificationAssurance.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/verificationAssurance.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/verificationAssure.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/verificationAssure.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +73,7 @@
       <workItem from="1620210444565" duration="18000" />
       <workItem from="1620210467823" duration="7000" />
       <workItem from="1620210539403" duration="21000" />
+      <workItem from="1622022650461" duration="9185000" />
     </task>
     <servers />
   </component>

@@ -24,8 +24,6 @@
         <link href="../css/generics.css" rel="stylesheet">
         <link href="../css/boxes.css" rel="stylesheet">
         <link href="../css/form.css" rel="stylesheet">
-
-        <script type="text/javascript" src="ajoutConstat1.js"></script>
         
     </head>
 <body>
@@ -112,17 +110,17 @@
 
                                 <div class="input-container">
                                 <label for="prenomT" class="form-label">prénom du témoin</label>
-                                <input type="text" id="prenomT" name="prenomT" placeholder="Prénom du témoin" class="form-slim-input" required>  
+                                <input type="text" id="prenomT" name="prenomT" placeholder="Prénom du témoin" class="form-slim-input" required>
                             </div>
 
                             <div class="input-container">
                                 <label for="adresseT" class="form-label">adresse du témoin</label>
-                                <input type="text" id="adresseT" name="adresseT" placeholder="Adresse du témoin" class="form-slim-input" required>  
+                                <input type="text" id="adresseT" name="adresseT" placeholder="Adresse du témoin" class="form-slim-input" required>
                             </div>
 
                             <div class="input-container">
                                 <label for="telephoneT" class="form-label">téléphone du témoin</label>
-                                <input type="text" id="telephoneT" name="telephoneT" placeholder="Téléphone du témoin" class="form-slim-input" required>  
+                                <input type="text" id="telephoneT" name="telephoneT" placeholder="Téléphone du témoin" class="form-slim-input" required>
                             </div>
 
                         </div>
@@ -133,34 +131,35 @@
                         <h1 class="form-title">liste des témoins</h1>
                     </div>
 
-                    <div class="datas-grid" id="witness-grid" style="grid-template-columns: repeat(5, 1fr);" data-row="99">
-
-                        <span class="datas-title">nom</span>
-                        <span class="datas-title">prénom</span>
-                        <span class="datas-title">adresse</span>
-                        <span class="datas-title">téléphone</span>
-                        <span class="datas-title">supprimer ?</span>
-
+                    <table>
+                        <thead>
+                            <th>nom</th>
+                            <th>prénom</th>
+                            <th>adresse</th>
+                            <th>téléphone</th>
+                            <th>supprimer ?</th>
+                        </thead>
+                        <tbody id="table-body">
                         <?php
                             if ($ft = verificationFichier("../db/InfoAssure/".$_SESSION['identifiants']."/constats/tempTemoin.csv", 'r')) {
-                                    $i = 0;
 
                                     while ($data = fgetcsv($ft, 1000,';')) {
                                         echo "
-                                        <span class='datas-data' id='". $i ."'>". $data[0] ."</span>
-                                        <span class='datas-data' id='". $i ."'>". $data[1] ."</span>
-                                        <span class='datas-data' id='". $i ."'>". $data[2] ."</span>
-                                        <span class='datas-data' id='". $i ."'>". $data[3] ."</span>      
-                                        <span class='datas-data' id='". $i ."'>
-                                            <img src='../assets/svg/icons/delete.svg' class='datas-svg' onclick='retirerT()' id='". $i ."'>
-                                        </span>
+                                        <tr>
+                                            <td>" . $data[0] . "</td>
+                                            <td>" . $data[1] . "</td>
+                                            <td>" . $data[2] . "</td>
+                                            <td>" . $data[3] . "</td>
+                                            <td><img src='../assets/svg/icons/delete.svg' class='datas-svg line-delete'></td>
+                                        </tr>
                                         ";
                                     }
 
                                     fclose($ft);
                             }
                         ?>
-                    </div>
+                        </tbody>
+                    </table>
 
                     <div class="buttons-container">
 
@@ -180,7 +179,9 @@
 
         <?php include "../layouts/footer.php"; ?>
 
-    </div> 
+    </div>
+
+    <script type="text/javascript" src="table.js"></script>
 
 </body>
 </html>
