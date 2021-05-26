@@ -75,12 +75,12 @@ verificationType(array('gestionnaire'));
 																</a>
 															</div>
 															<div class='box-constats-action'>
-																<a href='valider.php?numero=".$data[1]."'>
+																<a href='../src/validerConstat.php?numero=".$data[1]."&assure=".$data[2]."&valide=0'>
 																	<img src='../assets/svg/icons/admin_validation.svg' class='box-constats-action-svg'>
 																</a>
 															</div>
 															<div class='box-constats-action'>
-																<a href='refuser.php?numero=".$data[1]."'>
+																<a href='../src/validerConstat.php?numero=".$data[1]."&assure=".$data[2]."&valide=1'>
 																	<img src='../assets/svg/icons/admin_validation.svg' class='box-constats-action-svg' style='transform: rotate(180deg);'>
 																</a>
 															</div>
@@ -124,8 +124,7 @@ verificationType(array('gestionnaire'));
 														</div>
 														<div class='box-informations-container'>
 															<div class='box-informations'>
-																<h3 class='box-information box-information--primary'>NOM</h3>
-																<h3 class='box-information box-information--secondary'> DONNEES ? </h3>
+																<h3 class='box-information box-information--primary'>Nouvelles coordonnées</h3>
 															</div>
 														</div>
 														<div class='box-separator box-separator-446'></div>
@@ -136,12 +135,12 @@ verificationType(array('gestionnaire'));
 																</a>
 															</div>
 															<div class='box-constats-action'>
-																<a href='accepter.php?assure=".$data[1]."'>
+																<a href='../src/validerChangement.php?assure=".$data[1]."&valide=0'>
 																	<img src='../assets/svg/icons/admin_validation.svg' class='box-constats-action-svg'>
 																</a>
 															</div>
 															<div class='box-constats-action'>
-																<a href='refuser.php?assure=".$data[1]."'>
+																<a href='../src/validerChangement.php?assure=".$data[1]."&valide=1'>
 																	<img src='../assets/svg/icons/admin_validation.svg' class='box-constats-action-svg' style='transform: rotate(180deg);'>
 																</a>
 															</div>
@@ -176,7 +175,6 @@ verificationType(array('gestionnaire'));
                         if ($data[0] == 'cession') {
                             if ($fi = verificationFichier("../db/InfoAssure/".$data[2].'/contrats.csv', 'r')) {
                                 while ($donnees = fgetcsv($fi, 1000, ';')) {
-                                    //echo $donnees[7].' '.$data[1];
                                     if ($donnees[5] == $_SESSION['assurance'] && $donnees[7] == $data[1]) {
                                         $elem = file_get_contents("../db/InfoAssure/".$data[2]."/cession/".$data[1].".json");
                                         $obj = json_decode($elem);
@@ -212,12 +210,12 @@ verificationType(array('gestionnaire'));
 																</a>
 															</div>
 															<div class='box-constats-action'>
-																<a href='valider.php?numero='>
+																<a href='../src/validerCession.php?assure=".$data[2]."&immatriculation=".$obj[0]->immatriculation."&valide=0'>
 																	<img src='../assets/svg/icons/admin_validation.svg' class='box-constats-action-svg'>
 																</a>
 															</div>
 															<div class='box-constats-action'>
-																<a href='refuser.php?numero='>
+																<a href='../src/validerCession.php?assure=".$data[2]."&immatriculation=".$obj[0]->immatriculation."&valide=1'>
 																	<img src='../assets/svg/icons/admin_validation.svg' class='box-constats-action-svg' style='transform: rotate(180deg);'>
 																</a>
 															</div>

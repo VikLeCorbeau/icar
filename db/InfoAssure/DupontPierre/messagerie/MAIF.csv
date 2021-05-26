@@ -5,6 +5,4 @@ assureur:"Oui dites moi"
 me:"j'ai déglingué ma voiture"
 assureur:"fais un constat bouffon"
 me:"Ca farte ?"
-me:"Ca farte ?"
-assureur:YES
-assureur:"Et toi ça gaz le juif ?"
+me:OK

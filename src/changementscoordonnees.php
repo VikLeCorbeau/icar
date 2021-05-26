@@ -44,9 +44,7 @@
         }
     }
     fclose($fa);
-    //rename('../db/InfoAssure/'.$_SESSION["identifiants"].'/informations_temp.csv' , '../db/InfoAssure/'.$_SESSION["identifiants"].'/informations.csv');
-
-
+    
 
     #traitements
     $traitements = array(array('changement', $_SESSION['identifiants']));

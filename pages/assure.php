@@ -85,11 +85,11 @@
                                 </div>
                             </a>
 
-                            <a href="mesConstats.php">
+                            <a href="mesDeclarations.php">
                                 <div class="menu-button-container">
                                     <div class="menu-button">
                                         <img class="menu-button-svg" src="../assets/svg/menu_icons/menu_see_constats.svg">
-                                        <p class="menu-button-text">mes déclarations de constats</p>
+                                        <p class="menu-button-text">mes déclarations</p>
                                     </div>
                                 </div>
                             </a>

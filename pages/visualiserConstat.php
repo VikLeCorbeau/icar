@@ -2,7 +2,7 @@
     session_start();
     require_once("../src/fonctions.php");
 
-    verificationType(array('gestionnaire'));
+    verificationType(array('gestionnaire', 'assure'));
 ?>
 
 <!DOCTYPE html>
