@@ -1,7 +1,7 @@
 <?php 
 	session_start();
 	include('../phpqrcode/qrlib.php');
-	$ancienneImm = $_GET['AncienneImm'];
+	
 	$nom = $_POST['nomConducteur'];
 	$prenom = $_POST['prenomConducteur'];
 	$adresse = $_POST['adresse'];
@@ -19,17 +19,17 @@
 	$bonus = $_POST['bonus'];
 	$paiement = $_POST['paiement'];
 
-	unlink("../db/InfoAssure/".$nom.$prenom."/contrat-".$nom.$prenom.$ancienneImm.".png");
+	$donnees = $_GET['donnees'];
+	$tab = unserialize($donnees);
+	$contrat = array();
+	unlink("../db/InfoAssure/".$tab[0].$tab[1]."/contrat-".$tab[0].$tab[1].$tab[7].".png");
 
 	$lien = "http://localhost/Projet_Car/icar/pages/visiteur.php?assure=".$nom.$prenom."&immatriculation=".$immatriculation;
 	QRcode::png($lien, "../db/InfoAssure/".$nom.$prenom."/contrat-".$nom.$prenom.$immatriculation.".png");
 
-
-	$contrat = array();
-
 	$f = fopen("../db/InfoAssure/".$nom.$prenom."/contrats.csv", 'r');
 	while ($data = fgetcsv($f, 1000, ';')) {
-		if ($data[7] != $immatriculation && $ancienneImm != $immatriculation) {
+		if ($data != $tab) {
 			array_push($contrat, $data);
 		}
 	}
@@ -41,6 +41,8 @@
 		fputcsv($f, $element, ';');
 	}
 	fclose($f);
+
+
 	$fl = fopen("../db/logs.csv", 'a+');
 	$date = date('d-m-y h:i:s');
 	$donnees = array(array($date, 'contrat', $_SESSION['profil'].':'.$_SESSION['identifiants'], 'assure:'.$prenom.$nom, 'modification contrat'));
@@ -48,6 +50,6 @@
 		fputcsv($fl, $element, ';');
 	}
 	fclose($fl);
- 	header('Location: ../pages/visualiserContrats.php?assure='.$nom.$prenom.'&immatriculation='.$immatriculation.'&voiture='.$voiture);
+ 	header('Location: ../pages/visualiserContrats.php?assure='.$nom.$prenom.'&immatriculation='.$immatriculation.'&voiture='.$modele);
  	exit();
  ?>

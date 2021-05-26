@@ -42,7 +42,7 @@
                 </div>
 
                 <?php  
-                    echo "<form id='modificationContrat' class='form' action='../src/modificationContrat.php?AncienneImm=".$$data[7]."' method='POST'>"
+                    echo "<form id='modificationContrat' class='form' action='../src/modificationContrat.php?donnees=".serialize($data)."' method='POST'>"
                 ?>
                         <div class="form-title-container">
                             <h1 class="form-title">informations générales</h1>
