@@ -42,14 +42,25 @@
                     </div>
                 </div>
 
-                <div class="contact-input-container">
-                    <h2>Nouveau Message : <input type="text" name="NouvMessage" id="NMessage" placeholder="Entrez le nom de l'assurance">
-                        <button type="button" class="button button--light round-button" onclick="nouveauMessage()">
+                <div class="grid-form">
+
+                    <div class="input-container">
+                        <label for="NouvMessage" class="form-label">nouveau message</label>
+                        <input id="NMessage" type="text" name="NouvMessage" class="form-large-input" placeholder="Entrez le nom de l'assurance">
+                    </div>
+
+                    <div class="input-container" style="justify-content: flex-end;">
+                        <button type="button" class="button button--light" style="margin: 0;" onclick="nouveauMessage()">
                             <p class="button-text">Valider</p>
                         </button>
-                    </h2>
-                    <span id="erreur"></span>
+                    </div>
+
+                    <div class="input-container" style="justify-content: flex-end; align-items: center;">
+                        <span id="erreur" class="error" style="margin: 0;"></span>
+                    </div>
+
                 </div>
+
                 <div class="contact-grid">
 					<div class="contact-left-container">
 						<div class="contact-left-title-container">
