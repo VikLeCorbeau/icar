@@ -34,7 +34,7 @@ fclose($fa);
 
 
 $dossier = "../db/InfoAssure/".$nom.$prenom;
-$v = array(array($id,$mdp,$nom,$prenom,$tel,$email,$adresse,$ville,$cp,$pays,$contrat,$assurance));
+$v = array(array($nom,$prenom,$tel,$email,$adresse,$ville,$cp,$pays,$contrat,$assurance));
 mkdir($dossier, 0777, true);
 
 if ($fa = fopen("../db/InfoAssure/".$nom.$prenom."/informations.csv", 'a+')) {

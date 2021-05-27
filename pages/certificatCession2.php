@@ -88,12 +88,12 @@
 						?>
 						<div class="input-container">
 							<label for="nom" class="form-label">nom</label>
-							<input type="text" name="nom" class="form-slim-input" placeholder="Nom" value="<?php echo $data[2]; ?>" required>
+							<input type="text" name="nom" class="form-slim-input" placeholder="Nom" value="<?php echo $data[0]; ?>" required>
 						</div>
 
 						<div class="input-container">
 							<label for="prenom" class="form-label">prénom</label>
-							<input type="text" name="prenom" class="form-slim-input" placeholder="Prénom" value="<?php echo $data[3]; ?>" required>
+							<input type="text" name="prenom" class="form-slim-input" placeholder="Prénom" value="<?php echo $data[1]; ?>" required>
 						</div>
 
 						<div class="input-container">
@@ -103,17 +103,17 @@
 
 						<div class="input-container">
 							<label for="adresse" class="form-label">adresse</label>
-							<input type="text" name="adresse" class="form-slim-input" placeholder="Adresse" value="<?php echo $data[6]; ?>" required>
+							<input type="text" name="adresse" class="form-slim-input" placeholder="Adresse" value="<?php echo $data[4]; ?>" required>
 						</div>
 
 						<div class="input-container">
 							<label for="ville" class="form-label">ville</label>
-							<input type="text" name="ville" class="form-slim-input" placeholder="Ville" value="<?php echo $data[7]; ?>" required>
+							<input type="text" name="ville" class="form-slim-input" placeholder="Ville" value="<?php echo $data[5]; ?>" required>
 						</div>
 
 						<div class="input-container">
 							<label for="cp" class="form-label">code postal</label>
-							<input type="text" name="cp" class="form-slim-input" placeholder="Code Postal" value="<?php echo $data[8]; ?>" required>
+							<input type="text" name="cp" class="form-slim-input" placeholder="Code Postal" value="<?php echo $data[6]; ?>" required>
 						</div>
 
 						<div class="input-container">
@@ -123,7 +123,7 @@
 
 						<div class="input-container">
 							<label for="pays" class="form-label">pays</label>
-							<input type="text" name="pays" class="form-slim-input" placeholder="Pays" value="<?php echo $data[9]; ?>" required>
+							<input type="text" name="pays" class="form-slim-input" placeholder="Pays" value="<?php echo $data[7]; ?>" required>
 						</div>
 
 					</div>

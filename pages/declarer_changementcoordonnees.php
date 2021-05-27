@@ -6,12 +6,12 @@ require_once("../src/fonctions.php");
 <?php
 $fa = fopen("../db/InfoAssure/".$_SESSION["identifiants"]."/informations.csv", 'r');
 while ($data = fgetcsv($fa, 1000, ';')) {
-    $pays = $data[9];
-    $ville = $data[7];
-    $cp = $data[8];
-    $adresse = $data[6];
-    $tel = $data[4];
-    $email = $data[5];
+    $pays = $data[7];
+    $ville = $data[5];
+    $cp = $data[6];
+    $adresse = $data[4];
+    $tel = $data[2];
+    $email = $data[3];
 }
 
 fclose($fa);

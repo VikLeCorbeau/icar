@@ -116,7 +116,7 @@ verificationType(array('gestionnaire'));
                         if ($data[0] == 'changement') {
                             if ($fi = verificationFichier("../db/InfoAssure/".$data[1].'/informations_temp.csv', 'r')) {
                                 while ($donnees = fgetcsv($fi, 1000, ';')) {
-                                    if ($donnees[11] == $_SESSION['assurance']) {
+                                    if ($donnees[9] == $_SESSION['assurance']) {
                                         echo "
 													<div class='box box-446'>
 														<div class='box-title-container'>

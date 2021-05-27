@@ -20,16 +20,16 @@
 	if ($traitement) {
 		if ($fa = verificationFichier("../db/InfoAssure/".$nomA."/informations.csv", 'r')) {
 			while ($data = fgetcsv($fa, 1000, ';')) {
-				$nom = $data[2];
-				$prenom = $data[3];
-				$tel = $data[4];
-				$email = $data[5];
-				$rue = $data[6];
-				$ville = $data[7];
-				$cp = $data[8];
-				$pays = $data[9];
-				$numeroAssurance = $data[10];
-				$assurance = $data[11];
+				$nom = $data[0];
+				$prenom = $data[1];
+				$tel = $data[2];
+				$email = $data[3];
+				$rue = $data[4];
+				$ville = $data[5];
+				$cp = $data[6];
+				$pays = $data[7];
+				$numeroAssurance = $data[8];
+				$assurance = $data[9];
 			}
 			fclose($fa);
 		}

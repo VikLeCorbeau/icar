@@ -20,24 +20,22 @@
 
     $fa = fopen("../db/InfoAssure/".$_SESSION["identifiants"]."/informations.csv", 'r');
     while ($data = fgetcsv($fa, 1000, ';')) {
-        $pays = $data[9];
-        $ville = $data[7];
-        $cp = $data[8];
-        $adresse = $data[6];
-        $tel = $data[4];
-        $email = $data[5];
-        $id = $data[0];
-        $mdp = $data[1];
-        $nom = $data[2];
-        $prenom = $data[3];
-        $contrat = $data[10];
-        $assurance = $data[11];
+        $pays = $data[7];
+        $ville = $data[5];
+        $cp = $data[6];
+        $adresse = $data[4];
+        $tel = $data[2];
+        $email = $data[3];
+        $nom = $data[0];
+        $prenom = $data[1];
+        $contrat = $data[8];
+        $assurance = $data[9];
 
     }
 
     fclose($fa);
 
-    $v = array(array($id,$mdp,$nom,$prenom,$newTelephone,$newEmail,$newAdresse,$newVille,$newCP,$newPays,$contrat,$assurance));
+    $v = array(array($nom,$prenom,$newTelephone,$newEmail,$newAdresse,$newVille,$newCP,$newPays,$contrat,$assurance));
     if ($fa = fopen("../db/InfoAssure/".$nom.$prenom."/informations_temp.csv", 'a+')) {
         foreach ($v as $element) {
             fputcsv($fa, $element,';');

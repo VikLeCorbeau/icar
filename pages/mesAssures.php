@@ -69,8 +69,8 @@
 										<div class='box box-446'>
 
 											<div class='box-title-container'>
-												<h2 class='box-title'>" . $data[3] . " " . $data[2] . "</h2>
-												<a href='creerContrat.php?assure=" . $data[2] . $data[3] . "'>
+												<h2 class='box-title'>" . $data[1] . " " . $data[0] . "</h2>
+												<a href='creerContrat.php?assure=" . $data[0] . $data[1] . "'>
 													<div class='box-actions-container'>
 														<img class='box-actions-svg' src='../assets/svg/icons/gestionnaire_add_contract.svg'>
 													</div>
@@ -81,22 +81,22 @@
 
 												<div class='box-informations'>
 													<h3 class='box-information box-information--primary'>Nom :</h3>
-													<h3 class='box-information box-information--secondary'>" . $data[2] . "</h3>
+													<h3 class='box-information box-information--secondary'>" . $data[0] . "</h3>
 												</div>
 
 												<div class='box-informations'>
 													<h3 class='box-information box-information--primary'>Prénom :</h3>
-													<h3 class='box-information box-information--secondary'>" . $data[3] . "</h3>
+													<h3 class='box-information box-information--secondary'>" . $data[1] . "</h3>
 												</div>
 
 												<div class='box-informations'>
 													<h3 class='box-information box-information--primary'>Adresse mail :</h3>
-													<h3 class='box-information box-information--secondary'>" . $data[5] . "</h3>
+													<h3 class='box-information box-information--secondary'>" . $data[3] . "</h3>
 												</div>
 
 												<div class='box-informations'>
 													<h3 class='box-information box-information--primary'>Téléphone :</h3>
-													<h3 class='box-information box-information--secondary'>" . $data[4] . "</h3>
+													<h3 class='box-information box-information--secondary'>" . $data[2] . "</h3>
 												</div>
 
 											</div>

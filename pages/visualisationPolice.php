@@ -58,29 +58,29 @@
 
                                         echo "<div class='box box-446'>";
                                             echo "<div class='box-title-container'>";
-                                                echo "<h2 class='box-title'>".$data[3].' '.$data[2]."</h2>";
+                                                echo "<h2 class='box-title'>".$data[1].' '.$data[0]."</h2>";
                                             echo "</div>";
 
                                             echo "<div class='box-informations-container'>";
                                             
                                                 echo "<div class='box-informations'>";
                                                     echo "<h3 class='box-information box-information--primary'>Nom :</h3>";
-                                                    echo "<h3 class='box-information box-information--secondary'>".$data[2]."</h3>";
+                                                    echo "<h3 class='box-information box-information--secondary'>".$data[0]."</h3>";
                                                 echo "</div>";
 
                                                 echo "<div class='box-informations'>";
                                                     echo "<h3 class='box-information box-information--primary'>Prénom :</h3>";
-                                                    echo "<h3 class='box-information box-information--secondary'>".$data[3]."</h3>";
+                                                    echo "<h3 class='box-information box-information--secondary'>".$data[1]."</h3>";
                                                 echo "</div>";
 
                                                 echo "<div class='box-informations'>";
                                                     echo "<h3 class='box-information box-information--primary'>Adresse mail :</h3>";
-                                                    echo "<h3 class='box-information box-information--secondary'>".$data[5]."</h3>";
+                                                    echo "<h3 class='box-information box-information--secondary'>".$data[3]."</h3>";
                                                 echo "</div>";
 
                                                 echo "<div class='box-informations'>";
                                                     echo "<h3 class='box-information box-information--primary'>Téléphone :</h3>";
-                                                    echo "<h3 class='box-information box-information--secondary'>".$data[4]."</h3>";
+                                                    echo "<h3 class='box-information box-information--secondary'>".$data[2]."</h3>";
                                                 echo "</div>";
                                                 
                                             echo "</div>";
