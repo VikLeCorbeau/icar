@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbbb2ba7-76dd-4918-b044-d3dc239a79f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/db/InfoAssure/DupontPierre/messagerie/.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/creerGestionnaire.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enregistrerGestionnaire.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/logs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/db/logs.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/navigation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/contacterassurance.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contacterassurance.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/creerAssure.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/creerAssure.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/mesAssures.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mesAssures.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/recherche.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/recherche.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +51,8 @@
       <workItem from="1622054565160" duration="894000" />
       <workItem from="1622102885723" duration="583000" />
       <workItem from="1622103754530" duration="2851000" />
-      <workItem from="1622106695576" duration="25000" />
+      <workItem from="1622106695576" duration="218000" />
+      <workItem from="1622107059602" duration="12000" />
     </task>
     <servers />
   </component>
