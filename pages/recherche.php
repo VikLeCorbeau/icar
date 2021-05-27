@@ -47,12 +47,12 @@
                             
                     <div class="input-container">
                         <label for="prenom" class="form-label">prénom</label>
-                        <input type="text" name="prenom" class="form-large-input" placeholder="Prénom" id="prenom" value="Pierre">
+                        <input type="text" name="prenom" class="form-large-input" placeholder="Prénom" id="prenom">
                     </div>
 
 					<div class="input-container">
                         <label for="nom" class="form-label">nom</label>
-                        <input type="text" name="nom" class="form-large-input" placeholder="Nom" id="nom" value="Dupont">
+                        <input type="text" name="nom" class="form-large-input" placeholder="Nom" id="nom">
                     </div>
 
 					<div class="input-container">
