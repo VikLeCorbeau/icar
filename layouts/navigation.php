@@ -121,6 +121,7 @@
                                                 case "admin":?>
                                                     <li class="nav-side-link-dropdown-li"><a href="../pages/logs.php">Logs de modifications</a></li>
                                                     <li class="nav-side-link-dropdown-li"><a href="../pages/listeErreurs.php">Erreurs signalées</a></li>
+                                                    <li class="nav-side-link-dropdown-li"><a href="../pages/creerGestionnaire.php">Ajouter un gestionnaire</a></li>
                                                     <?php break;
                                             }
                                             ?>

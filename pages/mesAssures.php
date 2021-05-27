@@ -3,14 +3,6 @@
     require_once("../src/fonctions.php");
 
 	verificationType(array('gestionnaire'));
-
-	if (!isset($_SESSION['identifiants'])) {
-		header('Location: connexion.php');
-		exit();
-	}else if ($_SESSION['identifiants'] != 'gestionnaire') {
-		header('Location: ../accueil.php');
-		exit();
-	}
 ?>
 
 <!DOCTYPE html>

@@ -59,6 +59,15 @@
                                 </div>
                             </a>
 
+                            <a href="creerGestionnaire.php">
+                                <div class="menu-button-container">
+                                    <div class="menu-button">
+                                        <img class="menu-button-svg" src="../assets/svg/menu_icons/menu_add_insured.svg">
+                                        <p class="menu-button-text">ajouter un gestionnaire</p>
+                                    </div>
+                                </div>
+                            </a>
+
                         </div>
 
 
