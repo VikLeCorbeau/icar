@@ -7,20 +7,18 @@
 
 <!DOCTYPE html>
 <html>
-    <head>    
-    
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Visualisation constat</title>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualisation cession</title>
 
-        <link rel="icon" href="../assets/svg/logo/icon.svg">
+    <link rel="icon" href="../assets/svg/logo/icon.svg">
 
-        <link href="../css/generics.css" rel="stylesheet">
-        <link href="../css/boxes.css" rel="stylesheet">
-        <link href="../css/form.css" rel="stylesheet">
-
-    </head>
+    <link href="../css/generics.css" rel="stylesheet">
+    <link href="../css/boxes.css" rel="stylesheet">
+    <link href="../css/form.css" rel="stylesheet">
+</head>
 <body>
 
     <div class="main-container">
@@ -32,7 +30,7 @@
 
                 <div class="content-banner"> 
                     <div class="content-titles-container">
-                        <h1 class="content-title">Visualisation constat</h1>
+                        <h1 class="content-title">Visualisation cession</h1>
                         <h1 class="content-subtitle"><?php if (isset($_GET['assure'])) { echo $_GET['assure']; } ?></h1>
                     </div>
                 </div>
@@ -42,37 +40,29 @@
 
                     <?php
 
-                    if (isset($_GET['numero'], $_GET['assure'])) {
+                    if (isset($_GET['immatriculation'], $_GET['assure'])) {
 
-                        $numeroConstat = $_GET['numero'];
+                        $immatriculation = $_GET['immatriculation'];
                         $assure = $_GET['assure'];
 
-                    }else if(isset($_GET['numero'], $_SESSION['identifiants'])){
-                        $numeroConstat = $_GET['numero'];
+                    }else if(isset($_GET['immatriculation'], $_SESSION['identifiants'])){
+                        $immatriculation = $_GET['immatriculation'];
                         $assure = $_SESSION['identifiants'];
                     }
                     if (isset($assure)) {   
-                        $filename = "../db/InfoAssure/".$assure."/constats";
-                        $Json = file_get_contents($filename."/constat".$numeroConstat.".json", true);
+                        $filename = "../db/InfoAssure/".$assure."/cession";
+                        $Json = file_get_contents($filename."/".$immatriculation.".json", true);
                         $array = json_decode($Json, true);
 
-                        $titre1 = array("Informations générales","Votre véhicule","Véhicule tiers");
-                        $titre2 = array("Informations générales","Liste des témoins","Votre véhicule","Véhicule tiers");
+                        $titre = array("Informations générales du véhicule","ancien propriétaire","Nouveau propriétaire");
 
                         
                         for ($i=0; $i < count($array); $i++) {
                             echo "<div class='box box-446'>";
-                            if (count($array) == 3) {
                                 echo 
                                 "<div class='box-title-container'>
-									<h2 class='box-title'>" . $titre1[$i] . "</h2>
+									<h2 class='box-title'>" . $titre[$i] . "</h2>
 								</div>";
-                            }else{
-                                echo 
-                                "<div class='box-title-container'>
-                                    <h2 class='box-title'>".$titre2[$i]."</h2>
-                                </div>";
-                            }
 
                             echo "<div class='box-informations-container'>";
 
@@ -108,6 +98,5 @@
         <?php include("../layouts/footer.php"); ?>  
 
     </div> 
-
 </body>
 </html>
