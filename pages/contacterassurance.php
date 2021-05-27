@@ -102,7 +102,7 @@
                             <div class="contact-button-container">
 
                                 <button type="button" class="button button--light round-button" onclick="envoyer()">
-                                    <p class="button-text">Envoyer</p>
+                                    <p class="button-text" id="text-contact">Envoyer</p>
                                     <img class="button-svg" src="../assets/svg/icons/back.svg" style="transform: rotate(90deg);">
                                 </button>
 

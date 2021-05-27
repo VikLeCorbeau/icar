@@ -4,8 +4,7 @@
     <list default="true" id="fbbb2ba7-76dd-4918-b044-d3dc239a79f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/logs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/db/logs.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/navigation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/mesDeclarations.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mesDeclarations.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/recherche.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/recherche.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +49,10 @@
       <workItem from="1620210539403" duration="21000" />
       <workItem from="1622022650461" duration="9185000" />
       <workItem from="1622054565160" duration="894000" />
-      <workItem from="1622102885723" duration="90000" />
+      <workItem from="1622102885723" duration="583000" />
+      <workItem from="1622103754530" duration="2851000" />
+      <workItem from="1622106695576" duration="218000" />
+      <workItem from="1622107059602" duration="12000" />
     </task>
     <servers />
   </component>
