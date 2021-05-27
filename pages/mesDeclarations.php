@@ -100,7 +100,7 @@
 										</a>
 									</div>
 									<div class='box-constats-action'>
-										<a href='ajoutImageConstatConstat.php?numero=".$i."'>
+										<a href='ajoutImageConstat.php?numero=".$i."'>
 											<img src='../assets/svg/icons/insured_add_images.svg' class='box-constats-action-svg'>
 										</a>
 									</div>
@@ -148,7 +148,7 @@
 								<div class='box-separator box-separator-446'></div>
 								<div class='box-constats-actions-container'>
 									<div class='box-constats-action'>
-										<a href='.php'>
+										<a href='visualiserChangement.php'>
 											<img src='../assets/svg/icons/see.svg' class='box-constats-action-svg'>
 										</a>
 									</div>

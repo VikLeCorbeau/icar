@@ -48,7 +48,7 @@ fclose($fa);
                 </div>
             </div>
 
-            <form id="changeCoordinates" action="../src/changementscoordonnees.php" class="form" method="POST">
+            <form id="changeCoordinates" action="../src/changementscoordonnees.php" class="form" method="POST" enctype="multipart/form-data">
 
                 <div class="form-title-container">
                     <h1 class="form-title">vos coordonnées</h1>
@@ -96,7 +96,7 @@ fclose($fa);
                 <div class="grid-form">
 
                     <div class="form-images-input-file-container">
-                        <input class="form-images-input-file" id="photos-input" type="file" name="photo[]">
+                        <input class="form-images-input-file" id="photos-input" type="file" name="photo[]" required>
                         <label class="form-images-input-file-label" for="photos-input">Selectionner un justificatif de domicile</label>
                     </div>
 
@@ -106,7 +106,6 @@ fclose($fa);
 
                             <div class="photo-choosen">
                                 <p id="no-photo" class="photo-choosen-text">pas de photos sélectionnées</p>
-                                <!--<img class="photo-choosen-svg" src="../assets/svg/icons/delete.svg">-->
                             </div>
 
                         </div>
