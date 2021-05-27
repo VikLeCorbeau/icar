@@ -109,7 +109,7 @@
                                                     <li class="nav-side-link-dropdown-li"><a href="../pages/mesContrats.php">Voir mes contrats d'assurance</a></li>
                                                     <li class="nav-side-link-dropdown-li"><a href="../pages/certificatCession1.php">Je vends mon véhicule</a></li>
                                                     <li class="nav-side-link-dropdown-li"><a href="../pages/contacterassurance.php">Contacter mon assurance</a></li>
-                                                    <li class="nav-side-link-dropdown-li"><a href="../pages/mesConstats.php">Mes déclarations de constat</a></li>
+                                                    <li class="nav-side-link-dropdown-li"><a href="../pages/mesDeclarations.php">Mes déclarations</a></li>
                                                 <?php break;
                                                 case "gestionnaire":?>
                                                     <li class="nav-side-link-dropdown-li"><a href="../pages/mesAssures.php">Voir mes assurés</a></li>
