@@ -196,7 +196,7 @@
 						echo "
 							<div class='box box-446'>
 								<div class='box-title-container'>
-									<h2 class='box-title'>Cession : ".$donnees[1]."</h2>
+									<h2 class='box-title'>Cession : ".$data[7]."</h2>
 								</div>
 								<div class='box-informations-container'>
 									<div class='box-informations'>

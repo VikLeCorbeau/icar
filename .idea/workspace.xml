@@ -3,21 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="fbbb2ba7-76dd-4918-b044-d3dc239a79f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/contact.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/InfoAssure/DupontPierre/cession/valideCession.csv" beforeDir="false" afterPath="$PROJECT_DIR$/db/InfoAssure/DupontPierre/cession/valideCession.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/InfoAssure/DupontPierre/constats/valideConstat.csv" beforeDir="false" afterPath="$PROJECT_DIR$/db/InfoAssure/DupontPierre/constats/valideConstat.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/InfoAssure/DupontPierre/valideChangement.csv" beforeDir="false" afterPath="$PROJECT_DIR$/db/InfoAssure/DupontPierre/valideChangement.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/logs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/db/logs.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oui" beforeDir="false" afterPath="$PROJECT_DIR$/oui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/contacterAssure.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contacterAssure.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/contacterassurance.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contacterassurance.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/navigation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/mesDeclarations.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mesDeclarations.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/changementscoordonnees.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/changementscoordonnees.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/supprimerContrat.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/supprimerContrat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/supprimerErreurs.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/supprimerErreurs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/validerCession.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/validerCession.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/validerChangement.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/validerChangement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/validerConstat.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/validerConstat.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +50,7 @@
       <workItem from="1620210539403" duration="21000" />
       <workItem from="1622022650461" duration="9185000" />
       <workItem from="1622054565160" duration="894000" />
+      <workItem from="1622102885723" duration="90000" />
     </task>
     <servers />
   </component>
