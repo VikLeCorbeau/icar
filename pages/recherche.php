@@ -111,7 +111,7 @@
  			mail = document.getElementById('mail').value;
  			tel = document.getElementById('tel').value;
  			contrat = document.getElementById('contrat').value;
-
+ 			erreur = 0;
  			if (nom !== "" && prenom !== "") {
  				element = {'nom':nom, 'prenom':prenom};
  				params = JSON.stringify(element);
@@ -124,33 +124,37 @@
  			}else if (contrat !== "") {
  				element = {'contrat':contrat};
  				params = JSON.stringify(element);
+ 			}else{
+ 				document.getElementById('erreur').innerHTML = "pas assez d'informations pour la recheche";
+ 				erreur = 1;
  			}
-
- 			let xhttp = new XMLHttpRequest();
-		    xhttp.onreadystatechange = function(){
-		        if (this.readyState==4 && this.status==200) {
-			        let infos = JSON.parse(this.responseText);
-		        	if(infos[0] == "mauvais"){
-		        		document.getElementById('erreur').innerHTML = "Pas de résultat pour votre recherche";
-		        	}else{
-			        	liste = document.getElementById('affichage');
-			            for(let i = 0; i < infos.length; i++){
-			            	tr = document.createElement('tr');
-				            let champ = infos[i];
-			            	for(let j = 0; j < champ.length; j++){
-				            	let element = document.createElement("td");
-				            	tr.appendChild(element);
-				            	tr.cells[j].appendChild(document.createTextNode(champ[j]));
-			            	}
-			            	liste.appendChild(tr);
-			            }
+ 			if (erreur != 1) {
+	 			let xhttp = new XMLHttpRequest();
+			    xhttp.onreadystatechange = function(){
+			        if (this.readyState==4 && this.status==200) {
+				        let infos = JSON.parse(this.responseText);
+			        	if(infos[0] == "mauvais"){
+			        		document.getElementById('erreur').innerHTML = "Pas de résultat pour votre recherche";
+			        	}else{
+				        	liste = document.getElementById('affichage');
+				            for(let i = 0; i < infos.length; i++){
+				            	tr = document.createElement('tr');
+					            let champ = infos[i];
+				            	for(let j = 0; j < champ.length; j++){
+					            	let element = document.createElement("td");
+					            	tr.appendChild(element);
+					            	tr.cells[j].appendChild(document.createTextNode(champ[j]));
+				            	}
+				            	liste.appendChild(tr);
+				            }
+				        }
 			        }
-		        }
-		    };
+			    };
 
-		    xhttp.open("POST", "../src/chercher.php", true);
-		    xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-		    xhttp.send("chaine="+params);
+			    xhttp.open("POST", "../src/chercher.php", true);
+			    xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+			    xhttp.send("chaine="+params);
+ 			}
  		}
 
  	</script>
