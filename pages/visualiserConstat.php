@@ -38,7 +38,7 @@
                 </div>
 
 
-                <div class="boxes-container">
+                <div class="visualisation-container">
 
                     <?php
 
@@ -61,7 +61,7 @@
 
                         
                         for ($i=0; $i < count($array); $i++) {
-                            echo "<div class='box box-446'>";
+                            echo "<div class='box visualisation-box'>";
                             if (count($array) == 3) {
                                 echo 
                                 "<div class='box-title-container'>
@@ -89,13 +89,26 @@
                             </div>
                                 </div>";
                         }
+
                         $images = glob($filename.'/img/*.*');
+                        echo "
+                            <h1 class='box-title' style='text-align: center; margin: 30px;'>Images du constat</h1>
+                            <div class='grid-form'>
+                            ";
                         foreach ($images as $element) {
                             $num = explode('-', $element)[0];
+
                             if (substr($num, -1) == $numeroConstat) {
-                                echo "<img src='".$element."'>";
+                                echo
+                                "<div class='input-container'>
+                                    <img src='".$element."' class='visualisation-image'>
+                                </div>
+                                ";
                             }
+
                         }
+                        echo "</div>";
+
                     }
                     ?>
 

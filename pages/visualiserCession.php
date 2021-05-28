@@ -36,7 +36,7 @@
                 </div>
 
 
-                <div class="boxes-container">
+                <div class="visualisation-container">
 
                     <?php
 
@@ -58,7 +58,7 @@
 
                         
                         for ($i=0; $i < count($array); $i++) {
-                            echo "<div class='box box-446'>";
+                            echo "<div class='box visualisation-box'>";
                                 echo 
                                 "<div class='box-title-container'>
 									<h2 class='box-title'>" . $titre[$i] . "</h2>

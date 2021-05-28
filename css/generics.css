@@ -738,6 +738,11 @@ th {
         grid-template-columns: 1fr!important;
     }
 
+    .content-banner {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
 }
 
 @media screen and (max-width: 1200px) {

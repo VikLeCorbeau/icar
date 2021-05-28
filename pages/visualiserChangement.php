@@ -39,7 +39,7 @@
                 </div>
 
 
-                <div class="boxes-container">
+                <div class="visualisation-container">
 
                     <?php
                     $assure = $_SESSION['identifiants'];
@@ -52,34 +52,76 @@
                     if (isset($assure)) {
                         $fi = fopen($file, 'r');
                         while ($data = fgetcsv($fi, 1000, ';')) {
-                            echo "<div class='box box-446'>";
+                            echo "<div class='box visualisation-box'>";
                                 echo 
                                 "<div class='box-title-container'>
 									<h2 class='box-title'>" . $assure . "</h2>
 								</div>";
                             echo "<div class='box-informations-container'>";
                             echo "
-                            <div class='box-informations'>
-                                <h3 class='box-information box-information--primary'>" . $data[0] . "</h3><br>
-                                <h3 class='box-information box-information--primary'>" . $data[1] . "</h3><br>
-                                <h3 class='box-information box-information--primary'>" . $data[2] . "</h3><br>
-                                <h3 class='box-information box-information--primary'>" . $data[3] . "</h3><br>
-                                <h3 class='box-information box-information--primary'>" . $data[4] . "</h3><br>
-                                <h3 class='box-information box-information--primary'>" . $data[5] . "</h3><br>
-                                <h3 class='box-information box-information--primary'>" . $data[6] . "</h3><br>
-                                <h3 class='box-information box-information--primary'>" . $data[7] . "</h3><br>
-                                <h3 class='box-information box-information--primary'>" . $data[8] . "</h3><br>
-                            </div>
+                                <div class='box-informations'>
+									<h3 class='box-information box-information--primary'>Nom :</h3>
+									<h3 class='box-information box-information--secondary'>" . $data[0] . "</h3>
+								</div>
+								
+								<div class='box-informations'>
+									<h3 class='box-information box-information--primary'>Prénom :</h3>
+									<h3 class='box-information box-information--secondary'>" . $data[1] . "</h3>
+								</div>
+								
+								<div class='box-informations'>
+									<h3 class='box-information box-information--primary'>Téléphone :</h3>
+									<h3 class='box-information box-information--secondary'>" . $data[2] . "</h3>
+								</div>
+								
+								<div class='box-informations'>
+									<h3 class='box-information box-information--primary'>Adresse mail :</h3>
+									<h3 class='box-information box-information--secondary'>" . $data[3] . "</h3>
+								</div>
+								
+								<div class='box-informations'>
+									<h3 class='box-information box-information--primary'>Adresse :</h3>
+									<h3 class='box-information box-information--secondary'>" . $data[4] . "</h3>
+								</div>
+								
+								<div class='box-informations'>
+									<h3 class='box-information box-information--primary'>Ville :</h3>
+									<h3 class='box-information box-information--secondary'>" . $data[5] . "</h3>
+								</div>
+								
+								<div class='box-informations'>
+									<h3 class='box-information box-information--primary'>Code postal :</h3>
+									<h3 class='box-information box-information--secondary'>" . $data[6] . "</h3>
+								</div>
+								
+								<div class='box-informations'>
+									<h3 class='box-information box-information--primary'>Pays :</h3>
+									<h3 class='box-information box-information--secondary'>" . $data[7] . "</h3>
+								</div>
+								
+								<div class='box-informations'>
+									<h3 class='box-information box-information--primary'>Numéro de contrat :</h3>
+									<h3 class='box-information box-information--secondary'>" . $data[8] . "</h3>
+								</div>
                             ";
                             echo "
                             </div>
+                                </div>
+                                
                                 </div>";
                         }
-                        echo "<img src='../db/InfoAssure/".$_SESSION['identifiants']."/ImageChangementCoordonnees.png'>";
+                        echo "
+                            <h1 class='box-title' style='text-align: center; margin: 30px;'>Justificatif de domicile</h1>
+                            <div class='grid-form'>
+                                <div class='input-container'>
+                                    <img src='../db/InfoAssure/".$_SESSION['identifiants']."/ImageChangementCoordonnees.PNG' class='visualisation-image'>
+                                </div>
+                            </div>
+                        ";
                     }
                     ?>
 
-                </div>
+
 
 
             </div>
