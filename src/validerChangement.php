@@ -9,11 +9,11 @@
 	}
 
 	if ($valide == 0) {
-		$fc = fopen("../db/InfoAssure/".$assure."/valideChangement.csv", 'a+');
+		$fc = fopen("../db/InfoAssure/".$assure."/changement/valideChangement.csv", 'w');
 		fputcsv($fc, array("Validé", "changement de coordonnées Validé"));
 		fclose($fc);
 
-		rename('../db/InfoAssure/'.$assure.'/informations_temp.csv' , '../db/InfoAssure/'.$assure.'/informations.csv');
+		rename('../db/InfoAssure/'.$assure.'/changement/informations_temp.csv' , '../db/InfoAssure/'.$assure.'/informations.csv');
 		
 		$traitement=array();
 		$ft = fopen("../db/traitements.csv", 'r');
@@ -30,11 +30,11 @@
 		fclose($ft);
 
 	}else if ($valide == 1) {
-		$fc = fopen("../db/InfoAssure/".$assure."/valideChangement.csv", 'a+');
+		$fc = fopen("../db/InfoAssure/".$assure."/changement/valideChangement.csv", 'w');
 		fputcsv($fc, array("Refusé", "changement de coordonnées refusé"));
 		fclose($fc);		
 
-	 	supprimerFichier("../db/InfoAssure/".$assure."/informations_temp.csv");
+	 	supprimerFichier("../db/InfoAssure/".$assure."/changement/informations_temp.csv");
 	 	
 	 	$traitement=array();
 		$ft = fopen("../db/traitements.csv", 'r');

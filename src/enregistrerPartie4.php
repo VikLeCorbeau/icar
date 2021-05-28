@@ -45,10 +45,20 @@ for ($i=0; $i < count($_FILES["photo"]["name"]); $i++) {
 	}
 }
 
-#traitements, ajouter l'immatriculation 
-$traitements = array(array('constat', $numeroConstat, $_SESSION['identifiants']));
-$ft = fopen("../db/traitements.csv", 'a+');
-foreach ($traitements as $element) {
+#traitements
+$traitements = array('constat', $numeroConstat, $_SESSION['identifiants']);
+$valeurTraitement = array();
+$ft = fopen("../db/traitements.csv", 'r');
+while ($data= fgetcsv($ft, 1000, ';')) {
+    if ($data[0] != "constat" && $numeroConstat != $data[1]) {
+        array_push($valeurTraitement, $data);
+    }
+}
+array_push($valeurTraitement, $traitements);
+fclose($ft);
+
+$ft = fopen("../db/traitements.csv", 'w');
+foreach ($valeurTraitement as $element) {
 	fputcsv($ft, $element, ';');
 }
 fclose($ft);

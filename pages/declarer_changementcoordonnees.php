@@ -1,6 +1,10 @@
 <?php
 session_start();
 require_once("../src/fonctions.php");
+if (!file_exists("../db/InfoAssure/".$_SESSION['identifiants']."/changement")) {
+        mkdir("../db/InfoAssure/".$_SESSION['identifiants']."/changement", 0777, true);
+}
+
 ?>
 
 <?php

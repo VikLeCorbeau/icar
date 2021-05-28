@@ -42,9 +42,19 @@ for ($i=0; $i < count($_FILES["photo"]["name"]); $i++) {
 }
 
 #traitements
-$traitements = array(array('constat', $numeroConstat, $_SESSION['identifiants']));
-$ft = fopen("../db/traitements.csv", 'a+');
-foreach ($traitements as $element) {
+$traitements = array('constat', $numeroConstat, $_SESSION['identifiants']);
+$valeurTraitement = array();
+$ft = fopen("../db/traitements.csv", 'r');
+while ($data= fgetcsv($ft, 1000, ';')) {
+    if ($data[0] != "constat" && $data[1] != $numeroConstat) {
+        array_push($valeurTraitement, $data);
+    }
+}
+array_push($valeurTraitement, $traitements);
+fclose($ft);
+
+$ft = fopen("../db/traitements.csv", 'w');
+foreach ($valeurTraitement as $element) {
 	fputcsv($ft, $element, ';');
 }
 fclose($ft);

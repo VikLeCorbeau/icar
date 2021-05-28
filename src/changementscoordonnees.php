@@ -9,8 +9,10 @@
     session_start();
 
     $filename = "../db/InfoAssure/".$_SESSION['identifiants'];
-    supprimerFichier($filename."/informations_temp.csv");
-
+    supprimerFichier($filename."/changement/informations_temp.csv");
+    if (file_exists($filename.'/changement/valideChangement.csv')) {
+        unlink($filename.'/changement/valideChangement.csv');
+    }
 
     $newEmail = ($_POST['newEmail']);
     $newTelephone = ($_POST['newTelephone']);
@@ -37,7 +39,7 @@
     fclose($fa);
 
     $v = array(array($nom,$prenom,$newTelephone,$newEmail,$newAdresse,$newVille,$newCP,$newPays,$contrat,$assurance));
-    if ($fa = fopen($filename."/informations_temp.csv", 'a+')) {
+    if ($fa = fopen($filename."/changement/informations_temp.csv", 'w')) {
         foreach ($v as $element) {
             fputcsv($fa, $element,';');
         }
@@ -46,7 +48,7 @@
 
 
 
-    $target_dir = $filename.'/';
+    $target_dir = $filename.'/changement/';
     print_r($_FILES["photo"]["name"][0]);
     $photo = explode('.',$_FILES["photo"]["name"][0]);
     $target_file = $target_dir."ImageChangementCoordonnees".'.'.$photo[1];
@@ -84,9 +86,20 @@
     
 
     #traitements
-    $traitements = array(array('changement', $_SESSION['identifiants']));
-    $ft = fopen("../db/traitements.csv", 'a+');
-    foreach ($traitements as $element) {
+    $traitements = array('changement', $_SESSION['identifiants']);
+    $valeurTraitement = array();
+    $ft = fopen("../db/traitements.csv", 'r');
+    while ($data= fgetcsv($ft, 1000, ';')) {
+        if ($data[0] != "changement") {
+            array_push($valeurTraitement, $data);
+        }
+    }
+    array_push($valeurTraitement, $traitements);
+
+    fclose($ft);
+    
+    $ft = fopen("../db/traitements.csv", 'w');
+    foreach ($valeurTraitement as $element) {
         fputcsv($ft, $element, ';');
     }
     fclose($ft);

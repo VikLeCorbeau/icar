@@ -114,7 +114,7 @@ verificationType(array('gestionnaire'));
                 if ($ft = verificationFichier("../db/traitements.csv", 'r')) {
                     while ($data = fgetcsv($ft, 1000, ';')) {
                         if ($data[0] == 'changement') {
-                            if ($fi = verificationFichier("../db/InfoAssure/".$data[1].'/informations_temp.csv', 'r')) {
+                            if ($fi = verificationFichier("../db/InfoAssure/".$data[1].'/changement/informations_temp.csv', 'r')) {
                                 while ($donnees = fgetcsv($fi, 1000, ';')) {
                                     if ($donnees[9] == $_SESSION['assurance']) {
                                         echo "

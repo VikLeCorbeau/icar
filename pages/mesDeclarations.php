@@ -68,9 +68,13 @@
 						$fc = fopen($filename."/valideConstat.csv", 'r');
 						while ($data = fgetcsv($fc, 1000, ',')) {
 							if ($i == $data[1]) {
-								$etat = $data[0];
-								$message = $data[2];
+								$etatCO = $data[0];
+								$messageCO = $data[2];
 							}
+						}
+						if ($messageCO == '' && $etatCO == '') {
+							$messageCO = "en traitement";
+							$etatCO = "en traitement";
 						}
 						fclose($fc);
 						echo "
@@ -81,7 +85,7 @@
 								<div class='box-informations-container'>
 									<div class='box-informations'>
 										<h3 class='box-information box-information--primary'>Etat</h3>
-										<h3 class='box-information box-information--secondary'>".$etat."</h3>
+										<h3 class='box-information box-information--secondary'>".$etatCO."</h3>
 									</div>
 									<div class='box-informations'>
 										<h3 class='box-information box-information--primary'>Images</h3>
@@ -89,7 +93,7 @@
 									</div>
 									<div class='box-informations'>
 										<h3 class='box-information box-information--primary'>Message de l'assureur</h3>
-										<h3 class='box-information box-information--secondary'>".$message."</h3>
+										<h3 class='box-information box-information--secondary'>".$messageCO."</h3>
 									</div>
 								</div>
 								<div class='box-separator box-separator-446'></div>
@@ -107,6 +111,7 @@
 								</div>
 							</div>
 						";
+						$nbImage = 0;
 					}
 					?>
 
@@ -124,12 +129,16 @@
 
 					<?php
 
-						$fc = fopen("../db/InfoAssure/".$_SESSION['identifiants']."/valideChangement.csv", 'r');
+						$fc = fopen("../db/InfoAssure/".$_SESSION['identifiants']."/changement/valideChangement.csv", 'r');
 						while ($data = fgetcsv($fc, 1000, ',')) {
-							$etat = $data[0];
-							$message = $data[1];
+							$etatCH = $data[0];
+							$messageCH = $data[1];
 						}
 						fclose($fc);
+						if ($messageCH == '' && $etatCH == '') {
+							$messageCH = "en traitement";
+							$etatCH = "en traitement";
+						}
 						echo "
 							<div class='box box-446'>
 								<div class='box-title-container'>
@@ -138,11 +147,11 @@
 								<div class='box-informations-container'>
 									<div class='box-informations'>
 										<h3 class='box-information box-information--primary'>Etat</h3>
-										<h3 class='box-information box-information--secondary'>".$etat."</h3>
+										<h3 class='box-information box-information--secondary'>".$etatCH."</h3>
 									</div>
 									<div class='box-informations'>
 										<h3 class='box-information box-information--primary'>Message de l'assureur</h3>
-										<h3 class='box-information box-information--secondary'>".$message."</h3>
+										<h3 class='box-information box-information--secondary'>".$messageCH."</h3>
 									</div>
 								</div>
 								<div class='box-separator box-separator-446'></div>
@@ -188,9 +197,13 @@
 						$fc = fopen($filename."/valideCession.csv", 'r');
 						while ($donnees = fgetcsv($fc, 1000, ',')) {
 							if ($data[7] == $donnees[1]) {
-								$etat = $donnees[0];
-								$message = $donnees[2];
+								$etatCE = $donnees[0];
+								$messageCE = $donnees[2];
 							}
+						}
+						if ($messageCE == '' && $etatCE == '') {
+							$messageCE = "en traitement";
+							$etatCE = "en traitement";
 						}
 						fclose($fc);
 						echo "
@@ -201,11 +214,11 @@
 								<div class='box-informations-container'>
 									<div class='box-informations'>
 										<h3 class='box-information box-information--primary'>Etat</h3>
-										<h3 class='box-information box-information--secondary'>".$etat."</h3>
+										<h3 class='box-information box-information--secondary'>".$etatCE."</h3>
 									</div>
 									<div class='box-informations'>
 										<h3 class='box-information box-information--primary'>Message de l'assureur</h3>
-										<h3 class='box-information box-information--secondary'>".$message."</h3>
+										<h3 class='box-information box-information--secondary'>".$messageCE."</h3>
 									</div>
 								</div>
 								<div class='box-separator box-separator-446'></div>

@@ -1,7 +1,7 @@
 <?php
     session_start();
     require_once("../src/fonctions.php");
-    $numero = $_GET['numero'];
+
     verificationType(array('assure'));
 ?>
 
@@ -12,7 +12,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Constat</title>
+        <title>Justificatif Changement de Coordonnées</title>
 
         <link rel="icon" href="../assets/svg/logo/icon.svg">
 
@@ -33,13 +33,12 @@
                 <div class="content-banner">
                     
                     <div class="content-titles-container">
-                        <h1 class="content-title">Ajouter des images</h1>
-                        <h1 class="content-subtitle">Photos de l'accident</h1>
+                        <h1 class="content-title">Ajouter un nouveau justificatif</h1>
                     </div>
 
                 </div>
                 <?php 
-                	echo "<form action='../src/enregistrerImageConstat.php?numero=".$numero."' method='POST' enctype='multipart/form-data' id='ajoutConstat4'>";
+                	echo "<form action='../src/enregistrerImageChangement.php' method='POST' enctype='multipart/form-data' id='ajoutConstat4'>";
                  ?>
                     <div class="grid-form">
 
@@ -50,7 +49,7 @@
                                     <img class="form-images-illustration" src="../assets/svg/illustrations/illustration_add_images.svg">
                                 </div>
                                 <div class="form-images-input-file-container">
-                                    <input class="form-images-input-file" id="photos-input" type="file" name="photo[]" multiple>
+                                    <input class="form-images-input-file" id="photos-input" type="file" name="photo[]" required>
                                     <label class="form-images-input-file-label" for="photos-input">Selectionner une photo</label>
                                 </div>
                             </div>
