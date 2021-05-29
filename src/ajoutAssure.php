@@ -11,20 +11,20 @@ $ville = $_POST['ville'];
 $cp = $_POST['CP'];
 $pays = $_POST['pays'];
 $contrat = $_POST['contrat'];
-$assurance = $_POST['assurance'];
+$assurance = $_SESSION['assurance'];
 
 
-$id = $prenom.'.'.$nom;
+$id = $nom.$prenom;
 $mdp = $prenom.$nom;
 
-$identifiant = array(array($id, $mdp, 'assure', $nom.$prenom));
+$identifiant = array(array($id, $mdp, 'assure', $assurance));
 $fi = fopen("../db/identifiants.csv", 'a+');
 foreach ($identifiant as $element) {
 	fputcsv($fi, $element, ';');
 }
 fclose($fi);
 
-$assure = array(array($nom,$prenom,$contrat, $mail, $tel, $assurance));
+$assure = array(array($nom,$prenom,$contrat, $email, $tel, $assurance));
 if ($fa = fopen("../db/assure.csv", 'a+')) {
 	foreach ($assure as $element) {
 			fputcsv($fa, $element, ';');
@@ -50,6 +50,14 @@ foreach ($donnees as $element) {
 	fputcsv($fl, $element, ';');
 }
 fclose($fl);
+mkdir("../db/InfoAssure/".$nom.$prenom."/constats", 0777);
+mkdir("../db/InfoAssure/".$nom.$prenom."/cession", 0777);
+mkdir("../db/InfoAssure/".$nom.$prenom."/messagerie", 0777);
+mkdir("../db/InfoAssure/".$nom.$prenom."/changement", 0777);
+if (file_exists("../db/InfoAssure/".$nom.$prenom."/constats")) {
+	mkdir("../db/InfoAssure/".$nom.$prenom."/constats/img");
+}
+
 header('Location: ../pages/creerAssure.php');
 exit();
 ?>

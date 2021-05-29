@@ -88,7 +88,9 @@
 									<?php 
 										if ($fa = verificationFichier('../db/assure.csv', 'r')) {
 											while ($data = fgetcsv($fa, 1000, ';')) {
-												echo "<option value=".$data[0].$data[1].">".$data[0]." ".$data[1]."</option>";
+												if ($data[5] == $_SESSION['assurance']) {
+													echo "<option value=".$data[0].$data[1].">".$data[0]." ".$data[1]."</option>";
+												}
 											}
 											fclose($fa);
 										}
@@ -198,7 +200,6 @@
 							<div class="select-container">
 
 								<select class="select" name="typeAssurance">
-									<option value="0">Sélection type d'assurance :</option>
 									<option value="tiers">Tiers</option>
 									<option value="tiers plus">Tiers plus</option>
 									<option value="tous risques">Tous risques</option>
@@ -219,10 +220,9 @@
 							<div class="select-container">
 
 								<select class="select" name="paiement">
-									<option value="0">Sélection type de paiement :</option>
-									<option value="tiers">Mensuel</option>
-									<option value="tiers plus">Trimestriel</option>
-									<option value="tous risques">Annuel</option>
+									<option value="Mensuel">Mensuel</option>
+									<option value="Trimestriel">Trimestriel</option>
+									<option value="Annuel">Annuel</option>
 								</select>
 
 							</div>

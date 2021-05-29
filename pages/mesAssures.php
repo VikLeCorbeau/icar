@@ -52,8 +52,11 @@
 						}
 
 						foreach ($tabAssure as $element) {
-							$fileLines = file("../db/InfoAssure/".$element."/contrats.csv");
-							$nombreVoitureAssure = count($fileLines);
+							if ($fileLines = file("../db/InfoAssure/".$element."/contrats.csv")) {
+								$nombreVoitureAssure = count($fileLines);
+							}else{
+								$nombreVoitureAssure = 0;
+							}
 							if ($fa = fopen("../db/InfoAssure/".$element."/informations.csv", 'r')) {
 								while ($data = fgetcsv($fa, 1000, ';')) {
 

@@ -63,8 +63,6 @@
 							<h1 class="contact-title">répertoire</h1>
 						</div>
 						<ul class="contact-left-list" id="nom">
-                            <li class="contact-left-name" onclick="nouveauMessage()">Nouveau Message</li>
-
                             <?php
                                 $assure = array();
                                 $fv = fopen("../db/assure.csv", 'r');
@@ -75,6 +73,10 @@
                                 }
                                 fclose($fv);
                                 foreach ($assure as $element) {
+                                    $filename = "../db/InfoAssure/".$element."/messagerie";
+                                    if (!file_exists($filename)) {
+                                        mkdir($filename, 0777, true);
+                                    }
                                     $files = $scanned_directory = array_diff(scandir("../db/InfoAssure/".$element."/messagerie"), array('..','.'));
                                     foreach ($files as $file) {
                                         $fic = explode('.', $file);

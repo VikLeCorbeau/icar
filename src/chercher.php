@@ -8,6 +8,7 @@
 	$witness = array();
 	$ft = fopen("../db/assure.csv", 'r');
 	while ($data = fgetcsv($ft, 1000, ';')) {
+		if ($data[5] == $_SESSION['assurance'] || $_SESSION['profil'] == 'police') {
 			if (isset($tab[0]->nom , $tab[0]->prenom)){
 				$nom = $tab[0]->nom;
 				$prenom = $tab[0]->prenom;
@@ -49,6 +50,7 @@
 				$witness = array_push($witness, "mauvais");
 				$witness_json = json_encode($witness);
 			}
+		}
 	}
 	fclose($ft);
 	if ($essai == $mauvais) {

@@ -63,8 +63,8 @@
 
                                 <?php
                                 if ($fichierAssurance = verificationFichier('../db/assurance.csv', 'r')) {
-                                    while ($assurance = fgetcsv($fichierAssurance, 1000, ';')) {
-                                        echo "<option value= " .$assurance[0] ."> $assurance[0] </option>";
+                                    while ($assurance = fgetcsv($fichierAssurance, 1000)) {
+                                        echo "<option value= ".str_replace(" ","&nbsp;",$assurance[0]).">".str_replace(" ","&nbsp;",$assurance[0]) ."</option>";
                                     }
                                     fclose($fichierAssurance);
                                 }

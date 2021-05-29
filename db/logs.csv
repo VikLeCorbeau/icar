@@ -1,66 +1,26 @@
-"27-05-21 08:38:03";connexion;police:police;police:police;connexion
-"27-05-21 08:38:25";connexion;police:police;police:police;connexion
-"27-05-21 08:45:33";connexion;gestionnaire:gestionnaire;gestionnaire:gestionnaire;connexion
-"27-05-21 08:46:38";connexion;assure:DupontPierre;assure:DupontPierre;connexion
-"27-05-21 08:48:57";connexion;police:police;police:police;connexion
-"27-05-21 09:01:09";connexion;assure:DupontPierre;assure:DupontPierre;connexion
-"27-05-21 09:07:53";connexion;gestionnaire:gestionnaire;gestionnaire:gestionnaire;connexion
-"27-05-21 09:08:51";connexion;assure:DupontPierre;assure:DupontPierre;connexion
-"27-05-21 09:09:00";changements;assure:DupontPierre;assure:DupontPierre;"changement de coordonnées"
-"27-05-21 09:09:44";connexion;gestionnaire:gestionnaire;gestionnaire:gestionnaire;connexion
-"27-05-21 09:21:07";connexion;assure:DupontPierre;assure:DupontPierre;connexion
-"27-05-21 11:54:27";connexion;police:police;police:police;connexion
-"27-05-21 02:16:30";connexion;admin:admin;admin:admin;connexion
-"27-05-21 05:18:03";connexion;police:police;police:police;connexion
-"27-05-21 05:22:34";connexion;assure:DupontPierre;assure:DupontPierre;connexion
-"27-05-21 05:44:20";constat;assure:DupontPierre;assure:DupontPierre;"ajout d'image au constat"
-"27-05-21 05:57:04";changements;assure:DupontPierre;assure:DupontPierre;"changement de coordonnées"
-"27-05-21 05:57:59";changements;assure:DupontPierre;assure:DupontPierre;"changement de coordonnées"
-"27-05-21 05:59:01";changements;assure:DupontPierre;assure:DupontPierre;"changement de coordonnées"
-"27-05-21 05:59:11";changements;assure:DupontPierre;assure:DupontPierre;"changement de coordonnées"
-"27-05-21 05:59:26";changements;assure:DupontPierre;assure:DupontPierre;"changement de coordonnées"
-"27-05-21 05:59:40";changements;assure:DupontPierre;assure:DupontPierre;"changement de coordonnées"
-"27-05-21 05:59:48";changements;assure:DupontPierre;assure:DupontPierre;"changement de coordonnées"
-"27-05-21 06:03:19";changements;assure:DupontPierre;assure:DupontPierre;"changement de coordonnées"
-"27-05-21 06:06:57";changements;assure:DupontPierre;assure:DupontPierre;"changement de coordonnées"
-"27-05-21 06:07:17";changements;assure:DupontPierre;assure:DupontPierre;"changement de coordonnées"
-"27-05-21 06:08:51";changements;assure:DupontPierre;assure:DupontPierre;"changement de coordonnées"
-"27-05-21 06:11:20";changements;assure:DupontPierre;assure:DupontPierre;"changement de coordonnées"
-"27-05-21 06:11:34";changements;assure:DupontPierre;assure:DupontPierre;"changement de coordonnées"
-"27-05-21 06:12:41";changements;assure:DupontPierre;assure:DupontPierre;"changement de coordonnées"
-"27-05-21 06:14:28";changements;assure:DupontPierre;assure:DupontPierre;"changement de coordonnées"
-"28-05-21 03:38:08";connexion;assure:DupontPierre;assure:DupontPierre;connexion
-"28-05-21 02:42:03";changements;assure:DupontPierre;assure:DupontPierre;"changement de coordonnées"
-"28-05-21 02:44:35";changements;assure:DupontPierre;assure:DupontPierre;"changement de coordonnées"
-"28-05-21 02:49:52";changements;assure:DupontPierre;assure:DupontPierre;"changement de coordonnées"
-"28-05-21 02:56:53";connexion;assure:DupontPierre;assure:DupontPierre;connexion
-"28-05-21 02:57:52";changements;assure:DupontPierre;assure:DupontPierre;"changement de coordonnées"
-"28-05-21 03:04:45";changements;assure:DupontPierre;assure:DupontPierre;"changement de coordonnées"
-"28-05-21 03:04:57";changements;assure:DupontPierre;assure:DupontPierre;"changement de coordonnées"
-"28-05-21 03:22:47";changements;assure:DupontPierre;assure:DupontPierre;"nouveau justificatif"
-"28-05-21 03:23:36";changements;assure:DupontPierre;assure:DupontPierre;"nouveau justificatif"
-"28-05-21 03:23:55";changements;assure:DupontPierre;assure:DupontPierre;"nouveau justificatif"
-"28-05-21 03:26:24";changements;assure:DupontPierre;assure:DupontPierre;"nouveau justificatif"
-"28-05-21 03:28:00";changements;assure:DupontPierre;assure:DupontPierre;"nouveau justificatif"
-"28-05-21 03:28:10";changements;assure:DupontPierre;assure:DupontPierre;"nouveau justificatif"
-"28-05-21 03:29:04";changements;assure:DupontPierre;assure:DupontPierre;"nouveau justificatif"
-"28-05-21 03:29:15";changements;assure:DupontPierre;assure:DupontPierre;"nouveau justificatif"
-"28-05-21 03:30:02";changements;assure:DupontPierre;assure:DupontPierre;"nouveau justificatif"
-"28-05-21 03:30:44";changements;assure:DupontPierre;assure:DupontPierre;"nouveau justificatif"
-"28-05-21 03:30:58";changements;assure:DupontPierre;assure:DupontPierre;"nouveau justificatif"
-"28-05-21 03:31:06";changements;assure:DupontPierre;assure:DupontPierre;"nouveau justificatif"
-"28-05-21 03:31:37";changements;assure:DupontPierre;assure:DupontPierre;"nouveau justificatif"
-"28-05-21 03:31:51";changements;assure:DupontPierre;assure:DupontPierre;"nouveau justificatif"
-"28-05-21 03:33:24";connexion;gestionnaire:gestionnaire;gestionnaire:gestionnaire;connexion
-"28-05-21 03:36:45";connexion;assure:DupontPierre;assure:DupontPierre;connexion
-"28-05-21 03:57:26";changements;assure:DupontPierre;assure:DupontPierre;"nouveau justificatif"
-"28-05-21 03:58:02";connexion;assure:DupontPierre;assure:DupontPierre;connexion
-"28-05-21 03:58:34";changements;assure:DupontPierre;assure:DupontPierre;"changement de coordonnées"
-"28-05-21 04:01:48";connexion;assure:DupontPierre;assure:DupontPierre;connexion
-"28-05-21 04:02:05";changements;assure:DupontPierre;assure:DupontPierre;"changement de coordonnées"
-"28-05-21 04:02:27";changements;assure:DupontPierre;assure:DupontPierre;"nouveau justificatif"
-"28-05-21 04:04:29";changements;assure:DupontPierre;assure:DupontPierre;"nouveau justificatif"
-"29-05-21 12:12:51";connexion;gestionnaire:gestionnaire;gestionnaire:gestionnaire;connexion
-"29-05-21 12:18:53";connexion;assure:DupontPierre;assure:DupontPierre;connexion
-"29-05-21 12:20:10";connexion;gestionnaire:gestionnaire;gestionnaire:gestionnaire;connexion
-"29-05-21 12:20:25";connexion;assure:DupontPierre;assure:DupontPierre;connexion
+"29-05-21 01:35:47";connexion;gestionnaire:test;gestionnaire:test;connexion
+"29-05-21 01:44:41";connexion;assure:aa;assure:aa;connexion
+"29-05-21 01:50:51";constat;assure:aa;assure:aa;"nouvelle déclaration de constat"
+"29-05-21 01:51:23";constat;assure:aa;assure:aa;"ajout d'image au constat"
+"29-05-21 01:54:47";constat;assure:aa;assure:aa;"ajout d'image au constat"
+"29-05-21 01:56:00";constat;assure:aa;assure:aa;"ajout d'image au constat"
+"29-05-21 01:56:32";constat;assure:aa;assure:aa;"ajout d'image au constat"
+"29-05-21 01:57:06";constat;assure:aa;assure:aa;"ajout d'image au constat"
+"29-05-21 01:58:09";constat;assure:aa;assure:aa;"ajout d'image au constat"
+"29-05-21 02:00:59";constat;assure:aa;assure:aa;"ajout d'image au constat"
+"29-05-21 02:02:16";constat;assure:aa;assure:aa;"ajout d'image au constat"
+"29-05-21 02:02:52";constat;assure:aa;assure:aa;"ajout d'image au constat"
+"29-05-21 02:03:49";constat;assure:aa;assure:aa;"ajout d'image au constat"
+"29-05-21 02:05:19";constat;assure:aa;assure:aa;"ajout d'image au constat"
+"29-05-21 02:08:04";constat;assure:aa;assure:aa;"ajout d'image au constat"
+"29-05-21 02:10:28";constat;assure:aa;assure:aa;"ajout d'image au constat"
+"29-05-21 02:15:44";constat;assure:aa;assure:aa;"ajout d'image au constat"
+"29-05-21 02:16:07";connexion;gestionnaire:test;gestionnaire:test;connexion
+"29-05-21 02:16:40";assuré;gestionnaire:test;assure:bb;"ajout d'un assuré"
+"29-05-21 02:17:37";assuré;gestionnaire:test;assure:cc;"ajout d'un assuré"
+"29-05-21 02:18:54";connexion;gestionnaire:Bernard;gestionnaire:Bernard;connexion
+"29-05-21 02:19:43";assuré;gestionnaire:Bernard;assure:SanchezPedro;"ajout d'un assuré"
+"29-05-21 02:22:05";contrat;gestionnaire:Bernard;assure:PedroSanchez;"nouveau contrat"
+"29-05-21 02:28:28";connexion;police:police;police:police;connexion
+"29-05-21 02:29:14";connexion;gestionnaire:Bernard;gestionnaire:Bernard;connexion
+"29-05-21 02:29:48";connexion;assure:SanchezPedro;assure:SanchezPedro;connexion

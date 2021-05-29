@@ -5,9 +5,6 @@
     verificationType(array('assure'));
 
     $filename = "../db/InfoAssure/".$_SESSION['identifiants']."/constats";
-    if (!file_exists($filename)) {
-        mkdir($filename, 0777, true);
-    }
 ?>
 
 <!DOCTYPE html>

@@ -2,15 +2,8 @@
 session_start();
 require_once("fonctions.php");
 
-verificationType(array('assure'));
+verificationType(array('gestionnaire'));
 
-if (!isset($_SESSION['identifiants'])) {
-	header('Location: connexion.php');
-	exit();
-}else if ($_SESSION['identifiants'] != 'gestionnaire') {
-	header('Location: ../accueil.php');
-	exit();
-}
 include('../phpqrcode/qrlib.php');
 
 $nom = $_POST['nom'];

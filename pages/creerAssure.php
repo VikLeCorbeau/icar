@@ -99,11 +99,6 @@
                             <input type="text" name="contrat" class="form-large-input" placeholder="Numéro de contrat" required>
                         </div>
 
-						<div class="input-container">
-                            <label for="assurance" class="form-label">nom de l'assurance</label>
-                            <input type="text" name="assurance" class="form-large-input" placeholder="Nom de l'assurance" required>
-                        </div>
-
 					</div>
 
 					<div class="buttons-container">

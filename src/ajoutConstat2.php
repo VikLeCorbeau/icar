@@ -235,11 +235,6 @@
                         </div>
 
 						<div class="input-container">
-                            <label for="numContrat" class="form-label">numéro de contrat</label>
-                            <input type="text" name="numContrat" class="form-slim-input" placeholder="Numéro de contrat" value="<?php if (isset($numContrat)) { echo($numContrat); } ?>" required>
-                        </div>
-
-						<div class="input-container">
                             <label for="numCV" class="form-label">numéro de carte verte</label>
                             <input type="text" name="numCV" class="form-slim-input" placeholder="Numéro de carte verte" required>
                         </div>
