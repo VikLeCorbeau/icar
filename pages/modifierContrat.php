@@ -37,7 +37,7 @@ verificationType(array('gestionnaire'));
                     <div class="content-banner">
                         <div class="content-titles-container">
                             <h1 class="content-title">Modifier contrat d'assurance</h1>
-                            <h1 class="content-subtitle">VALEUR : <?php echo $data[9]; ?></h1>
+                            <h1 class="content-subtitle"><?php echo $data[9]; ?></h1>
                         </div>
                     </div>
 
@@ -62,7 +62,7 @@ verificationType(array('gestionnaire'));
 
                         <div class="input-container">
                             <label for="immatriculation" class="form-label">numéro d'immatriculation</label>
-                            <input type="text" name="immatriculation" class="form-large-input" placeholder="Numéro d'immatriculation" value="<?php echo $data[7]; ?>" required>
+                            <input type="text" id="immatriculation" name="immatriculation" class="form-large-input" placeholder="Numéro d'immatriculation" value="<?php echo $data[7]; ?>" required>
                         </div>
 
                         <div class="input-container">
@@ -85,12 +85,12 @@ verificationType(array('gestionnaire'));
 
                         <div class="input-container">
                             <label for="nomConducteur" class="form-label">nom</label>
-                            <input type="text" name="nomConducteur" class="form-large-input" placeholder="Nom" value="<?php echo $data[0]; ?>" required>
+                            <input type="text" name="nomConducteur" id="nomConducteur" class="form-large-input" placeholder="Nom" value="<?php echo $data[0]; ?>" required>
                         </div>
 
                         <div class="input-container">
                             <label for="prenomConducteur" class="form-label">prénom</label>
-                            <input type="text" name="prenomConducteur" class="form-large-input" placeholder="Prénom" value="<?php echo $data[1]; ?>" required>
+                            <input type="text" name="prenomConducteur" id="prenomConducteur" class="form-large-input" placeholder="Prénom" value="<?php echo $data[1]; ?>" required>
                         </div>
 
                         <div class="input-container">
@@ -161,7 +161,7 @@ verificationType(array('gestionnaire'));
                     <p class="button-text">Appliquer les changements</p>
                 </button>
 
-                <button id="supprimerContrat" type="button" class="button button--yellow" onclick="supprimerContrat()">
+                <button id="supprimerContrat" type="button" class="button button--yellow" onclick="suppCont()">
                     <p class="button-text">Supprimer le contrat d'assurance</p>
                 </button>
 
@@ -177,14 +177,14 @@ verificationType(array('gestionnaire'));
 
 </div>
 <script type="text/javascript">
-    function supprimerContrat(){
+    function suppCont(){
         nom = document.getElementById('nomConducteur').value;
         prenom = document.getElementById('prenomConducteur').value;
         immatriculation = document.getElementById('immatriculation').value;
         let xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function(){
             if (this.readyState==4 && this.status==200) {
-                console.log(this.reponseText);
+                document.location.href="http://localhost/Projet_Car/icar/pages/mesAssures.php";
             }
         };
         xhttp.open("POST", "../src/supprimerContrat.php",true);

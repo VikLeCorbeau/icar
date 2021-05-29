@@ -102,22 +102,22 @@
 
                             <div class="input-container">
                                 <label for="nomT" class="form-label">nom du témoin  </label>
-                                <input type="text" id="nomT" name="nomT" placeholder="Nom du témoin" class="form-slim-input" required>
+                                <input type="text" id="nomT" name="nomT" placeholder="Nom du témoin" class="form-slim-input">
                             </div>
 
                                 <div class="input-container">
                                 <label for="prenomT" class="form-label">prénom du témoin</label>
-                                <input type="text" id="prenomT" name="prenomT" placeholder="Prénom du témoin" class="form-slim-input" required>
+                                <input type="text" id="prenomT" name="prenomT" placeholder="Prénom du témoin" class="form-slim-input">
                             </div>
 
                             <div class="input-container">
                                 <label for="adresseT" class="form-label">adresse du témoin</label>
-                                <input type="text" id="adresseT" name="adresseT" placeholder="Adresse du témoin" class="form-slim-input" required>
+                                <input type="text" id="adresseT" name="adresseT" placeholder="Adresse du témoin" class="form-slim-input">
                             </div>
 
                             <div class="input-container">
                                 <label for="telephoneT" class="form-label">téléphone du témoin</label>
-                                <input type="text" id="telephoneT" name="telephoneT" placeholder="Téléphone du témoin" class="form-slim-input" required>
+                                <input type="text" id="telephoneT" name="telephoneT" placeholder="Téléphone du témoin" class="form-slim-input">
                             </div>
 
                         </div>

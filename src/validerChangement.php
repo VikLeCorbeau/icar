@@ -12,7 +12,7 @@
 		$fc = fopen("../db/InfoAssure/".$assure."/changement/valideChangement.csv", 'w');
 		fputcsv($fc, array("Validé", "changement de coordonnées Validé"));
 		fclose($fc);
-
+		
 		rename('../db/InfoAssure/'.$assure.'/changement/informations_temp.csv' , '../db/InfoAssure/'.$assure.'/informations.csv');
 		
 		$traitement=array();

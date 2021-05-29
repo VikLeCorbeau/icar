@@ -3,6 +3,22 @@
     require_once("../src/fonctions.php");
 
 	verificationType(array('assure'));
+
+if (isset($_POST['voitureA'])) {
+    $voiture = $_POST['voitureA'];
+
+    if ($fa = verificationFichier("../db/InfoAssure/".$_SESSION['identifiants']."/contrats.csv", 'r')) {
+        while ($data = fgetcsv($fa, 1000, ';')) {
+            if ($data[9] == $voiture) {
+                $marque = $data[9];
+                $immatriculation = $data[7];
+                $date = $data[8];
+            }
+        }
+
+        fclose($fa);
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -37,6 +53,50 @@
                     </div>
                 </div>
 
+                <form id="car-selection" action="certificatCession1.php" method="POST">
+
+                    <div class="form-title-container">
+                        <h1 class="form-title">sélection du véhicule concerné</h1>
+                    </div>
+
+                    <div class="grid-form">
+
+                        <div class="input-container">
+
+                            <div class="select-container">
+
+                                <select class="select" name="voitureA">
+                                    <?php
+                                    echo ('../db/InfoAssure/'.$_SESSION['identifiants'].'/contrats.csv');
+
+                                    if ($fa = verificationFichier('../db/InfoAssure/'.$_SESSION['identifiants'].'/contrats.csv', 'r')) {
+
+                                        while ($data = fgetcsv($fa, 1000, ';')) {
+                                            echo "<option value=".$data[9].">".$data[9]." ".$data[7]."</option>";
+                                        }
+                                        fclose($fa);
+
+                                    }
+                                    ?>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                        <div class="input-container">
+
+                            <button form="car-selection" type="submit" class="button button--light">
+                                <p class="button-text">Choisir</p>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
 				<form id="cession1" class="form" action="../src/enregistrerCession1.php" method="POST">
 
 					<div class="form-title-container">
@@ -46,7 +106,7 @@
 					<div class="grid-form">
 						<div class="input-container">
 							<label for="immatriculation" class="form-label">numéro d'immatriculation</label>
-							<input type="text" name="immatriculation" class="form-slim-input" placeholder="Numéro d'immatriculation" required>
+							<input type="text" name="immatriculation" class="form-slim-input" placeholder="Numéro d'immatriculation" value="<?php if (isset($immatriculation)) { echo $immatriculation; }?>" required>
 						</div>
 
 						<div class="input-container">
@@ -61,7 +121,7 @@
 
 						<div class="input-container">
 							<label for="marque" class="form-label">marque</label>
-							<input type="text" name="marque" class="form-slim-input" placeholder="Marque" required>
+							<input type="text" name="marque" class="form-slim-input" placeholder="Marque" value="<?php if (isset($marque)) { echo $marque; }?>" required >
 						</div>
 
 						<div class="input-container">
@@ -113,7 +173,7 @@
 
 						<div class="input-container" id="on">
 							<label for="dateCertificat" class="form-label">date du certificat d'immatriculation</label>
-							<input type="date" name="dateCertificat" class="form-slim-input" placeholder="date du certificat d'immatriculation">
+							<input type="date" name="dateCertificat" class="form-slim-input" placeholder="date du certificat d'immatriculation"  value="<?php if (isset($date)) { echo $date; }?>">
 						</div>
 
 						<div class="input-container span-2 display-none" id="off">

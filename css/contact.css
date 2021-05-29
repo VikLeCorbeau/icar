@@ -37,6 +37,8 @@
 .contact-left-list {
     display: flex;
     flex-direction: column;
+    max-height: 530px;
+    overflow-y: scroll;
 }
 
 .contact-left-name {

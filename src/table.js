@@ -87,14 +87,14 @@ function ajouterT(){
                 let line = document.createElement("tr")
 
                 for (let i = 0; i < temoin.length; i++) {
-                    let champ = temoin[i]
-                    console.log(champ)
+                    let champ = temoin[i];
+                    console.log(champ);
 
                     let td = document.createElement("td");
 
-                    td.innerText = champ
+                    td.innerText = champ;
 
-                    line.appendChild(td)
+                    line.appendChild(td);
                 }
 
 
@@ -106,13 +106,18 @@ function ajouterT(){
                 dlt.src = '../assets/svg/icons/delete.svg';
                 dlt.classList.add("datas-svg");
 
-                deleteTd.appendChild(dlt)
-                line.appendChild(deleteTd)
+                deleteTd.appendChild(dlt);
+                line.appendChild(deleteTd);
 
 
-                table.appendChild(line)
+                table.appendChild(line);
 
-                supprimerTemoin()
+                supprimerTemoin();
+                document.getElementById("nomT").value = "";
+                document.getElementById("prenomT").value = "";
+                document.getElementById("adresseT").value = "";
+                document.getElementById("telephoneT").value = "";
+
 
             }
         }
@@ -124,6 +129,7 @@ function ajouterT(){
     }
 
 }
+
 // APPEL DE BASE.
 
 supprimerTemoin()

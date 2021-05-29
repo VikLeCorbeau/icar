@@ -83,10 +83,6 @@
 
                     <div class="buttons-container">
 
-						<button type="button" class="button button--dark">
-							<p class="button-text">Retour</p>
-                        </button>
-
 						<button form="ajoutConstat4" type="submit" class="button button--yellow" name="submit">
                             <p class="button-text">Finaliser la déclaration de constat</p>
                         </button>

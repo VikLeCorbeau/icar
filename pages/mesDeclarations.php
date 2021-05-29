@@ -112,6 +112,8 @@
 							</div>
 						";
 						$nbImage = 0;
+						$messageCO = "";
+						$etatCO = "";
 					}
 					?>
 
@@ -198,7 +200,7 @@
 
 						$fc = fopen($filename."/valideCession.csv", 'r');
 						while ($donnees = fgetcsv($fc, 1000, ',')) {
-							if ($data[7] == $donnees[1]) {
+							if (file_exists($filename.'/'.$donnees[1].".json")) {
 								$etatCE = $donnees[0];
 								$messageCE = $donnees[2];
 							}
@@ -235,6 +237,8 @@
 								</div>
 							";
 						}
+						$etatCE = "";
+						$messageCE = "";
 					}
 					?>
 

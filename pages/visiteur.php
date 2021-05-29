@@ -2,7 +2,6 @@
     session_start();
     require_once("../src/fonctions.php");
 
-    verificationType(array('visiteur'));
  ?>
 <!DOCTYPE html>
 <html>

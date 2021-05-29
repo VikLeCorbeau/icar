@@ -342,10 +342,6 @@
 
 					<div class="buttons-container">
 
-						<button type="button" class="button button--dark">
-							<p class="button-text">Retour</p>
-                        </button>
-
 						<button form="ajoutConstat3" type="submit" class="button button--yellow">
                             <p class="button-text">Continuer</p>
                             <img class="button-svg" src="../assets/svg/icons/back.svg" style="transform: rotate(180deg);">
