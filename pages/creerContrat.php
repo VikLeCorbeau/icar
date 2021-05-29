@@ -83,7 +83,7 @@
 							<div class="select-container">
 
 								<select class="select" name="assure">
-									<option value="0">Selection de l'assuré :</option>
+									<option value="">Selection de l'assuré :</option>
 
 									<?php 
 										if ($fa = verificationFichier('../db/assure.csv', 'r')) {
@@ -145,11 +145,6 @@
 						<div class="input-container">
                             <label for="email" class="form-label">adresse mail</label>
                             <input type="email" name="email" class="form-slim-input" placeholder="Adresse mail" value="<?php if (isset($email)) { echo($email); } ?>" required>
-                        </div>
-
-						<div class="input-container">
-                            <label for="nom" class="form-label">nom</label>
-                            <input type="text" name="nom" class="form-slim-input" placeholder="Nom" value="<?php if (isset($nom)) { echo($nom); } ?>" required>
                         </div>
 										
 					</div>

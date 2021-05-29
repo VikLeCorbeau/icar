@@ -52,12 +52,13 @@
 						}
 
 						foreach ($tabAssure as $element) {
-							if ($fileLines = file("../db/InfoAssure/".$element."/contrats.csv")) {
-								$nombreVoitureAssure = count($fileLines);
-							}else{
-								$nombreVoitureAssure = 0;
+							$nombreVoitureAssure = 0;
+							if ($test = verificationFichier("../db/InfoAssure/".$element."/contrats.csv", "r")) {
+								if ($fileLines = file("../db/InfoAssure/".$element."/contrats.csv")) {
+									$nombreVoitureAssure = count($fileLines);
+								}
 							}
-							if ($fa = fopen("../db/InfoAssure/".$element."/informations.csv", 'r')) {
+							if ($fa = verificationFichier("../db/InfoAssure/".$element."/informations.csv", 'r')) {
 								while ($data = fgetcsv($fa, 1000, ';')) {
 
 									echo "
@@ -108,7 +109,7 @@
 												<div class='box-vehicles'>";
 													
 													
-													if ($fv = fopen("../db/InfoAssure/".$element."/contrats.csv", 'r')) {
+													if ($fv = verificationFichier("../db/InfoAssure/".$element."/contrats.csv", 'r')) {
 														while ($elem = fgetcsv($fv, 1000, ';')) {
 														echo "
 														<div class='box-vehicle'>	

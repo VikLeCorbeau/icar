@@ -1,8 +1,5 @@
 visiteur;visiteur;visiteur
 police;police;police
-assure;assure;assure
-gestionnaire;gestionnaire;gestionnaire;MAIF
-DupontPierre;PierreDupont;assure
 admin;admin;admin
-Bernard;a;gestionnaire;MAAF
-SanchezPedro;PedroSanchez;assure;MAAF
+gestionnaire;gestionnaire;gestionnaire;"BNP Paribas"
+BaucorVictor;VictorBaucor;assure;"BNP Paribas"

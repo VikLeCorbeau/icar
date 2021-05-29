@@ -184,7 +184,7 @@ verificationType(array('gestionnaire'));
         let xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function(){
             if (this.readyState==4 && this.status==200) {
-                document.location.href="http://localhost/Projet_Car/icar/pages/mesAssures.php";
+                document.location.href="../pages/mesAssures.php";
             }
         };
         xhttp.open("POST", "../src/supprimerContrat.php",true);

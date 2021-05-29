@@ -1,33 +1,10 @@
-"29-05-21 02:29:14";connexion;gestionnaire:Bernard;gestionnaire:Bernard;connexion
-"29-05-21 02:29:48";connexion;assure:SanchezPedro;assure:SanchezPedro;connexion
-"29-05-21 02:43:27";constat;assure:SanchezPedro;assure:SanchezPedro;"nouvelle déclaration de constat"
-"29-05-21 02:46:53";changements;assure:SanchezPedro;assure:SanchezPedro;"changement de coordonnées"
-"29-05-21 02:47:57";changements;assure:SanchezPedro;assure:SanchezPedro;"nouveau justificatif"
-"29-05-21 02:48:08";changements;assure:SanchezPedro;assure:SanchezPedro;"nouveau justificatif"
-"29-05-21 02:53:27";cession;assure:SanchezPedro;assure:SanchezPedro;"cession de véhicule"
-"29-05-21 03:11:18";cession;assure:SanchezPedro;assure:SanchezPedro;"cession de véhicule"
-"29-05-21 03:12:09";connexion;gestionnaire:Bernard;gestionnaire:Bernard;connexion
-"29-05-21 03:12:43";connexion;assure:SanchezPedro;assure:SanchezPedro;connexion
-"29-05-21 03:18:11";changements;assure:SanchezPedro;assure:SanchezPedro;"changement de coordonnées"
-"29-05-21 03:18:55";connexion;gestionnaire:Bernard;gestionnaire:Bernard;connexion
-"29-05-21 03:19:08";connexion;assure:SanchezPedro;assure:SanchezPedro;connexion
-"29-05-21 03:22:36";connexion;gestionnaire:Bernard;gestionnaire:Bernard;connexion
-"29-05-21 03:23:05";connexion;assure:SanchezPedro;assure:SanchezPedro;connexion
-"29-05-21 03:27:16";connexion;gestionnaire:Bernard;gestionnaire:Bernard;connexion
-"29-05-21 03:28:18";connexion;assure:SanchezPedro;assure:SanchezPedro;connexion
-"29-05-21 03:44:09";connexion;gestionnaire:Bernard;gestionnaire:Bernard;connexion
-"29-05-21 03:46:40";connexion;assure:SanchezPedro;assure:SanchezPedro;connexion
-"29-05-21 03:50:32";connexion;gestionnaire:Bernard;gestionnaire:Bernard;connexion
-"29-05-21 03:51:13";connexion;admin:admin;admin:admin;connexion
-"29-05-21 03:51:27";connexion;assure:SanchezPedro;assure:SanchezPedro;connexion
-"29-05-21 04:06:08";connexion;gestionnaire:Bernard;gestionnaire:Bernard;connexion
-"29-05-21 04:17:25";connexion;assure:SanchezPedro;assure:SanchezPedro;connexion
-"29-05-21 04:19:08";connexion;gestionnaire:Bernard;gestionnaire:Bernard;connexion
-"29-05-21 04:19:25";connexion;assure:SanchezPedro;assure:SanchezPedro;connexion
-"29-05-21 04:44:43";connexion;assure:DupontPierre;assure:DupontPierre;connexion
-"29-05-21 04:53:32";constat;assure:DupontPierre;assure:DupontPierre;"nouvelle déclaration de constat"
-"29-05-21 05:00:08";connexion;gestionnaire:gestionnaire;gestionnaire:gestionnaire;connexion
-"29-05-21 05:07:02";connexion;assure:DupontPierre;assure:DupontPierre;connexion
-"29-05-21 05:07:19";connexion;admin:admin;admin:admin;connexion
-"29-05-21 05:09:45";connexion;police:police;police:police;connexion
-"29-05-21 05:19:52";connexion;gestionnaire:gestionnaire;gestionnaire:gestionnaire;connexion
+"29-05-21 08:02:42";connexion;gestionnaire:gestionnaire;gestionnaire:gestionnaire;connexion
+"29-05-21 08:03:26";assuré;gestionnaire:gestionnaire;assure:BaucorVictor;"ajout d'un assuré"
+"29-05-21 08:14:45";contrat;gestionnaire:gestionnaire;assure:VictorBaucor;"nouveau contrat"
+"29-05-21 08:16:22";contrat;gestionnaire:gestionnaire;assure:VictorBaucor;"nouveau contrat"
+"29-05-21 08:16:33";contrat;gestionnaire:gestionnaire;assure:VictorBaucor;"modification contrat"
+"29-05-21 10:02:01";contrat;gestionnaire:gestionnaire;assure:VictorBaucor;"nouveau contrat"
+"29-05-21 10:03:08";contrat;gestionnaire:gestionnaire;assure:VictorBaucor;"nouveau contrat"
+"29-05-21 10:04:29";contrat;gestionnaire:gestionnaire;assure:VictorBaucor;"modification contrat"
+"29-05-21 10:05:16";contrat;gestionnaire:gestionnaire;assure:VictorBaucor;"nouveau contrat"
+"29-05-21 10:06:59";contrat;gestionnaire:gestionnaire;assure:VictorBaucor;"nouveau contrat"
