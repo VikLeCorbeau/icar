@@ -3,9 +3,7 @@ session_start();
 require_once("fonctions.php");
 
 $filename = "../db/InfoAssure/".$_SESSION['identifiants']."/constats";
-if (!file_exists($filename)) {
-	mkdir($filename, 0777, true);
-}
+
 
 $files = glob($filename.'/*.json');
 $compteur = count($files);

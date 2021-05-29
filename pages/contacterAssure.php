@@ -37,71 +37,40 @@
                     </div>
                 </div>
 
-                <div class="grid-form">
-
-                    <div class="input-container">
-                        <label for="NouvMessage" class="form-label">nouveau message</label>
-                        <input id="NMessage" type="text" name="NouvMessage" class="form-large-input" placeholder="Entrez le nom de l'assuré">
-                    </div>
-
-                    <div class="input-container" style="justify-content: flex-end;">
-                        <button type="button" class="button button--light" style="margin: 0;" onclick="nouveauMessage()">
-                            <p class="button-text">Valider</p>
-                        </button>
-                    </div>
-
-                    <div class="input-container" style="justify-content: flex-end; align-items: center;">
-                        <span id="erreur" class="error" style="margin: 0;"></span>
-                    </div>
-
-                </div>
-
                 <div class="contact-grid">
 
-					<div class="contact-left-container">
-						<div class="contact-left-title-container">
-							<h1 class="contact-title">répertoire</h1>
-						</div>
-						<ul class="contact-left-list" id="nom">
+                    <div class="contact-left-container">
+                        <div class="contact-left-title-container">
+                            <h1 class="contact-title">répertoire</h1>
+                        </div>
+                        <ul class="contact-left-list" id="nom">
                             <?php
-                                $assure = array();
-                                $fv = fopen("../db/assure.csv", 'r');
-                                while ($data = fgetcsv($fv, 1000, ';')) {
-                                    if ($data[5] == $_SESSION['assurance']) {
-                                        array_push($assure, $data[0].$data[1]);
+                                $assures = getAssures();
+
+                                foreach ($assures as $assure) {
+                                    if ($assure['assurance'] === $_SESSION['assurance']) {
+                                        $messageAssurance = "../db/InfoAssure/".$assure['identifiant']."/messagerie/" . $assure['assurance'] . ".csv";
+                                        fopen($messageAssurance, "a");
+                                        echo "<li class='contact-left-name' onclick='affichage(this.textContent)'>" . $assure['identifiant'] ."</li>";
                                     }
                                 }
-                                fclose($fv);
-                                foreach ($assure as $element) {
-                                    $filename = "../db/InfoAssure/".$element."/messagerie";
-                                    if (!file_exists($filename)) {
-                                        mkdir($filename, 0777, true);
-                                    }
-                                    $files = $scanned_directory = array_diff(scandir("../db/InfoAssure/".$element."/messagerie"), array('..','.'));
-                                    foreach ($files as $file) {
-                                        $fic = explode('.', $file);
-                                        if ($fic[0] == $_SESSION['assurance']) {
-                                            echo "<li class='contact-left-name' onclick='affichage(this.textContent)'>".$element."</li>";
-                                        }
-                                    }
-                                    
-                                }
+
                              ?>
-						</ul>
-					</div>
+                        </ul>
+                    </div>
 
-					<div class="contact-right-container">
+                    <div class="contact-right-container">
 
-						<div class="contact-right-top">
+                        <div class="contact-right-top">
 
-							<h1 class="contact-title">en relation avec :</h1>
+                            <h1 class="contact-title">en relation avec :</h1>
 
-							<div class="contact-right-top-contact-container">
+                            <div class="contact-right-top-contact-container">
                                 <p class="contact-info contact-info-primary" id="first"></p>
                                 <p class="contact-info contact-info-secondary" id="second"></p>
-							</div>
+                            </div>
 
-						</div>
+                        </div>
 
                         <div class="contact-right-middle" id="discussion">
                         </div>
@@ -123,9 +92,9 @@
 
                         </div>
 
-					</div>
+                    </div>
 
-				</div>
+                </div>
 
 
             </div>

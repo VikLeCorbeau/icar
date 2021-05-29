@@ -129,12 +129,12 @@
 
 						<div class="input-container" id="radio-show-input">
                             <label for="immatriculationR" class="form-label">numéro d'immatriculation</label>
-                            <input type="text" name="immatriculationR" class="form-slim-input" placeholder="Numéro d'immatriculation" required>
+                            <input type="text" name="immatriculationR" class="form-slim-input" placeholder="Numéro d'immatriculation">
                         </div>
 
 						<div class="input-container" id="radio-show-input">
                             <label for="paysImmR" class="form-label">pays d'immatriculation</label>
-                            <input type="text" name="paysImmR" class="form-slim-input" placeholder="Pays d'immatriculation" required>
+                            <input type="text" name="paysImmR" class="form-slim-input" placeholder="Pays d'immatriculation">
                         </div>
 
 					</div>
@@ -148,11 +148,6 @@
 						<div class="input-container">
                             <label for="assurance" class="form-label">nom de l'assurance</label>
                             <input type="text" name="assurance" class="form-slim-input" placeholder="Nom de l'assurance" required>
-                        </div>
-
-						<div class="input-container">
-                            <label for="numContrat" class="form-label">numéro de contrat</label>
-                            <input type="text" name="numContrat" class="form-slim-input" placeholder="Numéro de contrat" required>
                         </div>
 
 						<div class="input-container">

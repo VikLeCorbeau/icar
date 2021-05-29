@@ -1,9 +1,6 @@
 <?php 
 	session_start();
 	$filename = '../db/InfoAssure/'.$_SESSION['identifiants'].'/cession';
-	if (!file_exists($filename)) {
-		mkdir($filename, 0777, true);
-	}
 
 
 	$immatriculation = $_POST['immatriculation'];
@@ -22,10 +19,10 @@
 	while ($data = fgetcsv($fv, 1000, ';')) {
 		echo $data[7].' '.$data[9];
 		if ($data[7] == $immatriculation && $data[9] == $marque) {
-			$tab = file_get_contents('../db/InfoAssure/'.$_SESSION['identifiants'].'/cession/'.$immatriculation.'.json');
+			$tab = file_get_contents($filename.'/'.$immatriculation.'.json');
 			$array_data = json_decode($tab, true);
 			$data = json_encode($donnees);
-			file_put_contents('../db/InfoAssure/'.$_SESSION['identifiants'].'/cession/'.$immatriculation.'.json', $data);
+			file_put_contents($filename.'/'.$immatriculation.'.json', $data);
 			
 			header('Location: ../pages/certificatCession2.php?imm='.$immatriculation);
 			exit();

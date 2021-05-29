@@ -2,9 +2,7 @@
 session_start();
 
 $filename = "../db/InfoAssure/".$_SESSION['identifiants']."/constats/";
-if (!file_exists($filename.'img/')) {
-    mkdir($filename, 0777, true);
-}
+
 $files = glob($filename.'*.json');
 $numeroConstat = count($files);
 

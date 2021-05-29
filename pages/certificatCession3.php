@@ -123,11 +123,6 @@
 						</div>
 
 						<div class="input-container">
-							<label for="name" class="form-label">nom</label>
-							<input type="text" name="name" class="form-slim-input" placeholder="Nom" value="<?php  ?>" required>
-						</div>
-
-						<div class="input-container">
 							<label for="pays" class="form-label">pays</label>
 							<input type="text" name="pays" class="form-slim-input" placeholder="Pays" value="<?php  ?>" required>
 						</div>

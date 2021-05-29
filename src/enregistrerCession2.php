@@ -3,7 +3,7 @@
 	$filename = '../db/InfoAssure/'.$_SESSION['identifiants'].'/cession';
 	$immatriculation = $_GET['imm'];
 
-	$donnees = array('personne' => $_POST['personne'], 'sexe' => $_POST['sexe'], 'nom' => $_POST['nom'], 'prenom' => $_POST['prenom'], 'dateNaissance' => $_POST['dateNaissance'], 'adresse' => $_POST['adresse'], 'ville' => $_POST['ville'], 'cp' => $_POST['cp'], 'name' => $_POST['name'], 'pays' => $_POST['pays'], 'certification' => $_POST['certification'], 'dateCession' => $_POST['dateCession'], 'heureCession' => $_POST['heureCession'], 'certif' => $_POST['certif'], 'lieuSignature' => $_POST['lieuSignature'], 'dateSignature' => $_POST['dateSignature'], 'signature' => $_POST['signature']);
+	$donnees = array('personne' => $_POST['personne'], 'sexe' => $_POST['sexe'], 'nom' => $_POST['nom'], 'prenom' => $_POST['prenom'], 'dateNaissance' => $_POST['dateNaissance'], 'adresse' => $_POST['adresse'], 'ville' => $_POST['ville'], 'cp' => $_POST['cp'], 'pays' => $_POST['pays'], 'certification' => $_POST['certification'], 'dateCession' => $_POST['dateCession'], 'heureCession' => $_POST['heureCession'], 'certif' => $_POST['certif'], 'lieuSignature' => $_POST['lieuSignature'], 'dateSignature' => $_POST['dateSignature'], 'signature' => $_POST['signature']);
 
 		$tab = file_get_contents($filename.'/'.$immatriculation.'.json');
 		$array_data = json_decode($tab, true);

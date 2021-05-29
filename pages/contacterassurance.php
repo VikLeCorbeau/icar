@@ -4,10 +4,6 @@
 
     verificationType(array('assure', 'gestionnaire'));
 
-    $filename = "../db/InfoAssure/".$_SESSION['identifiants']."/messagerie";
-    if (!file_exists($filename)) {
-        mkdir($filename, 0777, true);
-    }
 ?>
 
 <!DOCTYPE html>
@@ -42,53 +38,39 @@
                     </div>
                 </div>
 
-                <div class="grid-form">
-
-                    <div class="input-container">
-                        <label for="NouvMessage" class="form-label">nouveau message</label>
-                        <input id="NMessage" type="text" name="NouvMessage" class="form-large-input" placeholder="Entrez le nom de l'assurance">
-                    </div>
-
-                    <div class="input-container" style="justify-content: flex-end;">
-                        <button type="button" class="button button--light" style="margin: 0;" onclick="nouveauMessage()">
-                            <p class="button-text">Valider</p>
-                        </button>
-                    </div>
-
-                    <div class="input-container" style="justify-content: flex-end; align-items: center;">
-                        <span id="erreur" class="error" style="margin: 0;"></span>
-                    </div>
-
-                </div>
-
                 <div class="contact-grid">
-					<div class="contact-left-container">
-						<div class="contact-left-title-container">
-							<h1 class="contact-title">répertoire</h1>
-						</div>
-						<ul class="contact-left-list" id="nom">
-                            <?php 
-                                $files = $scanned_directory = array_diff(scandir("../db/InfoAssure/".$_SESSION['identifiants']."/messagerie"), array('..','.'));
-                                foreach ($files as $file) {
-                                    $fic = explode('.', $file);
-                                    echo "<li class='contact-left-name' onclick='affichage(this.textContent)'>".$fic[0]."</li>";
+                    <div class="contact-left-container">
+                        <div class="contact-left-title-container">
+                            <h1 class="contact-title">répertoire</h1>
+                        </div>
+                        <ul class="contact-left-list" id="nom">
+                            <?php
+
+                                if ($fa = verificationFichier("../db/InfoAssure/".$_SESSION['identifiants']."/informations.csv", "r")) {
+                                    while ($data = fgetcsv($fa, 1000, ';')) {
+                                         $assurance = $data[9];
+                                    }
+                                    if (fopen("../db/InfoAssure/".$_SESSION['identifiants']."/messagerie/".$assurance.".csv", "a+")) {
+                                        echo "<li class='contact-left-name' onclick='affichage(this.textContent)'>".$assurance."</li>";
+                                    }
                                 }
+
                              ?>
-						</ul>
-					</div>
+                        </ul>
+                    </div>
 
-					<div class="contact-right-container">
+                    <div class="contact-right-container">
 
-						<div class="contact-right-top">
+                        <div class="contact-right-top">
 
-							<h1 class="contact-title">en relation avec :</h1>
+                            <h1 class="contact-title">en relation avec :</h1>
 
-							<div class="contact-right-top-contact-container">
+                            <div class="contact-right-top-contact-container">
                                 <p class="contact-info contact-info-primary" id="first"></p>
                                 <p class="contact-info contact-info-secondary" id="second"></p>
-							</div>
+                            </div>
 
-						</div>
+                        </div>
 
                         <div class="contact-right-middle" id="discussion">
                         </div>
@@ -110,9 +92,9 @@
 
                         </div>
 
-					</div>
+                    </div>
 
-				</div>
+                </div>
 
 
             </div>

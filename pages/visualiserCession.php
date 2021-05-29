@@ -3,6 +3,14 @@
     require_once("../src/fonctions.php");
 
     verificationType(array('gestionnaire', 'assure'));
+    if (isset($_GET['immatriculation'], $_GET['assure'])) {
+         $immatriculation = $_GET['immatriculation'];
+         $assure = $_GET['assure'];
+    }else if(isset($_GET['immatriculation'], $_SESSION['identifiants'])){
+        $immatriculation = $_GET['immatriculation'];
+        $assure = $_SESSION['identifiants'];
+    }
+                    
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +39,7 @@
                 <div class="content-banner"> 
                     <div class="content-titles-container">
                         <h1 class="content-title">Visualisation cession</h1>
-                        <h1 class="content-subtitle"><?php if (isset($_GET['assure'])) { echo $_GET['assure']; } ?></h1>
+                        <h1 class="content-subtitle"><?php echo $assure; ?></h1>
                     </div>
                 </div>
 
@@ -39,21 +47,10 @@
                 <div class="visualisation-container">
 
                     <?php
-
-                    if (isset($_GET['immatriculation'], $_GET['assure'])) {
-
-                        $immatriculation = $_GET['immatriculation'];
-                        $assure = $_GET['assure'];
-
-                    }else if(isset($_GET['immatriculation'], $_SESSION['identifiants'])){
-                        $immatriculation = $_GET['immatriculation'];
-                        $assure = $_SESSION['identifiants'];
-                    }
-                    if (isset($assure)) {   
+                    if (isset($assure)) {  
                         $filename = "../db/InfoAssure/".$assure."/cession";
                         $Json = file_get_contents($filename."/".$immatriculation.".json", true);
                         $array = json_decode($Json, true);
-
                         $titre = array("Informations générales du véhicule","ancien propriétaire","Nouveau propriétaire");
 
                         

@@ -139,7 +139,7 @@
 							$messageCH = "en traitement";
 							$etatCH = "en traitement";
 						}
-						if (file_exists("../db/InfoAssure/".$_SESSION['identifiants']."/changement/informations_temp.csv")) {
+						if (file_exists("../db/InfoAssure/".$_SESSION['identifiants']."/changement/informations_temp.csv") || filesize("../db//InfoAssure/".$_SESSION['identifiants']."/changement/valideChangement.csv") != 0) {
 							echo "
 								<div class='box box-446'>
 									<div class='box-title-container'>
@@ -208,31 +208,33 @@
 							$etatCE = "en traitement";
 						}
 						fclose($fc);
-						echo "
-							<div class='box box-446'>
-								<div class='box-title-container'>
-									<h2 class='box-title'>Cession : ".$data[7]."</h2>
-								</div>
-								<div class='box-informations-container'>
-									<div class='box-informations'>
-										<h3 class='box-information box-information--primary'>Etat</h3>
-										<h3 class='box-information box-information--secondary'>".$etatCE."</h3>
+						if ($nombreCession != 0) {
+							echo "
+								<div class='box box-446'>
+									<div class='box-title-container'>
+										<h2 class='box-title'>Cession : ".$data[7]."</h2>
 									</div>
-									<div class='box-informations'>
-										<h3 class='box-information box-information--primary'>Message de l'assureur</h3>
-										<h3 class='box-information box-information--secondary'>".$messageCE."</h3>
+									<div class='box-informations-container'>
+										<div class='box-informations'>
+											<h3 class='box-information box-information--primary'>Etat</h3>
+											<h3 class='box-information box-information--secondary'>".$etatCE."</h3>
+										</div>
+										<div class='box-informations'>
+											<h3 class='box-information box-information--primary'>Message de l'assureur</h3>
+											<h3 class='box-information box-information--secondary'>".$messageCE."</h3>
+										</div>
+									</div>
+									<div class='box-separator box-separator-446'></div>
+									<div class='box-constats-actions-container'>
+										<div class='box-constats-action'>
+											<a href='visualiserCession.php?immatriculation=".$data[7]."'>
+												<img src='../assets/svg/icons/see.svg' class='box-constats-action-svg'>
+											</a>
+										</div>
 									</div>
 								</div>
-								<div class='box-separator box-separator-446'></div>
-								<div class='box-constats-actions-container'>
-									<div class='box-constats-action'>
-										<a href='visualiserCession.php?immatriculation=".$data[7]."'>
-											<img src='../assets/svg/icons/see.svg' class='box-constats-action-svg'>
-										</a>
-									</div>
-								</div>
-							</div>
-						";
+							";
+						}
 					}
 					?>
 

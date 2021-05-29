@@ -3,10 +3,7 @@ session_start();
 
 $filename = "../db/InfoAssure/".$_SESSION['identifiants']."/constats/";
 $numeroConstat = $_GET['numero'];
-if (!file_exists($filename.'img/')) {
-    $result = mkdir($filename, 0777, true);
-    var_dump($result);
-}
+
 
 for ($i=0; $i < count($_FILES["photo"]["name"]); $i++) { 		
 	echo "<br>";

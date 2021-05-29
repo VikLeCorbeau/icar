@@ -35,4 +35,24 @@
         }
     }
 
+    function getAssures ()
+    {
+        $assures = array();
+
+        if ($fichierAssures = fopen("../db/assure.csv", 'r')) {
+            while ($datas = fgetcsv($fichierAssures, 1000, ';')) {
+                $assure = [
+                    "nom" => $datas[0],
+                    "prenom" => $datas[1],
+                    "identifiant" => $datas[0] . $datas[1],
+                    "assurance" => $datas[5],
+                ];
+                array_push($assures, $assure);
+            }
+            fclose($fichierAssures);
+        }
+
+        return $assures;
+    }
+
 ?>

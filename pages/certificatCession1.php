@@ -108,12 +108,12 @@
 
 						<div class="input-container" id="on">
 							<label for="formule" class="form-label">numéro de formule</label>
-							<input type="text" name="formule" class="form-slim-input" placeholder="numéro de formule" required>
+							<input type="text" name="formule" class="form-slim-input" placeholder="numéro de formule">
 						</div>
 
 						<div class="input-container" id="on">
 							<label for="dateCertificat" class="form-label">date du certificat d'immatriculation</label>
-							<input type="date" name="dateCertificat" class="form-slim-input" placeholder="date du certificat d'immatriculation" required>
+							<input type="date" name="dateCertificat" class="form-slim-input" placeholder="date du certificat d'immatriculation">
 						</div>
 
 						<div class="input-container span-2 display-none" id="off">
