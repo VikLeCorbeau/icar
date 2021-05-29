@@ -118,7 +118,7 @@
                             <h1 class='box-title' style='text-align: center; margin: 30px;'>Justificatif de domicile</h1>
                             <div class='grid-form'>
                                 <div class='input-container'>
-                                    <img src='../db/InfoAssure/".$assure."/changement/ImageChangementCoordonnees.PNG' class='visualisation-image'>
+                                    <img src='../db/InfoAssure/".$assure."/changement/ImageChangementCoordonnees.jpg' class='visualisation-image'>
                                 </div>
                             </div>
                         ";
