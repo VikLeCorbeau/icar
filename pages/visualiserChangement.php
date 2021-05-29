@@ -42,7 +42,11 @@
                 <div class="visualisation-container">
 
                     <?php
-                    $assure = $_SESSION['identifiants'];
+                    if (isset($_GET['assure'])) {
+                    	$assure = $_GET['assure'];
+                    }else{
+                    	$assure = $_SESSION['identifiants'];
+                    }
                     $filename = "../db/InfoAssure/".$assure;
                     if (file_exists($filename."/changement/informations_temp.csv")) {
                     	$file = $filename."/changement/informations_temp.csv";
@@ -114,7 +118,7 @@
                             <h1 class='box-title' style='text-align: center; margin: 30px;'>Justificatif de domicile</h1>
                             <div class='grid-form'>
                                 <div class='input-container'>
-                                    <img src='../db/InfoAssure/".$_SESSION['identifiants']."/changement/ImageChangementCoordonnees.PNG' class='visualisation-image'>
+                                    <img src='../db/InfoAssure/".$assure."/changement/ImageChangementCoordonnees.PNG' class='visualisation-image'>
                                 </div>
                             </div>
                         ";
