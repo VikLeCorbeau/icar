@@ -3,14 +3,13 @@ session_start();
 
 $filename = "../db/InfoAssure/".$_SESSION['identifiants']."/constats/";
 $numeroConstat = $_GET['numero'];
-$nbImages = $_GET['images'] + 1;
+$nbImages = $_GET['images'];
 
-for ($i = $nbImages; $i < count($_FILES["photo"]["name"]) + $nbImages; $i++) { 		
+for ($i = 0; $i < count($_FILES["photo"]["name"]); $i++) { 		
 	echo "<br>";
-	echo $i;
 	$target_dir = $filename.'img/';
 	$photo = explode('.',$_FILES["photo"]["name"][$i]);
-	$target_file = $target_dir.$numeroConstat.'-imageConstat'.$i.'.'.$photo[1];
+	$target_file = $target_dir.$numeroConstat.'-imageConstat'.$nbImages.'.'.$photo[1];
 	$uploadOk = 1;
 	$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 	if(isset($_POST["submit"])) {
@@ -41,6 +40,7 @@ for ($i = $nbImages; $i < count($_FILES["photo"]["name"]) + $nbImages; $i++) {
 	    echo "Il y a eu une erreur en ajoutant la photo.";
 	  }
 	}
+	$nbImages = $nbImages + 1;
 }
 
 #traitements
@@ -69,6 +69,6 @@ foreach ($donnees as $element) {
 	fputcsv($fl, $element, ';');
 }
 fclose($fl);
-//header('Location: ../pages/mesDeclarations.php');
-//exit();
+header('Location: ../pages/mesDeclarations.php');
+exit();
 ?>
