@@ -41,6 +41,7 @@
 				<?php 
 				if ($fa = verificationFichier("../db/InfoAssure/".$_SESSION['identifiants']."/contrats.csv", 'r')) {
 					while ($data = fgetcsv($fa, 1000, ';')) {
+						$immatriculation = $data[7];
 						echo "
 							<div class='box box-446'>
 
@@ -88,16 +89,23 @@
 									</div>
 								</div>
 
+								<div class='box-separator box-separator-446'></div>
+								<div class='box-informations-container'>
+									<div class='box-informations'>
+										<h3 class='box-information box-information--primary'>QR Code associé :</h3>
+										<h3 class='box-information box-information--secondary'>" ."<img src='../db/InfoAssure/".$_SESSION['identifiants']."/contrat-".$_SESSION['identifiants'].$immatriculation.".png'>" . "</h3>
+									</div>
+								</div>
+
 							</div>
 						";
+						
 					}
 
 					fclose($fa); 
 				}
 				?>
-
-				 </div>
-
+				</div>
 
             </div>
         </div>
