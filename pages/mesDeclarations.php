@@ -223,7 +223,7 @@
 								fclose($fc);
 							}
 
-							if ($nombreCession != 0) {
+							if ($nombreCession != 0 && isset($immatriculation, $etatCE, $messageCE)) {
 								echo "
 									<div class='box box-446'>
 										<div class='box-title-container'>

@@ -34,7 +34,6 @@
                 <div class="content-banner"> 
                     <div class="content-titles-container">
                         <h1 class="content-title">Visualisation Changement de coordonnées</h1>
-                        <h1 class="content-subtitle"><?php echo $_SESSION['identifiants']; ?></h1>
                     </div>
                 </div>
 

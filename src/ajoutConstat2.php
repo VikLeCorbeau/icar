@@ -7,7 +7,12 @@
 	verificationType(array('assure'));
 
 	if (isset($_POST['voitureA'])) {
+
 		$voiture = $_POST['voitureA'];
+
+        $string = htmlentities($voiture, null, 'utf-8');
+        $voiture = str_replace("&nbsp;", " ", $string);
+        $voiture = html_entity_decode($voiture);
 
 		if ($fa = verificationFichier("../db/InfoAssure/".$_SESSION['identifiants']."/contrats.csv", 'r')) {
 			while ($data = fgetcsv($fa, 1000, ';')) {
@@ -22,17 +27,19 @@
 					$assurance = $data[5];
 					$numContrat = $data[6];
 					$date = $data[8];
+
+					$elementAdresse = explode(',', $adresseLongue);
+			
+					$adresse = $elementAdresse[0];
+					$cp = $elementAdresse[2];
+					$ville = $elementAdresse[1];
+					$pays = $elementAdresse[3];
 				}
 			}
 	 
 			fclose($fa);
 			
-			$elementAdresse = explode(',', $adresseLongue);
-	 
-			$adresse = $elementAdresse[0];
-			$cp = $elementAdresse[2];
-			$ville = $elementAdresse[1];
-			$pays = $elementAdresse[3];
+			
 		}
 	}
 
@@ -93,7 +100,7 @@
 											if ($fa = verificationFichier('../db/InfoAssure/'.$_SESSION['identifiants'].'/contrats.csv', 'r')) {
 
 												while ($data = fgetcsv($fa, 1000, ';')) {
-													echo "<option value=".$data[9].">".$data[9]." ".$data[7]."</option>";
+													echo "<option value=".str_replace(" ","&nbsp;",$data[9]).">".$data[9]." ".$data[7]."</option>";
 												}
 												fclose($fa);
 
