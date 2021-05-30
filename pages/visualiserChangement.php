@@ -113,25 +113,9 @@
                                 
                                 </div>";
                         }
-                        $filesPNG = glob("../db/InfoAssure/".$assure."/changement/".'*.PNG');
-                        $filespng = glob("../db/InfoAssure/".$assure."/changement/".'*.png');
-                        $filesJPG = glob("../db/InfoAssure/".$assure."/changement/".'*.JPG');
-                        $filesjpg = glob("../db/InfoAssure/".$assure."/changement/".'*.jpg');
-                        $filesJPEG = glob("../db/InfoAssure/".$assure."/changement/".'*.JPEG');
-                        $filesjpeg = glob("../db/InfoAssure/".$assure."/changement/".'*.jpeg');
-                        if (!empty($filesPNG)) {
-                            $image = "PNG";
-                        }else if (!empty($filesJPG)) {
-                            $image = "JPG";
-                        }else if (!empty($filesJPEG)) {
-                            $image = "JPEG";
-                        }else if (!empty($filespng)) {
-                            $image = "png";
-                        }else if (!empty($filesjpg)) {
-                            $image = "jpg";
-                        }else if (!empty($filesjpeg)) {
-                            $image = "jpeg";
-                        }
+
+                        $image = getExtension("../db/InfoAssure/".$assure."/changement/");
+                        
                         echo "
                             <h1 class='box-title' style='text-align: center; margin: 30px;'>Justificatif de domicile</h1>
                             <div class='grid-form'>

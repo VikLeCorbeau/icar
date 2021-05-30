@@ -53,10 +53,11 @@
 					$nombreConstat = count($files);
 					$nbImage = 0;
 
-					$messageCO = "en traitement";
-					$etatCO = "en traitement";
-					
+
 					for ($i=1; $i <= $nombreConstat; $i++) { 
+						$messageCO = "en traitement";
+						$etatCO = "en traitement";
+						
 						
 						$images = glob($filename.'/img/*.*');
 						foreach ($images as $element) {
@@ -101,12 +102,12 @@
 								<div class='box-separator box-separator-446'></div>
 								<div class='box-constats-actions-container'>
 									<div class='box-constats-action'>
-										<a href='visualiserConstat.php?numero=".$i  ."'>
+										<a href='visualiserConstat.php?numero=".$i."'>
 											<img src='../assets/svg/icons/see.svg' class='box-constats-action-svg'>
 										</a>
 									</div>
 									<div class='box-constats-action'>
-										<a href='ajoutImageConstat.php?numero=".$i."'>
+										<a href='ajoutImageConstat.php?numero=".$i."&images=".$nbImage."'>
 											<img src='../assets/svg/icons/insured_add_images.svg' class='box-constats-action-svg'>
 										</a>
 									</div>
@@ -114,8 +115,6 @@
 							</div>
 						";
 						$nbImage = 0;
-						$messageCO = "";
-						$etatCO = "";
 					}
 					?>
 
@@ -207,21 +206,6 @@
 									$immatriculation = $data[7];
 								}
 							}
-							
-
-
-							if ($fc = verificationFichier($filename."/valideCession.csv", 'r')) {
-								
-								while ($donnees = fgetcsv($fc, 1000, ',')) {
-									if (file_exists($filename.'/'.$donnees[1].".json")) {
-										$etatCE = $donnees[0];
-										$messageCE = $donnees[2];
-										$immatriculation = $donnees[1];
-									}
-								}
-
-								fclose($fc);
-							}
 
 							if ($nombreCession != 0 && isset($immatriculation, $etatCE, $messageCE)) {
 								echo "
@@ -253,6 +237,55 @@
 						}
 						fclose($fr);
 					}
+
+
+					if ($fc = verificationFichier($filename."/valideCession.csv", 'r')) {
+								
+						while ($d = fgetcsv($fc, 1000, ',')) {
+
+							if (file_exists($filename.'/'.$d[1].".json")) {
+								$etatCE = $d[0];
+								$messageCE = $d[2];
+								$immatriculation = $d[1];
+							}
+
+							if (isset($immatriculation, $etatCE, $messageCE)) {
+								echo "
+									<div class='box box-446'>
+										<div class='box-title-container'>
+											<h2 class='box-title'>Cession : ".$immatriculation."</h2>
+										</div>
+										<div class='box-informations-container'>
+											<div class='box-informations'>
+												<h3 class='box-information box-information--primary'>Etat</h3>
+												<h3 class='box-information box-information--secondary'>".$etatCE."</h3>
+											</div>
+											<div class='box-informations'>
+												<h3 class='box-information box-information--primary'>Message de l'assureur</h3>
+												<h3 class='box-information box-information--secondary'>".$messageCE."</h3>
+											</div>
+										</div>
+										<div class='box-separator box-separator-446'></div>
+										<div class='box-constats-actions-container'>
+											<div class='box-constats-action'>
+												<a href='visualiserCession.php?immatriculation=".$immatriculation."'>
+													<img src='../assets/svg/icons/see.svg' class='box-constats-action-svg'>
+												</a>
+											</div>
+										</div>
+									</div>
+								";
+							}
+
+
+						}
+
+						
+
+						fclose($fc);
+					}
+
+
 					?>
 
 				</div>

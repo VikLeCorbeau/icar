@@ -26,14 +26,15 @@
 		$fc = fopen("../db/InfoAssure/".$assure."/contrats.csv", 'r');
 		while ($data = fgetcsv($fc, 1000, ';')) {
 			if ($data[7] != $immatriculation) {
-				array_push($fc, $data);
+				array_push($contrats, $data);
 			}
 		}
 		fclose($fc);
 		$fc = fopen("../db/InfoAssure/".$assure."/contrats.csv", 'w');
 		fputcsv($fc, $contrats);
 		fclose($fc);
-		unlink("../db/InfoAssure/".$assure."/Contrat-".$assure.$immatriculation.'png');
+		unlink("../db/InfoAssure/".$assure."/contrat-".$assure.$immatriculation.'png');
+		unlink("../phpqrcode/contrat-".$assure.$immatriculation.'png-errors.txt');
 	}else if ($valide == 1) {
 		$fc = fopen("../db/InfoAssure/".$assure."/cession/valideCession.csv", 'a+');
 		fputcsv($fc, array("Refusé", $immatriculation, "cession du véhicule refusée"));
