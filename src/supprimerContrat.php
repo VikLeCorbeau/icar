@@ -18,7 +18,4 @@
     fclose($fa);
     unlink("../db/InfoAssure/".$nom.$prenom."/contrat-".$nom.$prenom.$immatriculation.".png");
 
-
-    header('Location: ../accueil.php');
-    exit();
 ?>

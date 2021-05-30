@@ -19,6 +19,10 @@
 	$bonus = $_POST['bonus'];
 	$paiement = $_POST['paiement'];
 
+	$string = htmlentities($nomAssurance, null, 'utf-8');
+    $nomAssurance = str_replace("&nbsp;", " ", $string);
+    $nomAssurance = html_entity_decode($nomAssurance);
+
 	$donnees = $_GET['donnees'];
 	$tab = unserialize($donnees);
 	$contrat = array();

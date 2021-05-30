@@ -8,7 +8,7 @@
 	$witness = array();
 	$ft = fopen("../db/assure.csv", 'r');
 	while ($data = fgetcsv($ft, 1000, ';')) {
-		if ($data[5] == $_SESSION['assurance'] || $_SESSION['profil'] == 'police') {
+		if ($_SESSION['profil'] == 'police' || $data[5] == $_SESSION['assurance']) {
 			if (isset($tab[0]->nom , $tab[0]->prenom)){
 				$nom = $tab[0]->nom;
 				$prenom = $tab[0]->prenom;

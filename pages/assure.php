@@ -36,11 +36,23 @@
 
                 </div>    
 
+                    <?php 
+                        if (isset($_GET['constat'])) {
+                            echo "<p>Vous ne pouvez pas déclarer de constat, vous n'avez pas de voitures assurées</p>";
+                        }else if (isset($_GET['cession'])) {
+                            echo "<p>Vous ne pouvez pas déclarer de certificat de cession, vous n'avez pas de voitures assurées</p>";
+                        }
+                    ?>
+
 					<div class="menu-container">
-
 						<div class="menu-buttons-container">
-
-                            <a href="../src/ajoutConstat1.php">
+                            <?php 
+                                if (verifExistVoiture($_SESSION['identifiants'])) {
+                                    echo "<a href='../src/ajoutConstat1.php'>";
+                                }else{
+                                    echo "<a href='assure.php?constat=0'>";
+                                }
+                             ?>
                                 <div class="menu-button-container">
                                     <div class="menu-button">
                                         <img class="menu-button-svg" src="../assets/svg/menu_icons/menu_constats.svg">
@@ -66,8 +78,13 @@
                                     </div>
                                 </div>
                             </a>
-
-                            <a href="certificatCession1.php">
+                            <?php 
+                                if (verifExistVoiture($_SESSION['identifiants'])) {
+                                    echo "<a href='certificatCession1.php'>";
+                                }else{
+                                    echo "<a href='assure.php?cession=0'>";
+                                }
+                             ?>
                                 <div class="menu-button-container">
                                     <div class="menu-button">
                                         <img class="menu-button-svg" src="../assets/svg/menu_icons/menu_sell_car.svg">

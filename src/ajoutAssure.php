@@ -58,7 +58,7 @@ if (file_exists("../db/InfoAssure/".$nom.$prenom."/constats")) {
 	mkdir("../db/InfoAssure/".$nom.$prenom."/constats/img");
 }
 
-header('Location: ../pages/creerAssure.php');
+header('Location: ../pages/mesAssures.php');
 exit();
 ?>
 

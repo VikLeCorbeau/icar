@@ -36,7 +36,7 @@
                         <h1 class="content-title">Contacter Assurés</h1>
                     </div>
                 </div>
-
+                <p id="erreur"></p>
                 <div class="contact-grid">
 
                     <div class="contact-left-container">
@@ -131,24 +131,29 @@
             texte = document.getElementById("contact-message").value;
             discussion = document.getElementById("discussion");
             assure = document.getElementById("first").textContent;
-            let xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function(){
-                if (this.readyState==4 && this.status==200) {
-                    let message = document.createElement("p");
-                    message.className = "contact-message-container my-message";
-                    message.innerHTML = this.responseText;
-                    discussion.appendChild(message);
-                }
-            };  
-            xhttp.open("POST", "../src/ajouterMessageGestionnaire.php",true);
-            xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            xhttp.send("message="+texte+"&assure="+assure);
-            document.getElementById('contact-message').value = null;
+            if (assure == "") {
+                document.getElementById('erreur').innerHTML = "Veuillez sélectionner l'assurance avant d'envoyer un message"
+            }else{
+                let xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function(){
+                    if (this.readyState==4 && this.status==200) {
+                        let message = document.createElement("p");
+                        message.className = "contact-message-container my-message";
+                        message.innerHTML = this.responseText;
+                        discussion.appendChild(message);
+                    }
+                };  
+                xhttp.open("POST", "../src/ajouterMessageGestionnaire.php",true);
+                xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhttp.send("message="+texte+"&assure="+assure);
+                document.getElementById('contact-message').value = null;
+            }
         }
         function affichage(assure){
             document.getElementById("first").innerHTML = assure;
             document.getElementById("second").innerHTML = assure+"@icar.contact.fr";
             discussion = document.getElementById("discussion");
+            document.getElementById('erreur').innerHTML = "";
             while(discussion.firstChild){
                 discussion.removeChild(discussion.firstChild);
             }

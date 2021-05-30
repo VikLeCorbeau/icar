@@ -11,7 +11,7 @@ $prenom = $_POST['prenom'];
 $adresse = $_POST['adresse'];
 $tel = $_POST['tel'];
 $email = $_POST['email'];
-$nomAssurance = $_POST['nomAssurance'];
+$nomAssurance = $_SESSION['assurance'];
 $numeroAssurance = $_POST['numeroAssurance'];
 $immatriculation = $_POST['immatriculation'];
 $dateValidite = $_POST['dateValidite'];
@@ -69,15 +69,13 @@ fclose($fl);
                 <div class="content-banner"> 
                     <div class="content-titles-container">
                         <h1 class="content-title">Ajout contrat d'assurance</h1>
-                        <h1 class="content-subtitle">Le contrat a bien été créé son qr code associé est</h1>
+                        <h1 class="content-subtitle">Le contrat a bien été créé son QR code associé est</h1>
                     </div>
                 </div>
 
 				<div class="qr-code-container">
 					<img src=<?php echo "../db/InfoAssure/".$nom.$prenom."/contrat-".$nom.$prenom.$immatriculation.".png";?> class="qr-code">
 				</div>
- 				
-
             </div>
         </div>
 

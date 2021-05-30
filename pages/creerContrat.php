@@ -83,8 +83,6 @@
 							<div class="select-container">
 
 								<select class="select" name="assure">
-									<option value="">Selection de l'assuré :</option>
-
 									<?php 
 										if ($fa = verificationFichier('../db/assure.csv', 'r')) {
 											while ($data = fgetcsv($fa, 1000, ';')) {
@@ -154,11 +152,6 @@
                     </div>
 
 					<div class="grid-form">
-
-						<div class="input-container">
-                            <label for="nomAssurance" class="form-label">nom de l'assurance</label>
-                            <input type="text" name="nomAssurance" class="form-slim-input" placeholder="Nom de l'assurance" value="<?php if (isset($assurance)) { echo($assurance); } ?>" required>
-                        </div>
 
 						<div class="input-container">
                             <label for="numeroAssurance" class="form-label">numéro du contrat d'assurance</label>

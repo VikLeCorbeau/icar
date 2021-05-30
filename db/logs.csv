@@ -1,0 +1,15 @@
+"30-05-21 04:56:12";connexion;police:police;police:police;connexion
+"30-05-21 05:01:17";connexion;admin:admin;admin:admin;connexion
+"30-05-21 05:01:43";connexion;gestionnaire:Tim;gestionnaire:Tim;connexion
+"30-05-21 05:03:45";assuré;gestionnaire:Tim;assure:ByBob;"ajout d'un assuré"
+"30-05-21 05:04:58";assuré;gestionnaire:Tim;assure:aa;"ajout d'un assuré"
+"30-05-21 05:13:03";contrat;gestionnaire:Tim;assure:BobBy;"nouveau contrat"
+"30-05-21 05:14:51";contrat;gestionnaire:Tim;assure:BobBy;"nouveau contrat"
+"30-05-21 05:16:30";contrat;gestionnaire:Tim;assure:BobBy;"nouveau contrat"
+"30-05-21 05:30:30";connexion;assure:ByBob;assure:ByBob;connexion
+"30-05-21 05:30:49";changements;assure:ByBob;assure:ByBob;"changement de coordonnées"
+"30-05-21 05:38:24";connexion;gestionnaire:Tim;gestionnaire:Tim;connexion
+"30-05-21 05:39:31";assuré;gestionnaire:Tim;assure:HeBabar;"ajout d'un assuré"
+"30-05-21 05:39:48";connexion;assure:HeBabar;assure:HeBabar;connexion
+"30-05-21 06:10:36";connexion;assure:ByBob;assure:ByBob;connexion
+"30-05-21 06:21:08";connexion;assure:HeBabar;assure:HeBabar;connexion

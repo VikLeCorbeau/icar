@@ -55,4 +55,15 @@
         return $assures;
     }
 
+    function verifExistVoiture($assure){
+        if (!file_exists("../db/InfoAssure/".$assure."/contrats.csv")){
+            $voiture = false;
+        }else if(filesize("../db/InfoAssure/".$assure."/contrats.csv") != 0){
+            $voiture= true;
+        }else{
+            $voiture = false;
+        }
+        return $voiture;
+    }
+
 ?>
