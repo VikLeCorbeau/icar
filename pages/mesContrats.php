@@ -41,65 +41,66 @@
 				<?php 
 				if ($fa = verificationFichier("../db/InfoAssure/".$_SESSION['identifiants']."/contrats.csv", 'r')) {
 					while ($data = fgetcsv($fa, 1000, ';')) {
-						$immatriculation = $data[7];
-						echo "
-							<div class='box box-446'>
+						if (isset($data[7])) {
+							$immatriculation = $data[7];
+							echo "
+								<div class='box box-446'>
 
-								<div class='box-title-container'>
-									<h2 class='box-title'>Contrat d'assurance</h2>
+									<div class='box-title-container'>
+										<h2 class='box-title'>Contrat d'assurance</h2>
+									</div>
+
+									<div class='box-informations-container'>
+										<div class='box-informations'>
+											<h3 class='box-information box-information--primary'>Nom de l’assurance :</h3>
+											<h3 class='box-information box-information--secondary'>" . $data[5] . "</h3>
+										</div>
+										<div class='box-informations'>
+											<h3 class='box-information box-information--primary'>Numéro du contrat d’assurance :</h3>
+											<h3 class='box-information box-information--secondary'>" . $data[6] . "</h3>
+										</div>
+										<div class='box-informations'>
+											<h3 class='box-information box-information--primary'>Numéro d’immatriculation : </h3>
+											<h3 class='box-information box-information--secondary'>" . $data[7] . "</h3>
+										</div>
+										<div class='box-informations'>
+											<h3 class='box-information box-information--primary'>Date de validité</h3>
+											<h3 class='box-information box-information--secondary'>" . $data[8] . "</h3>
+										</div>
+										<div class='box-informations'>
+											<h3 class='box-information box-information--primary'>Modèle du véhicule</h3>
+											<h3 class='box-information box-information--secondary'>" . $data[9] . "</h3>
+										</div>
+									</div>
+
+									<div class='box-separator box-separator-446'></div>
+
+									<div class='box-informations-container'>
+										<div class='box-informations'>
+											<h3 class='box-information box-information--primary'>Type d’assurance :</h3>
+											<h3 class='box-information box-information--secondary'>" . $data[10] . "</h3>
+										</div>
+										<div class='box-informations'>
+											<h3 class='box-information box-information--primary'>Bonus</h3>
+											<h3 class='box-information box-information--secondary'>" . $data[11] . "</h3>
+										</div>
+										<div class='box-informations'>
+											<h3 class='box-information box-information--primary'>Paiement</h3>
+											<h3 class='box-information box-information--secondary'>" . $data[12] . "</h3>
+										</div>
+									</div>
+
+									<div class='box-separator box-separator-446'></div>
+									<div class='box-informations-container'>
+										<div class='box-informations'>
+											<h3 class='box-information box-information--primary'>QR Code associé :</h3>
+											<h3 class='box-information box-information--secondary'>" ."<img src='../db/InfoAssure/".$_SESSION['identifiants']."/contrat-".$_SESSION['identifiants'].$immatriculation.".png'>" . "</h3>
+										</div>
+									</div>
+
 								</div>
-
-								<div class='box-informations-container'>
-									<div class='box-informations'>
-										<h3 class='box-information box-information--primary'>Nom de l’assurance :</h3>
-										<h3 class='box-information box-information--secondary'>" . $data[5] . "</h3>
-									</div>
-									<div class='box-informations'>
-										<h3 class='box-information box-information--primary'>Numéro du contrat d’assurance :</h3>
-										<h3 class='box-information box-information--secondary'>" . $data[6] . "</h3>
-									</div>
-									<div class='box-informations'>
-										<h3 class='box-information box-information--primary'>Numéro d’immatriculation : </h3>
-										<h3 class='box-information box-information--secondary'>" . $data[7] . "</h3>
-									</div>
-									<div class='box-informations'>
-										<h3 class='box-information box-information--primary'>Date de validité</h3>
-										<h3 class='box-information box-information--secondary'>" . $data[8] . "</h3>
-									</div>
-									<div class='box-informations'>
-										<h3 class='box-information box-information--primary'>Modèle du véhicule</h3>
-										<h3 class='box-information box-information--secondary'>" . $data[9] . "</h3>
-									</div>
-								</div>
-
-								<div class='box-separator box-separator-446'></div>
-
-								<div class='box-informations-container'>
-									<div class='box-informations'>
-										<h3 class='box-information box-information--primary'>Type d’assurance :</h3>
-										<h3 class='box-information box-information--secondary'>" . $data[10] . "</h3>
-									</div>
-									<div class='box-informations'>
-										<h3 class='box-information box-information--primary'>Bonus</h3>
-										<h3 class='box-information box-information--secondary'>" . $data[11] . "</h3>
-									</div>
-									<div class='box-informations'>
-										<h3 class='box-information box-information--primary'>Paiement</h3>
-										<h3 class='box-information box-information--secondary'>" . $data[12] . "</h3>
-									</div>
-								</div>
-
-								<div class='box-separator box-separator-446'></div>
-								<div class='box-informations-container'>
-									<div class='box-informations'>
-										<h3 class='box-information box-information--primary'>QR Code associé :</h3>
-										<h3 class='box-information box-information--secondary'>" ."<img src='../db/InfoAssure/".$_SESSION['identifiants']."/contrat-".$_SESSION['identifiants'].$immatriculation.".png'>" . "</h3>
-									</div>
-								</div>
-
-							</div>
-						";
-						
+							";
+						}
 					}
 
 					fclose($fa); 

@@ -76,7 +76,10 @@ if (isset($_POST['voitureA'])) {
                                     if ($fa = verificationFichier('../db/InfoAssure/'.$_SESSION['identifiants'].'/contrats.csv', 'r')) {
 
                                         while ($data = fgetcsv($fa, 1000, ';')) {
-                                            echo "<option value=".str_replace(" ","&nbsp;",$data[9]).">".$data[9]." ".$data[7]."</option>";
+											if (!empty($data[9])) {
+												echo "<option value=".str_replace(" ","&nbsp;",$data[9]).">".$data[9]." ".$data[7]."</option>";
+											}
+                                            
                                         }
                                         fclose($fa);
 

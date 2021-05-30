@@ -1,5 +1,7 @@
 <?php 
 	session_start();
+	require_once("../src/fonctions.php");
+
 	$assure = $_GET['assure'];
 	$valide = $_GET['valide'];
 	function supprimerFichier ($file_name){
@@ -37,18 +39,23 @@
 	 	supprimerFichier("../db/InfoAssure/".$assure."/changement/informations_temp.csv");
 	 	
 	 	$traitement=array();
-		$ft = fopen("../db/traitements.csv", 'r');
-		while ($data = fgetcsv($ft, 1000, ';')) {
-			if ($data[0] != 'changement') {
-				array_push($traitement, $data);
+
+		if ($ft = verificationFichier("../db/traitements.csv", 'r')) {
+			while ($data = fgetcsv($ft, 1000, ';')) {
+				if ($data[0] != 'changement') {
+					array_push($traitement, $data);
+				}
 			}
+			fclose($ft);
 		}
-		$ft = fopen("../db/traitements.csv", 'w');
-		fclose($ft);
-		foreach ($traitement as $value) {
-			fputcsv($ft, $value, ';');
+
+		if ($ft = fopen("../db/traitements.csv", 'w')) {
+			foreach ($traitement as $value) {
+				fputcsv($ft, $value, ';');
+			}
+			fclose($ft);
 		}
-		fclose($ft);
+		
 	}
 	header('Location: ../pages/traitements.php');
 	exit();

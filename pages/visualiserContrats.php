@@ -60,7 +60,6 @@
 
                     <div class="box box-446" style="flex: auto;">
                         
-                        
 						<?php
 								if ($fa = verificationFichier("../db/InfoAssure/".$assure."/contrats.csv", "r")) {
 									while ($data = fgetcsv($fa, 1000, ';')) {
@@ -127,19 +126,29 @@
 											echo "<div class='box-separator box-separator-610'></div>";
 	
 											echo "<div class='box-informations-container'>";
-											echo "<div class='box-informations'>";
-											echo "<h3 class='box-information box-information--primary'>Type d'assurance :</h3>";
-											echo "<h3 class='box-information box-information--secondary'>".$data[10]."</h3>";
+												echo "<div class='box-informations'>";
+												echo "<h3 class='box-information box-information--primary'>Type d'assurance :</h3>";
+												echo "<h3 class='box-information box-information--secondary'>".$data[10]."</h3>";
 											echo "</div>";
-											echo "<div class='box-informations'>";
-											echo "<h3 class='box-information box-information--primary'>Bonus :</h3>";
-											echo "<h3 class='box-information box-information--secondary'>".$data[11]."</h3>";
+												echo "<div class='box-informations'>";
+												echo "<h3 class='box-information box-information--primary'>Bonus :</h3>";
+												echo "<h3 class='box-information box-information--secondary'>".$data[11]."</h3>";
 											echo "</div>";
-											echo "<div class='box-informations'>";
-											echo "<h3 class='box-information box-information--primary'>Paiement :</h3>";
-											echo "<h3 class='box-information box-information--secondary'>".$data[12]."</h3>";
+												echo "<div class='box-informations'>";
+												echo "<h3 class='box-information box-information--primary'>Paiement :</h3>";
+												echo "<h3 class='box-information box-information--secondary'>".$data[12]."</h3>";
 											echo "</div>";
+
 											echo "</div>";
+
+											echo "<div class='box-separator box-separator-446'></div>
+
+											<div class='box-informations-container'>
+												<div class='box-informations'>
+													<h3 class='box-information box-information--primary'>QR Code associé :</h3>
+													<h3 class='box-information box-information--secondary'>" ."<img src='../db/InfoAssure/". $data[0] . $data[1] ."/contrat-". $data[0] . $data[1] . $data[7].".png'>" . "</h3>
+												</div>
+											</div>";
 										}
 									}
 									fclose($fa);

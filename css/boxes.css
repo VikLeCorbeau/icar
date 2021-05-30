@@ -213,7 +213,7 @@
 
 @media screen and (max-width: 1280px) {
     .box-446 {
-        flex: auto;
+        flex: 0 0 47%;
     }
 }
 
@@ -230,6 +230,12 @@
         margin: 0 auto 30px auto;
     }
 
+}
+
+@media screen and (max-width: 800px) {
+    .box-446 {
+        flex: auto;
+    }
 }
 
 @media screen and (max-width: 640px) {

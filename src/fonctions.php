@@ -56,13 +56,20 @@
     }
 
     function verifExistVoiture($assure){
-        if (!file_exists("../db/InfoAssure/".$assure."/contrats.csv")){
-            $voiture = false;
-        }else if(filesize("../db/InfoAssure/".$assure."/contrats.csv") != 0){
-            $voiture= true;
-        }else{
+
+        $voiture = false;
+
+        if ($fa = verificationFichier("../db/InfoAssure/".$_SESSION['identifiants']."/contrats.csv", 'r')) {
+            while ($data = fgetcsv($fa, 1000, ';')) {
+                if (isset($data[7])) {
+                    $voiture = true;
+                }
+            }
+            fclose($fa);
+        } else if (!file_exists("../db/InfoAssure/".$assure."/contrats.csv")){
             $voiture = false;
         }
+
         return $voiture;
     }
 

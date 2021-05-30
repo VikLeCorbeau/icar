@@ -6,6 +6,8 @@ verificationType(array('gestionnaire'));
 
 include('../phpqrcode/qrlib.php');
 
+$success = false;
+
 $nom = $_POST['nom'];
 $prenom = $_POST['prenom'];
 $adresse = $_POST['adresse'];
@@ -20,24 +22,34 @@ $typeA = $_POST['typeAssurance'];
 $bonus = $_POST['bonus'];
 $paiement = $_POST['paiement'];
 
-$lien = "http://localhost/Projet_Car/icar/pages/visiteur.php?assure=".$nom.$prenom."&immatriculation=".$immatriculation;
-QRcode::png($lien, "../db/InfoAssure/".$nom.$prenom."/contrat-".$nom.$prenom.$immatriculation.".png");
+
+if (is_dir("../db/InfoAssure/".$nom.$prenom."")) {
+
+    $lien = "http://localhost/Projet_Car/icar/pages/visiteur.php?assure=".$nom.$prenom."&immatriculation=".$immatriculation;
+    QRcode::png($lien, "../db/InfoAssure/".$nom.$prenom."/contrat-".$nom.$prenom.$immatriculation.".png");
 
 
-$contrat = array(array($nom,$prenom,$adresse,$tel,$email,$nomAssurance,$numeroAssurance,$immatriculation,$dateValidite,$modele,$typeA,$bonus,$paiement));
+    $contrat = array(array($nom,$prenom,$adresse,$tel,$email,$nomAssurance,$numeroAssurance,$immatriculation,$dateValidite,$modele,$typeA,$bonus,$paiement));
 
-$f = fopen("../db/InfoAssure/".$nom.$prenom."/contrats.csv", 'a+');
-foreach ($contrat as $element) {
-	fputcsv($f, $element, ';');
+    $f = fopen("../db/InfoAssure/".$nom.$prenom."/contrats.csv", 'a+');
+    foreach ($contrat as $element) {
+        fputcsv($f, $element, ';');
+    }
+    fclose($f);
+    
+    $fl = fopen("../db/logs.csv", 'a+');
+    $date = date('d-m-y h:i:s');
+    $donnees = array(array($date, 'contrat', $_SESSION['profil'].':'.$_SESSION['identifiants'], 'assure:'.$prenom.$nom, 'nouveau contrat'));
+    
+    foreach ($donnees as $element) {
+        fputcsv($fl, $element, ';');
+    }
+    
+    fclose($fl);
+
+    $success = true;
 }
-fclose($f);
-$fl = fopen("../db/logs.csv", 'a+');
-$date = date('d-m-y h:i:s');
-$donnees = array(array($date, 'contrat', $_SESSION['profil'].':'.$_SESSION['identifiants'], 'assure:'.$prenom.$nom, 'nouveau contrat'));
-foreach ($donnees as $element) {
-	fputcsv($fl, $element, ';');
-}
-fclose($fl);
+
  ?>
 
 <!DOCTYPE html>
@@ -69,13 +81,23 @@ fclose($fl);
                 <div class="content-banner"> 
                     <div class="content-titles-container">
                         <h1 class="content-title">Ajout contrat d'assurance</h1>
-                        <h1 class="content-subtitle">Le contrat a bien été créé son QR code associé est</h1>
+                        <h1 class="content-subtitle">
+                        <?php 
+                            if ($success) {
+                                echo "Le contrat a bien été créé son QR code associé est";
+                            } else {
+                                echo "Erreur : veuillez selectionner un assuré valide.";
+                            }
+                        ?>
+                        </h1>
                     </div>
                 </div>
-
+                <?php 
+                    if ($success) { ?>
 				<div class="qr-code-container">
 					<img src=<?php echo "../db/InfoAssure/".$nom.$prenom."/contrat-".$nom.$prenom.$immatriculation.".png";?> class="qr-code">
 				</div>
+                <?php } ?>
             </div>
         </div>
 

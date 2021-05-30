@@ -196,14 +196,19 @@
 					 
 					if ($fr = verificationFichier("../db/InfoAssure/".$_SESSION['identifiants']."/contrats.csv", 'r')) {
 						while ($data = fgetcsv($fr, 1000, ';')) {
-							
-							if (file_exists("../db/InfoAssure/".$_SESSION['identifiants']."/cession/".$data[7].".json")) {
-								$Json = file_get_contents("../db/InfoAssure/".$_SESSION['identifiants']."/cession/".$data[7].".json", true);
-								$array = json_decode($Json, true);
-							}
-							
+
 							$messageCE = "en traitement";
 							$etatCE = "en traitement";
+							
+							if (isset($data[7])) {
+								if (file_exists("../db/InfoAssure/".$_SESSION['identifiants']."/cession/".$data[7].".json")) {
+									$Json = file_get_contents("../db/InfoAssure/".$_SESSION['identifiants']."/cession/".$data[7].".json", true);
+									$array = json_decode($Json, true);
+									$immatriculation = $data[7];
+								}
+							}
+							
+
 
 							if ($fc = verificationFichier($filename."/valideCession.csv", 'r')) {
 								
@@ -211,6 +216,7 @@
 									if (file_exists($filename.'/'.$donnees[1].".json")) {
 										$etatCE = $donnees[0];
 										$messageCE = $donnees[2];
+										$immatriculation = $donnees[1];
 									}
 								}
 
@@ -221,7 +227,7 @@
 								echo "
 									<div class='box box-446'>
 										<div class='box-title-container'>
-											<h2 class='box-title'>Cession : ".$data[7]."</h2>
+											<h2 class='box-title'>Cession : ".$immatriculation."</h2>
 										</div>
 										<div class='box-informations-container'>
 											<div class='box-informations'>
@@ -236,7 +242,7 @@
 										<div class='box-separator box-separator-446'></div>
 										<div class='box-constats-actions-container'>
 											<div class='box-constats-action'>
-												<a href='visualiserCession.php?immatriculation=".$data[7]."'>
+												<a href='visualiserCession.php?immatriculation=".$immatriculation."'>
 													<img src='../assets/svg/icons/see.svg' class='box-constats-action-svg'>
 												</a>
 											</div>

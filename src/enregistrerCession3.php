@@ -11,7 +11,6 @@
 		$data = json_encode($array_data);
 		file_put_contents($filename.'/'.$immatriculation.'.json', $data);
 
-
 		#traitements
 		$traitements = array('cession', $immatriculation, $_SESSION['identifiants']);
 		$valeurTraitement = array();
