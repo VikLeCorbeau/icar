@@ -22,14 +22,6 @@
 			while ($data = fgetcsv($fa, 1000, ';')) {
 				$nom = $data[0];
 				$prenom = $data[1];
-				$tel = $data[2];
-				$email = $data[3];
-				$rue = $data[4];
-				$ville = $data[5];
-				$cp = $data[6];
-				$pays = $data[7];
-				$numeroAssurance = $data[8];
-				$assurance = $data[9];
 			}
 			fclose($fa);
 		}
@@ -129,21 +121,6 @@
                             <label for="prenom" class="form-label">prénom</label>
                             <input type="text" name="prenom" class="form-slim-input" placeholder="Prénom" value="<?php if (isset($prenom)) { echo($prenom); } ?>" required>
                         </div>
-
-						<div class="input-container">
-                            <label for="adresse" class="form-label">adresse</label>
-                            <input type="text" name="adresse" class="form-slim-input" placeholder="Adresse" value="<?php if (isset($rue, $ville, $cp, $pays)) { echo "" . $rue. ", " .$ville. ", " .$cp. ", " .$pays.""; } ?>" required>
-                        </div>
-
-						<div class="input-container">
-                            <label for="tel" class="form-label">téléphone</label>
-                            <input type="text" name="tel" class="form-slim-input" placeholder="Téléphone" value="<?php if (isset($tel)) { echo($tel); } ?>" required>
-                        </div>
-
-						<div class="input-container">
-                            <label for="email" class="form-label">adresse mail</label>
-                            <input type="email" name="email" class="form-slim-input" placeholder="Adresse mail" value="<?php if (isset($email)) { echo($email); } ?>" required>
-                        </div>
 										
 					</div>
 
@@ -155,7 +132,7 @@
 
 						<div class="input-container">
                             <label for="numeroAssurance" class="form-label">numéro du contrat d'assurance</label>
-                            <input type="text" name="numeroAssurance" class="form-slim-input" placeholder="Numéro du contrat d'assurance" value="<?php if (isset($numeroAssurance)) { echo($numeroAssurance); } ?>" required>
+                            <input type="text" name="numeroAssurance" class="form-slim-input" placeholder="Numéro du contrat d'assurance" required>
                         </div>
 
 						<div class="input-container">

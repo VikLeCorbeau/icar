@@ -10,9 +10,6 @@ $success = false;
 
 $nom = $_POST['nom'];
 $prenom = $_POST['prenom'];
-$adresse = $_POST['adresse'];
-$tel = $_POST['tel'];
-$email = $_POST['email'];
 $nomAssurance = $_SESSION['assurance'];
 $numeroAssurance = $_POST['numeroAssurance'];
 $immatriculation = $_POST['immatriculation'];
@@ -28,6 +25,14 @@ if (is_dir("../db/InfoAssure/".$nom.$prenom."")) {
     $lien = "http://localhost/Projet_Car/icar/pages/visiteur.php?assure=".$nom.$prenom."&immatriculation=".$immatriculation;
     QRcode::png($lien, "../db/InfoAssure/".$nom.$prenom."/contrat-".$nom.$prenom.$immatriculation.".png");
 
+    if ($informationsAssure = verificationFichier("../db/InfoAssure/".$nom.$prenom."/informations.csv", "r")) {
+        while ($data = fgetcsv($informationsAssure, 1000, ';')) {
+            $adresse = $data[4]. ", " . $data[5] . ", " . $data[6] . ", " . $data[7];
+            $tel = $data[2];
+            $email = $data[3];
+        }
+        fclose($informationsAssure);
+    }
 
     $contrat = array(array($nom,$prenom,$adresse,$tel,$email,$nomAssurance,$numeroAssurance,$immatriculation,$dateValidite,$modele,$typeA,$bonus,$paiement));
 
