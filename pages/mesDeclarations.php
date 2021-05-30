@@ -142,7 +142,7 @@
 							$messageCH = "en traitement";
 							$etatCH = "en traitement";
 						}
-						if (file_exists("../db/InfoAssure/".$_SESSION['identifiants']."/changement/informations_temp.csv") || filesize("../db//InfoAssure/".$_SESSION['identifiants']."/changement/valideChangement.csv") != 0) {
+						if (file_exists("../db/InfoAssure/".$_SESSION['identifiants']."/changement/informations_temp.csv") || filesize("../db/InfoAssure/".$_SESSION['identifiants']."/changement/valideChangement.csv") != 0) {
 							echo "
 								<div class='box box-446'>
 									<div class='box-title-container'>

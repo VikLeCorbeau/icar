@@ -10,7 +10,6 @@
 	$pays = $_POST['pays'];
 	$tel = $_POST['telephone'];
 	$email = $_POST['mail'];
-	$nomAssurance = $_POST['assurance'];
 	$numeroAssurance = $_POST['numeroContrat'];
 	$immatriculation = $_POST['immatriculation'];
 	$dateValidite = $_POST['validite'];
@@ -18,10 +17,6 @@
 	$typeA = $_POST['typeAssurance'];
 	$bonus = $_POST['bonus'];
 	$paiement = $_POST['paiement'];
-
-	$string = htmlentities($nomAssurance, null, 'utf-8');
-    $nomAssurance = str_replace("&nbsp;", " ", $string);
-    $nomAssurance = html_entity_decode($nomAssurance);
 
 	$donnees = $_GET['donnees'];
 	$tab = unserialize($donnees);
@@ -39,7 +34,7 @@
 	}
 	fclose($f);
 
-	array_push($contrat, array($nom,$prenom,$adresse.','.$ville.','.$cp.','.$pays,$tel,$email,$nomAssurance,$numeroAssurance,$immatriculation,$dateValidite,$modele,$typeA,$bonus,$paiement));
+	array_push($contrat, array($nom,$prenom,$adresse.','.$ville.','.$cp.','.$pays,$tel,$email,$_SESSION['assurance'],$numeroAssurance,$immatriculation,$dateValidite,$modele,$typeA,$bonus,$paiement));
 	$f = fopen("../db/InfoAssure/".$nom.$prenom."/contrats.csv", 'w');
 	foreach ($contrat as $element) {
 		fputcsv($f, $element, ';');

@@ -114,11 +114,21 @@
                                 
                                 </div>";
                         }
+                        $filesPNG = glob("../db/InfoAssure/".$assure."/changement/".'*.PNG');
+                        $filesJPG = glob("../db/InfoAssure/".$assure."/changement/".'*.JPG');
+                        $filesJPEG = glob("../db/InfoAssure/".$assure."/changement/".'*.JPEG');
+                        if (!empty($filesPNG)) {
+                            $image = "PNG";
+                        }else if (!empty($filesJPG)) {
+                            $image = "JPG";
+                        }else if (!empty($filesJPEG)) {
+                            $image = "JPEG";
+                        }
                         echo "
                             <h1 class='box-title' style='text-align: center; margin: 30px;'>Justificatif de domicile</h1>
                             <div class='grid-form'>
                                 <div class='input-container'>
-                                    <img src='../db/InfoAssure/".$assure."/changement/ImageChangementCoordonnees.jpg' class='visualisation-image'>
+                                    <img src='../db/InfoAssure/".$assure."/changement/ImageChangementCoordonnees.".$image."' class='visualisation-image'>
                                 </div>
                             </div>
                         ";

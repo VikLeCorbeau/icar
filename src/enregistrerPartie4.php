@@ -18,12 +18,10 @@ for ($i=0; $i < count($_FILES["photo"]["name"]); $i++) {
 	  if($check !== false) {
 	    $uploadOk = 1;
 	  } else {
-	    echo "Vous n'avez pas mis une photo";
 	    $uploadOk = 0;
 	  }
 	}
 	if (file_exists($target_file)) {
-		echo "La photo que vous voulez ajouté existe déjà.";
 		$uploadOk = 0;
 	}
 	if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {

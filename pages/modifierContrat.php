@@ -49,23 +49,6 @@ verificationType(array('gestionnaire'));
                     </div>
 
                     <div class="grid-form">
-
-                        <div class="select-container">
-                            <label class="form-label" for="assurance">selectionnez l'assurance</label>
-                            <select class="select select-with-label" name="assurance">
-
-                                <?php
-                                if ($fichierAssurance = verificationFichier('../db/assurance.csv', 'r')) {
-                                    while ($assurance = fgetcsv($fichierAssurance, 1000)) {
-                                        echo "<option value= ".str_replace(" ","&nbsp;",$assurance[0]).">".str_replace(" ","&nbsp;",$assurance[0]) ."</option>";
-                                    }
-                                    fclose($fichierAssurance);
-                                }
-                                ?>
-
-                            </select>
-
-                        </div>
                         
                         <div class="input-container">
                             <label for="numeroContrat" class="form-label">numéro du contrat d'assurance</label>
