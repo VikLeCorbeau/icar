@@ -1,5 +1,9 @@
 visiteur;visiteur;visiteur
 police;police;police
 admin;admin;admin
-gestionnaire;gestionnaire;gestionnaire;GAN
-BaucorVictor;VictorBaucor;assure;GAN
+mma;mma;gestionnaire;MMA
+groupama;groupama;gestionnaire;GROUPAMA
+BaucorVictor;VictorBaucor;assure;MMA
+PeyrouletLéo;LéoPeyroulet;assure;MMA
+LarrouyTimothey;TimotheyLarrouy;assure;GROUPAMA
+ArnaudinVincent;VincentArnaudin;assure;GROUPAMA
