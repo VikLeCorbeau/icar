@@ -54,8 +54,11 @@
 						foreach ($tabAssure as $element) {
 							$nombreVoitureAssure = 0;
 							if ($test = verificationFichier("../db/InfoAssure/".$element."/contrats.csv", "r")) {
-								if ($fileLines = file("../db/InfoAssure/".$element."/contrats.csv")) {
-									$nombreVoitureAssure = count($fileLines);
+								while ($data = fgetcsv($test, 1000, ';')) {
+									if ($data[0] != '') {
+										$nombreVoitureAssure++;
+									}
+									
 								}
 								fclose($test);
 							}

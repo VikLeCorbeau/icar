@@ -1,0 +1,28 @@
+"30-05-21 10:09:44";connexion;admin:admin;admin:admin;connexion
+"30-05-21 10:10:08";connexion;gestionnaire:gestionnaire;gestionnaire:gestionnaire;connexion
+"30-05-21 10:10:27";assuré;gestionnaire:gestionnaire;assure:BaucorVictor;"ajout d'un assuré"
+"30-05-21 10:10:57";contrat;gestionnaire:gestionnaire;assure:VictorBaucor;"nouveau contrat"
+"30-05-21 10:12:26";connexion;assure:BaucorVictor;assure:BaucorVictor;connexion
+"30-05-21 10:13:24";constat;assure:BaucorVictor;assure:BaucorVictor;"nouvelle déclaration de constat"
+"30-05-21 10:14:31";constat;assure:BaucorVictor;assure:BaucorVictor;"nouvelle déclaration de constat"
+"30-05-21 10:14:45";connexion;gestionnaire:gestionnaire;gestionnaire:gestionnaire;connexion
+"30-05-21 10:14:58";connexion;assure:BaucorVictor;assure:BaucorVictor;connexion
+"30-05-21 10:18:28";changements;assure:BaucorVictor;assure:BaucorVictor;"changement de coordonnées"
+"30-05-21 10:18:45";changements;assure:BaucorVictor;assure:BaucorVictor;"nouveau justificatif"
+"30-05-21 10:18:57";changements;assure:BaucorVictor;assure:BaucorVictor;"nouveau justificatif"
+"30-05-21 10:20:18";changements;assure:BaucorVictor;assure:BaucorVictor;"nouveau justificatif"
+"30-05-21 10:32:23";changements;assure:BaucorVictor;assure:BaucorVictor;"nouveau justificatif"
+"30-05-21 10:35:04";changements;assure:BaucorVictor;assure:BaucorVictor;"nouveau justificatif"
+"30-05-21 10:35:13";changements;assure:BaucorVictor;assure:BaucorVictor;"nouveau justificatif"
+"30-05-21 10:36:24";changements;assure:BaucorVictor;assure:BaucorVictor;"nouveau justificatif"
+"30-05-21 10:36:41";changements;assure:BaucorVictor;assure:BaucorVictor;"nouveau justificatif"
+"30-05-21 10:37:07";changements;assure:BaucorVictor;assure:BaucorVictor;"changement de coordonnées"
+"30-05-21 10:37:26";changements;assure:BaucorVictor;assure:BaucorVictor;"changement de coordonnées"
+"30-05-21 10:38:17";changements;assure:BaucorVictor;assure:BaucorVictor;"changement de coordonnées"
+"30-05-21 10:39:39";changements;assure:BaucorVictor;assure:BaucorVictor;"nouveau justificatif"
+"30-05-21 10:41:25";changements;assure:BaucorVictor;assure:BaucorVictor;"changement de coordonnées"
+"30-05-21 10:42:23";constat;assure:BaucorVictor;assure:BaucorVictor;"ajout d'image au constat"
+"30-05-21 10:42:35";constat;assure:BaucorVictor;assure:BaucorVictor;"ajout d'image au constat"
+"30-05-21 10:42:51";constat;assure:BaucorVictor;assure:BaucorVictor;"ajout d'image au constat"
+"30-05-21 10:44:36";constat;assure:BaucorVictor;assure:BaucorVictor;"ajout d'image au constat"
+"30-05-21 10:44:57";constat;assure:BaucorVictor;assure:BaucorVictor;"ajout d'image au constat"

@@ -63,10 +63,6 @@
         $uploadOk = 0;
       }
     }
-    if (file_exists($target_file)) {
-        echo "La photo que vous voulez ajouté existe déjà.";
-        $uploadOk = 0;
-    }
     if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
           echo "Désolé, est accepté seulement les fichiers : .png, .jpg et .jpeg";
           $uploadOk = 0;

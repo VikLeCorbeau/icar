@@ -73,4 +73,31 @@
         return $voiture;
     }
 
+    function getExtension ($filename) {
+
+        $filesPNG = glob($filename.'*.PNG');
+        $filespng = glob($filename.'*.png');
+
+        $filesJPG = glob($filename.'*.JPG');
+        $filesjpg = glob($filename.'*.jpg');
+
+        $filesJPEG = glob($filename.'*.JPEG');
+        $filesjpeg = glob($filename.'*.jpeg');
+
+        if (!empty($filesPNG)) {
+            $image = "PNG";
+        }else if (!empty($filesJPG)) {
+            $image = "JPG";
+        }else if (!empty($filesJPEG)) {
+            $image = "JPEG";
+        }else if (!empty($filespng)) {
+            $image = "png";
+        }else if (!empty($filesjpg)) {
+            $image = "jpg";
+        }else if (!empty($filesjpeg)) {
+            $image = "jpeg";
+        }
+                        
+        return $image;
+    }
 ?>

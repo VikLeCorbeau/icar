@@ -1,8 +1,13 @@
 <?php
     session_start();
     require_once("../src/fonctions.php");
-    $numero = $_GET['numero'];
+    
     verificationType(array('assure'));
+
+    if(isset($_GET['numero'], $_GET['images'])) {
+        $numero = $_GET['numero'];
+        $images = $_GET['images'];
+    }
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +44,7 @@
 
                 </div>
                 <?php 
-                	echo "<form action='../src/enregistrerImageConstat.php?numero=".$numero."' method='POST' enctype='multipart/form-data' id='ajoutConstat4'>";
+                	echo "<form action='../src/enregistrerImageConstat.php?numero=".$numero."&images=". $images ."' method='POST' enctype='multipart/form-data' id='ajoutConstat4'>";
                  ?>
                     <div class="grid-form">
 

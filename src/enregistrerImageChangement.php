@@ -1,9 +1,12 @@
 <?php 
 	session_start();
+  require_once("../src/fonctions.php");
  
 
 $filename = "../db/InfoAssure/".$_SESSION['identifiants'];
-unlink($filename.'/changement/ImageChangementCoordonnees.PNG');
+$extension = getExtension("../db/InfoAssure/".$_SESSION['identifiants']."/changement/");
+
+unlink($filename.'/changement/ImageChangementCoordonnees.'.$extension);
 
 
 $target_dir = $filename.'/changement/';
