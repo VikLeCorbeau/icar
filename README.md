@@ -1,13 +1,13 @@
-/******************************************************************************************************************************************/
+/*****************************************************************************************************************/
 
 INITIALISATION : (sous Linux)
     - Copiez le dossier dans vos projets web locaux.
-    - A la racine de vos projets web tapez : "sudo chmod -R 777 <nomDuProjet>". Cela donnera le droit d'écriture à tous les fichiers 
-      de la base de données.
+    - A la racine de vos projets web tapez : "sudo chmod -R 777 <nomDuProjet>". Cela donnera le droit d'écriture 
+      à tous les fichiers de la base de données.
     - Lancez votre serveur local.
     - Vous pouvez normalement tester notre site !
 
-/******************************************************************************************************************************************/
+/*****************************************************************************************************************/
 
 UTILISATION RECOMMANDEE  POUR TEST COMPLET :
 
@@ -28,5 +28,5 @@ UTILISATION RECOMMANDEE  POUR TEST COMPLET :
             * Identifiant -> police, mot de passe -> police.
         - Explorez toutes les options possibles des forces de l'ordre.
 
-/******************************************************************************************************************************************/
+/*****************************************************************************************************************/
 
