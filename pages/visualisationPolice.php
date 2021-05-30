@@ -49,8 +49,15 @@
                 <div class='boxes-container'>
                 <?php 
                     foreach ($tabAssure as $element) {
-                        $fileLines=file("../db/InfoAssure/".$element."/contrats.csv");
-                        $nombreVoitureAssure = count($fileLines);
+
+                        $nombreVoitureAssure = 0;
+
+                        if ($test = verificationFichier("../db/InfoAssure/".$element."/contrats.csv", "r")) {
+                            if ($fileLines = file("../db/InfoAssure/".$element."/contrats.csv")) {
+                                $nombreVoitureAssure = count($fileLines);
+                            }
+                            fclose($test);
+                        }
 
                         if ($fa = verificationFichier("../db/InfoAssure/".$element."/informations.csv", "r")) {
 
@@ -95,16 +102,17 @@
                                                 echo "</div>";
 
                                                 echo "<div class='box-vehicles'>";
-                                                    $fv = fopen("../db/InfoAssure/".$element."/contrats.csv", 'r');
-                                                    while ($elem = fgetcsv($fv, 1000, ';')) {
-                                                        echo "<div class='box-vehicle'>";
-                                                            echo "<a href='visualiserContrats.php?assure=".$element."&immatriculation=".$elem[7]."&voiture=".$elem[9]."' class='box-vehicle-a'>";
-                                                                echo "<p class='box-vehicle-svg-text'>".$elem[9]."</p>";
-                                                                echo "<img src='../assets/svg/icons/contract_enter.svg'>";
-                                                            echo "</a>";
-                                                        echo "</div>";
-                                                    }
-                                            fclose($fv);
+                                                    if ($fv = verificationFichier("../db/InfoAssure/".$element."/contrats.csv", 'r')) {
+                                                        while ($elem = fgetcsv($fv, 1000, ';')) {
+                                                            echo "<div class='box-vehicle'>";
+                                                                echo "<a href='visualiserContrats.php?assure=".$element."&immatriculation=".$elem[7]."&voiture=".$elem[9]."' class='box-vehicle-a'>";
+                                                                    echo "<p class='box-vehicle-svg-text'>".$elem[9]."</p>";
+                                                                    echo "<img src='../assets/svg/icons/contract_enter.svg'>";
+                                                                echo "</a>";
+                                                            echo "</div>";
+                                                        }
+                                                         fclose($fv);
+                                                      }
                                                 echo "</div>";
                                             echo "</div>";
                                         echo "</div>";

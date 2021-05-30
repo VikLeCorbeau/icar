@@ -34,16 +34,21 @@
                         <h1 class="content-title">Menu - Assuré</h1>
                     </div>
 
-                </div>    
+                </div>
+                            
+                <div class="grid-form" style="margin-bottom: 20px;">
+                    <div class="input-container" style="grid-column: span 2;">
+                            <?php 
+                                if (isset($_GET['constat'])) {
+                                    echo "<p class='error'>Vous ne pouvez pas déclarer de constat, vous n'avez pas de voitures assurées</p>";
+                                }else if (isset($_GET['cession'])) {
+                                    echo "<p class='error'>Vous ne pouvez pas déclarer de certificat de cession, vous n'avez pas de voitures assurées</p>";
+                                }
+                            ?>
+                    </div>
+                </div>
 
-                    <?php 
-                        if (isset($_GET['constat'])) {
-                            echo "<p>Vous ne pouvez pas déclarer de constat, vous n'avez pas de voitures assurées</p>";
-                        }else if (isset($_GET['cession'])) {
-                            echo "<p>Vous ne pouvez pas déclarer de certificat de cession, vous n'avez pas de voitures assurées</p>";
-                        }
-                    ?>
-
+                
 					<div class="menu-container">
 						<div class="menu-buttons-container">
                             <?php 

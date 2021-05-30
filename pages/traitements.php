@@ -205,7 +205,7 @@ verificationType(array('gestionnaire'));
 														<div class='box-separator box-separator-446'></div>
 														<div class='box-constats-actions-container'>
 															<div class='box-constats-action'>
-																<a href='visualiserConstat.php?numero='>
+																<a href='visualiserCession.php?immatriculation=". $donnees[7] ."&assure=". $data[2] ."'>
 																	<img src='../assets/svg/icons/see.svg' class='box-constats-action-svg'>
 																</a>
 															</div>

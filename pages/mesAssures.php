@@ -57,6 +57,7 @@
 								if ($fileLines = file("../db/InfoAssure/".$element."/contrats.csv")) {
 									$nombreVoitureAssure = count($fileLines);
 								}
+								fclose($test);
 							}
 							if ($fa = verificationFichier("../db/InfoAssure/".$element."/informations.csv", 'r')) {
 								while ($data = fgetcsv($fa, 1000, ';')) {

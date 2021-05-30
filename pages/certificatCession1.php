@@ -7,6 +7,10 @@
 if (isset($_POST['voitureA'])) {
     $voiture = $_POST['voitureA'];
 
+    $string = htmlentities($voiture, null, 'utf-8');
+    $voiture = str_replace("&nbsp;", " ", $string);
+    $voiture = html_entity_decode($voiture);
+
     if ($fa = verificationFichier("../db/InfoAssure/".$_SESSION['identifiants']."/contrats.csv", 'r')) {
         while ($data = fgetcsv($fa, 1000, ';')) {
             if ($data[9] == $voiture) {
@@ -72,7 +76,7 @@ if (isset($_POST['voitureA'])) {
                                     if ($fa = verificationFichier('../db/InfoAssure/'.$_SESSION['identifiants'].'/contrats.csv', 'r')) {
 
                                         while ($data = fgetcsv($fa, 1000, ';')) {
-                                            echo "<option value=".$data[9].">".$data[9]." ".$data[7]."</option>";
+                                            echo "<option value=".str_replace(" ","&nbsp;",$data[9]).">".$data[9]." ".$data[7]."</option>";
                                         }
                                         fclose($fa);
 

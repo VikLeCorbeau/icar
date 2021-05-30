@@ -37,7 +37,13 @@
                         <h1 class="content-title">Contacter mon assurance</h1>
                     </div>
                 </div>
-                <p id="erreur"></p>
+
+                <div class="grid-form" style="margin-bottom: 20px;">
+                    <div class="input-container" style="grid-column: span 2;">
+                        <p id="erreur" class="error"></p>
+                    </div>
+                </div>
+
                 <div class="contact-grid">
                     <div class="contact-left-container">
                         <div class="contact-left-title-container">

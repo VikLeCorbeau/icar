@@ -113,7 +113,7 @@
                                                 <?php break;
                                                 case "gestionnaire":?>
                                                     <li class="nav-side-link-dropdown-li"><a href="../pages/mesAssures.php">Voir mes assurés</a></li>
-                                                    <li class="nav-side-link-dropdown-li"><a href="../pages/">Voir mes messages</a></li>
+                                                    <li class="nav-side-link-dropdown-li"><a href="../pages/contacterAssure.php">Voir mes messages</a></li>
                                                     <li class="nav-side-link-dropdown-li"><a href="../pages/traitements.php">Voir les traitements en attente</a></li>
                                                     <li class="nav-side-link-dropdown-li"><a href="../pages/creerAssure.php">Ouvrir un nouveau compte assuré</a></li>
                                                     <li class="nav-side-link-dropdown-li"><a href="../pages/creerContrat.php">Ajouter un contrat d'assurance</a></li>

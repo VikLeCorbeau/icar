@@ -52,6 +52,9 @@
 					$files = glob($filename.'/*.json');
 					$nombreConstat = count($files);
 					$nbImage = 0;
+
+					$messageCO = "en traitement";
+					$etatCO = "en traitement";
 					
 					for ($i=1; $i <= $nombreConstat; $i++) { 
 						
@@ -65,18 +68,17 @@
 
 						$Json = file_get_contents("../db/InfoAssure/".$_SESSION['identifiants']."/constats/constat".$i.".json", true);
 						$array = json_decode($Json, true);
-						$fc = fopen($filename."/valideConstat.csv", 'r');
-						while ($data = fgetcsv($fc, 1000, ',')) {
-							if ($i == $data[1]) {
-								$etatCO = $data[0];
-								$messageCO = $data[2];
+
+						if ($fc = verificationFichier($filename."/valideConstat.csv", 'r')) {
+							while ($data = fgetcsv($fc, 1000, ',')) {
+								if ($i == $data[1]) {
+									$etatCO = $data[0];
+									$messageCO = $data[2];
+								}
 							}
+							fclose($fc);
 						}
-						if ($messageCO == '' && $etatCO == '') {
-							$messageCO = "en traitement";
-							$etatCO = "en traitement";
-						}
-						fclose($fc);
+						
 						echo "
 							<div class='box box-446'>
 								<div class='box-title-container'>
@@ -130,6 +132,8 @@
 				<div class="boxes-container">
 
 					<?php
+						$messageCH = "en traitement";
+						$etatCH = "en traitement";
 
 						if ($fc = verificationFichier("../db/InfoAssure/".$_SESSION['identifiants']."/changement/valideChangement.csv", 'r')) {
 							while ($data = fgetcsv($fc, 1000, ',')) {
@@ -138,11 +142,8 @@
 							}
 							fclose($fc);
 						}
-						if ($messageCH == '' && $etatCH == '') {
-							$messageCH = "en traitement";
-							$etatCH = "en traitement";
-						}
-						if (file_exists("../db/InfoAssure/".$_SESSION['identifiants']."/changement/informations_temp.csv") || filesize("../db/InfoAssure/".$_SESSION['identifiants']."/changement/valideChangement.csv") != 0) {
+
+						if (file_exists("../db/InfoAssure/".$_SESSION['identifiants']."/changement/informations_temp.csv")) {
 							echo "
 								<div class='box box-446'>
 									<div class='box-title-container'>
@@ -193,53 +194,58 @@
 					$files = glob($filename.'/*.json');
 					$nombreCession = count($files);
 					 
-					$fr = fopen("../db/InfoAssure/".$_SESSION['identifiants']."/contrats.csv", 'r');
-					while ($data = fgetcsv($fr, 1000, ';')) {
-
-						$Json = file_get_contents("../db/InfoAssure/".$_SESSION['identifiants']."/cession/".$data[7].".json", true);
-						$array = json_decode($Json, true);
-
-						$fc = fopen($filename."/valideCession.csv", 'r');
-						while ($donnees = fgetcsv($fc, 1000, ',')) {
-							if (file_exists($filename.'/'.$donnees[1].".json")) {
-								$etatCE = $donnees[0];
-								$messageCE = $donnees[2];
+					if ($fr = verificationFichier("../db/InfoAssure/".$_SESSION['identifiants']."/contrats.csv", 'r')) {
+						while ($data = fgetcsv($fr, 1000, ';')) {
+							
+							if (file_exists("../db/InfoAssure/".$_SESSION['identifiants']."/cession/".$data[7].".json")) {
+								$Json = file_get_contents("../db/InfoAssure/".$_SESSION['identifiants']."/cession/".$data[7].".json", true);
+								$array = json_decode($Json, true);
 							}
-						}
-						if ($messageCE == '' && $etatCE == '') {
+							
 							$messageCE = "en traitement";
 							$etatCE = "en traitement";
+
+							if ($fc = verificationFichier($filename."/valideCession.csv", 'r')) {
+								
+								while ($donnees = fgetcsv($fc, 1000, ',')) {
+									if (file_exists($filename.'/'.$donnees[1].".json")) {
+										$etatCE = $donnees[0];
+										$messageCE = $donnees[2];
+									}
+								}
+
+								fclose($fc);
+							}
+
+							if ($nombreCession != 0) {
+								echo "
+									<div class='box box-446'>
+										<div class='box-title-container'>
+											<h2 class='box-title'>Cession : ".$data[7]."</h2>
+										</div>
+										<div class='box-informations-container'>
+											<div class='box-informations'>
+												<h3 class='box-information box-information--primary'>Etat</h3>
+												<h3 class='box-information box-information--secondary'>".$etatCE."</h3>
+											</div>
+											<div class='box-informations'>
+												<h3 class='box-information box-information--primary'>Message de l'assureur</h3>
+												<h3 class='box-information box-information--secondary'>".$messageCE."</h3>
+											</div>
+										</div>
+										<div class='box-separator box-separator-446'></div>
+										<div class='box-constats-actions-container'>
+											<div class='box-constats-action'>
+												<a href='visualiserCession.php?immatriculation=".$data[7]."'>
+													<img src='../assets/svg/icons/see.svg' class='box-constats-action-svg'>
+												</a>
+											</div>
+										</div>
+									</div>
+								";
+							}
 						}
-						fclose($fc);
-						if ($nombreCession != 0) {
-							echo "
-								<div class='box box-446'>
-									<div class='box-title-container'>
-										<h2 class='box-title'>Cession : ".$data[7]."</h2>
-									</div>
-									<div class='box-informations-container'>
-										<div class='box-informations'>
-											<h3 class='box-information box-information--primary'>Etat</h3>
-											<h3 class='box-information box-information--secondary'>".$etatCE."</h3>
-										</div>
-										<div class='box-informations'>
-											<h3 class='box-information box-information--primary'>Message de l'assureur</h3>
-											<h3 class='box-information box-information--secondary'>".$messageCE."</h3>
-										</div>
-									</div>
-									<div class='box-separator box-separator-446'></div>
-									<div class='box-constats-actions-container'>
-										<div class='box-constats-action'>
-											<a href='visualiserCession.php?immatriculation=".$data[7]."'>
-												<img src='../assets/svg/icons/see.svg' class='box-constats-action-svg'>
-											</a>
-										</div>
-									</div>
-								</div>
-							";
-						}
-						$etatCE = "";
-						$messageCE = "";
+						fclose($fr);
 					}
 					?>
 

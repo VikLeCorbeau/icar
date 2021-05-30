@@ -58,7 +58,7 @@
 
                 <div class="boxes-container">
 
-                    <div class="box box-446">
+                    <div class="box box-446" style="flex: auto;">
                         
                         
 						<?php
@@ -147,7 +147,7 @@
 						?>
                     </div>
 
-                     <div class="box box-446">
+                     <div class="box box-446" style="flex: auto;">
 
                         <div class="box-title-container">
                             <h2 class="box-title">Carte verte associée</h2>

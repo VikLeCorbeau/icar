@@ -8,7 +8,6 @@
         $mdp = $_POST['mdp'];
         $assurance = $_POST['assurance'];
 
-
         $string = htmlentities($assurance, null, 'utf-8');
         $assurance = str_replace("&nbsp;", " ", $string);
         $assurance = html_entity_decode($assurance);

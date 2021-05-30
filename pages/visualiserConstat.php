@@ -53,8 +53,11 @@
                     }
                     if (isset($assure)) {   
                         $filename = "../db/InfoAssure/".$assure."/constats";
-                        $Json = file_get_contents($filename."/constat".$numeroConstat.".json", true);
-                        $array = json_decode($Json, true);
+
+                        if (file_exists($filename."/constat".$numeroConstat.".json")) {
+                            $Json = file_get_contents($filename."/constat".$numeroConstat.".json", true);
+                            $array = json_decode($Json, true);
+                        }
 
                         $titre1 = array("Informations générales","Votre véhicule","Véhicule tiers");
                         $titre2 = array("Informations générales","Liste des témoins","Votre véhicule","Véhicule tiers");
