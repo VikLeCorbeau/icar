@@ -57,36 +57,36 @@ verificationType(array('gestionnaire'));
                                         $obj = json_decode($elem);
                                         if ($obj[2]->immatriculation == $donnees[7]) {
                                             echo "
-													<div class='box box-446'>
-														<div class='box-title-container'>
-															<h2 class='box-title'>" . $data[2] . "</h2>
-														</div>
-														<div class='box-informations-container'>
-															<div class='box-informations'>
-																<h3 class='box-information box-information--primary'>Date</h3>
-																<h3 class='box-information box-information--secondary'>" . $obj[0]->date . "</h3>
-															</div>
-														</div>
-														<div class='box-separator box-separator-446'></div>
-														<div class='box-constats-actions-container'>
-															<div class='box-constats-action'>
-																<a href='visualiserConstat.php?assure=".$data[2]."&numero=".$data[1]."'>
-																	<img src='../assets/svg/icons/see.svg' class='box-constats-action-svg'>
-																</a>
-															</div>
-															<div class='box-constats-action'>
-																<a href='../src/validerConstat.php?numero=".$data[1]."&assure=".$data[2]."&valide=0'>
-																	<img src='../assets/svg/icons/admin_validation.svg' class='box-constats-action-svg'>
-																</a>
-															</div>
-															<div class='box-constats-action'>
-																<a href='../src/validerConstat.php?numero=".$data[1]."&assure=".$data[2]."&valide=1'>
-																	<img src='../assets/svg/icons/admin_validation.svg' class='box-constats-action-svg' style='transform: rotate(180deg);'>
-																</a>
-															</div>
+												<div class='box box-446'>
+													<div class='box-title-container'>
+														<h2 class='box-title'>" . $data[2] . "</h2>
+													</div>
+													<div class='box-informations-container'>
+														<div class='box-informations'>
+															<h3 class='box-information box-information--primary'>Date</h3>
+															<h3 class='box-information box-information--secondary'>" . $obj[0]->date . "</h3>
 														</div>
 													</div>
-													";
+													<div class='box-separator box-separator-446'></div>
+													<div class='box-constats-actions-container'>
+														<div class='box-constats-action'>
+															<a href='visualiserConstat.php?assure=".$data[2]."&numero=".$data[1]."'>
+																<img src='../assets/svg/icons/see.svg' class='box-constats-action-svg'>
+															</a>
+														</div>
+														<div class='box-constats-action'>
+															<a href='../src/validerConstat.php?numero=".$data[1]."&assure=".$data[2]."&valide=0'>
+																<img src='../assets/svg/icons/admin_validation.svg' class='box-constats-action-svg'>
+															</a>
+														</div>
+														<div class='box-constats-action'>
+															<a href='../src/validerConstat.php?numero=".$data[1]."&assure=".$data[2]."&valide=1'>
+																<img src='../assets/svg/icons/admin_validation.svg' class='box-constats-action-svg' style='transform: rotate(180deg);'>
+															</a>
+														</div>
+													</div>
+												</div>
+												";
                                         }
                                     }
                                 }
@@ -118,35 +118,35 @@ verificationType(array('gestionnaire'));
                                 while ($donnees = fgetcsv($fi, 1000, ';')) {
                                     if ($donnees[9] == $_SESSION['assurance']) {
                                         echo "
-													<div class='box box-446'>
-														<div class='box-title-container'>
-															<h2 class='box-title'>" . $data[1] . "</h2>
-														</div>
-														<div class='box-informations-container'>
-															<div class='box-informations'>
-																<h3 class='box-information box-information--primary'>Nouvelles coordonnées</h3>
-															</div>
-														</div>
-														<div class='box-separator box-separator-446'></div>
-														<div class='box-constats-actions-container'>
-															<div class='box-constats-action'>
-																<a href='visualiserChangement.php?assure=".$data[1]."'>
-																	<img src='../assets/svg/icons/see.svg' class='box-constats-action-svg'>
-																</a>
-															</div>
-															<div class='box-constats-action'>
-																<a href='../src/validerChangement.php?assure=".$data[1]."&valide=0'>
-																	<img src='../assets/svg/icons/admin_validation.svg' class='box-constats-action-svg'>
-																</a>
-															</div>
-															<div class='box-constats-action'>
-																<a href='../src/validerChangement.php?assure=".$data[1]."&valide=1'>
-																	<img src='../assets/svg/icons/admin_validation.svg' class='box-constats-action-svg' style='transform: rotate(180deg);'>
-																</a>
-															</div>
-														</div>
+											<div class='box box-446'>
+												<div class='box-title-container'>
+													<h2 class='box-title'>" . $data[1] . "</h2>
+												</div>
+												<div class='box-informations-container'>
+													<div class='box-informations'>
+														<h3 class='box-information box-information--primary'>Nouvelles coordonnées</h3>
 													</div>
-													";
+												</div>
+												<div class='box-separator box-separator-446'></div>
+												<div class='box-constats-actions-container'>
+													<div class='box-constats-action'>
+														<a href='visualiserChangement.php?assure=".$data[1]."'>
+															<img src='../assets/svg/icons/see.svg' class='box-constats-action-svg'>
+														</a>
+													</div>
+													<div class='box-constats-action'>
+														<a href='../src/validerChangement.php?assure=".$data[1]."&valide=0'>
+															<img src='../assets/svg/icons/admin_validation.svg' class='box-constats-action-svg'>
+														</a>
+													</div>
+													<div class='box-constats-action'>
+														<a href='../src/validerChangement.php?assure=".$data[1]."&valide=1'>
+															<img src='../assets/svg/icons/admin_validation.svg' class='box-constats-action-svg' style='transform: rotate(180deg);'>
+														</a>
+													</div>
+												</div>
+											</div>
+											";
                                     }
                                 }
                                 fclose($fi);

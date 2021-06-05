@@ -31,9 +31,11 @@
 		}
 		fclose($fc);
 		$fc = fopen("../db/InfoAssure/".$assure."/contrats.csv", 'w');
-		fputcsv($fc, $contrats);
+		foreach ($contrats as $element) {
+			fputcsv($fc, $element, ';');
+		}
 		fclose($fc);
-		unlink("../db/InfoAssure/".$assure."/contrat-".$assure.$immatriculation.'png');
+		unlink("../db/InfoAssure/".$assure."/contrat-".$assure.$immatriculation.".png");
 		unlink("../phpqrcode/contrat-".$assure.$immatriculation.'png-errors.txt');
 	}else if ($valide == 1) {
 		$fc = fopen("../db/InfoAssure/".$assure."/cession/valideCession.csv", 'a+');

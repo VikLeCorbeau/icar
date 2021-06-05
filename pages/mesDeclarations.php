@@ -198,16 +198,14 @@
 
 							$messageCE = "en traitement";
 							$etatCE = "en traitement";
+							$immatriculation = $data[7];
 							
-							if (isset($data[7])) {
-								if (file_exists("../db/InfoAssure/".$_SESSION['identifiants']."/cession/".$data[7].".json")) {
-									$Json = file_get_contents("../db/InfoAssure/".$_SESSION['identifiants']."/cession/".$data[7].".json", true);
-									$array = json_decode($Json, true);
-									$immatriculation = $data[7];
-								}
+							if (file_exists("../db/InfoAssure/".$_SESSION['identifiants']."/cession/".$data[7].".json")) {
+								$Json = file_get_contents("../db/InfoAssure/".$_SESSION['identifiants']."/cession/".$data[7].".json", true);
+								$array = json_decode($Json, true);
 							}
-
-							if ($nombreCession != 0 && isset($immatriculation, $etatCE, $messageCE)) {
+							
+							if ($nombreCession != 0 && isset($immatriculation, $etatCE, $messageCE) && $array[0]["immatriculation"] == $immatriculation) {
 								echo "
 									<div class='box box-446'>
 										<div class='box-title-container'>
@@ -237,10 +235,7 @@
 						}
 						fclose($fr);
 					}
-
-
 					if ($fc = verificationFichier($filename."/valideCession.csv", 'r')) {
-								
 						while ($d = fgetcsv($fc, 1000, ',')) {
 
 							if (file_exists($filename.'/'.$d[1].".json")) {

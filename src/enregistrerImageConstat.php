@@ -55,6 +55,23 @@ while ($data= fgetcsv($ft, 1000, ';')) {
 array_push($valeurTraitement, $traitements);
 fclose($ft);
 
+# enlever si existe dans valideConstat.csv
+$valide = array();
+if ($fv = fopen($filename."/valideConstat.csv", 'r')) {
+	while ($data = fgetcsv($fv, 1000, ',')) {
+		if ($data[1] != $numeroConstat) {
+			array_push($valide, $data);
+		}
+	}
+	fclose($fv);
+}
+if ($fv = fopen($filename."/valideConstat.csv", 'w')) {
+	foreach ($valide as $element) {
+		fputcsv($fv, $element, ',');
+	}
+	fclose($fv);
+}
+
 $ft = fopen("../db/traitements.csv", 'w');
 foreach ($valeurTraitement as $element) {
 	fputcsv($ft, $element, ';');
