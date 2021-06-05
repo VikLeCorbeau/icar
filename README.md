@@ -21,6 +21,8 @@
         -- PARTIE ASSURE --
             - Connectez-vous à l'un des assurés que vous avez créés.
                 * Identifiant -> NomPrénom, Mot de passe -> PrenomNom.
+            - OU Connectez-vous à ceux déjà crées.
+                * Voir identifiants.csv pour les codes. Premier élément -> identifiant, Deuxième élément -> mot de passe.
             - Explorez toutes les options possibles.
         -- PARTIE POLICE --
             - Connectez-vous avec les codes suivants : 
@@ -28,4 +30,3 @@
             - Explorez toutes les options possibles des forces de l'ordre.
 
     /*****************************************************************************************************************/
-

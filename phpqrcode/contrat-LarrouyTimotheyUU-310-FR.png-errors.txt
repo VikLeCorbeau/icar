@@ -1,4 +1,4 @@
-2021-05-30 22:10:57: <br />
+2021-05-30 23:17:26: <br />
 <b>Warning</b>:  file_put_contents(/opt/lampp/htdocs/icar/phpqrcode/cache/frame_5.dat): Failed to open stream: Aucun fichier ou dossier de ce type in <b>/opt/lampp/htdocs/icar/phpqrcode/qrspec.php</b> on line <b>568</b><br />
 <br />
 <b>Warning</b>:  mkdir(): Aucun fichier ou dossier de ce type in <b>/opt/lampp/htdocs/icar/phpqrcode/qrmask.php</b> on line <b>154</b><br />
