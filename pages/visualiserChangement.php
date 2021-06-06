@@ -35,10 +35,24 @@
                     <div class="content-titles-container">
                         <h1 class="content-title">Visualisation Changement de coordonnées</h1>
                     </div>
+                    <div class="back-container">
+                        <a href="<?php 
+                        if (isset($_SESSION['profil'])) {
+                            if ($_SESSION['profil'] === 'assure') {
+                                echo "mesDeclarations.php";
+                            } elseif ($_SESSION['profil'] === 'gestionnaire') {
+                                echo "traitements.php";
+                            }
+                        }
+                        ?>">
+                            <img src="../assets/svg/icons/back.svg">
+                       </a>
+                    </div>
                 </div>
 
-
                 <div class="visualisation-container">
+
+
 
                     <?php
                     if (isset($_GET['assure'])) {

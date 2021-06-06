@@ -66,11 +66,11 @@
 							<div class="input-radio-container">
 								<label for="sexe" class="radio-container">
 									<input type="radio" name="sexe" value="male" class="input-radio" checked>
-									<p class="input-radio-text">Mâle</p>
+									<p class="input-radio-text">Homme</p>
 								</label>
 								<label for="sexe" class="radio-container">
 									<input type="radio" name="sexe" value="femelle" class="input-radio">
-									<p class="input-radio-text">Femelle</p>
+									<p class="input-radio-text">Femme</p>
 								</label>
 								<label for="sexe" class="radio-container">
 									<input type="radio" name="sexe" value="non-binaire" class="input-radio">

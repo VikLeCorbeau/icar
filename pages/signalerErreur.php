@@ -44,20 +44,29 @@
 					</div>
 
 					<div class="grid-form">
-						
+						<?php 
+							if ($fi = fopen("../db/InfoAssure/".$_SESSION['identifiants']."/informations.csv", 'r')) {
+								while ($data = fgetcsv($fi, 1000, ';')) {
+									$nom = $data[0];
+									$prenom = $data[1];
+									$email = $data[3];
+								}
+								fclose($fi);
+							}
+						 ?>
 						<div class="input-container">
 							<label for="nom" class="form-label">nom</label>
-							<input type="text" name="nom" class="form-large-input" placeholder="Nom" required>
+							<input type="text" name="nom" class="form-large-input" placeholder="Nom" value="<?php echo $nom; ?>" required>
 						</div>
 
                         <div class="input-container">
 							<label for="prenom" class="form-label">prénom</label>
-							<input type="text" name="prenom" class="form-large-input" placeholder="Prénom" required>
+							<input type="text" name="prenom" class="form-large-input" placeholder="Prénom" value="<?php echo $prenom; ?>" required>
 						</div>
 
                         <div class="input-container">
 							<label for="email" class="form-label">Adresse mail</label>
-							<input type="email" name="email" class="form-large-input" placeholder="Adresse mail" required>
+							<input type="email" name="email" class="form-large-input" placeholder="Adresse mail" value="<?php echo $email;?>" required>
 						</div>
                     
                     </div>

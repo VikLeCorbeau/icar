@@ -34,6 +34,7 @@
                     <div class="content-titles-container">
                         <h1 class="content-title">Mes déclarations</h1>
                     </div>
+
                 </div>
 
                 <div class="grid-form" style="margin-bottom: 0px;">
@@ -57,6 +58,7 @@
 					for ($i=1; $i <= $nombreConstat; $i++) { 
 						$messageCO = "en traitement";
 						$etatCO = "en traitement";
+						$valide = 0;
 						
 						
 						$images = glob($filename.'/img/*.*');
@@ -75,45 +77,79 @@
 								if ($i == $data[1]) {
 									$etatCO = $data[0];
 									$messageCO = $data[2];
+									if ($etatCO == "Validé") {
+										$valide = 1;
+									}
 								}
 							}
 							fclose($fc);
 						}
-						
-						echo "
-							<div class='box box-446'>
-								<div class='box-title-container'>
-									<h2 class='box-title'>" . $array[0]['date'] . "</h2>
+						if ($valide == 0) {
+							echo "
+								<div class='box box-446'>
+									<div class='box-title-container'>
+										<h2 class='box-title'>" . $array[0]['date'] . "</h2>
+									</div>
+									<div class='box-informations-container'>
+										<div class='box-informations'>
+											<h3 class='box-information box-information--primary'>Etat</h3>
+											<h3 class='box-information box-information--secondary'>".$etatCO."</h3>
+										</div>
+										<div class='box-informations'>
+											<h3 class='box-information box-information--primary'>Images</h3>
+											<h3 class='box-information box-information--secondary'>" . $nbImage . "</h3>
+										</div>
+										<div class='box-informations'>
+											<h3 class='box-information box-information--primary'>Message de l'assureur</h3>
+											<h3 class='box-information box-information--secondary'>".$messageCO."</h3>
+										</div>
+									</div>
+									<div class='box-separator box-separator-446'></div>
+									<div class='box-constats-actions-container'>
+										<div class='box-constats-action'>
+											<a href='visualiserConstat.php?numero=".$i."'>
+												<img src='../assets/svg/icons/see.svg' class='box-constats-action-svg'>
+											</a>
+										</div>
+										<div class='box-constats-action'>
+											<a href='ajoutImageConstat.php?numero=".$i."&images=".$nbImage."'>
+												<img src='../assets/svg/icons/insured_add_images.svg' class='box-constats-action-svg'>
+											</a>
+										</div>
+									</div>
 								</div>
-								<div class='box-informations-container'>
-									<div class='box-informations'>
-										<h3 class='box-information box-information--primary'>Etat</h3>
-										<h3 class='box-information box-information--secondary'>".$etatCO."</h3>
+							";
+						}else if ($valide == 1) {
+							echo "
+								<div class='box box-446'>
+									<div class='box-title-container'>
+										<h2 class='box-title'>" . $array[0]['date'] . "</h2>
 									</div>
-									<div class='box-informations'>
-										<h3 class='box-information box-information--primary'>Images</h3>
-										<h3 class='box-information box-information--secondary'>" . $nbImage . "</h3>
+									<div class='box-informations-container'>
+										<div class='box-informations'>
+											<h3 class='box-information box-information--primary'>Etat</h3>
+											<h3 class='box-information box-information--secondary'>".$etatCO."</h3>
+										</div>
+										<div class='box-informations'>
+											<h3 class='box-information box-information--primary'>Images</h3>
+											<h3 class='box-information box-information--secondary'>" . $nbImage . "</h3>
+										</div>
+										<div class='box-informations'>
+											<h3 class='box-information box-information--primary'>Message de l'assureur</h3>
+											<h3 class='box-information box-information--secondary'>".$messageCO."</h3>
+										</div>
 									</div>
-									<div class='box-informations'>
-										<h3 class='box-information box-information--primary'>Message de l'assureur</h3>
-										<h3 class='box-information box-information--secondary'>".$messageCO."</h3>
+									<div class='box-separator box-separator-446'></div>
+									<div class='box-constats-actions-container'>
+										<div class='box-constats-action'>
+											<a href='visualiserConstat.php?numero=".$i."'>
+												<img src='../assets/svg/icons/see.svg' class='box-constats-action-svg'>
+											</a>
+										</div>
 									</div>
 								</div>
-								<div class='box-separator box-separator-446'></div>
-								<div class='box-constats-actions-container'>
-									<div class='box-constats-action'>
-										<a href='visualiserConstat.php?numero=".$i."'>
-											<img src='../assets/svg/icons/see.svg' class='box-constats-action-svg'>
-										</a>
-									</div>
-									<div class='box-constats-action'>
-										<a href='ajoutImageConstat.php?numero=".$i."&images=".$nbImage."'>
-											<img src='../assets/svg/icons/insured_add_images.svg' class='box-constats-action-svg'>
-										</a>
-									</div>
-								</div>
-							</div>
-						";
+							";
+						}
 						$nbImage = 0;
 					}
 					?>
@@ -168,6 +204,32 @@
 										<div class='box-constats-action'>
 											<a href='changerJustificatif.php'>
 												<img src='../assets/svg/icons/insured_add_images.svg' class='box-constats-action-svg'>
+											</a>
+										</div>
+									</div>
+								</div>
+							";
+						}else{
+							echo "
+								<div class='box box-446'>
+									<div class='box-title-container'>
+										<h2 class='box-title'>Changement de coordonnées</h2>
+									</div>
+									<div class='box-informations-container'>
+										<div class='box-informations'>
+											<h3 class='box-information box-information--primary'>Etat</h3>
+											<h3 class='box-information box-information--secondary'>".$etatCH."</h3>
+										</div>
+										<div class='box-informations'>
+											<h3 class='box-information box-information--primary'>Message de l'assureur</h3>
+											<h3 class='box-information box-information--secondary'>".$messageCH."</h3>
+										</div>
+									</div>
+									<div class='box-separator box-separator-446'></div>
+									<div class='box-constats-actions-container'>
+										<div class='box-constats-action'>
+											<a href='visualiserChangement.php'>
+												<img src='../assets/svg/icons/see.svg' class='box-constats-action-svg'>
 											</a>
 										</div>
 									</div>

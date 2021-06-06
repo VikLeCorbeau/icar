@@ -45,8 +45,15 @@ if ($uploadOk == 0) {
   }
 }
 
-#traitements
+#vide valideChangement
+$vide=array();
+$fv = fopen($filename."/changement/valideChangement.csv", 'w');
+foreach ($vide as $element) {
+    fputcsv($fv, $element);
+}
+fclose($fv);
 
+#traitements
 $traitements = array('changement', $_SESSION['identifiants']);
 $valeurTraitement = array();
 

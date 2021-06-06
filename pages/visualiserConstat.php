@@ -35,6 +35,20 @@
                         <h1 class="content-title">Visualisation constat</h1>
                         <h1 class="content-subtitle"><?php if (isset($_GET['assure'])) { echo $_GET['assure']; } ?></h1>
                     </div>
+
+                    <div class="back-container">
+                        <a href="<?php 
+                        if (isset($_SESSION['profil'])) {
+                            if ($_SESSION['profil'] === 'assure') {
+                                echo "mesDeclarations.php";
+                            } elseif ($_SESSION['profil'] === 'gestionnaire') {
+                                echo "traitements.php";
+                            }
+                        }
+                        ?>">
+                            <img src="../assets/svg/icons/back.svg">
+                       </a>
+                    </div>
                 </div>
 
 

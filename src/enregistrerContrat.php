@@ -69,7 +69,6 @@ if (is_dir("../db/InfoAssure/".$nom.$prenom."")) {
         <link rel="icon" href="../assets/svg/logo/icon.svg">
 
         <link href="../css/generics.css" rel="stylesheet">
-        <link href="../css/visiteur.css" rel="stylesheet">
         <link href="../css/boxes.css" rel="stylesheet">
         <link href="../css/form.css" rel="stylesheet">
 

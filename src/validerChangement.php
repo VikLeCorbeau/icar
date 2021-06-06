@@ -36,8 +36,6 @@
 		fputcsv($fc, array("Refusé", "changement de coordonnées refusé"));
 		fclose($fc);		
 
-	 	supprimerFichier("../db/InfoAssure/".$assure."/changement/informations_temp.csv");
-	 	
 	 	$traitement=array();
 
 		if ($ft = verificationFichier("../db/traitements.csv", 'r')) {
