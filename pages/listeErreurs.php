@@ -63,7 +63,7 @@
                                             <td>" . $data[5] . "</td>
                                             <td>" . $data[6] . "</td>
                                             <td>" . $data[7] . "</td>
-                                            <td><img src='../assets/svg/icons/delete.svg' class='datas-svg line-delete'></td>
+                                            <td><img src='../assets/svg/icons/delete.svg' class='datas-svg-e line-delete'></td>
                                         </tr>
                                         ";
                         }

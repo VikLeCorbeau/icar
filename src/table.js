@@ -16,51 +16,57 @@ function supprimerTemoin() {
 
     buttons.forEach(button => {
         button.addEventListener("click", () => {
-            let datas = lineDelete(button)
+            if (window.confirm("Etes vous sûr de vouloir supprimer ?")) {
+                let datas = lineDelete(button)
 
-            let xhttp = new XMLHttpRequest();
+                let xhttp = new XMLHttpRequest();
 
-            xhttp.open("POST", "supprimerTemoin.php",true);
-            xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            xhttp.send("nom="+datas[0]+"&prenom="+datas[1]+"&adresse="+datas[2]+"&tel="+datas[3]);
+                xhttp.open("POST", "supprimerTemoin.php",true);
+                xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhttp.send("nom="+datas[0]+"&prenom="+datas[1]+"&adresse="+datas[2]+"&tel="+datas[3]);
+            }
         })
     })
 
 }
 
 function supprimerLog() {
-    let buttons = document.querySelectorAll('.datas-svg')
+    let buttons = document.querySelectorAll('.datas-svg-l');
 
     buttons.forEach(button => {
         button.addEventListener("click", () => {
-            let datas = lineDelete(button)
-            let xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function(){
-                if (this.readyState === 4 && this.status === 200) {
-                    console.log(this.responseText)
+            if (window.confirm("Etes vous sûr de vouloir supprimer ?")) {
+                let datas = lineDelete(button);
+                let xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function(){
+                    if (this.readyState === 4 && this.status === 200) {
+                        console.log(this.responseText);
+                    }
                 }
-            }
 
-            xhttp.open("POST", "../src/supprimerLogs.php",true);
-            xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            xhttp.send("date="+datas[0]+"&type="+datas[1]+"&nom="+datas[2]+"&sujet="+datas[3]+"&quoi="+datas[4]);
+                xhttp.open("POST", "../src/supprimerLogs.php",true);
+                xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhttp.send("date="+datas[0]+"&type="+datas[1]+"&nom="+datas[2]+"&sujet="+datas[3]+"&quoi="+datas[4]);
+            }
         })
     })
 
 }
 
 function supprimerErreurs() {
-    let buttons = document.querySelectorAll('.datas-svg')
+    let buttons = document.querySelectorAll('.datas-svg-e')
 
     buttons.forEach(button => {
         button.addEventListener("click", () => {
-            let datas = lineDelete(button)
+            if (window.confirm("Etes vous sûr de vouloir supprimer ?")) {
+                let datas = lineDelete(button)
 
-            let xhttp = new XMLHttpRequest();
+                let xhttp = new XMLHttpRequest();
 
-            xhttp.open("POST", "../src/supprimerErreurs.php",true);
-            xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            xhttp.send("date="+datas[0]+"&urgence="+datas[1]+"&type="+datas[2]+"&identite="+datas[3]+"&email="+datas[4]+"&identifiant="+datas[5]+"&titre="+datas[6]+"&message="+datas[7]);
+                xhttp.open("POST", "../src/supprimerErreurs.php",true);
+                xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhttp.send("date="+datas[0]+"&urgence="+datas[1]+"&type="+datas[2]+"&identite="+datas[3]+"&email="+datas[4]+"&identifiant="+datas[5]+"&titre="+datas[6]+"&message="+datas[7]);
+            }
         })
     })
 

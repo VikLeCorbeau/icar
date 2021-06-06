@@ -50,15 +50,15 @@
 
                         while ($data = fgetcsv($fl, 1000,';')) {
                             echo "
-                                        <tr>
-                                            <td>" . $data[0] . "</td>
-                                            <td>" . $data[1] . "</td>
-                                            <td>" . $data[2] . "</td>
-                                            <td>" . $data[3] . "</td>
-                                            <td>" . $data[4] . "</td>
-                                            <td><img src='../assets/svg/icons/delete.svg' class='datas-svg line-delete'></td>
-                                        </tr>
-                                        ";
+                                <tr>
+                                    <td>" . $data[0] . "</td>
+                                    <td>" . $data[1] . "</td>
+                                    <td>" . $data[2] . "</td>
+                                    <td>" . $data[3] . "</td>
+                                    <td>" . $data[4] . "</td>
+                                    <td><img src='../assets/svg/icons/delete.svg' class='datas-svg-l line-delete'></td>
+                                </tr>
+                                ";
                         }
 
                         fclose($fl);
