@@ -1,0 +1,165 @@
+.contact-grid {
+    display: grid;
+
+    border: 1px solid black;
+
+    grid-template-columns: 2fr 8fr;
+
+    margin-bottom: 50px;
+    
+    width: 100%;
+    min-height: 500px;
+}
+
+/* LEFT */
+
+.contact-left-container {
+    display: flex;
+    flex-direction: column;
+
+    border-right: 1px solid black;
+}
+
+.contact-left-title-container {
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+.contact-title {
+    padding: 15px;
+
+    text-align: center;
+    font-weight: 700;
+    font-variant: small-caps;
+    font-size: 1rem;
+}
+
+.contact-left-list {
+    display: flex;
+    flex-direction: column;
+    max-height: 530px;
+    overflow-y: scroll;
+}
+
+.contact-left-name {
+    padding: 15px;
+    border-bottom: 1px solid black;
+    
+    text-align: center;
+
+    cursor: pointer;
+}
+
+/* RIGHT */
+
+.contact-right-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* TOP */
+
+.contact-right-top {
+    border-bottom: 1px solid black;
+    display: flex;
+}
+
+.contact-right-top-contact-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact-info {
+
+}
+
+.contact-info-primary {
+    margin-right: 30px;
+}
+
+.contact-info-secondary {
+
+}
+
+/* MIDDLE */
+
+.contact-right-middle {
+    overflow-y: scroll;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 350px;
+
+    padding: 30px;
+}
+
+.contact-message-container {
+    max-width: 50%;
+    padding: 15px;
+
+    border: 1px transparent solid;
+    border-radius: 20px;
+
+    margin-bottom: 30px;
+}
+
+.my-message {
+    margin-left: auto;
+    background-color: var(--light-grey);
+}
+
+.other-message {
+    background-color: var(--light-yellow);
+}
+
+/* BOTTOM */
+
+.contact-right-bottom {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 30px;
+}
+
+.contact-input-container {
+    width: 75%;
+}
+
+.contact-input {
+    width: calc(100% - 32px);
+
+    padding: 15px;
+
+
+    border: 1px solid black;
+    border-radius: 20px;
+
+    color: black;
+}
+
+.contact-button-container {
+    width: 20%;
+}
+
+/* RESPONSIVE */
+
+
+@media screen and (max-width: 975px) {
+
+    /* FORMULAIRES */
+
+    #text-contact {
+        display: none;
+    }
+
+    .contact-info-secondary {
+        display: none;
+    }
+
+    .contact-right-bottom {
+        padding: 15px;
+    }
+
+}

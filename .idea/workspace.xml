@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fbbb2ba7-76dd-4918-b044-d3dc239a79f9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/boxes.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/boxes.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/generics.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/generics.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/InfoAssure/DupontPierre/ImageChangementCoordonnees.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/db/InfoAssure/DupontPierre/ImageChangementCoordonnees.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/InfoAssure/DupontPierre/constats/img/1-imageConstat0.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/db/InfoAssure/DupontPierre/constats/img/1-imageConstat0.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/InfoAssure/DupontPierre/constats/img/1-imageConstat1.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/db/InfoAssure/DupontPierre/constats/img/1-imageConstat1.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/InfoAssure/DupontPierre/informations.csv" beforeDir="false" afterPath="$PROJECT_DIR$/db/InfoAssure/DupontPierre/informations.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/InfoAssure/DupontPierre/informations_temp.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/InfoAssure/DupontPierre/valideChangement.csv" beforeDir="false" afterPath="$PROJECT_DIR$/db/InfoAssure/DupontPierre/valideChangement.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/logs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/db/logs.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/traitements.csv" beforeDir="false" afterPath="$PROJECT_DIR$/db/traitements.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/navigation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/ajoutImageConstat.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ajoutImageConstat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/visualiserCession.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/visualiserCession.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/visualiserChangement.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/visualiserChangement.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/visualiserConstat.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/visualiserConstat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enregistrerImageConstat.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/enregistrerImageConstat.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1s6zA5M8InWiU6U3TICZO6apgkX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fbbb2ba7-76dd-4918-b044-d3dc239a79f9" name="Default Changelist" comment="" />
+      <created>1620207682733</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1620207682733</updated>
+      <workItem from="1620207684907" duration="463000" />
+      <workItem from="1620208695259" duration="115000" />
+      <workItem from="1620208854018" duration="208000" />
+      <workItem from="1620210444565" duration="18000" />
+      <workItem from="1620210467823" duration="7000" />
+      <workItem from="1620210539403" duration="21000" />
+      <workItem from="1622022650461" duration="9185000" />
+      <workItem from="1622054565160" duration="894000" />
+      <workItem from="1622102885723" duration="583000" />
+      <workItem from="1622103754530" duration="2851000" />
+      <workItem from="1622106695576" duration="218000" />
+      <workItem from="1622107059602" duration="12000" />
+      <workItem from="1622208304652" duration="1673000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

@@ -1,0 +1,34 @@
+2021-05-30 23:17:26: <br />
+<b>Warning</b>:  file_put_contents(/opt/lampp/htdocs/icar/phpqrcode/cache/frame_5.dat): Failed to open stream: Aucun fichier ou dossier de ce type in <b>/opt/lampp/htdocs/icar/phpqrcode/qrspec.php</b> on line <b>568</b><br />
+<br />
+<b>Warning</b>:  mkdir(): Aucun fichier ou dossier de ce type in <b>/opt/lampp/htdocs/icar/phpqrcode/qrmask.php</b> on line <b>154</b><br />
+<br />
+<b>Warning</b>:  file_put_contents(/opt/lampp/htdocs/icar/phpqrcode/cache/mask_0/mask_37_0.dat): Failed to open stream: Aucun fichier ou dossier de ce type in <b>/opt/lampp/htdocs/icar/phpqrcode/qrmask.php</b> on line <b>155</b><br />
+<br />
+<b>Warning</b>:  mkdir(): Aucun fichier ou dossier de ce type in <b>/opt/lampp/htdocs/icar/phpqrcode/qrmask.php</b> on line <b>154</b><br />
+<br />
+<b>Warning</b>:  file_put_contents(/opt/lampp/htdocs/icar/phpqrcode/cache/mask_1/mask_37_1.dat): Failed to open stream: Aucun fichier ou dossier de ce type in <b>/opt/lampp/htdocs/icar/phpqrcode/qrmask.php</b> on line <b>155</b><br />
+<br />
+<b>Warning</b>:  mkdir(): Aucun fichier ou dossier de ce type in <b>/opt/lampp/htdocs/icar/phpqrcode/qrmask.php</b> on line <b>154</b><br />
+<br />
+<b>Warning</b>:  file_put_contents(/opt/lampp/htdocs/icar/phpqrcode/cache/mask_2/mask_37_2.dat): Failed to open stream: Aucun fichier ou dossier de ce type in <b>/opt/lampp/htdocs/icar/phpqrcode/qrmask.php</b> on line <b>155</b><br />
+<br />
+<b>Warning</b>:  mkdir(): Aucun fichier ou dossier de ce type in <b>/opt/lampp/htdocs/icar/phpqrcode/qrmask.php</b> on line <b>154</b><br />
+<br />
+<b>Warning</b>:  file_put_contents(/opt/lampp/htdocs/icar/phpqrcode/cache/mask_3/mask_37_3.dat): Failed to open stream: Aucun fichier ou dossier de ce type in <b>/opt/lampp/htdocs/icar/phpqrcode/qrmask.php</b> on line <b>155</b><br />
+<br />
+<b>Warning</b>:  mkdir(): Aucun fichier ou dossier de ce type in <b>/opt/lampp/htdocs/icar/phpqrcode/qrmask.php</b> on line <b>154</b><br />
+<br />
+<b>Warning</b>:  file_put_contents(/opt/lampp/htdocs/icar/phpqrcode/cache/mask_4/mask_37_4.dat): Failed to open stream: Aucun fichier ou dossier de ce type in <b>/opt/lampp/htdocs/icar/phpqrcode/qrmask.php</b> on line <b>155</b><br />
+<br />
+<b>Warning</b>:  mkdir(): Aucun fichier ou dossier de ce type in <b>/opt/lampp/htdocs/icar/phpqrcode/qrmask.php</b> on line <b>154</b><br />
+<br />
+<b>Warning</b>:  file_put_contents(/opt/lampp/htdocs/icar/phpqrcode/cache/mask_5/mask_37_5.dat): Failed to open stream: Aucun fichier ou dossier de ce type in <b>/opt/lampp/htdocs/icar/phpqrcode/qrmask.php</b> on line <b>155</b><br />
+<br />
+<b>Warning</b>:  mkdir(): Aucun fichier ou dossier de ce type in <b>/opt/lampp/htdocs/icar/phpqrcode/qrmask.php</b> on line <b>154</b><br />
+<br />
+<b>Warning</b>:  file_put_contents(/opt/lampp/htdocs/icar/phpqrcode/cache/mask_6/mask_37_6.dat): Failed to open stream: Aucun fichier ou dossier de ce type in <b>/opt/lampp/htdocs/icar/phpqrcode/qrmask.php</b> on line <b>155</b><br />
+<br />
+<b>Warning</b>:  mkdir(): Aucun fichier ou dossier de ce type in <b>/opt/lampp/htdocs/icar/phpqrcode/qrmask.php</b> on line <b>154</b><br />
+<br />
+<b>Warning</b>:  file_put_contents(/opt/lampp/htdocs/icar/phpqrcode/cache/mask_7/mask_37_7.dat): Failed to open stream: Aucun fichier ou dossier de ce type in <b>/opt/lampp/htdocs/icar/phpqrcode/qrmask.php</b> on line <b>155</b><br />
